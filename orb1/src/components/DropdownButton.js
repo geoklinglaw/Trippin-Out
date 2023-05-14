@@ -4,7 +4,7 @@ import { DownOutlined, UserOutlined } from '@ant-design/icons';
 import { Space } from 'antd';
 import { Menu } from 'antd';
 import { useState } from "react";
-import countriesData from '/Users/apple/Desktop/NUS/Orbital/orbital1/orb1/src/json/countries.json';
+import countriesData from '../json/countries.json';
 
 const DropdownButton = () => {
   const [destination, setDestination] = useState("Select Destination");
