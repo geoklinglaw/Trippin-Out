@@ -1,6 +1,7 @@
 // LandingPage.js
 import { Card, Space, Form, message, Button } from 'antd';
 import React from 'react';
+import Header from '../components/Header.js';
 import DropdownButton from '../components/DropdownButton';
 import DateSelector from '../components/DateSelector';
 import NumberInput from '../components/NumberInput';
@@ -20,6 +21,8 @@ function LandingPage() {
   };
 
   return (
+    <>
+    <Header />
     <Form
       form={form}
       layout="vertical"
@@ -71,6 +74,7 @@ function LandingPage() {
         </Space>
       </div>
     </Form>
+    </>
   );
 }
 
