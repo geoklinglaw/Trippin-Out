@@ -2,17 +2,27 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
+import SignUp from './pages/Signup';
+import './index.css';
 import reportWebVitals from './reportWebVitals';
-
 
 ReactDOM.render(
   <React.StrictMode>
-    <Router>
-      <App />
-    </Router>
+    <App />
   </React.StrictMode>,
   document.getElementById('root')
 );
+
+
+// ReactDOM.render(
+//   <React.StrictMode>
+//     <Router>
+//       <App />
+//       <SignUp />
+//     </Router>
+//   </React.StrictMode>,
+//   document.getElementById('root')
+// );
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));
 // root.render(

@@ -1,16 +1,23 @@
 import React from 'react';
 import { Button, Space } from 'antd';
-import {NavLink, useNavigate} from 'react-router-dom'
+import {Routes, Route, NavLink, useNavigate} from 'react-router-dom'
 import logo from '../images/logo.png';
 import './Header.css';
+import SignUp from '../pages/Signup';
+import Login from '../pages/Login';
 
-const Header = ({isLogged}) =>{
+
+
+const Header = () =>{
     const navigate = useNavigate();
 
-    const handleClick=() =>{
-        navigate('/');
-        isLogged(false)
-    }
+    const navigateToSignUp = () => {
+        navigate('/signup');
+    };
+
+    const navigateToLogin = () => {
+        navigate('/login');
+    };
 
     return(
         <nav>
@@ -19,8 +26,12 @@ const Header = ({isLogged}) =>{
                     <img src={logo} alt='logo' className='logo'/>
                 </div>
                 <div style={{display:'flex',flexDirection:'row',alignItems:'center'}}>
-                    <Button onClick={handleClick}>Login</Button>
-                    <Button onClick={handleClick}>Create Account</Button>
+                    <Button onClick={navigateToLogin}>Login</Button>
+                    <Button onClick={navigateToSignUp}>Create Account</Button>
+                    <Routes>
+                        <Route path="orb1/src/pages/Login.js" element={<Login />} />
+                        <Route path="orb1/src/pages/Signup.js" element={<SignUp />} />
+                    </Routes>                   
                 </div>
             </div>
         </nav>
