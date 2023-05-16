@@ -36,8 +36,8 @@ function LandingPage() {
             size={35}
             style={{ border: '2px solid #d9d9d9', height: '24123', width: '1000', justifyContent: 'center' }}
           >
-            <h2 class = "Title"> We've Got Your Journey Covered &#128526; </h2>
-            <div class='Card'>
+            <h2 className = "Title"> We've Got Your Journey Covered &#128526; </h2>
+            <div className='Card'>
               <Form.Item
                 name="destination"
                 label="Destination"
