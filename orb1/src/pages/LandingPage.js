@@ -64,7 +64,7 @@ function LandingPage() {
               </Form.Item>
               <Form.Item>
                 <Space>
-                  <Button type="primary" htmlType="submit">
+                  <Button style={{ backgroundColor: '#5186CD', color: 'white' }} type="primary" htmlType="submit">
                     Submit
                   </Button>
                 </Space>

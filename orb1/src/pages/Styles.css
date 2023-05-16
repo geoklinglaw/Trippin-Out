@@ -1,0 +1,22 @@
+.Card {
+    align-items: 'center';
+    justify-content: 'center';
+}
+
+.Label {
+    font-size: 18px;
+    padding-bottom: 10px;
+    font-family: sans-serif;
+}
+
+Div {
+    white-space: pre-wrap;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+  
