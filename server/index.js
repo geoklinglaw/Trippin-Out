@@ -24,12 +24,11 @@ db.connect(function(err) {
 });
 
 app.get("/signup", (req, res) => {
-    // This would typically send the HTML for the signup page
     res.send("Signup page");
 });
 
-app.post("/signup", (req, res) => {
-    console.log(req.body); // Add this line to log the request body
+app.post("/signup", (req, res) => { // backend for signup page
+    console.log(req.body); 
     const email = req.body.email;
     const password = req.body.password;
 
@@ -49,8 +48,37 @@ app.post("/signup", (req, res) => {
     );
 });
 
+app.get("/login", (req, res) => {
+    res.send("Login page");
+});
 
-app.listen(3022, () => {
+app.post("/login", (req, res) => { // backend for login page
+    console.log(req.body); 
+    const email = req.body.email;
+    const password = req.body.password;
+
+
+    db.query(
+        "SELECT * FROM LoginSystem WHERE email = ? AND password = ?",
+        [email, password],
+        (err, result) => {
+            if (err) {
+                console.error(err);
+                res.status(500).send(err);
+                return;
+            }
+            if (result.length > 0) {
+                res.send(result);
+            } else {
+                res.send({ message: "Wrong email/password combination!" });
+            }
+            
+        }
+    );
+});
+
+
+app.listen(3028, () => {
     console.log("running server");
 }
 );

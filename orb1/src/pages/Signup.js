@@ -13,7 +13,7 @@ const SignUp = () => {
 
     try {
       // Make a request to the login endpoint
-      const response = await Axios.post("http://localhost:3022/signup", {
+      const response = await Axios.post("http://localhost:3028/signup", {
         email: email,
         password: password,
       }).then((response) => {

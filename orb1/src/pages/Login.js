@@ -53,17 +53,23 @@ const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
+  const[loginStatus, setLoginStatus] = useState("");
+
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
     try {
       // Make a request to the login endpoint
-      const response = await Axios.post("http://localhost:3022/signup", {
+      const response = await Axios.post("http://localhost:3028/login", {
         email: email,
         password: password,
-      }).then((response) => {
-        console.log(response)});
+      })
+      console.log(response);
+        
+      if (response.data.message) {
+        setLoginStatus("Wrong email or password!")
+      }
 
       // If the login was successful, store the user data or token
     //   localStorage.setItem("user", JSON.stringify(response.data));
@@ -146,6 +152,8 @@ const Login = () => {
                 type="primary submit" onClick={handleSubmit}> Login 
               </Button>
             </div>
+            <div className="Div"> </div>
+            <label style={{color: 'red'}}> {loginStatus} </label>
           </Card>
         </Space>
       </form>
