@@ -26,7 +26,7 @@ const DropdownButton = () => {
         </div>
       }
     >
-      <Button>
+      <Button size='large'>
         {destination} <DownOutlined />
       </Button>
     </Dropdown>

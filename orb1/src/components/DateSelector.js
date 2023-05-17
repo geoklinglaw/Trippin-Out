@@ -15,6 +15,7 @@ const Date = () => (
       showTime={{
         format: 'HH:mm',
       }}
+      size='large'
       format="YYYY-MM-DD HH:mm"
       onChange={onChange}
       onOk={onOk}

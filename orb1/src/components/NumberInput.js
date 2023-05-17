@@ -5,6 +5,6 @@ const onChange = (value) => {
   console.log('changed', value);
 };
 
-const Num = () => <InputNumber min={0} max={10} defaultValue={0} onChange={onChange} />;
+const Num = () => <InputNumber size='large' min={0} max={10} defaultValue={0} onChange={onChange} />;
 
 export default Num;

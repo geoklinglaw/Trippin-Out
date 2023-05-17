@@ -1,4 +1,9 @@
 
+@font-face {
+  font-family: 'futera';
+  src: url('../fonts/futura_sv/FuturaBook.ttf') format('truetype');
+}
+
 .Title {
     font-family: sans-serif;
     font-size: 35px;
@@ -14,6 +19,12 @@
     padding: 40px;
 
   }
+
+  .ant-form-item-label > label {
+    font-size: 17px !important;
+    font-family: sans-serif !important;
+  }
+
   
   .Destination {
     display: inline-block;

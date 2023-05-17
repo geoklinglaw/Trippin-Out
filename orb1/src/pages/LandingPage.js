@@ -25,11 +25,11 @@ function LandingPage() {
   const [buttonPopup, setButtonPopup] = useState(false);
 
 
-  useEffect(() => {
-    setTimeout(() => {
-      setButtonPopup(true);
-    }, 10000);
-  }, []);
+  // useEffect(() => {
+  //   setTimeout(() => {
+  //     setButtonPopup(true);
+  //   }, 10000);
+  // }, []);
 
 
   return (
@@ -48,7 +48,10 @@ function LandingPage() {
             size={35}
             style={{ border: '2px solid #d9d9d9', height: '24123', width: '1000', justifyContent: 'center' }}
           >
-            <h2 className = "Title"> We've Got Your Journey Covered &#128526; </h2>
+            <h2 className = "Title" 
+                style={{ textAlign: 'center',
+                         marginTop: '50px',
+                }}> We've Got Your Journey Covered &#128526; </h2>
             <div className='Card'>
               <Form.Item
                 name="destination"
