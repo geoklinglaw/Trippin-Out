@@ -6,6 +6,8 @@ import DropdownButton from '../components/DropdownButton';
 import DateSelector from '../components/DateSelector';
 import NumberInput from '../components/NumberInput';
 import './LandingPage.css';
+import LoginPopUp from '../components/LoginPopUp';
+import { useState, useEffect } from 'react';
 
 function LandingPage() {
   const [form] = Form.useForm();
@@ -19,6 +21,16 @@ function LandingPage() {
     console.log('Failed:', errorInfo);
     message.error('Submit failed!');
   };
+
+  const [buttonPopup, setButtonPopup] = useState(false);
+
+
+  useEffect(() => {
+    setTimeout(() => {
+      setButtonPopup(true);
+    }, 10000);
+  }, []);
+
 
   return (
     <>
@@ -64,9 +76,15 @@ function LandingPage() {
               </Form.Item>
               <Form.Item>
                 <Space>
-                  <Button style={{ backgroundColor: '#5186CD', color: 'white' }} type="primary" htmlType="submit">
+                  <Button 
+                    onClick={() => setButtonPopup(true)} 
+                    style={{ backgroundColor: '#5186CD', color: 'white' }} 
+                    type="primary" htmlType="submit">
                     Submit
                   </Button>
+                  <LoginPopUp trigger = {buttonPopup} setTrigger={setButtonPopup}>
+                    <h1> Login Popup </h1>
+                  </LoginPopUp>
                 </Space>
               </Form.Item>
             </div>

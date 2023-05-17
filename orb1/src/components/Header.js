@@ -5,6 +5,7 @@ import logo from '../images/logo.png';
 import './Header.css';
 import SignUp from '../pages/Signup';
 import Login from '../pages/Login';
+import Preferences from '../pages/Preferences';
 
 
 
@@ -19,6 +20,10 @@ const Header = () =>{
         navigate('/login');
     };
 
+    const navigateToPreferences = () => {
+        navigate('/preferences');
+    };
+
     return(
         <nav>
             <div className='div-header'>
@@ -28,9 +33,11 @@ const Header = () =>{
                 <div style={{display:'flex',flexDirection:'row',alignItems:'center'}}>
                     <Button onClick={navigateToLogin}>Login</Button>
                     <Button onClick={navigateToSignUp}>Create Account</Button>
+                    <Button onClick={navigateToPreferences}>Preferences</Button>
                     <Routes>
                         <Route path="orb1/src/pages/Login.js" element={<Login />} />
                         <Route path="orb1/src/pages/Signup.js" element={<SignUp />} />
+                        <Route path='orb1/src/pages/Preferences.js' element={<Preferences />} />
                     </Routes>                   
                 </div>
             </div>
