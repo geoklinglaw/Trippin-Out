@@ -1,0 +1,19 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 3rem;
+    color: #959090;
+}
+
+.product {
+    margin: 1rem 0;
+    padding: 1rem;
+    color: #1A385A;
+    border-radius: 8px;
+    border: #1A385A 1px solid;
+}
+
+.product h2,
+.product p {
+    margin: 0.5rem 0;
+}

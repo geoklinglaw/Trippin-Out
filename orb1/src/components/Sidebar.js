@@ -18,10 +18,12 @@ const { Step } = Steps;
 
     
 
-function Sidebar() {
+function Sidebar({setHeader}) {
     const [current, setCurrent] = useState(0);
+    const arr = ["Explore", "Accomodation","Preferences",  "Locations", "Food Options"]
     const onChange = (value) => {
       console.log('onChange:', value);
+      setHeader(value)
       setCurrent(value);
     };
     const description = 'This is a description.';
@@ -54,11 +56,11 @@ function Sidebar() {
                 onChange={onChange}
                 direction="vertical"
             >
-                <Step title={<Link className='link' to='/landing'>Explore</Link>} />
-                <Step title={<Link className='link' to='/accomodation'>Accomodation</Link>} />
-                <Step title={<Link className='link' to='/preferences'>Preferences</Link>} />
-                <Step title={<Link className='link' to='/locations'>Locations</Link>} />
-                <Step title={<Link className='link' to='/food-options'>Food Options</Link>} />
+                <Step title={<Link className='link' to='/explore'>Explore</Link>} />
+                <Step title={"Accomodation"} />
+                <Step title={"Preferences"} />
+                <Step title={"Locations"} />
+                <Step title={<Link className='link' to='/landing'>Food Options</Link>} />
             </Steps>
 
             </div>

@@ -1,13 +1,21 @@
-import React from "react";
+import React, {useState} from "react";
 import { Steps, Layout, Menu, theme  } from 'antd';
 import Sidebar from "../components/Sidebar";
 import two from '../images/2.png';
 
 
 const description = 'This is a description.';
-const App = () => (
+const A = () => (<h1>Explore</h1>)
+const B = () => { return (<h1>Accomodation</h1>)}
+const C = () => (<h1>Preferences</h1>)
+const D = () => { return (<h1><img src={two}/>Locations</h1>)}
+const E = () => { return (<h1>Food Options</h1>)}
+const App = () => {
+    
+    const [header, setHeader] = useState(0);
+    return (
     <>
-    <Sidebar/>
+    <Sidebar setHeader={(x) => setHeader(x)}/>
     <div style={{
         display: 'flex',
         alignItems: 'center',
@@ -15,10 +23,20 @@ const App = () => (
         marginLeft: '450px',
     }}> 
         <img style={{width: '40px', height: '40px'}} src = {two}/>
-        <h1 style={{marginLeft: '15px', fontSize: '40px', color: '#1C395B'}}> Preferences </h1>
+        <div
+            style={{marginLeft: '17px', fontSize: '19px', color: '#1C395B'}}>
+                {
+                    (header === 0 ? (<A/>) 
+                        : header === 1 ? (<B/>)
+                            : header === 2 ? <C/> 
+                            : header === 3 ? <D/> : <E/>
+                    )
+                }
+        </div>
     </div>
     </>
-);
+    )
+};
 export default App;
 
 

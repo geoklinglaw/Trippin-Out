@@ -1,31 +1,31 @@
-import React from 'react';
-import { Button, Dropdown, message } from 'antd';
-import { DownOutlined, UserOutlined } from '@ant-design/icons';
-import { Space } from 'antd';
-import { Menu } from 'antd';
-import { useState } from "react";
+import React, { useState } from 'react';
+import { Button, Dropdown, Menu } from 'antd';
+import { DownOutlined } from '@ant-design/icons';
 import countriesData from '../json/countries.json';
 
-const DropdownButton = () => {
+const DropdownButton = ({ onChange }) => {
   const [destination, setDestination] = useState("Select Destination");
+
   const handleMenuClick = (e) => {
     setDestination(e.key);
-    console.log('click', e);
-    
+    if (onChange) {
+      onChange(e);
+    }
   };
 
+  // Display only first 50 countries
+  const displayedCountries = countriesData.countries;
+
+  const menu = (
+    <Menu onClick={handleMenuClick} style={{ maxHeight: 300, overflow: 'auto' }}>
+      {displayedCountries.map((country) => (
+        <Menu.Item key={country.name}>{country.name}</Menu.Item>
+      ))}
+    </Menu>
+  );
+
   return (
-    <Dropdown
-      overlay={
-        <div style={{ maxHeight: '300px', overflowY: 'scroll' }}>
-          <Menu onClick={handleMenuClick}>
-            {countriesData.countries.map((country) => (
-              <Menu.Item key={country.name}>{country.name}</Menu.Item>
-            ))}
-          </Menu>
-        </div>
-      }
-    >
+    <Dropdown overlay={menu}>
       <Button size='large'>
         {destination} <DownOutlined />
       </Button>

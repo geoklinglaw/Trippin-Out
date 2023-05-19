@@ -58,6 +58,8 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(email, password);
+    alert("You have logged in successfully!");
 
     try {
       // Make a request to the login endpoint

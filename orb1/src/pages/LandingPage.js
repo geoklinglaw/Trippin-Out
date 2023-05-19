@@ -9,28 +9,50 @@ import './LandingPage.css';
 import LoginPopUp from '../components/LoginPopUp';
 import { useState, useEffect } from 'react';
 
-function LandingPage() {
+function LandingPage(props) {
   const [form] = Form.useForm();
 
   const onFinish = (values) => {
     console.log('Success:', values);
     message.success('Submit success!');
+    const landingData = {
+      destination: values.destination,
+      duration: values.duration,
+      guests: values.guests
+    };
+    props.onSaveUserData(landingData);
+    setButtonPopup(true);
+    form.resetFields();
   };
+  
 
   const onFinishFailed = (errorInfo) => {
     console.log('Failed:', errorInfo);
     message.error('Submit failed!');
   };
 
+  const [destination, setDestination] = useState("");
+  const destinationChangeHandler = (e) => {
+    setDestination(e.key);
+    console.log(e.key);
+  }
+
+
+  const [duration, setDuration] = useState("");
+  const dateChangeHandler = (value, dateString) => {
+    setDuration(dateString);
+    console.log(dateString);
+  }
+  
+
+  const [guests, setGuests] = useState("");
+  const peopleChangeHandler = (e) => {
+    setGuests(e.key);
+    console.log(e.key);
+  }
+
+
   const [buttonPopup, setButtonPopup] = useState(false);
-
-
-  // useEffect(() => {
-  //   setTimeout(() => {
-  //     setButtonPopup(true);
-  //   }, 10000);
-  // }, []);
-
 
   return (
     <>
@@ -58,29 +80,29 @@ function LandingPage() {
                 label="Destination"
                 rules={[{ required: true, message: 'Please select a destination!' }]}
               >
-                <DropdownButton />
+                <DropdownButton onChange={destinationChangeHandler} />
               </Form.Item>
               <Form.Item
                 name="duration"
                 label="Duration"
                 rules={[{ required: true, message: 'Please select a duration!' }]}
               >
-                <DateSelector />
+                <DateSelector onChange={dateChangeHandler}/>
               </Form.Item>
               <Form.Item
-                name="adults"
+                name="guests"
+                onChange = {peopleChangeHandler}
                 label="Number of Guests"
                 rules={[
-                  { required: true, message: 'Please enter the number of adults!' },
-                  { type: 'number', min: 1, message: 'Number of adults must be at least 1!' },
+                  { required: true, message: 'Please enter the number of guests!' },
+                  { type: 'number', min: 1, message: 'Number of guests must be at least 1!' },
                 ]}
               >
-                <NumberInput />
+                <NumberInput onChange={peopleChangeHandler}/>
               </Form.Item>
               <Form.Item>
                 <Space>
-                  <Button 
-                    onClick={() => setButtonPopup(true)} 
+                  <Button  
                     style={{ backgroundColor: '#5186CD', color: 'white' }} 
                     type="primary" htmlType="submit">
                     Submit
