@@ -1,0 +1,13 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    color: #959090;
+}
+
+.product {
+    padding: 1px;
+    color: #1A385A;
+    box-shadow: 0 2px 4px rgba(0, 0, 0.2, 0.2);
+}
+
+

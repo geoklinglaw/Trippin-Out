@@ -56,11 +56,11 @@ function Sidebar({setHeader}) {
                 onChange={onChange}
                 direction="vertical"
             >
-                <Step title={<Link className='link' to='/explore'>Explore</Link>} />
-                <Step title={"Accomodation"} />
-                <Step title={"Preferences"} />
-                <Step title={"Locations"} />
-                <Step title={<Link className='link' to='/landing'>Food Options</Link>} />
+                <Step title="Explore"/>
+                <Step title="Accomodation" />
+                <Step title="Preferences" />
+                <Step title="Locations" />
+                <Step title="Food Options" />
             </Steps>
 
             </div>

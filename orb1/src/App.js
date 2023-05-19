@@ -5,7 +5,7 @@ import SignUp from './pages/Signup';
 import Login from './pages/Login';
 import LandingPage from './pages/LandingPage';
 import Preferences from './pages/Preferences';
-import Explore from './pages/Explore';
+import Explore from './components/Pref Page/Explore';
 
 function App() {
 

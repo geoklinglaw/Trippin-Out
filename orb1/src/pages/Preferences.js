@@ -2,10 +2,11 @@ import React, {useState} from "react";
 import { Steps, Layout, Menu, theme  } from 'antd';
 import Sidebar from "../components/Sidebar";
 import two from '../images/2.png';
+import Explore from "../components/Pref Page/Explore";
 
 
 const description = 'This is a description.';
-const A = () => (<h1>Explore</h1>)
+const A = () => (<Explore/>)
 const B = () => { return (<h1>Accomodation</h1>)}
 const C = () => (<h1>Preferences</h1>)
 const D = () => { return (<h1><img src={two}/>Locations</h1>)}
@@ -22,7 +23,6 @@ const App = () => {
         marginTop: '70px',
         marginLeft: '450px',
     }}> 
-        <img style={{width: '40px', height: '40px'}} src = {two}/>
         <div
             style={{marginLeft: '17px', fontSize: '19px', color: '#1C395B'}}>
                 {
