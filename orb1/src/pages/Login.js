@@ -46,6 +46,7 @@ import { Card, Space, Input, Button, Alert } from "antd";
 import LoginImage from "../images/login.png";
 import logo from "../images/logo.png";
 import "./Styles.css";
+import GoogleLogin from "./GoogleLogin"
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -166,6 +167,7 @@ const Login = () => {
             </div>
             <div className="Div"> </div>
             <label style={{ color: "red" }}> {loginStatus} </label>
+            <GoogleLogin />
           </Card>
         </Space>
       </form>
