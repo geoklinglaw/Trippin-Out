@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Axios from "axios";
-import { Card, Space } from 'antd';
-
+import { Card, Space } from "antd";
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -17,10 +16,11 @@ const SignUp = () => {
         email: email,
         password: password,
       }).then((response) => {
-        console.log(response)});
+        console.log(response);
+      });
 
       // If the login was successful, store the user data or token
-    //   localStorage.setItem("user", JSON.stringify(response.data));
+      //   localStorage.setItem("user", JSON.stringify(response.data));
     } catch (err) {
       // If there was an error, update the error state
       setError(err.message);
@@ -30,10 +30,7 @@ const SignUp = () => {
   return (
     <form onSubmit={handleSubmit}>
       <Space direction="vertical" size={16}>
-        <Card 
-            style={{ width: 500,
-                    height: 300,
-                    justifyContent: 'center'}}>
+        <Card style={{ width: 500, height: 300, justifyContent: "center" }}>
           {error && <p>{error}</p>}
           <label>
             Email:
@@ -55,7 +52,9 @@ const SignUp = () => {
               required
             />
           </label>
-          <button onClick={handleSubmit} type="submit">Sign up</button>
+          <button onClick={handleSubmit} type="submit">
+            Sign up
+          </button>
         </Card>
       </Space>
     </form>

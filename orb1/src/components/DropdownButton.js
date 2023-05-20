@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import { Button, Dropdown, Menu } from 'antd';
-import { DownOutlined } from '@ant-design/icons';
-import countriesData from '../json/countries.json';
+import React, { useState } from "react";
+import { Button, Dropdown, Menu } from "antd";
+import { DownOutlined } from "@ant-design/icons";
+import countriesData from "../json/countries.json";
 
 const DropdownButton = ({ onChange }) => {
   const [destination, setDestination] = useState("Select Destination");
@@ -13,11 +13,13 @@ const DropdownButton = ({ onChange }) => {
     }
   };
 
-  // Display only first 50 countries
   const displayedCountries = countriesData.countries;
 
   const menu = (
-    <Menu onClick={handleMenuClick} style={{ maxHeight: 300, overflow: 'auto' }}>
+    <Menu
+      onClick={handleMenuClick}
+      style={{ maxHeight: 300, overflow: "auto" }}
+    >
       {displayedCountries.map((country) => (
         <Menu.Item key={country.name}>{country.name}</Menu.Item>
       ))}
@@ -26,7 +28,7 @@ const DropdownButton = ({ onChange }) => {
 
   return (
     <Dropdown overlay={menu}>
-      <Button size='large'>
+      <Button size="large">
         {destination} <DownOutlined />
       </Button>
     </Dropdown>
@@ -34,9 +36,6 @@ const DropdownButton = ({ onChange }) => {
 };
 
 export default DropdownButton;
-
-
-
 
 // import React from 'react';
 // import { Button, Dropdown, Tooltip, message } from 'antd';
@@ -79,12 +78,12 @@ export default DropdownButton;
 //       disabled: true,
 //     },
 //   ];
-  
+
 //   const menuProps = {
 //     items,
 //     onClick: handleMenuClick,
 //   };
-  
+
 //   const DropdownButton = () => (
 //     <Space wrap>
 
@@ -99,5 +98,5 @@ export default DropdownButton;
 
 //     </Space>
 //   );
-  
+
 // export default DropdownButton;
