@@ -7,6 +7,7 @@ import LandingPage from "./pages/LandingPage";
 import Preferences from "./pages/Preferences";
 import Explore from "./components/Pref_Page/Explore";
 
+
 function App() {
   const saveUserDataHandler = (enteredUserData) => {
     const landingData = {
