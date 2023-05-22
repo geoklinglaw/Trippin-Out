@@ -77,4 +77,12 @@ async function logout() {
   }
 }
 
+const GoogleLogin = () => {
+  return (
+    <div>
+      {/* Place your JSX components and UI for the Google Login page here */}
+      <button onClick={loginWithGoogle}>Login with Google</button>
+    </div>
+  );
+};
 export default loginWithGoogle;

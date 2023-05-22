@@ -4,6 +4,8 @@
     "@emotion/styled": "^11.11.0",
     "@mui/icons-material": "^5.11.16",
     "@mui/material": "^5.13.1",
-    "@supabase/supabase-js": "^2.22.0"
+    "@supabase/supabase-js": "^2.22.0",
+    "firebase": "^9.22.0",
+    "react-router-dom": "^6.11.2"
   }
 }
