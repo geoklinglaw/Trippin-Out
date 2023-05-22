@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Steps, Layout, Menu, theme } from "antd";
 import Sidebar from "../components/Sidebar";
 import two from "../images/2.png";
-import Explore from "../components/Pref Page/Explore";
+import Explore from "../components/Pref_Page/Explore";
 
 const description = "This is a description.";
 const A = () => <Explore />;

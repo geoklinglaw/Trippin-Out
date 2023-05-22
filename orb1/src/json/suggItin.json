@@ -2,22 +2,29 @@
     {
       "title": "7 days in Korea",
       "description": "Explore the vibrant cities and rich cultural heritage of South Korea.",
-      "link": "https://media.nomadicmatt.com/2022/koreaguide1.jpg"
+      "image": "https://media.nomadicmatt.com/2022/koreaguide1.jpg",
+      "link": "Trippin-Out/orb1/src/components/Pref_Page/S_itin/korea7days.js"
+
     },
     {
       "title": "my trip to Japan!",
       "description": "Immerse yourself in the unique blend of tradition and modernity in Japan.",
-      "link": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/97/39/7f/caption.jpg?w=1200&h=-1&s=1&cx=1920&cy=1080&chk=v1_f31158e4bb953d28a308"
+      "image": "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/26/97/39/7f/caption.jpg?w=1200&h=-1&s=1&cx=1920&cy=1080&chk=v1_f31158e4bb953d28a308",
+      "link": "Trippin-Out/orb1/src/components/Pref_Page/S_itin/korea7days.js"
+
     },
     {
       "title": "Taiwan Itinerary",
       "description": "Experience the stunning landscapes, delicious street food, and warm hospitality of Taiwan.",
-      "link": "https://www.dbs.com.sg/documents/276102/331030526/IMG_7776.jpg/f7b01e31-0094-7d40-53cb-caf0b8f31630?t=1637567005427"
+      "image": "https://www.dbs.com.sg/documents/276102/331030526/IMG_7776.jpg/f7b01e31-0094-7d40-53cb-caf0b8f31630?t=1637567005427",
+      "link": "Trippin-Out/orb1/src/components/Pref_Page/S_itin/korea7days.js"
+
     },
     {
       "title": "Weekend gateway to Bali",
       "description": "Relax on beautiful beaches, visit ancient temples, and indulge in Balinese cuisine in Indonesia's paradise island.",
-      "link": "https://a.cdn-hotels.com/gdcs/production143/d1112/c4fedab1-4041-4db5-9245-97439472cf2c.jpg"
+      "image": "https://a.cdn-hotels.com/gdcs/production143/d1112/c4fedab1-4041-4db5-9245-97439472cf2c.jpg",
+      "link": "Trippin-Out/orb1/src/components/Pref_Page/S_itin/korea7days.js"
     }
   ]
   

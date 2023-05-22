@@ -5,7 +5,7 @@ import SignUp from "./pages/Signup";
 import Login from "./pages/Login";
 import LandingPage from "./pages/LandingPage";
 import Preferences from "./pages/Preferences";
-import Explore from "./components/Pref Page/Explore";
+import Explore from "./components/Pref_Page/Explore";
 
 function App() {
   const saveUserDataHandler = (enteredUserData) => {

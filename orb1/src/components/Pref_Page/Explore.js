@@ -1,6 +1,6 @@
 import React from "react";
 import { useState } from "react";
-import SuggItin from "../SuggItin";
+import SuggItin from "./SuggItin";
 import "./Explore.css";
 import itinerary from "../../json/suggItin.json";
 import two from "../../images/2.png";
@@ -74,9 +74,10 @@ function Explore() {
               {itinerary.map((itin) => (
                 <SuggItin
                   key={itin.id}
-                  pic={itin.link}
+                  pic={itin.image}
                   title={itin.title}
                   description={itin.description}
+                  link={itin.link}
                 />
               ))}
             </div>

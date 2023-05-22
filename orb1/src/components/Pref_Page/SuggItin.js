@@ -10,8 +10,12 @@ function SuggItin(props) {
     return text;
   };
 
+  const goToLink = () => {
+    window.open(props.link, "_itinerary");
+  }
+
   return (
-    <Card className="product" style={{ width: "350px", margin: "15px" }}>
+    <Card className="product" style={{ width: "350px", margin: "15px" }} onClick={goToLink}>
       <div style={{ width: "100%", height: "200px", overflow: "hidden" }}>
         <img
           src={props.pic}
