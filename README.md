@@ -51,7 +51,7 @@ With the above features, we will generate a list of suggested locations, based o
 
 With these selected locations, we will generate an itinerary and it will be displayed in the form of a calendar with a daily timeline for users. Within this daily timeline in the calendar, users will also be able to see some of the travel options available for them to travel from one location to another throughout the day. These travel options will include details like the mode of transport, the travelling duration and also the cost of transport. (Completed By June).
 
-##Tech Stack
+## Tech Stack
 
 1. React
 2. Nodejs
@@ -61,6 +61,6 @@ With these selected locations, we will generate an itinerary and it will be disp
 6. Firebase (to store data) 
 
 
-##Testing:
+## Testing:
 Unit testing
 Integration testing 
