@@ -10,4 +10,9 @@ body {
     box-shadow: 0 2px 4px rgba(0, 0, 0.2, 0.2);
 }
 
-
+.h1Style {
+    margin-left: 17px;
+    font-size: 40px;
+    color: #1C395B;
+  }
+  

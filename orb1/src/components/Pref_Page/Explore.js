@@ -35,11 +35,7 @@ function Explore() {
           }}
         >
           <img style={{ width: "40px", height: "40px" }} src={two} />
-          <h1
-            style={{ marginLeft: "17px", fontSize: "40px", color: "#1C395B" }}
-          >
-            Explore
-          </h1>
+          <h1 className="h1Style"> Explore </h1>
         </div>
         {/* <form onSubmit={handleSubmit}> 
                 <input value={search} onChange={handleSearch} type='text'/>

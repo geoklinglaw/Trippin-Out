@@ -3,13 +3,15 @@ import { Steps, Layout, Menu, theme } from "antd";
 import Sidebar from "../components/Sidebar";
 import two from "../images/2.png";
 import Explore from "../components/Pref_Page/Explore";
+import Pref from "../components/Pref_Page/Pref";
+
 
 const description = "This is a description.";
 const A = () => <Explore />;
 const B = () => {
   return <h1>Accomodation</h1>;
 };
-const C = () => <h1>Preferences</h1>;
+const C = () => <Pref />;
 const D = () => {
   return (
     <h1>
