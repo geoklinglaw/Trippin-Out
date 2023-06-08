@@ -171,7 +171,7 @@
 
 import React, { useState } from "react";
 import Axios from "axios";
-import { Card, Space, Input, Button, Alert } from "antd";
+import { Card, Input, Button, Alert } from "antd";
 import "./Signup.css";
 import logo from "../images/logo.png";
 

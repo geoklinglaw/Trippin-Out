@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Steps, Layout, Menu, theme } from "antd";
+//import { Steps, Layout, Menu, theme } from "antd";
 import Sidebar from "../components/Sidebar";
 import two from "../images/2.png";
 import Explore from "../components/Pref_Page/Explore";
 import Accommodation from "../components/Pref_Page/Accommodation";
+import Preferences from "../components/Pref_Page/Preferences";
 
-const description = "This is a description.";
+//const description = "This is a description.";
 const A = () => <Explore />;
 // const B = () => {
 //   return <h1>Accomodation</h1>;
@@ -38,7 +39,14 @@ const B = () => (
   </>
 );
 
-const C = () => <h1>Preferences</h1>;
+const C = () => (
+  <>
+    <h1>Preferences</h1>
+    <Preferences/>
+  </>
+);
+
+//const C = () => <h1>Preferences</h1>;
 const D = () => {
   return (
     <h1>
