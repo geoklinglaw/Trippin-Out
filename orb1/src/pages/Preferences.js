@@ -3,14 +3,17 @@ import React, { useState } from "react";
 import Sidebar from "../components/Sidebar";
 import two from "../images/2.png";
 import Explore from "../components/Pref_Page/Explore";
+import Pref from "../components/Pref_Page/Pref";
 import Accommodation from "../components/Pref_Page/Accommodation";
 import Preferences from "../components/Pref_Page/Preferences";
 
 //const description = "This is a description.";
 const A = () => <Explore />;
+
 // const B = () => {
 //   return <h1>Accomodation</h1>;
 // };
+
 const handleCheckInDateTimeChange = (value) => {
   console.log("Check-in date and time: ", value);
 };
@@ -39,6 +42,7 @@ const B = () => (
   </>
 );
 
+<<<<<<< HEAD
 const C = () => (
   <>
     <h1>Preferences</h1>
@@ -47,6 +51,10 @@ const C = () => (
 );
 
 //const C = () => <h1>Preferences</h1>;
+=======
+const C = () => <h1>Preferences</h1>; 
+                <Pref />
+>>>>>>> 7aca2003201842a668b8766a5790955b6eb5e8ab
 const D = () => {
   return (
     <h1>
