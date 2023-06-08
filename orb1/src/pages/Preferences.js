@@ -4,14 +4,45 @@ import Sidebar from "../components/Sidebar";
 import two from "../images/2.png";
 import Explore from "../components/Pref_Page/Explore";
 import Pref from "../components/Pref_Page/Pref";
-
+import Accommodation from "../components/Pref_Page/Accommodation";
 
 const description = "This is a description.";
 const A = () => <Explore />;
-const B = () => {
-  return <h1>Accomodation</h1>;
+
+// const B = () => {
+//   return <h1>Accomodation</h1>;
+// };
+
+const handleCheckInDateTimeChange = (value) => {
+  console.log("Check-in date and time: ", value);
 };
-const C = () => <Pref />;
+const handleCheckOutDateTimeChange = (value) => {
+  console.log("Check-out date and time: ", value);
+};
+
+const handleLocationChange = (event) => {
+  console.log("Location: ", event.target.value);
+};
+
+const handleHotelNameChange = (event) => {
+  console.log("Hotel Name: ", event.target.value);
+};
+
+
+const B = () => (
+  <>
+    <h1>Accommodation</h1>
+    <Accommodation
+    onCheckInDateTimeChange={handleCheckInDateTimeChange}
+    onCheckOutDateTimeChange={handleCheckOutDateTimeChange}
+    onLocationChange={handleLocationChange}
+    onHotelNameChange={handleHotelNameChange}
+     />
+  </>
+);
+
+const C = () => <h1>Preferences</h1>; 
+                <Pref />
 const D = () => {
   return (
     <h1>

@@ -8,6 +8,7 @@ import NumberInput from "../components/NumberInput";
 import "./LandingPage.css";
 import LoginPopUp from "../components/LoginPopUp";
 import { useState, useEffect } from "react";
+import Accommodation from "../components/Pref_Page/Accommodation.js";
 
 function LandingPage(props) {
   const [form] = Form.useForm();
@@ -140,7 +141,8 @@ function LandingPage(props) {
                   </Space>
                 </Form.Item>
               </div>
-            </Card>
+            </Card>  
+          
           </Space>
         </div>
       </Form>
