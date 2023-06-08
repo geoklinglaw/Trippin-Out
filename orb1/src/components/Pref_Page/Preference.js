@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Form, InputNumber, Checkbox, Button } from "antd";
 import { CoffeeOutlined, ShoppingOutlined, StarOutlined } from "@ant-design/icons";
 
-import "./Preferences.css";
+import "./Preference.css";
 
-function Preferences() {
+function Preference() {
   const [preferences, setPreferences] = useState({
     Food: undefined,
     Shopping: undefined,
@@ -24,10 +24,11 @@ function Preferences() {
     }));
   };
 
-  const handleIncludeChange = (name, checked) => {
+  const handleIncludeChange = (name) => (event) => {
+    const checked = event.target.checked;
     setPreferences((prevPreferences) => ({
       ...prevPreferences,
-      [name]: checked ? undefined : "-",
+      [name]: checked ? 1 : undefined,
     }));
   };
 
@@ -47,13 +48,12 @@ function Preferences() {
                 {name === "Food" && <CoffeeOutlined className="preference-icon" />}
                 {name === "Shopping" && <ShoppingOutlined className="preference-icon" />}
                 {name === "Night Life" && <StarOutlined className="preference-icon" />}
-            
               </span>
             </div>
             <Checkbox
               name={name}
               checked={value !== undefined}
-              onChange={(e) => handleIncludeChange(name, e.target.checked)}
+              onChange={handleIncludeChange(name)}
               className="include-checkbox"
             />
             {value !== undefined && (
@@ -77,4 +77,4 @@ function Preferences() {
   );
 }
 
-export default Preferences;
+export default Preference;

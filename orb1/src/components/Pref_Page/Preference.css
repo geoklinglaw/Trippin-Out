@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 20px;
+  width: 100%;
+  max-width: 800px;
+  border-radius: 15px;
+  background-color: #FFFFFF;
+}
+
+.preference-container {
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.preference {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.preference-name {
+  margin-right: 10px;
+}
+
+.preference-icon {
+  margin-right: 5px;
+}
+
+.include-checkbox {
+  transform: scale(1.5); /* Increase the checkbox size */
+}
+
+.input {
+  border-radius: 15px;
+  border: 1px solid #769ABE;
+  padding: 10px;
+  width: 80px; /* Adjust the width as needed */
+  text-align: center;
+}
+
+.rank-label {
+  width: 60px; /* Adjust the width as needed */
+}
+
+.submit-button-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.submit-button {
+  padding: 10px 20px;
+}

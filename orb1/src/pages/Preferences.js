@@ -5,7 +5,7 @@ import two from "../images/2.png";
 import Explore from "../components/Pref_Page/Explore";
 import Pref from "../components/Pref_Page/Pref";
 import Accommodation from "../components/Pref_Page/Accommodation";
-import Preferences from "../components/Pref_Page/Preferences";
+import Preference from "../components/Pref_Page/Preference";
 
 //const description = "This is a description.";
 const A = () => <Explore />;
@@ -42,19 +42,17 @@ const B = () => (
   </>
 );
 
-<<<<<<< HEAD
+
 const C = () => (
   <>
     <h1>Preferences</h1>
-    <Preferences/>
+    <Preference/>
   </>
 );
 
 //const C = () => <h1>Preferences</h1>;
-=======
-const C = () => <h1>Preferences</h1>; 
-                <Pref />
->>>>>>> 7aca2003201842a668b8766a5790955b6eb5e8ab
+
+
 const D = () => {
   return (
     <h1>
