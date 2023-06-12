@@ -7,7 +7,7 @@ import Pref from "../components/Pref_Page/Pref";
 import Accommodation from "../components/Pref_Page/Accommodation";
 import Preference from "../components/Pref_Page/Preference";
 import FoodOptions from "../components/Pref_Page/FoodOptions";
-import SuggestedLocations from "../components/Pref_Page/Meals/SuggestedLocation";
+import SuggestedLocations from "../components/Pref_Page/SuggestedLocation";
 
 //const description = "This is a description.";
 const A = () => <Explore />;
