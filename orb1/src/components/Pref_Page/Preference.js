@@ -1,8 +1,17 @@
 import React, { useState } from "react";
 import { Form, InputNumber, Checkbox, Button } from "antd";
 import { CoffeeOutlined, ShoppingOutlined, StarOutlined } from "@ant-design/icons";
+import {firestore} from "../.././pages/firebase";
+
+
+import {firebase} from "../.././pages/firebase"
+import {addDoc, collection} from "firebase/firestore"
+
 
 import "./Preference.css";
+
+console.log("firestore");
+
 
 function Preference() {
   const [preferences, setPreferences] = useState({
@@ -13,7 +22,7 @@ function Preference() {
     "Cultural Experiences": undefined,
     Sightseeing: undefined,
     "Beauty And Wellness": undefined,
-    "Special Events": undefined,
+    "Special Events": undefined
   });
 
   const handlePreferenceChange = (name) => (value) => {
@@ -32,9 +41,23 @@ function Preference() {
     }));
   };
 
-  const handleSubmit = () => {
-    // Perform actions with the preferences data
-    console.log(preferences);
+  // const handleSubmit = () => {
+  //   // Perform actions with the preferences data
+  //   console.log(preferences);
+  // };
+  //const ref = collection(firebase, "messages");
+
+  const handleSubmit = async () => {
+    try {
+      // Perform actions with the preferences data
+      console.log(preferences);
+
+      // Store preferences in Firestore
+      await firestore.collection("users").add(preferences);
+      console.log("Preferences stored in Firestore");
+    } catch (error) {
+      console.error("Error storing preferences:", error);
+    }
   };
 
   return (

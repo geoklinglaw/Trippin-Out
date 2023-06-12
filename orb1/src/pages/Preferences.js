@@ -6,6 +6,8 @@ import Explore from "../components/Pref_Page/Explore";
 import Pref from "../components/Pref_Page/Pref";
 import Accommodation from "../components/Pref_Page/Accommodation";
 import Preference from "../components/Pref_Page/Preference";
+import FoodOptions from "../components/Pref_Page/FoodOptions";
+import SuggestedLocations from "../components/Pref_Page/Meals/SuggestedLocation";
 
 //const description = "This is a description.";
 const A = () => <Explore />;
@@ -53,17 +55,20 @@ const C = () => (
 //const C = () => <h1>Preferences</h1>;
 
 
-const D = () => {
-  return (
-    <h1>
-      <img src={two} />
-      Locations
-    </h1>
-  );
-};
-const E = () => {
-  return <h1>Food Options</h1>;
-};
+const D = () => (
+  <>
+   <h1 style={{ marginBottom: '5px' }}>Suggested Locations</h1>
+    <h6 style={{ opacity: 0.7, fontSize: '14px', marginTop: '0' }}>tick the locations if you wish to include it in your itinerary</h6>
+  <SuggestedLocations/>
+  </>
+)
+const E = () => (
+  <>
+   <h1 style={{ marginBottom: '5px' }}>Food Options</h1>
+    <h6 style={{ opacity: 0.7, fontSize: '14px', marginTop: '0' }}>Pick the food you would like to include</h6>
+  <FoodOptions />
+  </>
+);
 const App = () => {
   const [header, setHeader] = useState(0);
   return (

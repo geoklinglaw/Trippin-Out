@@ -1,23 +1,27 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-import { getAuth } from "firebase/auth";
-import { GoogleAuthProvider } from "firebase/auth";
+import { getAuth, GoogleAuthProvider } from "firebase/auth";
 import { getStorage } from "firebase/storage";
+import { getFirestore } from "firebase/firestore";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyC_SyZezplGnJqMLfuYCjt69y_wiYZXmsU",
-  authDomain: "trippin-out-4b976.firebaseapp.com",
-  projectId: "trippin-out-4b976",
-  storageBucket: "trippin-out-4b976.appspot.com",
-  messagingSenderId: "647184431594",
-  appId: "1:647184431594:web:d69a768cadd176075c9a93",
-  measurementId: "G-Y5RFEGS41E"
+  apiKey: "your-api-key",
+  authDomain: "your-auth-domain",
+  projectId: "your-project-id",
+  storageBucket: "your-storage-bucket",
+  messagingSenderId: "your-messaging-sender-id",
+  appId: "your-app-id",
+  measurementId: "your-measurement-id"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
+export const firestore = getFirestore(app);
+
 export const provider = new GoogleAuthProvider();
 export const auth = getAuth(app);
 export const storage = getStorage();
+
+export const firebase = app;

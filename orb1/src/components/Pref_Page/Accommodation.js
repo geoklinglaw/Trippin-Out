@@ -2,9 +2,11 @@ import React, { useState } from "react";
 import { Form, Input, Button, Collapse } from "antd";
 import { DeleteOutlined } from "@ant-design/icons";
 import DateTimePicker from "../../components/DateTimePicker";
+import { firebase } from "../../pages/firebase";
 import "./Accommodation.css";
 
 const { Panel } = Collapse;
+console.log("firestore")
 
 function Accommodation({
   onHotelNameChange,
@@ -43,6 +45,19 @@ function Accommodation({
     const updatedAccommodations = [...accommodations];
     updatedAccommodations.splice(index, 1);
     setAccommodations(updatedAccommodations);
+  };
+
+  const handleSubmit = async () => {
+    try {
+      const db = firebase.firestore();
+      // Store accommodations in Firestore
+      accommodations.forEach(async (accommodation) => {
+        await db.collection("accommodations").add(accommodation);
+      });
+      console.log("Accommodations stored in Firestore");
+    } catch (error) {
+      console.error("Error storing accommodations:", error);
+    }
   };
 
   return (
@@ -125,6 +140,11 @@ function Accommodation({
       </Collapse>
       <div className="add-button-wrapper">
         <Button onClick={addAccommodation}>+ Add</Button>
+      </div>
+      <div className="submit-button-wrapper">
+        <Button type="primary" onClick={handleSubmit} className="submit-button">
+          Submit Accommodations
+        </Button>
       </div>
     </div>
   );
