@@ -1,0 +1,113 @@
+[
+    {
+        "name": "Newton Food Centre",
+        "activity_duration": 2,
+        "preferred_start_time": "18:00",
+        "preferred_end_time": "22:00",
+        "location": {
+            "lat": 1.3122,
+            "lng": 103.8383
+        }
+    },
+    {
+        "name": "Maxwell Food Centre",
+        "activity_duration": 2,
+        "preferred_start_time": "18:00",
+        "preferred_end_time": "22:00",
+        "location": {
+            "lat": 1.2804,
+            "lng": 103.8448
+        }
+    },
+    {
+        "name": "Chinatown Food Street",
+        "activity_duration": 2,
+        "preferred_start_time": "18:00",
+        "preferred_end_time": "22:00",
+        "location": {
+            "lat": 1.2821,
+            "lng": 103.8445
+        }
+    }, 
+    {
+        "name": "Lau Pa Sat",
+        "activity_duration": 2,
+        "preferred_start_time": "18:00",
+        "preferred_end_time": "22:00",
+        "location": {
+            "lat": 1.2806,
+            "lng": 103.8504
+        }
+    },
+    {
+        "name": "Old Airport Road Food Centre",
+        "activity_duration": 2,
+        "preferred_start_time": "18:00",
+        "preferred_end_time": "22:00",
+        "location": {
+            "lat": 1.3081,
+            "lng": 103.8843
+        }
+    },
+    {
+        "name": "Kakure",
+        "activity_duration": 2,
+        "preferred_start_time": "18:00",
+        "preferred_end_time": "22:00",
+        "location": {
+            "lat": 1.31091,
+            "lng": 103.8346
+        }
+    },
+    {
+        "name": "328 Laksa",
+        "activity_duration": 2,
+        "preferred_start_time": "11:00",
+        "preferred_end_time": "20:00",
+        "location": {
+            "lat": 1.31918,
+            "lng": 103.8423
+        }
+    },
+    {
+        "name": "Amoy Street Food Centre",
+        "activity_duration": 2,
+        "preferred_start_time": "11:00",
+        "preferred_end_time": "19:30",
+        "location": {
+            "lat": 1.2798,
+            "lng": 103.8465
+        }
+    },
+    {
+        "name": "Chomp Chomp Food Centre",
+        "activity_duration": 2,
+        "preferred_start_time": "18:00",
+        "preferred_end_time": "23:00",
+        "location": {
+            "lat": 1.3632,
+            "lng": 103.8668
+        }
+    },
+    {
+        "name": "Restaurant Zen",
+        "activity_duration": 2,
+        "preferred_start_time": "12:00",
+        "preferred_end_time": "22:30",
+        "location": {
+            "lat": 1.2796,
+            "lng": 103.84044
+        }
+    },
+    {
+        "name": "Changi Nasi Lemak",
+        "activity_duration": 2,
+        "preferred_start_time": "11:00",
+        "preferred_end_time": "19:00",
+        "location": {
+            "lat": 1.38996,
+            "lng": 103.9881
+        }
+    }
+
+]
