@@ -4,9 +4,9 @@ import { DeleteOutlined } from "@ant-design/icons";
 import DateTimePicker from "../../components/DateTimePicker";
 import { firebase } from "../../pages/firebase";
 import "./Accommodation.css";
-
+import {firestore} from "../.././pages/firebase";
 const { Panel } = Collapse;
-console.log("firestore")
+console.log(firestore);
 
 function Accommodation({
   onHotelNameChange,
