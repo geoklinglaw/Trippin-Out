@@ -1,77 +1,76 @@
-import axios from 'axios';
-import {Client} from "@googlemaps/google-maps-services-js";
-const {Client} = require("@googlemaps/google-maps-services-js");
-
-const client = new Client({});
-
-client
-  .elevation({
-    params: {
-      locations: [{ lat: 45, lng: -110 }],
-      key: "asdf",
-    },
-    timeout: 1000, // milliseconds
-  })
-  .then((r) => {
-    console.log(r.data.results[0].elevation);
-  })
-  .catch((e) => {
-    console.log(e.response.data.error_message);
-  });
-
-
-const axios = require('axios');
+// const {Client} = require("@googlemaps/google-maps-services-js");
+const locations = require('./locations.json'); // assuming locations.json is in the same directory
 const fs = require('fs');
+var path = require('path');
+var filePath = path.resolve('./timeMatrix')
 
-// Load locations from a JSON file
-const locations = require('./locations.json');
+var axios = require('axios'); // first address must be airbnb
+const origins = locations.map(location => `${location.location.lat},${location.location.lng}`).join('|');
+const destinations = locations.map(location => `${location.location.lat},${location.location.lng}`).join('|');
 
-// Function to fetch distance matrix
-async function fetchDistanceMatrix(origins, destinations) {
-  var originsParameter = origins.join('|');
-  var destinationsParameter = destinations.join('|');
+async function getDistanceMatrix() {
+    const origins = locations.map(location => `${location.location.lat},${location.location.lng}`).join('|');
+    const destinations = locations.map(location => `${location.location.lat},${location.location.lng}`).join('|');
 
-  var config = {
-    method: 'get',
-    url: `https://maps.googleapis.com/maps/api/distancematrix/json?origins=${originsParameter}&destinations=${destinationsParameter}&units=imperial&key=AIzaSyBcWBdZDoCbrwwzekb964YE65Y-Yp3i044`,
-    headers: { },
-  };
+    // request based on bus 
+    
+    var config = {
+        method: 'get',
+        url: `https://maps.googleapis.com/maps/api/distancematrix/json?units=metric&origins=${origins}&destinations=${destinations}&mode=transit&transit_mode=bus&transit_routing_preference=less_walking&traffic_model=optimistic&avoid=tolls&units=imperial&key=AIzaSyBcWBdZDoCbrwwzekb964YE65Y-Yp3i044`,
+        headers: { }
+    };
 
-  return axios(config)
+    return axios(config)
     .then(function (response) {
-      console.log(JSON.stringify(response.data));
-      return response.data;
+        console.log(JSON.stringify(response.data));
+
+        // write the data to a JSON file
+        fs.writeFile('output.json', JSON.stringify(response.data, null, 2), (err) => {
+            if (err) throw err;
+            console.log('Data written to file');
+        });
+
+        return response.data;
     })
     .catch(function (error) {
-      console.log(error);
+        console.log(error);
     });
 }
 
-// Prepare an empty object to hold results
-const distances = {};
+module.exports = { getDistanceMatrix };
 
-// Function to calculate distances between each pair of locations
-async function calculateDistances() {
-  for (let i = 0; i < locations.length - 1; i++) {
-    const origin = locations[i];
-    const destination = locations[i + 1];
+// const client = new Client({});
 
-    const result = await fetchDistanceMatrix([origin], [destination]);
-    const distance = result.rows[0].elements[0].distance.text;
-    const time = result.rows[0].elements[0].duration.text;
+// async function getDistanceMatrix() {
+    // const origins = locations.map(location => `${location.location.lat},${location.location.lng}`);
+    // const destinations = [...origins]; // same as origins in your case
 
-    distances[`${origin} to ${destination}`] = {
-      distance,
-      time,
-    };
-  }
+//     try {
+//         const response = await client.distancematrix({
+//             params: {
+//                 origins: origins,
+//                 destinations: destinations,
+//                 key: 'AIzaSyBcWBdZDoCbrwwzekb964YE65Y-Yp3i044',
+//             },
+//             timeout: 1000, // milliseconds
+//         });
 
-  // Save results to a new JSON file
-  fs.writeFile('./distances.json', JSON.stringify(distances, null, 2), (err) => {
-    if (err) {
-      console.error('Error writing file:', err);
-    }
-  });
-}
+//         if (response.data.status === 'OK') {
+//             // console.log(`Response: ${response.data.rows}`)
+//             return response.data.rows;
+//         } else {
+//             console.log(`Error: ${response.data.error_message}`);
+//             return null;
+//         }
+//     } catch (error) {
+//         console.error(`An error occurred: ${error}`);
+//         return null;
+//     }
+// }
 
-calculateDistances();
+// getDistanceMatrix().then(distanceMatrix => {
+//     console.log(JSON.stringify(distanceMatrix, null, 2));
+// });
+
+// module.exports = { getDistanceMatrix };
+
