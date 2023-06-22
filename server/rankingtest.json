@@ -1,0 +1,33 @@
+[
+    {
+      "category": "Arts & Entertainment",
+      "category_id": "10000",
+      "rank": 6
+    },
+    {
+      "category": "Dining & Drinking",
+      "category_id": "13000",
+      "rank": 2
+    },
+    {
+      "category": "Night Clubs",
+      "category_id": "10032",
+      "rank": 5
+    },
+    {
+      "category": "Historic and Protected Sites",
+      "category_id": "16020",
+      "rank": 3
+    },
+    {
+      "category": "Landmark & Outdoors",
+      "category_id": "16000",
+      "rank": 1
+    },
+    {
+      "category": "Entertainment Events",
+      "category_id": "14003",
+      "rank": 4
+    }
+  ]
+  
