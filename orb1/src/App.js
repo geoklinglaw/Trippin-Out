@@ -8,7 +8,11 @@ import Explore from "./components/Pref_Page/Explore";
 import FoodOptions from "./components/Pref_Page/FoodOptions";
 import Lunch from "./components/Pref_Page/Meals/Lunch";
 
+
+
 function App() {
+
+
   const saveUserDataHandler = (enteredUserData) => {
     const landingData = {
       ...enteredUserData,

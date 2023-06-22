@@ -10,7 +10,7 @@ import {addDoc, collection} from "firebase/firestore"
 
 import "./Preference.css";
 
-console.log("firestore");
+console.log(firestore);
 
 
 function Preference() {
@@ -53,7 +53,7 @@ function Preference() {
       console.log(preferences);
 
       // Store preferences in Firestore
-      await firestore.collection("users").add(preferences);
+      await addDoc(collection(firestore, "users"), preferences);
       console.log("Preferences stored in Firestore");
     } catch (error) {
       console.error("Error storing preferences:", error);
