@@ -30,7 +30,7 @@ const rankRule = {
   // Obtain the list of locations based on the rank rule
   // for example: the category that is ranked 1 will have 40 locations assuming duration of travel is 5 days (5 * 8)
   async function obtainListOfLocations(data, rankRule) {
-    const destination_location = '1.3521,103.8198'; // Singapore
+    const destination_location = '37.5519,126.9918'; // Taiwan
     let locations = [];
 
     for (let i = 0; i < data.length; i++) {
@@ -58,27 +58,10 @@ const rankRule = {
     return locations;
 }
 
-// PLACES API
-const categories = [
-    '10000', // Arts & Entertainment
-    '13000', // Dining & Drinking
-    '13065', // Restaurants
-    '13032', // Cafes
-    '13040', // Desserts
-    '13002', // Bakery
-    '13062', // Night Market
-    '10032', // Night Clubs
-    '13003', // Bars
-    '10027', // Museums
-    '16020', // Historic and Protected Sites
-    '16000', // Landmark & Outdoors
-    '16032', // Parks
-    '14003', // Entertainment Events
-];
 
 sdk.auth('fsq3Nq0mkZ3S3E6kiHea7RjQXE+XsDmAnkvZKzvsJOpGcQE=');
 async function getListPerCategory(cat, cat_id, country) {
-    sdk.placeSearch({
+    return sdk.placeSearch({
         query: cat.toString(),  // keyword search
         ll: country.toString(), // the lat/long for Singapore // ideally should be airbnb location
         radius: 10000,  // search within a radius (in terms of m)
@@ -108,3 +91,21 @@ obtainListOfLocations(data, rankRule)
     .catch(error => {
         console.error(`Error: ${error}`);
     });
+
+// PLACES API
+const categories = [
+    '10000', // Arts & Entertainment
+    '13000', // Dining & Drinking
+    '13065', // Restaurants
+    '13032', // Cafes
+    '13040', // Desserts
+    '13002', // Bakery
+    '13062', // Night Market
+    '10032', // Night Clubs
+    '13003', // Bars
+    '10027', // Museums
+    '16020', // Historic and Protected Sites
+    '16000', // Landmark & Outdoors
+    '16032', // Parks
+    '14003', // Entertainment Events
+];
