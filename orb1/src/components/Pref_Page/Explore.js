@@ -23,6 +23,12 @@ function Explore() {
     return search === "";
   };
 
+  async function fetchItineraries() {
+    const response = await fetch('itinerary');
+    // waits until the request completes...
+    console.log(response);
+  }
+
   const itin = itinerary;
 
   return (

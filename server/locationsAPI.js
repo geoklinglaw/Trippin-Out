@@ -66,7 +66,7 @@ async function getListPerCategory(cat, cat_id, country) {
         ll: country.toString(), // the lat/long for Singapore // ideally should be airbnb location
         radius: 10000,  // search within a radius (in terms of m)
         categories: cat_id.toString(),
-        fields: 'fsq_id%2Cname%2Cgeocodes%2Clocation%2Cchains%2Chours%2Crating%2Cpopularity%2Cprice',
+        fields: 'fsq_id%2Cname%2Cgeocodes%2Clocation%2Cchains%2Chours%2Crating%2Cpopularity%2Cprice%2Cphotos',
         sort: 'RATING', // sort by rating
         
     })
@@ -83,7 +83,11 @@ async function getListPerCategory(cat, cat_id, country) {
 obtainListOfLocations(data, rankRule)
     .then(list => {
         console.log(list);
-        fs.writeFile('tempLocations1.json', JSON.stringify(list, null, 2), (err) => {
+        var currentTime = new Date();
+        var singaporeTimeOptions = { timeZone: 'Asia/Singapore', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' };
+        var singaporeTime = currentTime.toLocaleString('en-SG', singaporeTimeOptions).replace(/[\/\s:]/g, '');
+        var filename = 'list_of_locations_' + singaporeTime + '.json';
+        fs.writeFile(`${filename}`, JSON.stringify(list, null, 2), (err) => {
             if (err) throw err;
             console.log('Data written to file');
         });

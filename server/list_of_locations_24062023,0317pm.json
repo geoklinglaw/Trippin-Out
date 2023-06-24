@@ -1410,7 +1410,7 @@
     "hours": {
       "display": "Mon-Fri 7:00-20:00; Sat-Sun 7:00-16:00",
       "is_local_holiday": false,
-      "open_now": true,
+      "open_now": false,
       "regular": [
         {
           "close": "2000",

@@ -78,8 +78,10 @@
 // });
 
 const express = require('express');
+const cors = require('cors');
 const app = express();
-const PORT = 3000;
+const PORT = 5000;
+app.use(cors());
 
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
 
@@ -94,6 +96,6 @@ app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
 
 // initializeApp();index.js
 
-app.get('/locations', (req, res) => {
-    res.sendFile(__dirname + '/locations.json');
+app.get('/tempLocations1', (req, res) => {
+    res.sendFile(__dirname + '/tempLocations1.json');
 });
