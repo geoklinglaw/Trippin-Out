@@ -76,26 +76,62 @@
 //         }
 //     );
 // });
-
 const express = require('express');
+const admin = require('firebase-admin');
 const cors = require('cors');
+
 const app = express();
-const PORT = 5000;
+const PORT = 7000;
 app.use(cors());
 
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
 
-// // The Cloud Functions for Firebase SDK to create Cloud Functions and triggers.
-// const {logger} = require("firebase-functions");
-// const {onRequest} = require("firebase-functions/v2/https");
-// const {onDocumentCreated} = require("firebase-functions/v2/firestore");
-
-// // The Firebase Admin SDK to access Firestore.
-// const {initializeApp} = require("firebase-admin/app");
-// const {getFirestore} = require("firebase-admin/firestore");
-
-// initializeApp();index.js
-
 app.get('/tempLocations1', (req, res) => {
     res.sendFile(__dirname + '/tempLocations1.json');
 });
+
+// Firebase config
+const firebaseConfig = {
+  apiKey: "AIzaSyC_SyZezplGnJqMLfuYCjt69y_wiYZXmsU",
+  authDomain: "trippin-out-4b976.firebaseapp.com",
+  databaseURL: "https://trippin-out-4b976-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "trippin-out-4b976",
+  storageBucket: "trippin-out-4b976.appspot.com",
+  messagingSenderId: "647184431594",
+  appId: "1:647184431594:web:d69a768cadd176075c9a93",
+};
+
+// Initialize Firebase Admin SDK
+var serviceAccount = require("./trippin-out-4b976-firebase-adminsdk-tikce-71353c614d.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: "https://trippin-out-4b976-default-rtdb.asia-southeast1.firebasedatabase.app"
+});
+
+const db = admin.firestore();
+
+async function readAndWriteData() {
+  try {
+    // Write data
+    // const docRef = db.collection('users').doc('alovelace');
+    // await docRef.set({
+    //   first: 'Ada',
+    //   last: 'Lovelace',
+    //   born: 1815
+    // });
+
+    // Read data
+    const snapshot = await db.collection('users').get();
+    snapshot.forEach((doc) => {
+      console.log(doc.id, '=>', doc.data());
+    });
+  } catch (error) {
+    console.error('Error reading or writing data:', error);
+  }
+}
+
+// Call the async function to read and write data
+readAndWriteData();
+
+
