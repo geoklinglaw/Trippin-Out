@@ -1,0 +1,6132 @@
+[
+  {
+    "fsq_id": "4f15780ce4b07e9ece62b1f2",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 1.283351,
+        "longitude": 103.852749
+      },
+      "main": {
+        "latitude": 1.28326,
+        "longitude": 103.852991
+      },
+      "roof": {
+        "latitude": 1.28326,
+        "longitude": 103.852991
+      }
+    },
+    "hours": {
+      "display": "Mon-Sat 11:30-15:00, 18:00-23:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "1500",
+          "day": 1,
+          "open": "1130"
+        },
+        {
+          "close": "2300",
+          "day": 1,
+          "open": "1800"
+        },
+        {
+          "close": "1500",
+          "day": 2,
+          "open": "1130"
+        },
+        {
+          "close": "2300",
+          "day": 2,
+          "open": "1800"
+        },
+        {
+          "close": "1500",
+          "day": 3,
+          "open": "1130"
+        },
+        {
+          "close": "2300",
+          "day": 3,
+          "open": "1800"
+        },
+        {
+          "close": "1500",
+          "day": 4,
+          "open": "1130"
+        },
+        {
+          "close": "2300",
+          "day": 4,
+          "open": "1800"
+        },
+        {
+          "close": "1500",
+          "day": 5,
+          "open": "1130"
+        },
+        {
+          "close": "2300",
+          "day": 5,
+          "open": "1800"
+        },
+        {
+          "close": "1500",
+          "day": 6,
+          "open": "1130"
+        },
+        {
+          "close": "2300",
+          "day": 6,
+          "open": "1800"
+        }
+      ]
+    },
+    "location": {
+      "address": "OUE Tower, 60 Collyer Quay",
+      "address_extended": "Level 4 & 5",
+      "country": "SG",
+      "cross_street": "60 Collyer Quay",
+      "formatted_address": "OUE Tower, 60 Collyer Quay (60 Collyer Quay), 049322",
+      "locality": "Singapore",
+      "post_town": "Marina Area",
+      "postcode": "049322"
+    },
+    "name": "Tong Le Private Dining",
+    "photos": [
+      {
+        "id": "62fb77a2ad099b0d52d5610c",
+        "created_at": "2022-08-16T10:55:30.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/67372622_FIzTiBq_rmr2wqiFsBCN0tf_JYCEzRf3zES1I9KTk18.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "62ba36fb882b7f482194530e",
+        "created_at": "2022-06-27T23:02:19.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/3296559_jmpnOzWxZXG3zd9dRJjxXLwT17AQuRChn6pGgfyhuTo.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "62ba36fb6862d31b1fe34140",
+        "created_at": "2022-06-27T23:02:19.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/3296559_6d1GTLRs8NS_zI0Nmj02Fr-419biunHZonxz-F4oAC8.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "62ba36fb0ce1e74e5bd6e49b",
+        "created_at": "2022-06-27T23:02:19.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/3296559_ODj_3a0T7gmwIntbNfiOqh6t90jU7MilwQ9OSx8WVkU.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "61ceb656e0fdd443268f7c38",
+        "created_at": "2021-12-31T07:50:46.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/9036291__R5jfZX2r0sJHwome8BqzknDxdWWzIXzjhB4Y0Hv8Dk.jpg",
+        "width": 1080,
+        "height": 1440
+      }
+    ],
+    "popularity": 0.9795632529189614,
+    "price": 1,
+    "rating": 8.1
+  },
+  {
+    "fsq_id": "5040a505e4b0068b1feba467",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.337857,
+        "longitude": 103.793548
+      },
+      "roof": {
+        "latitude": 1.337857,
+        "longitude": 103.793548
+      }
+    },
+    "hours": {
+      "display": "Open Daily 12:00-14:30, 18:00-22:30",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "1430",
+          "day": 1,
+          "open": "1200"
+        },
+        {
+          "close": "2230",
+          "day": 1,
+          "open": "1800"
+        },
+        {
+          "close": "1430",
+          "day": 2,
+          "open": "1200"
+        },
+        {
+          "close": "2230",
+          "day": 2,
+          "open": "1800"
+        },
+        {
+          "close": "1430",
+          "day": 3,
+          "open": "1200"
+        },
+        {
+          "close": "2230",
+          "day": 3,
+          "open": "1800"
+        },
+        {
+          "close": "1430",
+          "day": 4,
+          "open": "1200"
+        },
+        {
+          "close": "2230",
+          "day": 4,
+          "open": "1800"
+        },
+        {
+          "close": "1430",
+          "day": 5,
+          "open": "1200"
+        },
+        {
+          "close": "2230",
+          "day": 5,
+          "open": "1800"
+        },
+        {
+          "close": "1430",
+          "day": 6,
+          "open": "1200"
+        },
+        {
+          "close": "2230",
+          "day": 6,
+          "open": "1800"
+        },
+        {
+          "close": "1430",
+          "day": 7,
+          "open": "1200"
+        },
+        {
+          "close": "2230",
+          "day": 7,
+          "open": "1800"
+        }
+      ]
+    },
+    "location": {
+      "address": "The Grandstand, 200 Turf Club Rd",
+      "address_extended": "#01-27",
+      "country": "SG",
+      "cross_street": "200 Turf Club Rd.",
+      "formatted_address": "The Grandstand, 200 Turf Club Rd (200 Turf Club Rd.), 287994",
+      "locality": "Singapore",
+      "post_town": "Newton",
+      "postcode": "287994"
+    },
+    "name": "Kuro Kin Japanese Dining",
+    "photos": [
+      {
+        "id": "59a8e8ad35d3fc7c928a48ce",
+        "created_at": "2017-09-01T04:57:17.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/27405511_5UqlT0M8UXN03O8VZ__DoFcmz3x7lTwZ5g2I-rRf_gc.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "59a8e8abfd9d73363044cfbf",
+        "created_at": "2017-09-01T04:57:15.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/27405511_ue6mgYWtEi5_j8QuF0_n1rJGwpdahfUCfRpAeJKnmoI.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "59a8e8a981348858ce3f9806",
+        "created_at": "2017-09-01T04:57:13.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/27405511_RIiz512kft9YKsx7NzD6tPAXW-GhKCfHKiOsEcrc-DU.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "597d82c846e1b64c188e0bba",
+        "created_at": "2017-07-30T06:55:04.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4822734_OgGzqLvbuxzXCRItWs7ghCLba9skKG62ev8cEdi4LO4.jpg",
+        "width": 1440,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "597d82c6f79faa2781f77dd6",
+        "created_at": "2017-07-30T06:55:02.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4822734_Zvr9vxUcRl69SMoYtYdpNQ0_AkccpKzLoSybGgVUIyI.jpg",
+        "width": 1440,
+        "height": 1440
+      }
+    ],
+    "popularity": 0.676388090514071,
+    "price": 2,
+    "rating": 7.9
+  },
+  {
+    "fsq_id": "54119564498e4371f8dce458",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 1.282914,
+        "longitude": 103.848964
+      },
+      "main": {
+        "latitude": 1.282978,
+        "longitude": 103.848859
+      },
+      "roof": {
+        "latitude": 1.282978,
+        "longitude": 103.848859
+      }
+    },
+    "hours": {
+      "display": "Open Daily 7:00-10:00, 11:30-14:30, 18:00-22:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "1000",
+          "day": 1,
+          "open": "0700"
+        },
+        {
+          "close": "1430",
+          "day": 1,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 1,
+          "open": "1800"
+        },
+        {
+          "close": "1000",
+          "day": 2,
+          "open": "0700"
+        },
+        {
+          "close": "1430",
+          "day": 2,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 2,
+          "open": "1800"
+        },
+        {
+          "close": "1000",
+          "day": 3,
+          "open": "0700"
+        },
+        {
+          "close": "1430",
+          "day": 3,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 3,
+          "open": "1800"
+        },
+        {
+          "close": "1000",
+          "day": 4,
+          "open": "0700"
+        },
+        {
+          "close": "1430",
+          "day": 4,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 4,
+          "open": "1800"
+        },
+        {
+          "close": "1000",
+          "day": 5,
+          "open": "0700"
+        },
+        {
+          "close": "1430",
+          "day": 5,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 5,
+          "open": "1800"
+        },
+        {
+          "close": "1000",
+          "day": 6,
+          "open": "0700"
+        },
+        {
+          "close": "1430",
+          "day": 6,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 6,
+          "open": "1800"
+        },
+        {
+          "close": "1000",
+          "day": 7,
+          "open": "0700"
+        },
+        {
+          "close": "1430",
+          "day": 7,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 7,
+          "open": "1800"
+        }
+      ]
+    },
+    "location": {
+      "address": "76 Telok Ayer St",
+      "address_extended": "#01-02 Far East Square",
+      "country": "SG",
+      "cross_street": "",
+      "formatted_address": "76 Telok Ayer St, 048464",
+      "locality": "Singapore",
+      "post_town": "Marina Area",
+      "postcode": "048464"
+    },
+    "name": "Jin Fine Dining",
+    "photos": [
+      {
+        "id": "5f1d68e535f599584c3aeecf",
+        "created_at": "2020-07-26T11:28:37.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/20247720_RfBqoHKbiEjr3SA0Bej0-2rym4yJpG7_b0PV09ZiVYI.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "5ef33c28bdbe3f0007112d39",
+        "created_at": "2020-06-24T11:42:32.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/20247720_vCec0BUTtxzF7X6L4tcm2F8dNO447yB19ZI2xtB1J_Q.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "5cbc4b9c3b830700398901f2",
+        "created_at": "2019-04-21T10:53:16.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/37391544_AdDwVn72gYcUBTEhbgzfWt6s-1EPQAe53ucRL-qFads.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5bf9315ed48ec1002c79123f",
+        "created_at": "2018-11-24T11:09:18.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/9231487_jqJpXwzshgsEuT0bqgiqFj69ZTiYE6_dl3saBxKshiI.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5bf9314f65211f002c92fbc8",
+        "created_at": "2018-11-24T11:09:03.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/9231487_dy5t0tUaSTvMcQ49niL_JASZPqb055D3uAZehiiL2u8.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      }
+    ],
+    "popularity": 0.9488141816091528,
+    "price": 2,
+    "rating": 7.7
+  },
+  {
+    "fsq_id": "5388afe7498e0c921f99f2af",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.295451,
+        "longitude": 103.858373
+      },
+      "roof": {
+        "latitude": 1.295451,
+        "longitude": 103.858373
+      }
+    },
+    "hours": {
+      "display": "Mon-Fri 11:30-15:00, 17:00-22:00; Sat-Sun 11:30-22:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "1500",
+          "day": 1,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 1,
+          "open": "1700"
+        },
+        {
+          "close": "1500",
+          "day": 2,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 2,
+          "open": "1700"
+        },
+        {
+          "close": "1500",
+          "day": 3,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 3,
+          "open": "1700"
+        },
+        {
+          "close": "1500",
+          "day": 4,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 4,
+          "open": "1700"
+        },
+        {
+          "close": "1500",
+          "day": 5,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 5,
+          "open": "1700"
+        },
+        {
+          "close": "2200",
+          "day": 6,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 7,
+          "open": "1130"
+        }
+      ]
+    },
+    "location": {
+      "address": "Suntec City Mall, 3 Temasek Boulevard",
+      "address_extended": "#02-391/392 Suntec City Mall",
+      "country": "SG",
+      "cross_street": "3 Temasek Blvd",
+      "formatted_address": "Suntec City Mall, 3 Temasek Boulevard (3 Temasek Blvd), 038983",
+      "locality": "Singapore",
+      "post_town": "Marina Area",
+      "postcode": "038983"
+    },
+    "name": "Ramen Dining Keisuke Tokyo",
+    "photos": [
+      {
+        "id": "6159485af06ed12e6c799294",
+        "created_at": "2021-10-03T06:06:18.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/123914889_n8cBbrcQicRaTagqcE08eTevGqJl9hQRtPd2-Psq9Hg.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6121fc7ef2487555e1be1fcf",
+        "created_at": "2021-08-22T07:27:58.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/436796_7WwqFth5fpw8UMGYIBkEtZtCAv51YR8QqbUL7nk0RjA.jpg",
+        "width": 1544,
+        "height": 1440
+      },
+      {
+        "id": "6121fc7d2377f4652823b400",
+        "created_at": "2021-08-22T07:27:57.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/436796_JeiD0fkFpPDAtBtdEBI8INHG_tOvZZKK5-5RWYNjCy4.jpg",
+        "width": 1920,
+        "height": 1241
+      },
+      {
+        "id": "5f7031f73240057304992230",
+        "created_at": "2020-09-27T06:32:23.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/58906077_evJSM5FDByCrVjCOB4C7M5vk0i7oL-IWbRsBTw3zgOs.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "5f7031f586a6aa1b1d2911d9",
+        "created_at": "2020-09-27T06:32:21.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/58906077_tBrAMcag2lfXrpKMvHAR3PBeyE-oAepXWYDwil6k8VU.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9982520227212323,
+    "rating": 7.5
+  },
+  {
+    "fsq_id": "4b911562f964a520eca233e3",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.304646,
+        "longitude": 103.830668
+      },
+      "roof": {
+        "latitude": 1.304646,
+        "longitude": 103.830668
+      }
+    },
+    "hours": {
+      "display": "Mon-Thu 12:00-23:00; Fri-Sat 12:00-23:30; Sun 12:00-23:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2300",
+          "day": 1,
+          "open": "1200"
+        },
+        {
+          "close": "2300",
+          "day": 2,
+          "open": "1200"
+        },
+        {
+          "close": "2300",
+          "day": 3,
+          "open": "1200"
+        },
+        {
+          "close": "2300",
+          "day": 4,
+          "open": "1200"
+        },
+        {
+          "close": "2330",
+          "day": 5,
+          "open": "1200"
+        },
+        {
+          "close": "2330",
+          "day": 6,
+          "open": "1200"
+        },
+        {
+          "close": "2300",
+          "day": 7,
+          "open": "1200"
+        }
+      ]
+    },
+    "location": {
+      "address": "501 Orchard Rd",
+      "address_extended": "#03-15 Wheelock Place",
+      "country": "SG",
+      "cross_street": "501 Orchard Rd.",
+      "formatted_address": "501 Orchard Rd (501 Orchard Rd.), 238880",
+      "locality": "Singapore",
+      "post_town": "Orchard",
+      "postcode": "238880"
+    },
+    "name": "Sun With Moon Japanese Dining & Cafe",
+    "photos": [
+      {
+        "id": "644b48bf8b61fe701a428999",
+        "created_at": "2023-04-28T04:17:03.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/147072834_ReTbqM9lgmkj2UgUDJaHFdEntexQj4C_aYLrFPVDHt8.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "644b48981d2b707d3b3d0604",
+        "created_at": "2023-04-28T04:16:24.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/147072834_-1xXvwl5gZTfHbjYkCkupyW-hJgToMSMmITZQcPWxxg.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "64378819fb758d080369553f",
+        "created_at": "2023-04-13T04:42:01.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/509100016_CZJWCU3OtSM88DTTteNSnvRet_OullYwHsthBg0h_TI.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "643262e6129fba256239ddc7",
+        "created_at": "2023-04-09T07:01:58.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/509100016_ROMnRvPoDB_BLdy4QvemcUjGhWEYf-H3ohcV-h5LkO4.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6432484cb627d134ad6266a2",
+        "created_at": "2023-04-09T05:08:28.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/509100016_Aca2m83TFM4IHxvQbUUU8rkoCqcJ1VTMq6YzCo7mXCA.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9974114113000426,
+    "price": 2,
+    "rating": 7.1
+  },
+  {
+    "fsq_id": "517286c2e4b01640fba18c02",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.300362,
+        "longitude": 103.851116
+      },
+      "roof": {
+        "latitude": 1.300362,
+        "longitude": 103.851116
+      }
+    },
+    "hours": {
+      "display": "Open Daily 11:30-15:00, 17:30-22:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "1500",
+          "day": 1,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 1,
+          "open": "1730"
+        },
+        {
+          "close": "1500",
+          "day": 2,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 2,
+          "open": "1730"
+        },
+        {
+          "close": "1500",
+          "day": 3,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 3,
+          "open": "1730"
+        },
+        {
+          "close": "1500",
+          "day": 4,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 4,
+          "open": "1730"
+        },
+        {
+          "close": "1500",
+          "day": 5,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 5,
+          "open": "1730"
+        },
+        {
+          "close": "1500",
+          "day": 6,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 6,
+          "open": "1730"
+        },
+        {
+          "close": "1500",
+          "day": 7,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 7,
+          "open": "1730"
+        }
+      ]
+    },
+    "location": {
+      "address": "91 Bencoolen St",
+      "address_extended": "#01-50 Sunshine Plaza",
+      "country": "SG",
+      "cross_street": "91 Bencoolen St",
+      "formatted_address": "91 Bencoolen St (91 Bencoolen St), 189652",
+      "locality": "Singapore",
+      "post_town": "Beach Road",
+      "postcode": "189652"
+    },
+    "name": "Teng Bespoke Japanese Vegetarian Dining",
+    "photos": [
+      {
+        "id": "61f9294263f5ba30cd49e629",
+        "created_at": "2022-02-01T12:36:18.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/64265395_mPdyrrLj5zcLX0GjAGaCaEJpDjRXYsj8oe1RS-06dBU.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "61f929329daab04bf67113a3",
+        "created_at": "2022-02-01T12:36:02.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/64265395_9ewamDl5sNuel9MuZtcbrTETWElxom8MXCJxIr93AMg.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "61f9292532f2f20e9d81b984",
+        "created_at": "2022-02-01T12:35:49.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/64265395_I701TTwraf8fNJe_Dhotz8WBGsruriDtpUs0zPXOH7k.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "61f928fa8ded3f4fd08c034b",
+        "created_at": "2022-02-01T12:35:06.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/64265395_9GCIOQROUBd6By8J5wY8L-4RXByWWy9HVuV9kOB1ILs.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "619a04ab0ffa9178d5e5a29c",
+        "created_at": "2021-11-21T08:34:51.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/37296990_xyVD1JPd6B-9ROt-MbdaEa3FhGwyNrsRARtWFnsWHsY.jpg",
+        "width": 1440,
+        "height": 1032
+      }
+    ],
+    "popularity": 0.9412486788184464,
+    "price": 2,
+    "rating": 7.1
+  },
+  {
+    "fsq_id": "54294005498e2d89dffc36af",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.294883,
+        "longitude": 103.85244
+      },
+      "roof": {
+        "latitude": 1.294883,
+        "longitude": 103.85244
+      }
+    },
+    "hours": {
+      "display": "Mon-Fri 8:00-16:00; Sat 8:00-14:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "1600",
+          "day": 1,
+          "open": "0800"
+        },
+        {
+          "close": "1600",
+          "day": 2,
+          "open": "0800"
+        },
+        {
+          "close": "1600",
+          "day": 3,
+          "open": "0800"
+        },
+        {
+          "close": "1600",
+          "day": 4,
+          "open": "0800"
+        },
+        {
+          "close": "1600",
+          "day": 5,
+          "open": "0800"
+        },
+        {
+          "close": "1400",
+          "day": 6,
+          "open": "0800"
+        }
+      ]
+    },
+    "location": {
+      "address": "Chijmes, 30 Victoria St",
+      "address_extended": "#01-19",
+      "country": "SG",
+      "cross_street": "#01-19",
+      "formatted_address": "Chijmes, 30 Victoria St (#01-19), 187996",
+      "locality": "Singapore",
+      "post_town": "Beach Road",
+      "postcode": "187996"
+    },
+    "name": "Oyster Bar & Wine Dining Wharf",
+    "photos": [
+      {
+        "id": "5a2138829411f22a371a4580",
+        "created_at": "2017-12-01T11:09:54.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/58567935_5Iqun0KZ4UqSxhB5Oqk5Hrotj9idxtrpX-SOcLJEGv4.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "59afe7b84186861637372781",
+        "created_at": "2017-09-06T12:19:04.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/49123207_S-Vh1wEmdPRXm5lcONiiffC3rZmVKRGxmAkfEHLgmCA.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "59afe7b7d41bb709d181eb2c",
+        "created_at": "2017-09-06T12:19:03.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/49123207_o-abZkpVg08J2vS014shHFjge5Zim0ETUCUWdmZw8mY.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "59afda5f4186861637214319",
+        "created_at": "2017-09-06T11:22:07.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/49123207_Bs0e7K8w8ckApCn9dQrIAncHB_0CcavjFt2tkqIHLoc.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "59afda5db3c9617181405578",
+        "created_at": "2017-09-06T11:22:05.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/49123207_o-abZkpVg08J2vS014shHFjge5Zim0ETUCUWdmZw8mY.jpg",
+        "width": 1920,
+        "height": 1440
+      }
+    ],
+    "popularity": 0.26516345565465704,
+    "price": 2,
+    "rating": 7
+  },
+  {
+    "fsq_id": "57d9315c498efa7a6b29706d",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.300267,
+        "longitude": 103.837409
+      },
+      "roof": {
+        "latitude": 1.300267,
+        "longitude": 103.837409
+      }
+    },
+    "hours": {
+      "display": "Mon-Fri 11:30-15:00, 17:30-22:30; Sat-Sun 11:30-22:30",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "1500",
+          "day": 1,
+          "open": "1130"
+        },
+        {
+          "close": "2230",
+          "day": 1,
+          "open": "1730"
+        },
+        {
+          "close": "1500",
+          "day": 2,
+          "open": "1130"
+        },
+        {
+          "close": "2230",
+          "day": 2,
+          "open": "1730"
+        },
+        {
+          "close": "1500",
+          "day": 3,
+          "open": "1130"
+        },
+        {
+          "close": "2230",
+          "day": 3,
+          "open": "1730"
+        },
+        {
+          "close": "1500",
+          "day": 4,
+          "open": "1130"
+        },
+        {
+          "close": "2230",
+          "day": 4,
+          "open": "1730"
+        },
+        {
+          "close": "1500",
+          "day": 5,
+          "open": "1130"
+        },
+        {
+          "close": "2230",
+          "day": 5,
+          "open": "1730"
+        },
+        {
+          "close": "2230",
+          "day": 6,
+          "open": "1130"
+        },
+        {
+          "close": "2230",
+          "day": 7,
+          "open": "1130"
+        }
+      ]
+    },
+    "location": {
+      "address": "111 Somerset Rd",
+      "address_extended": "#02-05/06",
+      "country": "SG",
+      "cross_street": "176 Orchard Rd",
+      "formatted_address": "111 Somerset Rd (176 Orchard Rd), 238164",
+      "locality": "Singapore",
+      "post_town": "Orchard",
+      "postcode": "238164"
+    },
+    "name": "Kyoaji Dining",
+    "photos": [
+      {
+        "id": "5ad0bb9cb9ac3842c14f012f",
+        "created_at": "2018-04-13T14:15:56.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/929418_J1g0PO-_nWWY2Q-IllZyVM9Rhc8vRtTBbojuKRjXc0Y.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5ac6feb54186861cd4041492",
+        "created_at": "2018-04-06T04:59:33.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1698765_0cg8M9SsSlXrOKjbPyIRu0OvHLlrDZOQ85pnlqRT2CU.jpg",
+        "width": 1440,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5a58d062ccad6b5a4fac8667",
+        "created_at": "2018-01-12T15:12:34.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/5120752_S5DWvJGp3_JLFHne7t27mQJXIRCeJpgPWYNvCvn3B74.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "5a58d0571ffe97253fd334dd",
+        "created_at": "2018-01-12T15:12:23.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/5120752_74EJjYLOu5aY_H841bT9hMbxI3iTtsTu1ymeqz61-nM.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "59c25d1575a6ea6fba44f1f2",
+        "created_at": "2017-09-20T12:20:37.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/44656752_PF6E2gDZsgwkR7P5NGEZDpnSIy6Tk7Svb-_31dfzclM.jpg",
+        "width": 4032,
+        "height": 3024
+      }
+    ],
+    "popularity": 0.02280776576609987,
+    "price": 2,
+    "rating": 6.9
+  },
+  {
+    "fsq_id": "52f72dfe498ee5ec7bc9a6bb",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 1.312763,
+        "longitude": 103.859778
+      },
+      "main": {
+        "latitude": 1.312806,
+        "longitude": 103.859579
+      },
+      "roof": {
+        "latitude": 1.312806,
+        "longitude": 103.859579
+      }
+    },
+    "hours": {
+      "display": "Open Daily 11:30-14:30, 18:00-22:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "1430",
+          "day": 1,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 1,
+          "open": "1800"
+        },
+        {
+          "close": "1430",
+          "day": 2,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 2,
+          "open": "1800"
+        },
+        {
+          "close": "1430",
+          "day": 3,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 3,
+          "open": "1800"
+        },
+        {
+          "close": "1430",
+          "day": 4,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 4,
+          "open": "1800"
+        },
+        {
+          "close": "1430",
+          "day": 5,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 5,
+          "open": "1800"
+        },
+        {
+          "close": "1430",
+          "day": 6,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 6,
+          "open": "1800"
+        },
+        {
+          "close": "1430",
+          "day": 7,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 7,
+          "open": "1800"
+        }
+      ]
+    },
+    "location": {
+      "address": "363 Jln Besar",
+      "country": "SG",
+      "cross_street": "",
+      "formatted_address": "363 Jln Besar, 208994",
+      "locality": "Singapore",
+      "post_town": "Little India",
+      "postcode": "208994"
+    },
+    "name": "Ch叉r Casual Dining",
+    "photos": [
+      {
+        "id": "642bfe48315440596af1dedb",
+        "created_at": "2023-04-04T10:39:04.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/30599435_Jr8w7KCCrih6Ht5LF1Cyaf3PnGF7ES5ELPfMFw6xPt0.jpg",
+        "width": 1440,
+        "height": 1800
+      },
+      {
+        "id": "642bfe3e7429ad3cddb14c2a",
+        "created_at": "2023-04-04T10:38:54.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/30599435_WvXRdBaZ7xzxUTXfDA25sGKpIA8c3MvEwNVrlW59NSQ.jpg",
+        "width": 1440,
+        "height": 1800
+      },
+      {
+        "id": "642bfe1bb6893e7e81c796b5",
+        "created_at": "2023-04-04T10:38:19.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/30599435_vYL8BHQl9uXiOcGXD3ajjCp2beBtUmVky80Nvk9YqVo.jpg",
+        "width": 1440,
+        "height": 1800
+      },
+      {
+        "id": "642bfe13f202da5451334866",
+        "created_at": "2023-04-04T10:38:11.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/30599435_eHH4ynWvDDPV2MJgJQxpsBaINcrqTpfDyEX1BDhH-WE.jpg",
+        "width": 1440,
+        "height": 1800
+      },
+      {
+        "id": "642bfe0b29605753e1f995a3",
+        "created_at": "2023-04-04T10:38:03.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/30599435_6X2rBfUVdQDsJJmGiPUTg4wfXIaGd-YvZf6R7UyGfRQ.jpg",
+        "width": 1440,
+        "height": 1800
+      }
+    ],
+    "popularity": 0.9437223015446234,
+    "price": 2,
+    "rating": 6.7
+  },
+  {
+    "fsq_id": "4c1da4c9b306c928d4fe65b7",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.293308,
+        "longitude": 103.831856
+      },
+      "roof": {
+        "latitude": 1.293308,
+        "longitude": 103.831856
+      }
+    },
+    "hours": {
+      "display": "Open Daily 11:30-14:30, 18:00-22:30",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "1430",
+          "day": 1,
+          "open": "1130"
+        },
+        {
+          "close": "2230",
+          "day": 1,
+          "open": "1800"
+        },
+        {
+          "close": "1430",
+          "day": 2,
+          "open": "1130"
+        },
+        {
+          "close": "2230",
+          "day": 2,
+          "open": "1800"
+        },
+        {
+          "close": "1430",
+          "day": 3,
+          "open": "1130"
+        },
+        {
+          "close": "2230",
+          "day": 3,
+          "open": "1800"
+        },
+        {
+          "close": "1430",
+          "day": 4,
+          "open": "1130"
+        },
+        {
+          "close": "2230",
+          "day": 4,
+          "open": "1800"
+        },
+        {
+          "close": "1430",
+          "day": 5,
+          "open": "1130"
+        },
+        {
+          "close": "2230",
+          "day": 5,
+          "open": "1800"
+        },
+        {
+          "close": "1430",
+          "day": 6,
+          "open": "1130"
+        },
+        {
+          "close": "2230",
+          "day": 6,
+          "open": "1800"
+        },
+        {
+          "close": "1430",
+          "day": 7,
+          "open": "1130"
+        },
+        {
+          "close": "2230",
+          "day": 7,
+          "open": "1800"
+        }
+      ]
+    },
+    "location": {
+      "address": "1 Kim Seng Promenade",
+      "address_extended": "#01-28 Great World City",
+      "country": "SG",
+      "cross_street": "1 Kim Seng Promenade",
+      "formatted_address": "1 Kim Seng Promenade (1 Kim Seng Promenade), 237994",
+      "locality": "Singapore",
+      "post_town": "Orchard",
+      "postcode": "237994"
+    },
+    "name": "Kuriya Dining",
+    "photos": [
+      {
+        "id": "63b42a1e605f81515fef4bd2",
+        "created_at": "2023-01-03T13:14:06.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/433493_xa4PUCCbPA9BpgNaFJpBJuuiC7KGEvkgxQIX8CGzp1k.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "634cf07d6396bd7725a72a6c",
+        "created_at": "2022-10-17T06:04:45.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/87917157_k0JOH4WZaWa17Vo9peIvR4REvbKr06jWJR815tNwhVo.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6043472f883f375ba57d1b32",
+        "created_at": "2021-03-06T09:11:11.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/231366_hsEKfnKY9U0l-2BiNrhwBnq-LJdudybY7lAKfpmP6-0.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "60434721ac377f66a2f3219f",
+        "created_at": "2021-03-06T09:10:57.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/231366_UbkkUpoNvEucPkcqwGIqJRbtOSBUBqDXniW2KkFehOQ.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "604347204ec321660cb535a7",
+        "created_at": "2021-03-06T09:10:56.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/231366_zal6CEGm-iIUMlvL2bRWRkHSvIxdNpVNATsR2QNCBIA.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.989095539196598,
+    "price": 2,
+    "rating": 6.3
+  },
+  {
+    "fsq_id": "592a8cdd9b047373f119a291",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 1.285732,
+        "longitude": 103.834061
+      },
+      "main": {
+        "latitude": 1.285649,
+        "longitude": 103.834131
+      },
+      "roof": {
+        "latitude": 1.285649,
+        "longitude": 103.834131
+      }
+    },
+    "hours": {
+      "display": "Mon-Thu 17:00-23:00; Fri-Sun 11:30-14:30, 17:00-23:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2300",
+          "day": 1,
+          "open": "1700"
+        },
+        {
+          "close": "2300",
+          "day": 2,
+          "open": "1700"
+        },
+        {
+          "close": "2300",
+          "day": 3,
+          "open": "1700"
+        },
+        {
+          "close": "2300",
+          "day": 4,
+          "open": "1700"
+        },
+        {
+          "close": "1430",
+          "day": 5,
+          "open": "1130"
+        },
+        {
+          "close": "2300",
+          "day": 5,
+          "open": "1700"
+        },
+        {
+          "close": "1430",
+          "day": 6,
+          "open": "1130"
+        },
+        {
+          "close": "2300",
+          "day": 6,
+          "open": "1700"
+        },
+        {
+          "close": "1430",
+          "day": 7,
+          "open": "1130"
+        },
+        {
+          "close": "2300",
+          "day": 7,
+          "open": "1700"
+        }
+      ]
+    },
+    "location": {
+      "address": "38A Martin Rd",
+      "address_extended": "#01-01",
+      "country": "SG",
+      "cross_street": "",
+      "formatted_address": "38A Martin Rd, 239072",
+      "locality": "Singapore",
+      "post_town": "Orchard",
+      "postcode": "239072"
+    },
+    "name": "Bakalaki Greek Taverna",
+    "photos": [
+      {
+        "id": "64553a9dbd35cc784db19fbe",
+        "created_at": "2023-05-05T17:19:25.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4880533_hoRiByPezkY6IssXA6vy6jf7vgmzl0lJzOkPbhgk6IY.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "63f2fa7f4eac6901f67cfe77",
+        "created_at": "2023-02-20T04:43:43.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/87917157_aOO23uzHf3ITX5XoQaqlM3_dTr3EoZdDdjJc4Lbppzg.jpg",
+        "width": 1363,
+        "height": 1919
+      },
+      {
+        "id": "63d9ed4f3ea18d040fb84d09",
+        "created_at": "2023-02-01T04:40:47.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/363098_MpAbzZybOpVBOV0E8PGFWc5FjZzDJTSaA8NWZDybXbk.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "63d9ed4f5ed0d826672cd309",
+        "created_at": "2023-02-01T04:40:47.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/363098_LY1UxlXNSma21dFP6Ga0OBzfw5zwbNkI3HPBaGubVGI.jpg",
+        "width": 1920,
+        "height": 1440
+      }
+    ],
+    "popularity": 0.9958216667593811,
+    "price": 2,
+    "rating": 9.1
+  },
+  {
+    "fsq_id": "4ca5f522d971b1f72a35fbe0",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.303452,
+        "longitude": 103.810377
+      },
+      "roof": {
+        "latitude": 1.303452,
+        "longitude": 103.810377
+      }
+    },
+    "hours": {
+      "display": "Open Daily 12:00-14:30",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "1430",
+          "day": 1,
+          "open": "1200"
+        },
+        {
+          "close": "1430",
+          "day": 2,
+          "open": "1200"
+        },
+        {
+          "close": "1430",
+          "day": 3,
+          "open": "1200"
+        },
+        {
+          "close": "1430",
+          "day": 4,
+          "open": "1200"
+        },
+        {
+          "close": "1430",
+          "day": 5,
+          "open": "1200"
+        },
+        {
+          "close": "1430",
+          "day": 6,
+          "open": "1200"
+        },
+        {
+          "close": "1430",
+          "day": 7,
+          "open": "1200"
+        }
+      ]
+    },
+    "location": {
+      "address": "10 Dempsey Rd",
+      "address_extended": "#01-21",
+      "country": "SG",
+      "cross_street": "10 Dempsey Rd",
+      "formatted_address": "10 Dempsey Rd (10 Dempsey Rd), 247700",
+      "locality": "Singapore",
+      "post_town": "Tanglin",
+      "postcode": "247700"
+    },
+    "name": "Blu Kouzina",
+    "photos": [
+      {
+        "id": "64845bf954f0270129a50dd8",
+        "created_at": "2023-06-10T11:18:17.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/93120299_xvrArMs1MLaWbt8EhCdY8RmH619hKmOJ1cjv5ll0sRY.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "643f8561572e3611bc8113be",
+        "created_at": "2023-04-19T06:08:33.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/234324_BmMfUm4wsL4xa6XbrNot9GVdqfDu6o_cLF7FPk82z2M.jpg",
+        "width": 1279,
+        "height": 1920
+      },
+      {
+        "id": "63f23dbbd8d011760a8dd058",
+        "created_at": "2023-02-19T15:18:19.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1467747__uvZzIpuiP64vY1KTDXtKoWW-BUsGoTVQQsuimVyee8.jpg",
+        "width": 1031,
+        "height": 1920
+      },
+      {
+        "id": "63d74a6ba654127763614f87",
+        "created_at": "2023-01-30T04:41:15.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1363045856_-mSBwL0BIPxQOluc1soGPbj2L6PfXDPNQxBYIKdZG8I.jpg",
+        "width": 1080,
+        "height": 1440
+      },
+      {
+        "id": "63b64e5ff1b25f4d1a457875",
+        "created_at": "2023-01-05T04:13:19.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/2540105_wcm6PantD4iH2q1cDdyI59ey0_31Md_ex20jUIFCJTI.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9893922255805473,
+    "price": 2,
+    "rating": 9
+  },
+  {
+    "fsq_id": "55f9641d498eaceb29f0e5bb",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.29068,
+        "longitude": 103.860091
+      },
+      "roof": {
+        "latitude": 1.29068,
+        "longitude": 103.860091
+      }
+    },
+    "hours": {
+      "display": "Open Daily 6:30-10:30, 12:00-14:30, 18:30-22:30",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "1030",
+          "day": 1,
+          "open": "0630"
+        },
+        {
+          "close": "1430",
+          "day": 1,
+          "open": "1200"
+        },
+        {
+          "close": "2230",
+          "day": 1,
+          "open": "1830"
+        },
+        {
+          "close": "1030",
+          "day": 2,
+          "open": "0630"
+        },
+        {
+          "close": "1430",
+          "day": 2,
+          "open": "1200"
+        },
+        {
+          "close": "2230",
+          "day": 2,
+          "open": "1830"
+        },
+        {
+          "close": "1030",
+          "day": 3,
+          "open": "0630"
+        },
+        {
+          "close": "1430",
+          "day": 3,
+          "open": "1200"
+        },
+        {
+          "close": "2230",
+          "day": 3,
+          "open": "1830"
+        },
+        {
+          "close": "1030",
+          "day": 4,
+          "open": "0630"
+        },
+        {
+          "close": "1430",
+          "day": 4,
+          "open": "1200"
+        },
+        {
+          "close": "2230",
+          "day": 4,
+          "open": "1830"
+        },
+        {
+          "close": "1030",
+          "day": 5,
+          "open": "0630"
+        },
+        {
+          "close": "1430",
+          "day": 5,
+          "open": "1200"
+        },
+        {
+          "close": "2230",
+          "day": 5,
+          "open": "1830"
+        },
+        {
+          "close": "1030",
+          "day": 6,
+          "open": "0630"
+        },
+        {
+          "close": "1430",
+          "day": 6,
+          "open": "1200"
+        },
+        {
+          "close": "2230",
+          "day": 6,
+          "open": "1830"
+        },
+        {
+          "close": "1030",
+          "day": 7,
+          "open": "0630"
+        },
+        {
+          "close": "1430",
+          "day": 7,
+          "open": "1200"
+        },
+        {
+          "close": "2230",
+          "day": 7,
+          "open": "1830"
+        }
+      ]
+    },
+    "location": {
+      "address": "The Ritz-Carlton Millenia Singapore, 7 Raffles Ave",
+      "address_extended": "Level 3",
+      "country": "SG",
+      "cross_street": "7 Raffles Avenue",
+      "formatted_address": "The Ritz-Carlton Millenia Singapore, 7 Raffles Ave (7 Raffles Avenue), 039799",
+      "locality": "Singapore",
+      "post_town": "Marina Area",
+      "postcode": "039799"
+    },
+    "name": "Colony",
+    "photos": [
+      {
+        "id": "648c3befdc239c0867a4a7d3",
+        "created_at": "2023-06-16T10:39:43.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/6245420_eEaxHuWJRscMl3u24cagc7TjiGZZmQH09hT0vBEf5d8.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6479cd4a9ddb695cd0ad3bf0",
+        "created_at": "2023-06-02T11:06:50.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/92188894_CXCl66MyYHEI9OpRoUQRFlWX3xpgWHV5Blb82g67cu8.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "6479cd489ddb695cd0ad3693",
+        "created_at": "2023-06-02T11:06:48.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/92188894_gml4H8PL_Qk0pB1GFWzhyooxgkGbv_GZwco7kp6ZAhU.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "6479cd460c195748c42bad85",
+        "created_at": "2023-06-02T11:06:46.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/92188894_TOH05MlSAv-H5YXh8Wy0zB9SglWC0be14zhOCKSqvII.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "6479cd43a3124e529e108399",
+        "created_at": "2023-06-02T11:06:43.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/92188894_DXOdAkLwWq4sgb2we_O6b-dVCAsu2sbHpNmbYza-7GM.jpg",
+        "width": 1440,
+        "height": 1440
+      }
+    ],
+    "popularity": 0.996793314666815,
+    "rating": 9
+  },
+  {
+    "fsq_id": "4ca1e24946978cfa098dbf7f",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.29198,
+        "longitude": 103.841707
+      },
+      "roof": {
+        "latitude": 1.29198,
+        "longitude": 103.841707
+      }
+    },
+    "hours": {
+      "display": "Open Daily 18:00-23:30",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2330",
+          "day": 1,
+          "open": "1800"
+        },
+        {
+          "close": "2330",
+          "day": 2,
+          "open": "1800"
+        },
+        {
+          "close": "2330",
+          "day": 3,
+          "open": "1800"
+        },
+        {
+          "close": "2330",
+          "day": 4,
+          "open": "1800"
+        },
+        {
+          "close": "2330",
+          "day": 5,
+          "open": "1800"
+        },
+        {
+          "close": "2330",
+          "day": 6,
+          "open": "1800"
+        },
+        {
+          "close": "2330",
+          "day": 7,
+          "open": "1800"
+        }
+      ]
+    },
+    "location": {
+      "address": "11 Unity St",
+      "address_extended": "#01-01 Robertson Walk",
+      "country": "SG",
+      "cross_street": "11 Unity St.",
+      "formatted_address": "11 Unity St (11 Unity St.), 237995",
+      "locality": "Singapore",
+      "post_town": "Orchard",
+      "postcode": "237995"
+    },
+    "name": "Yakiniku YAZAWA",
+    "photos": [
+      {
+        "id": "5ad09edc5315931b1af206f1",
+        "created_at": "2018-04-13T12:13:16.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8905806_QHzmA7kT_vf-3XU5on_TTLKxHaOmMfuMvhDtgzL_BC4.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "5a69e14e826444560aad359b",
+        "created_at": "2018-01-25T13:53:18.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/67153051_zvSH36OC9n7BMmX5dnILQYh01OiriWObR-lOKZEJaew.jpg",
+        "width": 1920,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5a76f35ec0f16364e38db4a2",
+        "created_at": "2018-02-04T11:49:50.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/408851034_H3sCjqPdqp6EL2YDXrtTzYr8cX-ysb3SooFz-dX1MUw.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "57efc3a3498e36fb6df8596d",
+        "created_at": "2016-10-01T14:09:39.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/341168448_8jZ-eJINP-DMBltOI7Q-jtKKTxY45hphladluHP-1WA.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "6474cbdc41e67336b3e6504f",
+        "created_at": "2023-05-29T15:59:24.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/51058052_oyw0biEgtp0qeNoYoDCmoGm5MuPy5CJYNarKNkXoWGQ.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9795508909862968,
+    "price": 2,
+    "rating": 8.9
+  },
+  {
+    "fsq_id": "54103dbd498e9db793f05b47",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 1.287496,
+        "longitude": 103.847466
+      },
+      "main": {
+        "latitude": 1.287392,
+        "longitude": 103.847404
+      },
+      "roof": {
+        "latitude": 1.287392,
+        "longitude": 103.847404
+      }
+    },
+    "hours": {
+      "display": "Mon-Thu 12:00-14:00, 18:00-22:00; Fri 12:00-14:00, 18:00-22:30; Sat 18:00-22:30",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "1400",
+          "day": 1,
+          "open": "1200"
+        },
+        {
+          "close": "2200",
+          "day": 1,
+          "open": "1800"
+        },
+        {
+          "close": "1400",
+          "day": 2,
+          "open": "1200"
+        },
+        {
+          "close": "2200",
+          "day": 2,
+          "open": "1800"
+        },
+        {
+          "close": "1400",
+          "day": 3,
+          "open": "1200"
+        },
+        {
+          "close": "2200",
+          "day": 3,
+          "open": "1800"
+        },
+        {
+          "close": "1400",
+          "day": 4,
+          "open": "1200"
+        },
+        {
+          "close": "2200",
+          "day": 4,
+          "open": "1800"
+        },
+        {
+          "close": "1400",
+          "day": 5,
+          "open": "1200"
+        },
+        {
+          "close": "2230",
+          "day": 5,
+          "open": "1800"
+        },
+        {
+          "close": "2230",
+          "day": 6,
+          "open": "1800"
+        }
+      ]
+    },
+    "location": {
+      "address": "40 Hongkong St",
+      "country": "SG",
+      "cross_street": "",
+      "formatted_address": "40 Hongkong St, 059676",
+      "locality": "Singapore",
+      "post_town": "Marina Area",
+      "postcode": "059676"
+    },
+    "name": "Foc by Nandu Jubany",
+    "photos": [
+      {
+        "id": "54831056498e1ceb12637801",
+        "created_at": "2014-12-06T14:19:02.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/147050_aaWE2RhEwJzOlWoym_9ain-3dVZqS-8a1PwzcLivc7E.jpg",
+        "width": 1440,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "565db5e6498e94d769304faa",
+        "created_at": "2015-12-01T14:59:50.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/98972448_l8IKy87hhrEKbUknA--CrlEOCexzW_Xry3dG1d0SmY4.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "58a6cecb26a4075f5fbf6d9c",
+        "created_at": "2017-02-17T10:22:03.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1443038_zYi_MT8pqUuGUSm__2TzDlPMXrtTf95hFNvF1_PqxfQ.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "58a6d08bd702826172420130",
+        "created_at": "2017-02-17T10:29:31.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1443038_XpJvc5erlThSDAarmTYaJg4Cyzg2EQF8PsjhwuaoSD4.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "55e441a8498e9fa272d39d06",
+        "created_at": "2015-08-31T11:59:36.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/80018305_IqJDAhkKE1z31cROQIgL2hwO627qieLO7pbN0_EzRiQ.jpg",
+        "width": 1920,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      }
+    ],
+    "popularity": 0.9908051944841056,
+    "price": 2,
+    "rating": 8.9
+  },
+  {
+    "fsq_id": "4b9b68a5f964a5208a0536e3",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.31989,
+        "longitude": 103.862102
+      },
+      "roof": {
+        "latitude": 1.31989,
+        "longitude": 103.862102
+      }
+    },
+    "hours": {
+      "display": "Open Daily 11:00-15:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "1500",
+          "day": 1,
+          "open": "1100"
+        },
+        {
+          "close": "1500",
+          "day": 2,
+          "open": "1100"
+        },
+        {
+          "close": "1500",
+          "day": 3,
+          "open": "1100"
+        },
+        {
+          "close": "1500",
+          "day": 4,
+          "open": "1100"
+        },
+        {
+          "close": "1500",
+          "day": 5,
+          "open": "1100"
+        },
+        {
+          "close": "1500",
+          "day": 6,
+          "open": "1100"
+        },
+        {
+          "close": "1500",
+          "day": 7,
+          "open": "1100"
+        }
+      ]
+    },
+    "location": {
+      "address": "Blk 34 Whampoa West",
+      "address_extended": "#01-93",
+      "country": "SG",
+      "formatted_address": "Blk 34 Whampoa West, 330034",
+      "locality": "Singapore",
+      "post_town": "Toa Payoh",
+      "postcode": "330034"
+    },
+    "name": "Boon Tong Kee",
+    "photos": [
+      {
+        "id": "63b8fa69ebcf832e2f6dc88b",
+        "created_at": "2023-01-07T04:51:53.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/493609552_kpcC4QRcUxZ8rBUucUP35EILC79KvBxv-zDoJPbIhe8.jpg",
+        "width": 1080,
+        "height": 1920
+      },
+      {
+        "id": "634e4733e3e7fd5052890ce4",
+        "created_at": "2022-10-18T06:26:59.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/5854809_lzrMm-tF7mqndcbFS_4oEwfJXON2dBfT2QZcPJsjqj0.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "62f9bde36137ba4b0cbb8581",
+        "created_at": "2022-08-15T03:30:43.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/80023417_DOY5OEugrwSLkjqmFl9vDRXrmPyVZsDL9-kzOw9KjSg.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "62f9bc8657d3b774adc498c5",
+        "created_at": "2022-08-15T03:24:54.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/80023417_VesQnjdc4HxdRDFoZeBtURqUGxfcv9iqi9MO-bjA5wY.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "5ff19cbdd27bb5608b9f3ae2",
+        "created_at": "2021-01-03T10:30:21.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/71401279_BRsO6T_7J22UWTTEPjwi3eljBLa2i7Sf7xra5RW-TGY.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9942813699493779,
+    "price": 2,
+    "rating": 8.9
+  },
+  {
+    "fsq_id": "5b0783a3829b0c002c3ad31e",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.302824,
+        "longitude": 103.858038
+      },
+      "roof": {
+        "latitude": 1.302824,
+        "longitude": 103.858038
+      }
+    },
+    "hours": {
+      "display": "Mon-Thu 8:00-21:00; Fri 8:00-21:30; Sat 9:00-21:30; Sun 9:00-20:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2100",
+          "day": 1,
+          "open": "0800"
+        },
+        {
+          "close": "2100",
+          "day": 2,
+          "open": "0800"
+        },
+        {
+          "close": "2100",
+          "day": 3,
+          "open": "0800"
+        },
+        {
+          "close": "2100",
+          "day": 4,
+          "open": "0800"
+        },
+        {
+          "close": "2130",
+          "day": 5,
+          "open": "0800"
+        },
+        {
+          "close": "2130",
+          "day": 6,
+          "open": "0900"
+        },
+        {
+          "close": "2000",
+          "day": 7,
+          "open": "0900"
+        }
+      ]
+    },
+    "location": {
+      "address": "17 Jln Pinang",
+      "country": "SG",
+      "cross_street": "",
+      "formatted_address": "17 Jln Pinang, 199149",
+      "locality": "Singapore",
+      "post_town": "Beach Road",
+      "postcode": "199149"
+    },
+    "name": "Earlybird",
+    "photos": [
+      {
+        "id": "647ff47933813078cd6203e8",
+        "created_at": "2023-06-07T03:07:37.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/557849006_kXQ_m8DBroq8XKyOWAL4x-uHWcesRr0KxeyJqxBe2SM.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "647ff3b15d59c80bf05dba6a",
+        "created_at": "2023-06-07T03:04:17.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/557849006_Gd4ZMJ3uxgdd-xUfg4wd-eXzN-ltHH6WtA0YdUPz0Fc.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "647ff3a660cd2f7d0b61ceb1",
+        "created_at": "2023-06-07T03:04:06.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/557849006_bEJ2FyRIEf9g_Lpn38uNCrOumVIShUMauNzKN9NrGWY.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6469b42033be637273cef8bf",
+        "created_at": "2023-05-21T06:03:12.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/7341354_rGliuCzJHVzX8ntc1EecnF-TemFZumM856ITEqmO5Lw.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6469b3f46cd4f55c2d1db4bf",
+        "created_at": "2023-05-21T06:02:28.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1483499_UQtjy8rJcanqhaqjsGHGxyCSJ1_mHOFYkNvGm_gbk24.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9805880571368528,
+    "price": 1,
+    "rating": 8.9
+  },
+  {
+    "fsq_id": "553b2460498e8cfc0a3cdc32",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 1.280996,
+        "longitude": 103.845797
+      },
+      "main": {
+        "latitude": 1.281058,
+        "longitude": 103.8459
+      },
+      "roof": {
+        "latitude": 1.281058,
+        "longitude": 103.8459
+      }
+    },
+    "hours": {
+      "display": "Mon-Sat 18:00-23:59",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2359",
+          "day": 1,
+          "open": "1800"
+        },
+        {
+          "close": "2359",
+          "day": 2,
+          "open": "1800"
+        },
+        {
+          "close": "2359",
+          "day": 3,
+          "open": "1800"
+        },
+        {
+          "close": "2359",
+          "day": 4,
+          "open": "1800"
+        },
+        {
+          "close": "2359",
+          "day": 5,
+          "open": "1800"
+        },
+        {
+          "close": "2359",
+          "day": 6,
+          "open": "1800"
+        }
+      ]
+    },
+    "location": {
+      "address": "15 Ann Siang Rd",
+      "country": "SG",
+      "cross_street": "",
+      "formatted_address": "15 Ann Siang Rd, 069695",
+      "locality": "Singapore",
+      "post_town": "Marina Area",
+      "postcode": "069695"
+    },
+    "name": "Yen Yakiniku",
+    "photos": [
+      {
+        "id": "5e492b25fdc6610008ea6d2e",
+        "created_at": "2020-02-16T11:44:37.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/67187597_ZBUZbFgYLaj0WZrOzThoeYyu_LCF0LyUwHiC8yTQzcI.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5da9b833e370da0008e2bbe3",
+        "created_at": "2019-10-18T13:03:47.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/43847397_NAuZzQMxk9jAYdAGvtvS82_EQOytUIv477Yi7aAp4iM.jpg",
+        "width": 1440,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5d80d06cf53d3500080cb9f8",
+        "created_at": "2019-09-17T12:24:12.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/29340_YdKy_Edb12YvaVifA8hyqtswZzlIOiHGKR_r2EYtQ58.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "5cf7aa05af35f30026d9ca30",
+        "created_at": "2019-06-05T11:39:49.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/5610054_rQnIQEoqI1VGRTlBzBoyOzcHAoUpJDW22jiuexspbPc.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "5cf7a9dd065ef5002c47636f",
+        "created_at": "2019-06-05T11:39:09.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/5610054_rQnIQEoqI1VGRTlBzBoyOzcHAoUpJDW22jiuexspbPc.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      }
+    ],
+    "popularity": 0.1950441011947808,
+    "price": 2,
+    "rating": 8.8
+  },
+  {
+    "fsq_id": "57c12529498e382e51d5bf3f",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.32389,
+        "longitude": 103.796797
+      }
+    },
+    "hours": {
+      "display": "Mon-Thu 12:00-15:00, 18:00-22:00; Fri-Sun 12:00-22:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "1500",
+          "day": 1,
+          "open": "1200"
+        },
+        {
+          "close": "2200",
+          "day": 1,
+          "open": "1800"
+        },
+        {
+          "close": "1500",
+          "day": 2,
+          "open": "1200"
+        },
+        {
+          "close": "2200",
+          "day": 2,
+          "open": "1800"
+        },
+        {
+          "close": "1500",
+          "day": 3,
+          "open": "1200"
+        },
+        {
+          "close": "2200",
+          "day": 3,
+          "open": "1800"
+        },
+        {
+          "close": "1500",
+          "day": 4,
+          "open": "1200"
+        },
+        {
+          "close": "2200",
+          "day": 4,
+          "open": "1800"
+        },
+        {
+          "close": "2200",
+          "day": 5,
+          "open": "1200"
+        },
+        {
+          "close": "2200",
+          "day": 6,
+          "open": "1200"
+        },
+        {
+          "close": "2200",
+          "day": 7,
+          "open": "1200"
+        }
+      ]
+    },
+    "location": {
+      "address": "64 Namly Pl",
+      "country": "SG",
+      "cross_street": "",
+      "formatted_address": "64 Namly Pl, 267208",
+      "locality": "Singapore",
+      "post_town": "Tanglin",
+      "postcode": "267208"
+    },
+    "name": "Plank Sourdough Pizza by Baker & Cook",
+    "photos": [
+      {
+        "id": "57cac4dc498ece347d88c49c",
+        "created_at": "2016-09-03T12:41:00.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/409533_8f6LGaMwnzlAe7B0QMAmnuyd-DBzoRk6EG9I-s4lO8s.jpg",
+        "width": 1920,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "57cac4e2498e663d1357624d",
+        "created_at": "2016-09-03T12:41:06.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/409533_p6aO0prfeTfd4G2hQ14yXDAJEIB1zBh5jWaKFLPL0BU.jpg",
+        "width": 1920,
+        "height": 1440,
+        "classifications": [
+          "menu"
+        ]
+      },
+      {
+        "id": "5f37b2596b30581eab160150",
+        "created_at": "2020-08-15T10:00:57.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/27405511_IXWpaAI3v6yaNFv-8U_JabH-zT9aNZ-XICdEEjL6cEI.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "5e57c6526c502e000740f8dc",
+        "created_at": "2020-02-27T13:38:26.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/409533_RXVUfLXSfWs4o5PH8IB4-5sDp9Q0y8HSt7v8Y-qkDdc.jpg",
+        "width": 1920,
+        "height": 1080,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5e57c64e602d7c00073344c2",
+        "created_at": "2020-02-27T13:38:22.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/409533_L3AORwntri0KqXmkoFiaG09JaqdX9x0kHQkVaZkSUn8.jpg",
+        "width": 1920,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      }
+    ],
+    "popularity": 0.9526797579533585,
+    "price": 1,
+    "rating": 8.8
+  },
+  {
+    "fsq_id": "4d41cbdb9fa82c0f9a8ab08a",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.285504,
+        "longitude": 103.859542
+      },
+      "roof": {
+        "latitude": 1.285504,
+        "longitude": 103.859542
+      }
+    },
+    "hours": {
+      "display": "Mon-Thu 6:00-22:00; Fri-Sat 6:00-23:00; Sun 6:00-22:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2200",
+          "day": 1,
+          "open": "0600"
+        },
+        {
+          "close": "2200",
+          "day": 2,
+          "open": "0600"
+        },
+        {
+          "close": "2200",
+          "day": 3,
+          "open": "0600"
+        },
+        {
+          "close": "2200",
+          "day": 4,
+          "open": "0600"
+        },
+        {
+          "close": "2300",
+          "day": 5,
+          "open": "0600"
+        },
+        {
+          "close": "2300",
+          "day": 6,
+          "open": "0600"
+        },
+        {
+          "close": "2200",
+          "day": 7,
+          "open": "0600"
+        }
+      ]
+    },
+    "location": {
+      "address": "2 Bayfront Av, Galleria Level, The Shoppes at Marina Bay Sands",
+      "address_extended": "B1-71 (Next to the Theater)",
+      "country": "SG",
+      "cross_street": "10 Bayfront Ave",
+      "formatted_address": "2 Bayfront Av, Galleria Level, The Shoppes at Marina Bay Sands (10 Bayfront Ave), 018956",
+      "locality": "Singapore",
+      "post_town": "Marina Area",
+      "postcode": "018956"
+    },
+    "name": "Cut by Wolfgang Puck",
+    "photos": [
+      {
+        "id": "6488513207a2695e411b70a1",
+        "created_at": "2023-06-13T11:21:22.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/27140901_o9yhEOp0YyYmKV4MtKugbaScWFf9ujP14W3GTrMtS0o.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "64885131d0ce7c0aaed3885b",
+        "created_at": "2023-06-13T11:21:21.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/27140901_bPfUd2x42mzj_aHUzxJ6-T7jH4UmUyNYvwXIlUs14bM.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "6488512f8b819a0bc42e6d03",
+        "created_at": "2023-06-13T11:21:19.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/27140901_OjKCLFGd59zvx9kJutH-RlPiKIbvPYizdYk0R7yd7GQ.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "6446730a8a6f2c430d84aedc",
+        "created_at": "2023-04-24T12:16:10.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/117897142__LSGqcM7SMWFNyeveGoH7m__EjVy_x0Ypl4j92b4BkU.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9982816913596272,
+    "price": 4,
+    "rating": 8.8
+  },
+  {
+    "fsq_id": "575a76e1498ed10a81251ad0",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.275958,
+        "longitude": 103.846109
+      },
+      "roof": {
+        "latitude": 1.275958,
+        "longitude": 103.846109
+      }
+    },
+    "hours": {
+      "display": "Mon-Fri 8:00-16:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "1600",
+          "day": 1,
+          "open": "0800"
+        },
+        {
+          "close": "1600",
+          "day": 2,
+          "open": "0800"
+        },
+        {
+          "close": "1600",
+          "day": 3,
+          "open": "0800"
+        },
+        {
+          "close": "1600",
+          "day": 4,
+          "open": "0800"
+        },
+        {
+          "close": "1600",
+          "day": 5,
+          "open": "0800"
+        }
+      ]
+    },
+    "location": {
+      "address": "10 Anson Rd",
+      "address_extended": "#01-34 International Plaza",
+      "country": "SG",
+      "cross_street": "",
+      "formatted_address": "10 Anson Rd, 079903",
+      "locality": "Singapore",
+      "post_town": "Central Business District",
+      "postcode": "079903"
+    },
+    "name": "Alchemist",
+    "photos": [
+      {
+        "id": "58fea721f0ca9541b2ebe72e",
+        "created_at": "2017-04-25T01:32:17.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1677418_OOCVDFVkSKSrkbnAbYIJp8ybjj2X3pGFWcaKIBLjnrU.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6351f86b8b71752e44d8103e",
+        "created_at": "2022-10-21T01:39:55.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/71401279_hs0sfM1U0wl6mmoWEO0VHvJlMt-jBUab1LWCjgQW0rk.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6334f84da4eb572af3fdaff5",
+        "created_at": "2022-09-29T01:43:41.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/71401279_gFVRNfwiEQtImIp1O2k-uNpF7IRopcYZH87zwBz20fM.jpg",
+        "width": 1440,
+        "height": 1850
+      },
+      {
+        "id": "631ec6178f12aa2492ecb7f9",
+        "created_at": "2022-09-12T05:39:35.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/3211319_46bKPVQcjVZkCeaUSTF0l5XruIDu0zhQ6_v4kPEWMR8.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6228462e48b35f327d21c74f",
+        "created_at": "2022-03-09T06:16:14.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/23114495_YRCzpuh4tWvKri6vfwPYaVgP54BioBhSv6E4nu-4hGw.jpg",
+        "width": 1920,
+        "height": 1440
+      }
+    ],
+    "popularity": 0.9958933659688356,
+    "price": 1,
+    "rating": 9
+  },
+  {
+    "fsq_id": "5b0783a3829b0c002c3ad31e",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.302824,
+        "longitude": 103.858038
+      },
+      "roof": {
+        "latitude": 1.302824,
+        "longitude": 103.858038
+      }
+    },
+    "hours": {
+      "display": "Mon-Thu 8:00-21:00; Fri 8:00-21:30; Sat 9:00-21:30; Sun 9:00-20:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2100",
+          "day": 1,
+          "open": "0800"
+        },
+        {
+          "close": "2100",
+          "day": 2,
+          "open": "0800"
+        },
+        {
+          "close": "2100",
+          "day": 3,
+          "open": "0800"
+        },
+        {
+          "close": "2100",
+          "day": 4,
+          "open": "0800"
+        },
+        {
+          "close": "2130",
+          "day": 5,
+          "open": "0800"
+        },
+        {
+          "close": "2130",
+          "day": 6,
+          "open": "0900"
+        },
+        {
+          "close": "2000",
+          "day": 7,
+          "open": "0900"
+        }
+      ]
+    },
+    "location": {
+      "address": "17 Jln Pinang",
+      "country": "SG",
+      "cross_street": "",
+      "formatted_address": "17 Jln Pinang, 199149",
+      "locality": "Singapore",
+      "post_town": "Beach Road",
+      "postcode": "199149"
+    },
+    "name": "Earlybird",
+    "photos": [
+      {
+        "id": "647ff47933813078cd6203e8",
+        "created_at": "2023-06-07T03:07:37.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/557849006_kXQ_m8DBroq8XKyOWAL4x-uHWcesRr0KxeyJqxBe2SM.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "647ff3b15d59c80bf05dba6a",
+        "created_at": "2023-06-07T03:04:17.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/557849006_Gd4ZMJ3uxgdd-xUfg4wd-eXzN-ltHH6WtA0YdUPz0Fc.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "647ff3a660cd2f7d0b61ceb1",
+        "created_at": "2023-06-07T03:04:06.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/557849006_bEJ2FyRIEf9g_Lpn38uNCrOumVIShUMauNzKN9NrGWY.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6469b42033be637273cef8bf",
+        "created_at": "2023-05-21T06:03:12.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/7341354_rGliuCzJHVzX8ntc1EecnF-TemFZumM856ITEqmO5Lw.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6469b3f46cd4f55c2d1db4bf",
+        "created_at": "2023-05-21T06:02:28.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1483499_UQtjy8rJcanqhaqjsGHGxyCSJ1_mHOFYkNvGm_gbk24.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9805880571368528,
+    "price": 1,
+    "rating": 8.9
+  },
+  {
+    "fsq_id": "4f9f3ff3e4b01426c55d112b",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.276894,
+        "longitude": 103.84013
+      },
+      "roof": {
+        "latitude": 1.276894,
+        "longitude": 103.84013
+      }
+    },
+    "hours": {
+      "display": "Mon 8:30-17:30; Wed-Fri 8:30-17:30; Sat-Sun 9:00-18:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "1730",
+          "day": 1,
+          "open": "0830"
+        },
+        {
+          "close": "1730",
+          "day": 3,
+          "open": "0830"
+        },
+        {
+          "close": "1730",
+          "day": 4,
+          "open": "0830"
+        },
+        {
+          "close": "1730",
+          "day": 5,
+          "open": "0830"
+        },
+        {
+          "close": "1800",
+          "day": 6,
+          "open": "0900"
+        },
+        {
+          "close": "1800",
+          "day": 7,
+          "open": "0900"
+        }
+      ]
+    },
+    "location": {
+      "address": "4 Everton Pk",
+      "address_extended": "#01-40",
+      "country": "SG",
+      "cross_street": "#01-40",
+      "formatted_address": "4 Everton Pk (#01-40), 080004",
+      "locality": "Singapore",
+      "post_town": "Central Business District",
+      "postcode": "080004"
+    },
+    "name": "Nylon Coffee Roasters",
+    "photos": [
+      {
+        "id": "517cd786e4b0ab797c6f92d3",
+        "created_at": "2013-04-28T08:02:14.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/2819979_YiILZgYfFCzXd1LB-Zbtlgzr718RrFhCr1E7d6gDw2o.jpg",
+        "width": 1920,
+        "height": 1280,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "648a5f707e0e1a282b78af02",
+        "created_at": "2023-06-15T00:46:40.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/71401279_0n7zpBvdy8zMf_DrhsMSluBdNLqRcCY32OAlsEZrFO8.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "647a9b5e831dfb0aefc23297",
+        "created_at": "2023-06-03T01:46:06.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/5931716_0v59l-gHfL4KnLclcog5jwlDVPxjCxnCPEkC_-iqh0c.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "64797b337fbc8632a3fed3d8",
+        "created_at": "2023-06-02T05:16:35.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/5931716_Pp3y4DH4iglPbZuHGsIAXNwEutQBPxcNV0EkQsUT_pQ.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "64797aae0427881dbe4c1656",
+        "created_at": "2023-06-02T05:14:22.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/5931716_BoDUGmMz3ATGapTRY2QEupkZbFXbozEXFrrq7Qes_Sc.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9939426529943691,
+    "price": 1,
+    "rating": 8.8
+  },
+  {
+    "fsq_id": "595b27ae8e886a485ccb3fa2",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.298511,
+        "longitude": 103.851877
+      }
+    },
+    "hours": {
+      "display": "Mon-Fri 9:00-18:00; Sat-Sun 12:00-18:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "1800",
+          "day": 1,
+          "open": "0900"
+        },
+        {
+          "close": "1800",
+          "day": 2,
+          "open": "0900"
+        },
+        {
+          "close": "1800",
+          "day": 3,
+          "open": "0900"
+        },
+        {
+          "close": "1800",
+          "day": 4,
+          "open": "0900"
+        },
+        {
+          "close": "1800",
+          "day": 5,
+          "open": "0900"
+        },
+        {
+          "close": "1800",
+          "day": 6,
+          "open": "1200"
+        },
+        {
+          "close": "1800",
+          "day": 7,
+          "open": "1200"
+        }
+      ]
+    },
+    "location": {
+      "address": "261 Waterloo St",
+      "address_extended": "#01-24",
+      "country": "SG",
+      "cross_street": "331 North Bridge Road",
+      "formatted_address": "261 Waterloo St (331 North Bridge Road), 180261",
+      "locality": "Singapore",
+      "post_town": "Beach Road",
+      "postcode": "180261"
+    },
+    "name": "Kurasu",
+    "photos": [
+      {
+        "id": "646729f359ddaf265c6aa816",
+        "created_at": "2023-05-19T07:49:07.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1337117_G45vZcqDUmxm3BYX2dRkLzF4Ka46fuqUEKoomIVFm6A.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "63bfa9192b465c6ade050b2b",
+        "created_at": "2023-01-12T06:30:49.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/66741225_n5UBwbIocSEoz4YoqGu3PEKobEv6m7FB2mocTfI2tHY.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "63b913264ace105596e981bb",
+        "created_at": "2023-01-07T06:37:26.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/567381237_Lmxbf0v7hs6wiSj4r97zI5p0fp258XRsvud3hfCOmWI.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "638c0a9f70f8432f3e527158",
+        "created_at": "2022-12-04T02:49:03.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/11923212_tc34PEXbrJHQsepFabzupqavxelMTYVi_g_tRzYoWIA.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "633baaa541d9475610fe16cc",
+        "created_at": "2022-10-04T03:38:13.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4117318_IQJ-IT8n-NVk-w0puLjIJwSMbX3oP4MKv6wpxvkFMJI.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9800243530073491,
+    "price": 1,
+    "rating": 8.6
+  },
+  {
+    "fsq_id": "5c174105c0c0840025cdf11c",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 1.340964,
+        "longitude": 103.772383
+      },
+      "main": {
+        "latitude": 1.340844,
+        "longitude": 103.772523
+      },
+      "roof": {
+        "latitude": 1.340844,
+        "longitude": 103.772523
+      }
+    },
+    "hours": {
+      "display": "Mon 10:00-18:00; Wed-Fri 10:00-18:00; Sat-Sun 9:00-18:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "1800",
+          "day": 1,
+          "open": "1000"
+        },
+        {
+          "close": "1800",
+          "day": 3,
+          "open": "1000"
+        },
+        {
+          "close": "1800",
+          "day": 4,
+          "open": "1000"
+        },
+        {
+          "close": "1800",
+          "day": 5,
+          "open": "1000"
+        },
+        {
+          "close": "1800",
+          "day": 6,
+          "open": "0900"
+        },
+        {
+          "close": "1800",
+          "day": 7,
+          "open": "0900"
+        }
+      ]
+    },
+    "location": {
+      "address": "106 Jln Jurong Kechil",
+      "country": "SG",
+      "cross_street": "",
+      "formatted_address": "106 Jln Jurong Kechil, 598604",
+      "locality": "Bukit Timah",
+      "post_town": "Central West",
+      "postcode": "598604"
+    },
+    "name": "Flagwhite",
+    "photos": [
+      {
+        "id": "643f8a0cd3e46f55970a9cf1",
+        "created_at": "2023-04-19T06:28:28.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/87917157_jYw_xF0_oz5gibms1UfUKjJNLwrYRg1UOdEczfJDqwI.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "64217c4578475241a2571c8c",
+        "created_at": "2023-03-27T11:21:41.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/93120299_zAAy3UExLEJWeQtcP2_TQ6QueliVp8W52wjRh4oFYQs.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "63f32d172b5db30d1600085c",
+        "created_at": "2023-02-20T08:19:35.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8751056_cjHcESF1G498n1apB1d5YeAlYWXh-sPso4u7Uf6ZUEo.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "63f32d14532a6f39dfa87685",
+        "created_at": "2023-02-20T08:19:32.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8751056_7wkBy-EH0zuW0QlE-ae3srBcYmc-A1_EedgDLxuH72E.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.978565644952932,
+    "price": 1,
+    "rating": 8.6
+  },
+  {
+    "fsq_id": "4b174179f964a52049c423e3",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.305779,
+        "longitude": 103.810697
+      },
+      "roof": {
+        "latitude": 1.305779,
+        "longitude": 103.810697
+      }
+    },
+    "hours": {
+      "display": "Mon-Fri 9:30-20:00; Sat-Sun 9:30-19:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2000",
+          "day": 1,
+          "open": "0930"
+        },
+        {
+          "close": "2000",
+          "day": 2,
+          "open": "0930"
+        },
+        {
+          "close": "2000",
+          "day": 3,
+          "open": "0930"
+        },
+        {
+          "close": "2000",
+          "day": 4,
+          "open": "0930"
+        },
+        {
+          "close": "2000",
+          "day": 5,
+          "open": "0930"
+        },
+        {
+          "close": "1900",
+          "day": 6,
+          "open": "0930"
+        },
+        {
+          "close": "1900",
+          "day": 7,
+          "open": "0930"
+        }
+      ]
+    },
+    "location": {
+      "address": "18A Dempsey Rd",
+      "country": "SG",
+      "cross_street": "",
+      "formatted_address": "18A Dempsey Rd, 249677",
+      "locality": "Singapore",
+      "post_town": "Tanglin",
+      "postcode": "249677"
+    },
+    "name": "Huber's Butchery & Bistro",
+    "photos": [
+      {
+        "id": "645676768ad1de5ac05df5d2",
+        "created_at": "2023-05-06T15:47:02.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8081033_oOQiqsxU3oFBiJ2ELyOz9r9D5GWLKPrOFg_HMvEopwA.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "64567662bd35cc784d1b06c1",
+        "created_at": "2023-05-06T15:46:42.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8081033_VtzcL0ccOoAURzfoQ-S2cGfJJIl0XPtCTPc56zyRtSc.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "63f4798e2a781c392e1439d9",
+        "created_at": "2023-02-21T07:58:06.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1363045856_sQ43WYg0NS12XJKgb_nk2QBemOd8ZH1ZRTl6Cl14QhI.jpg",
+        "width": 1080,
+        "height": 1440
+      },
+      {
+        "id": "63ddc27b5a478a5639007240",
+        "created_at": "2023-02-04T02:27:07.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/433493_nX2utX4VfoIsHigYW4xNOf0xHIZcR3fRKVLcPg82J54.jpg",
+        "width": 1918,
+        "height": 1440
+      },
+      {
+        "id": "63afb3e0dbf4d836a4c38b3f",
+        "created_at": "2022-12-31T04:00:32.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8081033_xaKmdcAEJt_Kyjq5BxS0vKfua3YcbJP1ErK96HC5KtE.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9951590671685612,
+    "rating": 8.5
+  },
+  {
+    "fsq_id": "5906f0411543c754e182a6f5",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 1.27592,
+        "longitude": 103.835913
+      },
+      "main": {
+        "latitude": 1.27602,
+        "longitude": 103.835824
+      },
+      "roof": {
+        "latitude": 1.27602,
+        "longitude": 103.835824
+      }
+    },
+    "hours": {
+      "display": "Tue 11:00-23:00; Thu-Sat 11:00-23:00; Sun 9:00-21:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2300",
+          "day": 2,
+          "open": "1100"
+        },
+        {
+          "close": "2300",
+          "day": 4,
+          "open": "1100"
+        },
+        {
+          "close": "2300",
+          "day": 5,
+          "open": "1100"
+        },
+        {
+          "close": "2300",
+          "day": 6,
+          "open": "1100"
+        },
+        {
+          "close": "2100",
+          "day": 7,
+          "open": "0900"
+        }
+      ]
+    },
+    "location": {
+      "address": "54 Blair Rd",
+      "address_extended": "#01-01",
+      "country": "SG",
+      "cross_street": "",
+      "formatted_address": "54 Blair Rd, 089954",
+      "locality": "Singapore",
+      "post_town": "Central Business District",
+      "postcode": "089954"
+    },
+    "name": "Little Part 1 Cafe",
+    "photos": [
+      {
+        "id": "616beff1557daa3d4b681f61",
+        "created_at": "2021-10-17T09:42:09.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/71401279_Y9w2HDCjhMALbhI5Gd3e-VhHA8Mb7nISnQ35yM62go8.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "610475df15c3d3525eed9d8b",
+        "created_at": "2021-07-30T21:57:51.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/392442_Jq0XBwK8SpUMJ7w8rJWRkJjUBVRp_3bH6G8Du-HgmRM.jpg",
+        "width": 1920,
+        "height": 1080
+      },
+      {
+        "id": "5fdcaeb8dc545e636ed15ff6",
+        "created_at": "2020-12-18T13:29:28.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/57725739_5FCxs1RIt-k03-DZRSDdrihsPXm0PMxfZmzn9TSvf6g.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "5f9ce38f73f7596604103253",
+        "created_at": "2020-10-31T04:09:51.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/5334598_M88YoXCWCW-L6AobWVVUNL5XDW8jfBQYogxVJOi6hoo.jpg",
+        "width": 1080,
+        "height": 1920
+      },
+      {
+        "id": "5cd8260a3092be002cc354d9",
+        "created_at": "2019-05-12T13:56:26.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/41148108_bz-d_Nm12kL6qHYcKSb04PcIKVZDb49IX8RyEBeOZ6c.jpg",
+        "width": 1920,
+        "height": 1440,
+        "classifications": [
+          "outdoor"
+        ]
+      }
+    ],
+    "popularity": 0.9875861472182561,
+    "price": 1,
+    "rating": 8.5
+  },
+  {
+    "fsq_id": "4b08ac7df964a520951023e3",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.304589,
+        "longitude": 103.81102
+      },
+      "roof": {
+        "latitude": 1.304589,
+        "longitude": 103.81102
+      }
+    },
+    "hours": {
+      "display": "Mon-Fri 11:30-23:59; Sat-Sun 00:00-2:00, 9:30-23:59",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2359",
+          "day": 1,
+          "open": "1130"
+        },
+        {
+          "close": "2359",
+          "day": 2,
+          "open": "1130"
+        },
+        {
+          "close": "2359",
+          "day": 3,
+          "open": "1130"
+        },
+        {
+          "close": "2359",
+          "day": 4,
+          "open": "1130"
+        },
+        {
+          "close": "2359",
+          "day": 5,
+          "open": "1130"
+        },
+        {
+          "close": "0200",
+          "day": 6,
+          "open": "0000"
+        },
+        {
+          "close": "2359",
+          "day": 6,
+          "open": "0930"
+        },
+        {
+          "close": "0200",
+          "day": 7,
+          "open": "0000"
+        },
+        {
+          "close": "2359",
+          "day": 7,
+          "open": "0930"
+        }
+      ]
+    },
+    "location": {
+      "address": "28B Harding Rd",
+      "country": "SG",
+      "cross_street": "Dempsey Hill",
+      "formatted_address": "28B Harding Rd (Dempsey Hill), 249549",
+      "locality": "Singapore",
+      "post_town": "Tanglin",
+      "postcode": "249549"
+    },
+    "name": "Ps. Cafe",
+    "photos": [
+      {
+        "id": "5184ab26498ef45e561be137",
+        "created_at": "2013-05-04T06:31:02.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/33691157_mOSat-59errlw4MyIO2V1AREy0cXKnL3gXPIxBNfVd8.jpg",
+        "width": 1920,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "644e06835d753f7392fea2f2",
+        "created_at": "2023-04-30T06:11:15.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/73130200_LdDDfSiuVaZdYDkous0FwbWLQSNwa7QZXCSQ8drHp5k.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6408189f7c4f6e2a4cd7a91c",
+        "created_at": "2023-03-08T05:09:51.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/52180839_2JrubEl-p7EYrJ9AZ28WFLAzGA90Ws07Z8xB1eKSKS8.jpg",
+        "width": 1080,
+        "height": 1920
+      },
+      {
+        "id": "63c160b1897c3e6e0a245b2f",
+        "created_at": "2023-01-13T13:46:25.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/7341354_bBcmVHu3fIVbfOYlO6qrhpsygX3azIRX7LpFJn6jk3s.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9902909380852603,
+    "price": 3,
+    "rating": 8.5
+  },
+  {
+    "fsq_id": "50924964e4b0948956762c4a",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.429846,
+        "longitude": 103.83638
+      },
+      "roof": {
+        "latitude": 1.429846,
+        "longitude": 103.83638
+      }
+    },
+    "hours": {
+      "display": "Open Daily 10:00-22:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2200",
+          "day": 1,
+          "open": "1000"
+        },
+        {
+          "close": "2200",
+          "day": 2,
+          "open": "1000"
+        },
+        {
+          "close": "2200",
+          "day": 3,
+          "open": "1000"
+        },
+        {
+          "close": "2200",
+          "day": 4,
+          "open": "1000"
+        },
+        {
+          "close": "2200",
+          "day": 5,
+          "open": "1000"
+        },
+        {
+          "close": "2200",
+          "day": 6,
+          "open": "1000"
+        },
+        {
+          "close": "2200",
+          "day": 7,
+          "open": "1000"
+        }
+      ]
+    },
+    "location": {
+      "address_extended": "#01-02 GV Yishun 10",
+      "country": "SG",
+      "cross_street": "51 Yishun Central",
+      "formatted_address": "51 Yishun Central, 768794",
+      "locality": "Singapore",
+      "post_town": "Yishun",
+      "postcode": "768794"
+    },
+    "name": "Koi Thé",
+    "photos": [
+      {
+        "id": "5f071a5ac7ffdd76d2fce37d",
+        "created_at": "2020-07-09T13:23:38.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/3622219_UucdRMEjxMqXXyQln19glhJwzKhOk6C8lB_M8tNFWxM.jpg",
+        "width": 1080,
+        "height": 1440
+      },
+      {
+        "id": "5e4bcd48b607c80008e51faf",
+        "created_at": "2020-02-18T11:40:56.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1205674_tVuVOKEu5EmMKn6KoQc7W-OEN3RfRG4ENLQFIjNmhpo.jpg",
+        "width": 1440,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5a49c4d061e53b224faf40b3",
+        "created_at": "2018-01-01T05:19:12.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/51878136_7UxxQfrCoz60sDgdJ8RHjBC_-Kzeuf6ZfvDyY9SLJSw.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "5986a1288e886a26823b5e6c",
+        "created_at": "2017-08-06T04:55:04.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/3747038_LgTUmuZ1iP4kIxhoueZh2zjrzmcC8tiUkB3FXgqtpgI.jpg",
+        "width": 1440,
+        "height": 1770,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5871b7908cb34e38a5a5b111",
+        "created_at": "2017-01-08T03:52:48.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/3747038_R3fh8YdEyiHRt3qyrIlO_Z4cmBkq6WvuGa6Wk-u1Quo.jpg",
+        "width": 1920,
+        "height": 1412,
+        "classifications": [
+          "food"
+        ]
+      }
+    ],
+    "popularity": 0.9967908422802821,
+    "rating": 8.4
+  },
+  {
+    "fsq_id": "5205c76d11d2072b2bd3aa80",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.283152,
+        "longitude": 103.853511
+      },
+      "roof": {
+        "latitude": 1.283152,
+        "longitude": 103.853511
+      }
+    },
+    "hours": {
+      "display": "Mon-Fri 12:00-14:30, 18:30-22:30; Sat-Sun 12:00-15:00, 18:30-22:30",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "1430",
+          "day": 1,
+          "open": "1200"
+        },
+        {
+          "close": "2230",
+          "day": 1,
+          "open": "1830"
+        },
+        {
+          "close": "1430",
+          "day": 2,
+          "open": "1200"
+        },
+        {
+          "close": "2230",
+          "day": 2,
+          "open": "1830"
+        },
+        {
+          "close": "1430",
+          "day": 3,
+          "open": "1200"
+        },
+        {
+          "close": "2230",
+          "day": 3,
+          "open": "1830"
+        },
+        {
+          "close": "1430",
+          "day": 4,
+          "open": "1200"
+        },
+        {
+          "close": "2230",
+          "day": 4,
+          "open": "1830"
+        },
+        {
+          "close": "1430",
+          "day": 5,
+          "open": "1200"
+        },
+        {
+          "close": "2230",
+          "day": 5,
+          "open": "1830"
+        },
+        {
+          "close": "1500",
+          "day": 6,
+          "open": "1200"
+        },
+        {
+          "close": "2230",
+          "day": 6,
+          "open": "1830"
+        },
+        {
+          "close": "1500",
+          "day": 7,
+          "open": "1200"
+        },
+        {
+          "close": "2230",
+          "day": 7,
+          "open": "1830"
+        }
+      ]
+    },
+    "location": {
+      "address": "80 Collyer Quay The Fullerton Bay Hotel",
+      "address_extended": "Level 01 The Fullerton Bay Hotel",
+      "country": "SG",
+      "cross_street": "",
+      "formatted_address": "80 Collyer Quay The Fullerton Bay Hotel, 049326",
+      "locality": "Singapore",
+      "post_town": "Marina Area",
+      "postcode": "049326"
+    },
+    "name": "La Brasserie",
+    "photos": [
+      {
+        "id": "6421a622fee44b5fd6d01a6d",
+        "created_at": "2023-03-27T14:20:18.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4555711_j69QDVR8yNJqNbzTwCIKTR1ldoHVj1YMkzakYjVv-XU.jpg",
+        "width": 1440,
+        "height": 1800
+      },
+      {
+        "id": "6421a5faf9625f7fab8ca41e",
+        "created_at": "2023-03-27T14:19:38.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4555711_9NIcnL3D5bigRQAzElIP7tv0CXEJn_f7sC6Tf16QU7k.jpg",
+        "width": 1440,
+        "height": 1800
+      },
+      {
+        "id": "6421a5f344811c0524fc19bb",
+        "created_at": "2023-03-27T14:19:31.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4555711_dujPDxUYtcPnjOu4psRNG83SEERFq5RL21Pg2CpBEaQ.jpg",
+        "width": 1440,
+        "height": 1800
+      },
+      {
+        "id": "6421a5e86fef740c336d64d4",
+        "created_at": "2023-03-27T14:19:20.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4555711_CEx7A1dYSl628m0qoTiIzGEqzYsEJgN6r03YfRLmu38.jpg",
+        "width": 1080,
+        "height": 1920
+      },
+      {
+        "id": "61eb5c8c5e337d61e8f50254",
+        "created_at": "2022-01-22T01:23:24.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/422537_ImbB0SQTiS75plApHiNCzU_RRaE_3GFIyLlbDuKdIv4.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9801875305185213,
+    "price": 1,
+    "rating": 8.4
+  },
+  {
+    "fsq_id": "57e7522b498e3f249787e079",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.279586,
+        "longitude": 103.842091
+      },
+      "roof": {
+        "latitude": 1.279586,
+        "longitude": 103.842091
+      }
+    },
+    "hours": {
+      "display": "Mon-Thu 12:00-22:00; Fri 12:00-23:59; Sat 00:00-23:59; Sun 00:00-22:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2200",
+          "day": 1,
+          "open": "1200"
+        },
+        {
+          "close": "2200",
+          "day": 2,
+          "open": "1200"
+        },
+        {
+          "close": "2200",
+          "day": 3,
+          "open": "1200"
+        },
+        {
+          "close": "2200",
+          "day": 4,
+          "open": "1200"
+        },
+        {
+          "close": "2359",
+          "day": 5,
+          "open": "1200"
+        },
+        {
+          "close": "0100",
+          "day": 6,
+          "open": "0000"
+        },
+        {
+          "close": "2359",
+          "day": 6,
+          "open": "1200"
+        },
+        {
+          "close": "0100",
+          "day": 7,
+          "open": "0000"
+        },
+        {
+          "close": "2200",
+          "day": 7,
+          "open": "1200"
+        }
+      ]
+    },
+    "location": {
+      "address": "84 Neil Rd",
+      "country": "SG",
+      "cross_street": "",
+      "formatted_address": "84 Neil Rd, 088844",
+      "locality": "Singapore",
+      "post_town": "Central Business District",
+      "postcode": "088844"
+    },
+    "name": "Apiary",
+    "photos": [
+      {
+        "id": "5826bc6ada08cb6d476377fc",
+        "created_at": "2016-11-12T06:53:30.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/3211319_foirFeYj2sPs0nvqZaJH7Sa9H1UL__7zQ5tRCkaXdLY.jpg",
+        "width": 1440,
+        "height": 1800,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "59901651d7627e6616b905b2",
+        "created_at": "2017-08-13T09:05:21.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/94411_mA4DSrw_P8nDinVjuCve2JxHDhvtboKbfm126ERl35k.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "58ae7bfa2980db6d3d313f75",
+        "created_at": "2017-02-23T06:06:50.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4688443_FyiFAPEuy7cVXG5_-NdITfBS3ldvDAJ4gLcalDjCmEE.jpg",
+        "width": 3024,
+        "height": 4032
+      },
+      {
+        "id": "59901654fdb9a7339c8d0e96",
+        "created_at": "2017-08-13T09:05:24.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/94411_ITDlEQON2OId9FhKy5cG8EqZl_tVRVg6xFng9tvRMxw.jpg",
+        "width": 1440,
+        "height": 1798
+      },
+      {
+        "id": "59150045c8772e69427586f0",
+        "created_at": "2017-05-12T00:22:29.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/34014576_eWl00Wrci-pv6zg3iKAF4gPe3n0XVfNkZJr6IC7OpjA.jpg",
+        "width": 1080,
+        "height": 1350
+      }
+    ],
+    "popularity": 0.9912069572957036,
+    "price": 1,
+    "rating": 8.8
+  },
+  {
+    "fsq_id": "51763f4be4b0888c3d9f42a9",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.28233,
+        "longitude": 103.830451
+      },
+      "roof": {
+        "latitude": 1.28233,
+        "longitude": 103.830451
+      }
+    },
+    "hours": {
+      "display": "Mon-Sat 8:00-19:00; Sun 9:00-18:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "1900",
+          "day": 1,
+          "open": "0800"
+        },
+        {
+          "close": "1900",
+          "day": 2,
+          "open": "0800"
+        },
+        {
+          "close": "1900",
+          "day": 3,
+          "open": "0800"
+        },
+        {
+          "close": "1900",
+          "day": 4,
+          "open": "0800"
+        },
+        {
+          "close": "1900",
+          "day": 5,
+          "open": "0800"
+        },
+        {
+          "close": "1900",
+          "day": 6,
+          "open": "0800"
+        },
+        {
+          "close": "1800",
+          "day": 7,
+          "open": "0900"
+        }
+      ]
+    },
+    "location": {
+      "address": "1D Yong Siak St",
+      "country": "SG",
+      "cross_street": "",
+      "formatted_address": "1D Yong Siak St, 168641",
+      "locality": "Singapore",
+      "post_town": "Central South",
+      "postcode": "168641"
+    },
+    "name": "Plain Vanilla Bakery",
+    "photos": [
+      {
+        "id": "64044f034c3a020c45dc7437",
+        "created_at": "2023-03-05T08:12:51.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8081033_W5egENXAJZ9riYaQ-o5TsbpGfc4O5en-MIg3Flpp9Ak.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "64044efa71ee7c4e5c8c1c8a",
+        "created_at": "2023-03-05T08:12:42.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8081033_OohkfSzcuFJJRDOu_EerE-FAB12dbji2G3MP-eb9wkE.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "64044ef59585dc503d47f424",
+        "created_at": "2023-03-05T08:12:37.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8081033_DJztZl_j-EnqOsRU8MO7w5Ts72nleYz4Oe0x3J8L8ss.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "64044eebfedc16405e5dc163",
+        "created_at": "2023-03-05T08:12:27.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8081033_vjUhGU7uD9-g4Y04B-2Ty9U4GxCwDzKIQH94CcuwOy8.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "64044edb723a1d7ba3d7a2ca",
+        "created_at": "2023-03-05T08:12:11.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8081033_V4PUsUdHA8z3WwysU4Eh4F1XFI1m0Q_AyXyLZ2Lmvdg.jpg",
+        "width": 1920,
+        "height": 1440
+      }
+    ],
+    "popularity": 0.988348878463659,
+    "price": 2,
+    "rating": 8.6
+  },
+  {
+    "fsq_id": "4bd811e909ecb7133ffc477c",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 1.297304,
+        "longitude": 103.855436
+      },
+      "main": {
+        "latitude": 1.297145,
+        "longitude": 103.855317
+      },
+      "roof": {
+        "latitude": 1.297145,
+        "longitude": 103.855317
+      }
+    },
+    "hours": {
+      "display": "Mon-Thu 12:00-21:30; Fri-Sat 12:00-22:00; Sun 13:00-19:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2130",
+          "day": 1,
+          "open": "1200"
+        },
+        {
+          "close": "2130",
+          "day": 2,
+          "open": "1200"
+        },
+        {
+          "close": "2130",
+          "day": 3,
+          "open": "1200"
+        },
+        {
+          "close": "2130",
+          "day": 4,
+          "open": "1200"
+        },
+        {
+          "close": "2200",
+          "day": 5,
+          "open": "1200"
+        },
+        {
+          "close": "2200",
+          "day": 6,
+          "open": "1200"
+        },
+        {
+          "close": "1900",
+          "day": 7,
+          "open": "1300"
+        }
+      ]
+    },
+    "location": {
+      "address": "51 Middle Rd",
+      "address_extended": "#01-01",
+      "country": "SG",
+      "cross_street": "",
+      "formatted_address": "51 Middle Rd, 188959",
+      "locality": "Singapore",
+      "post_town": "Beach Road",
+      "postcode": "188959"
+    },
+    "name": "Tom's Palette",
+    "photos": [
+      {
+        "id": "643251d0135a0b0fc641997a",
+        "created_at": "2023-04-09T05:49:04.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/55390456_qwYf54eNPNehEoFfpO8H_gfImFCpHVr-qZe_xmIdXN8.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "63a7f89b36164d6e59ac093d",
+        "created_at": "2022-12-25T07:15:39.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/40033180_qn_X1-IrNlVpAyC55259NYOZiUBPeMRe1X2Mt0jXto4.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "6354f4c0b5129f67131e1892",
+        "created_at": "2022-10-23T08:01:04.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/2540105_u21_hID3mzNToFbRMr3y9jdXRu_q5h8a0GliwIMs9bw.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6354f4bd36621c71780660d9",
+        "created_at": "2022-10-23T08:01:01.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/2540105_tfaHJ4RcEPxglp0xaRuRtbEsKtH2-ybRUFG7sXUtJ4M.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6354f4bafd60426f8587b516",
+        "created_at": "2022-10-23T08:00:58.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/2540105_lGxwSatGpPK1jo8VLUej3-f-xvmNCqBioHmxsDU8b4I.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9776706410280184,
+    "price": 1,
+    "rating": 8.5
+  },
+  {
+    "fsq_id": "5dc1302d49c3d90008e1229b",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.277382,
+        "longitude": 103.839906
+      },
+      "roof": {
+        "latitude": 1.277382,
+        "longitude": 103.839906
+      }
+    },
+    "hours": {
+      "display": "Tue 10:00-17:30; Thu-Sun 10:00-17:30",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "1730",
+          "day": 2,
+          "open": "1000"
+        },
+        {
+          "close": "1730",
+          "day": 4,
+          "open": "1000"
+        },
+        {
+          "close": "1730",
+          "day": 5,
+          "open": "1000"
+        },
+        {
+          "close": "1730",
+          "day": 6,
+          "open": "1000"
+        },
+        {
+          "close": "1730",
+          "day": 7,
+          "open": "1000"
+        }
+      ]
+    },
+    "location": {
+      "address": "1 Everton Pk",
+      "address_extended": "#01-43",
+      "country": "SG",
+      "cross_street": "",
+      "formatted_address": "1 Everton Pk, 081001",
+      "locality": "Singapore",
+      "post_town": "Central Business District",
+      "postcode": "081001"
+    },
+    "name": "The Better Half",
+    "photos": [
+      {
+        "id": "63c63ef934a3682257e4b271",
+        "created_at": "2023-01-17T06:23:53.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4442208_scn-FocN-1bXhHXsx51sXNIGa9jXU9xJTiJ04zMztfg.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "63c63ef2fc897d332faeebeb",
+        "created_at": "2023-01-17T06:23:46.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4442208_T073wm4LDMcemHKvP5x4CNPYGhnKlr2I9eIGx5hm0fU.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "63c63ee9c9a07a7a3224c634",
+        "created_at": "2023-01-17T06:23:37.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4442208_TP121D6el_unxml_rQUcDnax7QDuGQ10MPjFMrLld0Q.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "63c63ed64d6ed24fd90f5156",
+        "created_at": "2023-01-17T06:23:18.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4442208_whLyEZ8v4V1OMk4NkELFOM5wJVLDo0YUAjd4taTSkDU.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "63bcdd69a779e94c1b90615f",
+        "created_at": "2023-01-10T03:37:13.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/115160_mFAzMtmcgInXuk_h8-Zu1UyeNtLvjOtfIZB2is6alMc.jpg",
+        "width": 1920,
+        "height": 1440
+      }
+    ],
+    "popularity": 0.9831692286772113,
+    "price": 1,
+    "rating": 8.4
+  },
+  {
+    "fsq_id": "56dbf47f498e11eedb30ae20",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.277455,
+        "longitude": 103.803922
+      },
+      "roof": {
+        "latitude": 1.277455,
+        "longitude": 103.803922
+      }
+    },
+    "hours": {
+      "display": "Tue-Thu 12:00-22:00; Fri-Sat 12:00-23:00; Sun 12:00-22:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2200",
+          "day": 2,
+          "open": "1200"
+        },
+        {
+          "close": "2200",
+          "day": 3,
+          "open": "1200"
+        },
+        {
+          "close": "2200",
+          "day": 4,
+          "open": "1200"
+        },
+        {
+          "close": "2300",
+          "day": 5,
+          "open": "1200"
+        },
+        {
+          "close": "2300",
+          "day": 6,
+          "open": "1200"
+        },
+        {
+          "close": "2200",
+          "day": 7,
+          "open": "1200"
+        }
+      ]
+    },
+    "location": {
+      "address": "5A Lock Rd Gillman Barracks",
+      "country": "SG",
+      "cross_street": "",
+      "formatted_address": "5A Lock Rd Gillman Barracks, 108927",
+      "locality": "Singapore",
+      "post_town": "South",
+      "postcode": "108927"
+    },
+    "name": "Creamier",
+    "photos": [
+      {
+        "id": "58b0fa3fa8b75911ad7250c0",
+        "created_at": "2017-02-25T03:30:07.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/19852582_7HOPdevOb6iI_nvMLn5v0zg8WhEpyuGkpwXx8QC5qb0.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "59c612d1e1f2282d144012d7",
+        "created_at": "2017-09-23T07:52:49.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/355346341_-nfY8rloHb3XA7D5xyGgnwu1zBq-Uz8vdY_i17IuW3I.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "598ef6ec1108ba4e32aa5a0f",
+        "created_at": "2017-08-12T12:39:08.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4593450_lb0iClhncQhBRWlIvpgwGKlR1ebjnGFNyHpNodcIO2w.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "590ecfdde96d0c49bc533d79",
+        "created_at": "2017-05-07T07:42:21.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/2383222_0mPRiziM25M2ALyi_q-5si46d5XXrgBMGiY-ZnE1G50.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "576e5237498eda02384d5443",
+        "created_at": "2016-06-25T09:43:19.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/3211319_JmRXSk2Y70aetcWBUeLQcW8lsKkImY_U3zss2AKFB0s.jpg",
+        "width": 1919,
+        "height": 1281
+      }
+    ],
+    "popularity": 0.9739942022535804,
+    "price": 1,
+    "rating": 8.3
+  },
+  {
+    "fsq_id": "4ee9fb2caa1f7c7810a14c3c",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.350636,
+        "longitude": 103.872603
+      },
+      "roof": {
+        "latitude": 1.350636,
+        "longitude": 103.872603
+      }
+    },
+    "hours": {
+      "display": "Open Daily 10:00-22:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2200",
+          "day": 1,
+          "open": "1000"
+        },
+        {
+          "close": "2200",
+          "day": 2,
+          "open": "1000"
+        },
+        {
+          "close": "2200",
+          "day": 3,
+          "open": "1000"
+        },
+        {
+          "close": "2200",
+          "day": 4,
+          "open": "1000"
+        },
+        {
+          "close": "2200",
+          "day": 5,
+          "open": "1000"
+        },
+        {
+          "close": "2200",
+          "day": 6,
+          "open": "1000"
+        },
+        {
+          "close": "2200",
+          "day": 7,
+          "open": "1000"
+        }
+      ]
+    },
+    "location": {
+      "address": "23 Serangoon Central",
+      "address_extended": "#01-K4/K5 Nex",
+      "country": "SG",
+      "cross_street": "23 Serangoon Ctrl",
+      "formatted_address": "23 Serangoon Central (23 Serangoon Ctrl), 556083",
+      "locality": "Singapore",
+      "post_town": "Hougang",
+      "postcode": "556083"
+    },
+    "name": "Baskin Robbins",
+    "photos": [
+      {
+        "id": "62cfddbbe486f04bee2f085e",
+        "created_at": "2022-07-14T09:11:23.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8441981_4DZ6vzIGnzdlokdCTu84y3VsDy6S82K-vM1RgYat_qw.jpg",
+        "width": 1080,
+        "height": 1920
+      },
+      {
+        "id": "61ff4e808877c04673525316",
+        "created_at": "2022-02-06T04:28:48.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/941196_gDR_QYZHqdlWFA3EonU23GjEi_rkpUlVfdlYNjIxoh8.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "5e022ecfbc36ab0007c3b2f6",
+        "created_at": "2019-12-24T15:29:19.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/408156188_nHStg2k5mYdIvq2kRMsuXDCb4FmppuqD0B288He7cuw.jpg",
+        "width": 1678,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5dbce4ef8c803a00085c32f3",
+        "created_at": "2019-11-02T02:07:43.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/23116182_ytqJAZ2GEFYwlGpJ7UvUyaxTPa2C51vzYVm2MHTirxs.jpg",
+        "width": 1425,
+        "height": 1900
+      },
+      {
+        "id": "5c739d65be7078003af2caec",
+        "created_at": "2019-02-25T07:46:45.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/13791193_WR0p1skSYvVmhAG5ZEzGYrwqajzvuRnYxyv6A9kNdE8.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9324333846353539,
+    "price": 1,
+    "rating": 8.3
+  },
+  {
+    "fsq_id": "592a85ba8d0a53502937bbd2",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 1.27795,
+        "longitude": 103.844345
+      },
+      "main": {
+        "latitude": 1.277916,
+        "longitude": 103.844542
+      },
+      "roof": {
+        "latitude": 1.277916,
+        "longitude": 103.844542
+      }
+    },
+    "hours": {
+      "display": "Mon-Thu 12:00-22:00; Fri-Sat 12:00-23:00; Sun 12:00-19:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2200",
+          "day": 1,
+          "open": "1200"
+        },
+        {
+          "close": "2200",
+          "day": 2,
+          "open": "1200"
+        },
+        {
+          "close": "2200",
+          "day": 3,
+          "open": "1200"
+        },
+        {
+          "close": "2200",
+          "day": 4,
+          "open": "1200"
+        },
+        {
+          "close": "2300",
+          "day": 5,
+          "open": "1200"
+        },
+        {
+          "close": "2300",
+          "day": 6,
+          "open": "1200"
+        },
+        {
+          "close": "1900",
+          "day": 7,
+          "open": "1200"
+        }
+      ]
+    },
+    "location": {
+      "address": "53 Tras St",
+      "country": "SG",
+      "cross_street": "",
+      "formatted_address": "53 Tras St, 078992",
+      "locality": "Singapore",
+      "post_town": "Central Business District",
+      "postcode": "078992"
+    },
+    "name": "Nesuto Patisserie",
+    "photos": [
+      {
+        "id": "649153e8157f0031ca2d2b76",
+        "created_at": "2023-06-20T07:23:20.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/115160_ApSAvg6fHXNI1Ytm_auHuAck5IRWYeKgEgb5Vohvs8I.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "644bcd62e51bfa6fd3da4931",
+        "created_at": "2023-04-28T13:42:58.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/5931716_8nSvezuqdBJjO8PY5jicg7hg3BG_mrspeYVRrdvQbOQ.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "644bcd611889856df5751f73",
+        "created_at": "2023-04-28T13:42:57.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/5931716_m_gwizFsVRhjKiHaFCa-_6C4WLl52g35KQ_rsw2J7fk.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "644bcd2e693e945ed7bcfae5",
+        "created_at": "2023-04-28T13:42:06.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/5931716_ppgGdSoC9M2WiVTDkZt_u5kNwJWGNe8YO9JL8aD2Ync.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "644bcd270305367f95067ebe",
+        "created_at": "2023-04-28T13:41:59.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/5931716_GrBP1FmHBIibm454taXST-WyNkhUrIIsYcCa3jzcfBs.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9720286549599164,
+    "price": 1,
+    "rating": 8.3
+  },
+  {
+    "fsq_id": "4b6aca15f964a5205fe02be3",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.323452,
+        "longitude": 103.767692
+      },
+      "roof": {
+        "latitude": 1.323452,
+        "longitude": 103.767692
+      }
+    },
+    "hours": {
+      "display": "Mon-Thu 11:00-21:00; Fri-Sat 11:00-22:00; Sun 14:00-21:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2100",
+          "day": 1,
+          "open": "1100"
+        },
+        {
+          "close": "2100",
+          "day": 2,
+          "open": "1100"
+        },
+        {
+          "close": "2100",
+          "day": 3,
+          "open": "1100"
+        },
+        {
+          "close": "2100",
+          "day": 4,
+          "open": "1100"
+        },
+        {
+          "close": "2200",
+          "day": 5,
+          "open": "1100"
+        },
+        {
+          "close": "2200",
+          "day": 6,
+          "open": "1100"
+        },
+        {
+          "close": "2100",
+          "day": 7,
+          "open": "1400"
+        }
+      ]
+    },
+    "location": {
+      "address": "41 Sunset Way",
+      "address_extended": "#01-04 Clementi Arcade",
+      "country": "SG",
+      "cross_street": "41 Sunset Way",
+      "formatted_address": "41 Sunset Way (41 Sunset Way), 597071",
+      "locality": "Singapore",
+      "post_town": "Central West",
+      "postcode": "597071"
+    },
+    "name": "The Daily Scoop",
+    "photos": [
+      {
+        "id": "623596054e2612796de5b4be",
+        "created_at": "2022-03-19T08:36:21.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/17834158_5_evKhE42Cgp14d090cS4lQTG1JearEn5OcOW_e1rZw.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "5f2806f5b230f759ae95e090",
+        "created_at": "2020-08-03T12:45:41.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/2416267_gdg6ppmSXu3oOPSRi6TmCmaXaPqJiNWSyzWpBjd5mMs.jpg",
+        "width": 1080,
+        "height": 1440
+      },
+      {
+        "id": "5dfca57f3913a80007262e19",
+        "created_at": "2019-12-20T10:42:07.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/41610635_48iz_1YSs7cvYJZvSWaYc3H2ukobeG81fb1Daaauwts.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5cfbaed23fffb400250ae5e3",
+        "created_at": "2019-06-08T12:49:22.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1205674_UxWfVVZPXhER2AMAvhwlbIqDGGvvkqw76hEnyeEcUR4.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "5cf780ec66f3cd002c89ef5a",
+        "created_at": "2019-06-05T08:44:28.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/172181_Scr9E8tP0WjkHODrs6tP1veoVhFiDj47dLH6Hzh1gjI.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9588792671846317,
+    "price": 1,
+    "rating": 8.3
+  },
+  {
+    "fsq_id": "5290969d11d216c8e052ff16",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.362338,
+        "longitude": 103.751255
+      },
+      "roof": {
+        "latitude": 1.362338,
+        "longitude": 103.751255
+      }
+    },
+    "hours": {
+      "display": "Tue-Sun 12:00-21:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2100",
+          "day": 2,
+          "open": "1200"
+        },
+        {
+          "close": "2100",
+          "day": 3,
+          "open": "1200"
+        },
+        {
+          "close": "2100",
+          "day": 4,
+          "open": "1200"
+        },
+        {
+          "close": "2100",
+          "day": 5,
+          "open": "1200"
+        },
+        {
+          "close": "2100",
+          "day": 6,
+          "open": "1200"
+        },
+        {
+          "close": "2100",
+          "day": 7,
+          "open": "1200"
+        }
+      ]
+    },
+    "location": {
+      "address": "Blk 347 Bukit Batok St 34",
+      "address_extended": "#01-260",
+      "country": "SG",
+      "cross_street": "",
+      "formatted_address": "Blk 347 Bukit Batok St 34, 650347",
+      "locality": "Singapore",
+      "post_town": "North West",
+      "postcode": "650347"
+    },
+    "name": "Beans & Cream",
+    "photos": [
+      {
+        "id": "60e19f46e9ea3506ecd90ae8",
+        "created_at": "2021-07-04T11:45:10.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/7651474_dEtyVo7pXkQ086ytH2_qDSBZtGG32Wi6OjrWdKMF90Y.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "5d397c6ec572f50007578614",
+        "created_at": "2019-07-25T09:54:54.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4775702_XfSKlDifUCckO9n0ol0u4S_CN4_5xMVPFPrB9zUUrac.jpg",
+        "width": 1440,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5b9e1529588e36002cfe7f8f",
+        "created_at": "2018-09-16T08:32:41.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/376613494_Oj4fSDQbK1bJ32u-tL_8E6VoUIcWbHTLFjX5T1Ri9XY.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5b48a2d192e7a9002cb0aee2",
+        "created_at": "2018-07-13T13:02:09.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/788704_cRrLk8G74DifwctGHuW4Ura2X31Ug2PRDwBhlmi9G1w.jpg",
+        "width": 1080,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5aa4c88118d43b25d57aa187",
+        "created_at": "2018-03-11T06:11:13.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/85813239_1mkb4MwZf8IbFHF2dVtB7puVcRxfJ0Ix5xHWgO5Zt8I.jpg",
+        "width": 1920,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      }
+    ],
+    "popularity": 0.9884131605135147,
+    "price": 1,
+    "rating": 8.2
+  },
+  {
+    "fsq_id": "581ad17bffb2191b8ca7c4cd",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 1.301579,
+        "longitude": 103.859651
+      },
+      "main": {
+        "latitude": 1.301618,
+        "longitude": 103.859706
+      },
+      "roof": {
+        "latitude": 1.301618,
+        "longitude": 103.859706
+      }
+    },
+    "hours": {
+      "display": "Open Daily 10:30-21:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2100",
+          "day": 1,
+          "open": "1030"
+        },
+        {
+          "close": "2100",
+          "day": 2,
+          "open": "1030"
+        },
+        {
+          "close": "2100",
+          "day": 3,
+          "open": "1030"
+        },
+        {
+          "close": "2100",
+          "day": 4,
+          "open": "1030"
+        },
+        {
+          "close": "2100",
+          "day": 5,
+          "open": "1030"
+        },
+        {
+          "close": "2100",
+          "day": 6,
+          "open": "1030"
+        },
+        {
+          "close": "2100",
+          "day": 7,
+          "open": "1030"
+        }
+      ]
+    },
+    "location": {
+      "address": "33 Bussorah St",
+      "country": "SG",
+      "cross_street": "",
+      "formatted_address": "33 Bussorah St, 199451",
+      "locality": "Singapore",
+      "post_town": "Beach Road",
+      "postcode": "199451"
+    },
+    "name": "Konditori - Artisan European Bakery",
+    "photos": [
+      {
+        "id": "648ae6b510de930206541832",
+        "created_at": "2023-06-15T10:23:49.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4000189_dZiYoqi-koyI-nFZAhxlqgSTlKV3s4WS8WV5Enc-kPE.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "64153ed3e926433ad2df30d7",
+        "created_at": "2023-03-18T04:32:19.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/789829_8S9JNOEW0hoeExRkQPZDOy-bwn3aJPrr3c65JAwyPMk.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "634526b87e25685721ef0fb8",
+        "created_at": "2022-10-11T08:18:00.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/5931716_apilAVcIE_i8Zeh-SkAFXKlUUAgabUW8EcKxJ0dkbTw.jpg",
+        "width": 1439,
+        "height": 1920
+      },
+      {
+        "id": "634526b71774d674d26a8361",
+        "created_at": "2022-10-11T08:17:59.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/5931716_CHADHCkX_bKxM8bKGYINl0fIbK7b_xlDMoEGpC7vTCQ.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6345269431ada8065722ff64",
+        "created_at": "2022-10-11T08:17:24.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/5931716_2yTctUK8LXZZiT5nGd1tD5CADfLl6-FsfsNzWbV4TOA.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.986524257202371,
+    "price": 1,
+    "rating": 8.2
+  },
+  {
+    "fsq_id": "51763f4be4b0888c3d9f42a9",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.28233,
+        "longitude": 103.830451
+      },
+      "roof": {
+        "latitude": 1.28233,
+        "longitude": 103.830451
+      }
+    },
+    "hours": {
+      "display": "Mon-Sat 8:00-19:00; Sun 9:00-18:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "1900",
+          "day": 1,
+          "open": "0800"
+        },
+        {
+          "close": "1900",
+          "day": 2,
+          "open": "0800"
+        },
+        {
+          "close": "1900",
+          "day": 3,
+          "open": "0800"
+        },
+        {
+          "close": "1900",
+          "day": 4,
+          "open": "0800"
+        },
+        {
+          "close": "1900",
+          "day": 5,
+          "open": "0800"
+        },
+        {
+          "close": "1900",
+          "day": 6,
+          "open": "0800"
+        },
+        {
+          "close": "1800",
+          "day": 7,
+          "open": "0900"
+        }
+      ]
+    },
+    "location": {
+      "address": "1D Yong Siak St",
+      "country": "SG",
+      "cross_street": "",
+      "formatted_address": "1D Yong Siak St, 168641",
+      "locality": "Singapore",
+      "post_town": "Central South",
+      "postcode": "168641"
+    },
+    "name": "Plain Vanilla Bakery",
+    "photos": [
+      {
+        "id": "64044f034c3a020c45dc7437",
+        "created_at": "2023-03-05T08:12:51.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8081033_W5egENXAJZ9riYaQ-o5TsbpGfc4O5en-MIg3Flpp9Ak.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "64044efa71ee7c4e5c8c1c8a",
+        "created_at": "2023-03-05T08:12:42.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8081033_OohkfSzcuFJJRDOu_EerE-FAB12dbji2G3MP-eb9wkE.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "64044ef59585dc503d47f424",
+        "created_at": "2023-03-05T08:12:37.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8081033_DJztZl_j-EnqOsRU8MO7w5Ts72nleYz4Oe0x3J8L8ss.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "64044eebfedc16405e5dc163",
+        "created_at": "2023-03-05T08:12:27.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8081033_vjUhGU7uD9-g4Y04B-2Ty9U4GxCwDzKIQH94CcuwOy8.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "64044edb723a1d7ba3d7a2ca",
+        "created_at": "2023-03-05T08:12:11.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8081033_V4PUsUdHA8z3WwysU4Eh4F1XFI1m0Q_AyXyLZ2Lmvdg.jpg",
+        "width": 1920,
+        "height": 1440
+      }
+    ],
+    "popularity": 0.988348878463659,
+    "price": 2,
+    "rating": 8.6
+  },
+  {
+    "fsq_id": "5dc1302d49c3d90008e1229b",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.277382,
+        "longitude": 103.839906
+      },
+      "roof": {
+        "latitude": 1.277382,
+        "longitude": 103.839906
+      }
+    },
+    "hours": {
+      "display": "Tue 10:00-17:30; Thu-Sun 10:00-17:30",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "1730",
+          "day": 2,
+          "open": "1000"
+        },
+        {
+          "close": "1730",
+          "day": 4,
+          "open": "1000"
+        },
+        {
+          "close": "1730",
+          "day": 5,
+          "open": "1000"
+        },
+        {
+          "close": "1730",
+          "day": 6,
+          "open": "1000"
+        },
+        {
+          "close": "1730",
+          "day": 7,
+          "open": "1000"
+        }
+      ]
+    },
+    "location": {
+      "address": "1 Everton Pk",
+      "address_extended": "#01-43",
+      "country": "SG",
+      "cross_street": "",
+      "formatted_address": "1 Everton Pk, 081001",
+      "locality": "Singapore",
+      "post_town": "Central Business District",
+      "postcode": "081001"
+    },
+    "name": "The Better Half",
+    "photos": [
+      {
+        "id": "63c63ef934a3682257e4b271",
+        "created_at": "2023-01-17T06:23:53.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4442208_scn-FocN-1bXhHXsx51sXNIGa9jXU9xJTiJ04zMztfg.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "63c63ef2fc897d332faeebeb",
+        "created_at": "2023-01-17T06:23:46.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4442208_T073wm4LDMcemHKvP5x4CNPYGhnKlr2I9eIGx5hm0fU.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "63c63ee9c9a07a7a3224c634",
+        "created_at": "2023-01-17T06:23:37.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4442208_TP121D6el_unxml_rQUcDnax7QDuGQ10MPjFMrLld0Q.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "63c63ed64d6ed24fd90f5156",
+        "created_at": "2023-01-17T06:23:18.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4442208_whLyEZ8v4V1OMk4NkELFOM5wJVLDo0YUAjd4taTSkDU.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "63bcdd69a779e94c1b90615f",
+        "created_at": "2023-01-10T03:37:13.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/115160_mFAzMtmcgInXuk_h8-Zu1UyeNtLvjOtfIZB2is6alMc.jpg",
+        "width": 1920,
+        "height": 1440
+      }
+    ],
+    "popularity": 0.9831692286772113,
+    "price": 1,
+    "rating": 8.4
+  },
+  {
+    "fsq_id": "5b1a1d29088158002cf29e02",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 1.310879,
+        "longitude": 103.796607
+      },
+      "main": {
+        "latitude": 1.310897,
+        "longitude": 103.796503
+      },
+      "roof": {
+        "latitude": 1.310897,
+        "longitude": 103.796503
+      }
+    },
+    "hours": {
+      "display": "Open Daily 8:00-20:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2000",
+          "day": 1,
+          "open": "0800"
+        },
+        {
+          "close": "2000",
+          "day": 2,
+          "open": "0800"
+        },
+        {
+          "close": "2000",
+          "day": 3,
+          "open": "0800"
+        },
+        {
+          "close": "2000",
+          "day": 4,
+          "open": "0800"
+        },
+        {
+          "close": "2000",
+          "day": 5,
+          "open": "0800"
+        },
+        {
+          "close": "2000",
+          "day": 6,
+          "open": "0800"
+        },
+        {
+          "close": "2000",
+          "day": 7,
+          "open": "0800"
+        }
+      ]
+    },
+    "location": {
+      "address": "43 Jln Merah Saga",
+      "address_extended": "#01-74",
+      "country": "SG",
+      "cross_street": "",
+      "formatted_address": "43 Jln Merah Saga, 278115",
+      "locality": "Singapore",
+      "post_town": "Tanglin",
+      "postcode": "278115"
+    },
+    "name": "Tiong Bahru Bakery",
+    "photos": [
+      {
+        "id": "645dc6d49b29d9620b590e79",
+        "created_at": "2023-05-12T04:55:48.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/3211319_jfCKb0dhCDGbppLz1b3v0TdI69yvFaK8_eEBqgvCEF0.jpg",
+        "width": 1280,
+        "height": 1920
+      },
+      {
+        "id": "63e4c9445f0d363d6f3820dc",
+        "created_at": "2023-02-09T10:21:56.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/3211319_W5YojUHWfEnkdGkvPRXz0e5p8jAXwJbozZxRfiFrN_c.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "631d43d9d09212504f7c04e6",
+        "created_at": "2022-09-11T02:11:37.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/46708380_96CXwXUDofwKWxKpUgoi5qumQ_iFYpdFSFCqc2Wx9CQ.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "61e54ba18fa7611e35d742cd",
+        "created_at": "2022-01-17T10:57:37.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/3211319_EZYYl5CDcCK_lkItsig73j_CBmvLHepv9v525DMjWeQ.jpg",
+        "width": 1440,
+        "height": 1800
+      },
+      {
+        "id": "61c92e7ce816b708fd52b93f",
+        "created_at": "2021-12-27T03:09:48.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/3211319_HCp-Dj5oTuv90MQbCDLCVBFiNzFIiaQJ554QbFPdgyk.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9818304313696403,
+    "price": 1,
+    "rating": 8.4
+  },
+  {
+    "fsq_id": "4ebca9a7d3e38e6b0bcf6f1a",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.278971,
+        "longitude": 103.851416
+      },
+      "roof": {
+        "latitude": 1.278971,
+        "longitude": 103.851416
+      }
+    },
+    "hours": {
+      "display": "Open Daily 11:30-15:00, 18:00-22:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "1500",
+          "day": 1,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 1,
+          "open": "1800"
+        },
+        {
+          "close": "1500",
+          "day": 2,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 2,
+          "open": "1800"
+        },
+        {
+          "close": "1500",
+          "day": 3,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 3,
+          "open": "1800"
+        },
+        {
+          "close": "1500",
+          "day": 4,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 4,
+          "open": "1800"
+        },
+        {
+          "close": "1500",
+          "day": 5,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 5,
+          "open": "1800"
+        },
+        {
+          "close": "1500",
+          "day": 6,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 6,
+          "open": "1800"
+        },
+        {
+          "close": "1500",
+          "day": 7,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 7,
+          "open": "1800"
+        }
+      ]
+    },
+    "location": {
+      "address": "Asia Square Tower 1 8 Marina View",
+      "address_extended": "#02-08/09/10",
+      "country": "SG",
+      "cross_street": "8 Marina View",
+      "formatted_address": "Asia Square Tower 1 8 Marina View (8 Marina View), 018960",
+      "locality": "Singapore",
+      "post_town": "Marina Area",
+      "postcode": "018960"
+    },
+    "name": "Imperial Treasure Super Peking Duck Restaurant",
+    "photos": [
+      {
+        "id": "56092a81498e50c718ab629a",
+        "created_at": "2015-09-28T11:54:41.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/234324_JOYSra_omJop1xg5UiCH-d_m32sodRyG0D_gwRv9H-Q.jpg",
+        "width": 1919,
+        "height": 1440
+      },
+      {
+        "id": "63e0eba5d60f7f67da3187ea",
+        "created_at": "2023-02-06T11:59:33.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/74774594_5ErLTJtIL9cRG1nK5-gsN0q4JRU5kAgGg3L7uKk8ztk.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "63a19f52631b7e1c71f7471c",
+        "created_at": "2022-12-20T11:41:06.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/18481138_P-HJ6QKp1J0AgXfu6qEiXPP6qwIwrndYEHgJY_VAEV4.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "63a05cb0deb4e61d69ac8ee2",
+        "created_at": "2022-12-19T12:44:32.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/91136_MibB16uhhDFY2Mezx5rfNhYalegfe_tSMH-6M2VCsXc.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "636519288db29d4476d6adfa",
+        "created_at": "2022-11-04T13:52:40.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/149024_XZb4-yRrBLx_W4MKtUdCRmfwobs7ga0UpjiA76bBEGk.jpg",
+        "width": 1920,
+        "height": 1440
+      }
+    ],
+    "popularity": 0.9905406491250842,
+    "rating": 8.4
+  },
+  {
+    "fsq_id": "4c957b9c1582952195fa23a8",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.292717,
+        "longitude": 103.859528
+      },
+      "roof": {
+        "latitude": 1.292717,
+        "longitude": 103.859528
+      }
+    },
+    "hours": {
+      "display": "Mon-Fri 7:30-21:30",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2130",
+          "day": 1,
+          "open": "0730"
+        },
+        {
+          "close": "2130",
+          "day": 2,
+          "open": "0730"
+        },
+        {
+          "close": "2130",
+          "day": 3,
+          "open": "0730"
+        },
+        {
+          "close": "2130",
+          "day": 4,
+          "open": "0730"
+        },
+        {
+          "close": "2130",
+          "day": 5,
+          "open": "0730"
+        }
+      ]
+    },
+    "location": {
+      "address": "9 Raffles Boulevard",
+      "address_extended": "#01-97/98 Millenia Walk",
+      "country": "SG",
+      "cross_street": "9 Raffles Blvd",
+      "formatted_address": "9 Raffles Boulevard (9 Raffles Blvd), 039596",
+      "locality": "Singapore",
+      "post_town": "Marina Area",
+      "postcode": "039596"
+    },
+    "name": "Pullman Bakery",
+    "photos": [
+      {
+        "id": "6330057711d533627835231b",
+        "created_at": "2022-09-25T07:38:31.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1031694_kJIv9y5IMFZvJsW9kpFEch0lix7yhnT7g6c9el1SU24.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "627203d5d2b21d13db70a859",
+        "created_at": "2022-05-04T04:40:53.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/5321003_eOuvnR0w7x_DZYJZjiTUJGVFywTtoLWO-6aENplWzvg.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "5bd067c167f62b00395400ac",
+        "created_at": "2018-10-24T12:38:25.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/39804895_1bw2zzrc8RLXFn15BqhJ7FR48PeFAkVkQFelpSRe-Oo.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "indoor"
+        ]
+      },
+      {
+        "id": "5b5c46df90d1ed002c9854f1",
+        "created_at": "2018-07-28T10:35:11.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/5931716_JDvLIyGGGZJimXD2bA8Fhi7bkU6NsXLdaGNxCf2cTsM.jpg",
+        "width": 1440,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5b5c46dd25fb7b002c9a3db2",
+        "created_at": "2018-07-28T10:35:09.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/5931716_iMUFSdkd5b815REl2pLqJ7qiZtDSy1eXAEsUW3tCXfk.jpg",
+        "width": 1440,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      }
+    ],
+    "popularity": 0.9838318282680314,
+    "price": 1,
+    "rating": 8.2
+  },
+  {
+    "fsq_id": "542a512e498ef4e6e7d1555e",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.274348,
+        "longitude": 103.844345
+      },
+      "roof": {
+        "latitude": 1.274348,
+        "longitude": 103.844345
+      }
+    },
+    "hours": {
+      "display": "Mon-Fri 8:00-20:00; Sat-Sun 9:00-18:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2000",
+          "day": 1,
+          "open": "0800"
+        },
+        {
+          "close": "2000",
+          "day": 2,
+          "open": "0800"
+        },
+        {
+          "close": "2000",
+          "day": 3,
+          "open": "0800"
+        },
+        {
+          "close": "2000",
+          "day": 4,
+          "open": "0800"
+        },
+        {
+          "close": "2000",
+          "day": 5,
+          "open": "0800"
+        },
+        {
+          "close": "1800",
+          "day": 6,
+          "open": "0900"
+        },
+        {
+          "close": "1800",
+          "day": 7,
+          "open": "0900"
+        }
+      ]
+    },
+    "location": {
+      "address": "Icon Village Altez, 16 Enggor St",
+      "address_extended": "#01-12",
+      "country": "SG",
+      "cross_street": "16 Enggor St",
+      "formatted_address": "Icon Village Altez, 16 Enggor St (16 Enggor St), 079717",
+      "locality": "Singapore",
+      "post_town": "Central Business District",
+      "postcode": "079717"
+    },
+    "name": "Two Men Bagel House",
+    "photos": [
+      {
+        "id": "5b8bdd17db2aeb002cf42e33",
+        "created_at": "2018-09-02T12:52:39.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/498107432_FmxA3OX7wlUyafggew2jbslm6HJZwUZh0XUxWaIPiuU.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5ba6f065b37e2b002cab9474",
+        "created_at": "2018-09-23T01:46:13.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/2110370_CF8gb0hrI17lWSFZakpI0AKawPmhHQPjGe7q_T6ytJQ.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "5b0ffe16237dee002c8cc5ed",
+        "created_at": "2018-05-31T13:52:22.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/63928606_Et_2q-2I7M_WvH7axm8vR7HADmfJdvFUS8zNvxs6f6g.jpg",
+        "width": 1440,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "56f12eea498e915e5edad7e9",
+        "created_at": "2016-03-22T11:39:22.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/79191132_H9OxRji9mfj8Sc8Bd0anHvyQJNT-jHNRW2Tm5DZr9Yk.jpg",
+        "width": 1440,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "64854d8500e1a910b793189d",
+        "created_at": "2023-06-11T04:28:53.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/564906471_vzHVHoPI1Y5Sj25JRH7DWH6ipgv_zf5oGECkXX9XDtA.jpg",
+        "width": 1920,
+        "height": 1440
+      }
+    ],
+    "popularity": 0.9910240006922683,
+    "price": 1,
+    "rating": 8.2
+  },
+  {
+    "fsq_id": "581ad17bffb2191b8ca7c4cd",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 1.301579,
+        "longitude": 103.859651
+      },
+      "main": {
+        "latitude": 1.301618,
+        "longitude": 103.859706
+      },
+      "roof": {
+        "latitude": 1.301618,
+        "longitude": 103.859706
+      }
+    },
+    "hours": {
+      "display": "Open Daily 10:30-21:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2100",
+          "day": 1,
+          "open": "1030"
+        },
+        {
+          "close": "2100",
+          "day": 2,
+          "open": "1030"
+        },
+        {
+          "close": "2100",
+          "day": 3,
+          "open": "1030"
+        },
+        {
+          "close": "2100",
+          "day": 4,
+          "open": "1030"
+        },
+        {
+          "close": "2100",
+          "day": 5,
+          "open": "1030"
+        },
+        {
+          "close": "2100",
+          "day": 6,
+          "open": "1030"
+        },
+        {
+          "close": "2100",
+          "day": 7,
+          "open": "1030"
+        }
+      ]
+    },
+    "location": {
+      "address": "33 Bussorah St",
+      "country": "SG",
+      "cross_street": "",
+      "formatted_address": "33 Bussorah St, 199451",
+      "locality": "Singapore",
+      "post_town": "Beach Road",
+      "postcode": "199451"
+    },
+    "name": "Konditori - Artisan European Bakery",
+    "photos": [
+      {
+        "id": "648ae6b510de930206541832",
+        "created_at": "2023-06-15T10:23:49.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4000189_dZiYoqi-koyI-nFZAhxlqgSTlKV3s4WS8WV5Enc-kPE.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "64153ed3e926433ad2df30d7",
+        "created_at": "2023-03-18T04:32:19.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/789829_8S9JNOEW0hoeExRkQPZDOy-bwn3aJPrr3c65JAwyPMk.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "634526b87e25685721ef0fb8",
+        "created_at": "2022-10-11T08:18:00.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/5931716_apilAVcIE_i8Zeh-SkAFXKlUUAgabUW8EcKxJ0dkbTw.jpg",
+        "width": 1439,
+        "height": 1920
+      },
+      {
+        "id": "634526b71774d674d26a8361",
+        "created_at": "2022-10-11T08:17:59.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/5931716_CHADHCkX_bKxM8bKGYINl0fIbK7b_xlDMoEGpC7vTCQ.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6345269431ada8065722ff64",
+        "created_at": "2022-10-11T08:17:24.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/5931716_2yTctUK8LXZZiT5nGd1tD5CADfLl6-FsfsNzWbV4TOA.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.986524257202371,
+    "price": 1,
+    "rating": 8.2
+  },
+  {
+    "fsq_id": "4bc9a4eafb84c9b6d55a1b3e",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.322474,
+        "longitude": 103.853113
+      },
+      "roof": {
+        "latitude": 1.322474,
+        "longitude": 103.853113
+      }
+    },
+    "hours": {
+      "display": "Open Daily 00:00-23:59",
+      "is_local_holiday": false,
+      "open_now": true,
+      "regular": [
+        {
+          "close": "2359",
+          "day": 1,
+          "open": "0000"
+        },
+        {
+          "close": "2359",
+          "day": 2,
+          "open": "0000"
+        },
+        {
+          "close": "2359",
+          "day": 3,
+          "open": "0000"
+        },
+        {
+          "close": "2359",
+          "day": 4,
+          "open": "0000"
+        },
+        {
+          "close": "2359",
+          "day": 5,
+          "open": "0000"
+        },
+        {
+          "close": "2359",
+          "day": 6,
+          "open": "0000"
+        },
+        {
+          "close": "2359",
+          "day": 7,
+          "open": "0000"
+        }
+      ]
+    },
+    "location": {
+      "address": "4 Whampoa Dr",
+      "country": "SG",
+      "formatted_address": "4 Whampoa Dr, 327715",
+      "locality": "Singapore",
+      "post_town": "Toa Payoh",
+      "postcode": "327715"
+    },
+    "name": "Sing Hon Loong Bakery",
+    "photos": [
+      {
+        "id": "60a92e0ed4e8e646536ba9b3",
+        "created_at": "2021-05-22T16:15:10.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/87917157_0pZuTtPSPVpnbYwkUznyDU70HtZkMchQ9rBY0v2W-VU.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "604f5ffd243d3a158fabf8cd",
+        "created_at": "2021-03-15T13:24:13.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/22145316_f1SOrSAdvlLjn3VvrArK_GgtbhqNW6lJaza73LD0R0s.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "5f81b8e5ce3497633d0c7472",
+        "created_at": "2020-10-10T13:36:37.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/90561018_R_ddNKvWeIQMUCw6MWSInCH2hUR9jLQAaeAJRPK4yzo.jpg",
+        "width": 1425,
+        "height": 1900
+      },
+      {
+        "id": "5f81ab5b6a05172a049c40c6",
+        "created_at": "2020-10-10T12:38:51.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/90561018_lS-HIA0P1tfppEKAkJXkNB24cHxZiOdOi_fLdOFpzBw.jpg",
+        "width": 1425,
+        "height": 1900
+      },
+      {
+        "id": "5f2bf0677330c0049fafa196",
+        "created_at": "2020-08-06T11:58:31.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/90561018_XeNRzh4ap8aITH--llpe5i5S_R-YeCAjY58MERRvCSc.jpg",
+        "width": 1425,
+        "height": 1900
+      }
+    ],
+    "popularity": 0.9896604795193681,
+    "price": 1,
+    "rating": 8.2
+  },
+  {
+    "fsq_id": "52a3109a11d2d5f6e87aa8da",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.334126,
+        "longitude": 103.742615
+      },
+      "roof": {
+        "latitude": 1.334126,
+        "longitude": 103.742615
+      }
+    },
+    "hours": {
+      "display": "Open Daily 10:00-22:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2200",
+          "day": 1,
+          "open": "1000"
+        },
+        {
+          "close": "2200",
+          "day": 2,
+          "open": "1000"
+        },
+        {
+          "close": "2200",
+          "day": 3,
+          "open": "1000"
+        },
+        {
+          "close": "2200",
+          "day": 4,
+          "open": "1000"
+        },
+        {
+          "close": "2200",
+          "day": 5,
+          "open": "1000"
+        },
+        {
+          "close": "2200",
+          "day": 6,
+          "open": "1000"
+        },
+        {
+          "close": "2200",
+          "day": 7,
+          "open": "1000"
+        }
+      ]
+    },
+    "location": {
+      "address": "Westgate, 3 Gateway Dr",
+      "address_extended": "#B2-01. Westgate",
+      "country": "SG",
+      "cross_street": "3 Gateway Dr.",
+      "formatted_address": "Westgate, 3 Gateway Dr (3 Gateway Dr.), 608532",
+      "locality": "Singapore",
+      "post_town": "Jurong",
+      "postcode": "608532"
+    },
+    "name": "Johan Paris",
+    "photos": [
+      {
+        "id": "576f6df6cd10ae8e5b27d81a",
+        "created_at": "2016-06-26T05:53:58.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/240112_utec_l0ndvmNeaDdUZ9iFipXucW-X7jPmtlD0MUCiXs.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "6170f73833ef094a5b6622a8",
+        "created_at": "2021-10-21T05:14:32.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/3747038_3qk-UWtWjok-JZDd86V3ftDYfB9m425oTgzU-8sZNpE.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "5843b26dea29b87010cb6511",
+        "created_at": "2016-12-04T06:06:37.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/40179_azITLELhLB4oOrorWzpGALe5dNn3G462KPxUAPsIHyE.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "5827fafa7c74e10acd93a523",
+        "created_at": "2016-11-13T05:32:42.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/64626615_imwzUnxEkE_WXze-PaanRVB-tbrqlQA67--nUixa2-g.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "52b04b8911d232c5331478b4",
+        "created_at": "2013-12-17T13:03:05.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/5150457_35qcVLu6oSQHcqT2ASSMfc8sc9M1iajWg6GbY5izENI.jpg",
+        "width": 640,
+        "height": 640
+      }
+    ],
+    "popularity": 0.9805114131543325,
+    "price": 1,
+    "rating": 8.2
+  },
+  {
+    "fsq_id": "53db460f498e18a343d830db",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.280092,
+        "longitude": 103.847086
+      },
+      "roof": {
+        "latitude": 1.280092,
+        "longitude": 103.847086
+      }
+    },
+    "hours": {
+      "display": "Mon-Fri 8:30-19:30; Sat 10:30-17:30",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "1930",
+          "day": 1,
+          "open": "0830"
+        },
+        {
+          "close": "1930",
+          "day": 2,
+          "open": "0830"
+        },
+        {
+          "close": "1930",
+          "day": 3,
+          "open": "0830"
+        },
+        {
+          "close": "1930",
+          "day": 4,
+          "open": "0830"
+        },
+        {
+          "close": "1930",
+          "day": 5,
+          "open": "0830"
+        },
+        {
+          "close": "1730",
+          "day": 6,
+          "open": "1030"
+        }
+      ]
+    },
+    "location": {
+      "address": "198 Telok Ayer St",
+      "country": "SG",
+      "cross_street": "",
+      "formatted_address": "198 Telok Ayer St, 068637",
+      "locality": "Singapore",
+      "post_town": "Marina Area",
+      "postcode": "068637"
+    },
+    "name": "Pantler",
+    "photos": [
+      {
+        "id": "546429c0498e18f7bf0bba93",
+        "created_at": "2014-11-13T03:47:12.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/7644703_9JQ1uwHAGZN-e3dLrhL8Clc_E_i1g0UA5ixY6iz1DWo.jpg",
+        "width": 1440,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5f7bf3b7dd53a8329acaec3e",
+        "created_at": "2020-10-06T04:33:59.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/87917157_6VMi9QvrepzXXU9S4KcuAzbTuJ5fZGlMQgfZRao0pqM.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "56cffe91cd10b2b6db65162d",
+        "created_at": "2016-02-26T07:28:17.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1474043_ij0MrScaSCoHlqJQ6Yn5FP_COEVmLefAj_Lsdn2zisE.jpg",
+        "width": 1920,
+        "height": 1440,
+        "classifications": [
+          "indoor"
+        ]
+      },
+      {
+        "id": "57651152498ed7bb3f56fedc",
+        "created_at": "2016-06-18T09:16:02.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/3733785_JnK9FAM-xEQP_oZ2tr4piD2WkmOxFF4OOjkcNdQjgC8.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5d4bb30b7928f300080c883b",
+        "created_at": "2019-08-08T05:28:43.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/126030027_FpJ0C-sSfbiXCjrEI0Hn0CeMsbL3YlOVEG0rQqCCDiY.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      }
+    ],
+    "popularity": 0.969621786670128,
+    "price": 1,
+    "rating": 8.2
+  }
+]

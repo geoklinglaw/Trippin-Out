@@ -30,7 +30,7 @@ const rankRule = {
   // Obtain the list of locations based on the rank rule
   // for example: the category that is ranked 1 will have 40 locations assuming duration of travel is 5 days (5 * 8)
   async function obtainListOfLocations(data, rankRule) {
-    const destination_location = '37.5519,126.9918'; // Taiwan
+    const destination_location = '1.3521,103.8198'; // Singapore
     let locations = [];
 
     for (let i = 0; i < data.length; i++) {
@@ -83,10 +83,13 @@ async function getListPerCategory(cat, cat_id, country) {
 obtainListOfLocations(data, rankRule)
     .then(list => {
         console.log(list);
-        var currentTime = new Date();
-        var singaporeTimeOptions = { timeZone: 'Asia/Singapore', year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit' };
-        var singaporeTime = currentTime.toLocaleString('en-SG', singaporeTimeOptions).replace(/[\/\s:]/g, '');
-        var filename = 'list_of_locations_' + singaporeTime + '.json';
+
+        // GET THIS SETTLED SOON
+        function generateUniqueFilename(prefix) {
+            const timestamp = new Date().toISOString().replace(/[:.-]/g, '');
+            return `${prefix}_${timestamp}.json`;
+        }
+        const filename = generateUniqueFilename('location_list');
         fs.writeFile(`${filename}`, JSON.stringify(list, null, 2), (err) => {
             if (err) throw err;
             console.log('Data written to file');

@@ -3,7 +3,6 @@ import { Card,  Button, Space } from 'antd';
 import SuggLocations from "./SuggLocations";
 import "./Explore.css";
 import { getFirestore } from 'firebase/firestore';
-// import { firebaseApp } from '../../firebase'; 
 import { db, firebase } from '../../firebase';
 import { collection, query, getDocs, addDoc, doc, setDoc } from "firebase/firestore";
 import axios from 'axios';
@@ -22,38 +21,44 @@ const SuggestedLocations = () => {
       ...prevSelected,
       [locationId]: prevSelected[locationId]
         ? undefined 
-        : { locationId, photo, name, formatted_address, price } 
+        : { name, locationId, photo, formatted_address, price } 
     }));
   };
   
+  // const trytry = collection(db, 'users')
+  // await setDoc(doc(trytry), {
+  //   name: 'Lexuan',
+  //   userID: '2',
+  // })    
+
   const submitData = async () => {
     const selectedData = Object.values(selectedLocations).filter(location => location);
-    console.log(selectedData);
 
     const userID = 'pVOrWYawmnkMvUu3IFtn';
     const tripID = 'V1NBZp7HSK7hnEkKT0Aw';
-    
-    // Use Firestore's modular syntax
+
     const locationsRef = collection(db, 'users', userID, 'trips', tripID, 'locations');
-    const trytry = collection(db, 'users')
-    
-    try {
-        // await setDoc(doc(locationsRef), {
-        //     name: selectedData.name,
-        //     locationId: selectedData.locationId,
-        //     photo: selectedData.photo,
-        //     formatted_address: selectedData.formatted_address,
-        //     price: selectedData.price
-        // });
-        await setDoc(doc(trytry), {
-          name: 'Lexuan',
-          userID: '2',
-        })
-        console.log("Document successfully written!");
-    } catch (error) {
-        console.error("Error storing locations:", error);
+    for (const location of selectedData) {
+        try {
+            console.log("id: " + location.locationId);
+            console.log("name: " + location.name);
+            console.log("add: " + location.formatted_address);
+            console.log("photo: " + location.photo);
+
+            await addDoc(locationsRef, {
+                name: location.name,
+                locationId: location.locationId,
+                photo: location.photo,
+                address: location.formatted_address,
+                // price: location.price
+            });
+            console.log("Document successfully written!");
+        } catch (error) {
+            console.error("Error storing locations:", error);
+        }
     }
 };
+
     // Save as JSON file (server-side handling is recommended)
     // const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(selectedData));
     // const downloadAnchorNode = document.createElement('a');
@@ -65,16 +70,27 @@ const SuggestedLocations = () => {
   
 
   useEffect(() => {
-    fetch("http://localhost:8000/tempLocations1")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then((data) => setLocations(data))
-      .catch((err) => setError(err.message));
-  }, []);
+    // filename: location_list_20230625T195008389Z.json
+    const filename = 'location_list_20230625T195008389Z.json';
+    fetch(`http://localhost:9000/files/${filename}`)
+          .then(response => response.json())
+          .then(data => {
+              console.log(data);
+              setLocations(data); 
+          })
+          .catch(error => console.error('Error fetching data:', error));
+    }, []);
+
+  //   fetch("http://localhost:9000/list_of_locations_26062023,0204am")
+  //     .then((response) => {
+  //       if (!response.ok) {
+  //         throw new Error("Network response was not ok");
+  //       }
+  //       return response.json();
+  //     })
+  //     .then((data) => setLocations(data))
+  //     .catch((err) => setError(err.message));
+  // }, []);
 
   return (
     <>

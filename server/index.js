@@ -79,16 +79,39 @@
 const express = require('express');
 const admin = require('firebase-admin');
 const cors = require('cors');
+const path = require('path');
+
 
 const app = express();
-const PORT = 8000;
+const PORT = 9000;
 app.use(cors());
 
-app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
-
-app.get('/tempLocations1', (req, res) => {
-    res.sendFile(__dirname + '/tempLocations1.json');
+app.get('/', (req, res) => {
+    res.json({message: 'Server is running'});
 });
+
+
+app.get('/files/:filename', (req, res) => {
+    const filename = req.params.filename;
+    const filepath = path.join(__dirname, filename);
+    res.sendFile(filepath, (err) => {
+        if (err) {
+            console.error('Error sending file:', err);
+            res.status(404).json({error: 'File not found'});
+        }
+    });
+});
+
+
+
+// app.get('/tempLocations1', (req, res) => {
+//     res.sendFile(__dirname + '/tempLocations1.json');
+// });
+
+app.listen(PORT, () => {
+    console.log(`Server running on http://localhost:${PORT}`);
+});
+
 
 // Firebase config
 const firebaseConfig = {
@@ -110,6 +133,8 @@ admin.initializeApp({
 });
 
 const db = admin.firestore();
+module.exports = { admin, db };
+
 
 async function readAndWriteData() {
   try {
@@ -131,7 +156,8 @@ async function readAndWriteData() {
   }
 }
 
-// Call the async function to read and write data
-readAndWriteData();
+// --------- UNIT TEST ---------
+// test for firebase connection
+// readAndWriteData();
 
 
