@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Form, Input, Button, Collapse } from "antd";
 import { DeleteOutlined } from "@ant-design/icons";
 import DateTimePicker from "../../components/DateTimePicker";
-import { firebase } from "../../pages/firebase";
-import "./Accommodation.css";
 import {firestore} from "../.././pages/firebase";
+import "./Accommodation.css";
+import {firebase} from "../.././pages/firebase";
 const { Panel } = Collapse;
 console.log(firestore);
 

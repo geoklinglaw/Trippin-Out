@@ -5,12 +5,15 @@ import App from './App';
 import SignUp from './pages/Signup';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
+import { UserProvider } from './userContext';
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <UserProvider>
+      <App />
+    </UserProvider>,
   </React.StrictMode>
 );
 

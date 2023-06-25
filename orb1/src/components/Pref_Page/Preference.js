@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import { Form, InputNumber, Checkbox, Button } from "antd";
 import { CoffeeOutlined, ShoppingOutlined, StarOutlined } from "@ant-design/icons";
 import {firestore} from "../.././pages/firebase";
-
-
 import {firebase} from "../.././pages/firebase"
 import {addDoc, collection} from "firebase/firestore"
 
