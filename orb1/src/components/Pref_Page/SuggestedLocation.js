@@ -2,10 +2,10 @@ import React, { useEffect, useState } from 'react';
 import { Card,  Button, Space } from 'antd';
 import SuggLocations from "./SuggLocations";
 import "./Explore.css";
-import {firestore} from "../.././pages/firebase";
-import {firebase} from "../.././pages/firebase";
-import {db} from "../.././pages/firebase";
-
+import { getFirestore } from 'firebase/firestore';
+// import { firebaseApp } from '../../firebase'; 
+import { db, firebase } from '../../firebase';
+import { collection, query, getDocs, addDoc, doc, setDoc } from "firebase/firestore";
 import axios from 'axios';
 import { UserContext } from '../../userContext';
 
@@ -15,31 +15,45 @@ const SuggestedLocations = () => {
   const [selectedLocations, setSelectedLocations] = useState({}); // keep track of selected locations
   const [error, setError] = useState(null);
 
-  const toggleSelected = (locationId) => {
+  const toggleSelected = (props) => {
+    const { locationId, photo, name, formatted_address, price } = props;
+  
     setSelectedLocations(prevSelected => ({
       ...prevSelected,
-      [locationId]: !prevSelected[locationId]
+      [locationId]: prevSelected[locationId]
+        ? undefined 
+        : { locationId, photo, name, formatted_address, price } 
     }));
   };
+  
+  const submitData = async () => {
+    const selectedData = Object.values(selectedLocations).filter(location => location);
+    console.log(selectedData);
 
-  const submitData = () => {
-    const selectedData = locations.filter((location, index) => selectedLocations[index]);
-
-    const db = firebase.firestore();
-    const userID =  'pVOrWYawmnkMvUu3IFtn';
+    const userID = 'pVOrWYawmnkMvUu3IFtn';
     const tripID = 'V1NBZp7HSK7hnEkKT0Aw';
-    const userRef = db.collection('users').doc(userID); // pVOrWYawmnkMvUu3IFtn
-    const tripsRef = userRef.collection('trips'); //V1NBZp7HSK7hnEkKT0Aw 
-    const tripRef = tripsRef.doc(tripID);
-    const locationsRef = tripRef.collection('locations');
     
-    db.collection('locations').add({
-      locations: selectedData,
-      timestamp: firebase.firestore.FieldValue.serverTimestamp(),
-    })
-    .then(() => console.log('Data successfully written!'))
-    .catch((error) => console.error('Error writing document: ', error));
-
+    // Use Firestore's modular syntax
+    const locationsRef = collection(db, 'users', userID, 'trips', tripID, 'locations');
+    const trytry = collection(db, 'users')
+    
+    try {
+        // await setDoc(doc(locationsRef), {
+        //     name: selectedData.name,
+        //     locationId: selectedData.locationId,
+        //     photo: selectedData.photo,
+        //     formatted_address: selectedData.formatted_address,
+        //     price: selectedData.price
+        // });
+        await setDoc(doc(trytry), {
+          name: 'Lexuan',
+          userID: '2',
+        })
+        console.log("Document successfully written!");
+    } catch (error) {
+        console.error("Error storing locations:", error);
+    }
+};
     // Save as JSON file (server-side handling is recommended)
     // const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(selectedData));
     // const downloadAnchorNode = document.createElement('a');
@@ -48,10 +62,10 @@ const SuggestedLocations = () => {
     // document.body.appendChild(downloadAnchorNode);
     // downloadAnchorNode.click();
     // downloadAnchorNode.remove();
-  };
+  
 
   useEffect(() => {
-    fetch("http://localhost:7000/tempLocations1")
+    fetch("http://localhost:8000/tempLocations1")
       .then((response) => {
         if (!response.ok) {
           throw new Error("Network response was not ok");
