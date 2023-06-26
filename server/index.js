@@ -79,16 +79,40 @@
 const express = require('express');
 const admin = require('firebase-admin');
 const cors = require('cors');
+const fs = require('fs');
 
-const app = express();
-const PORT = 7000;
-app.use(cors());
+// const app = express();
+// const PORT = 8000;
+// app.use(cors());
 
-app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
+// app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
 
-app.get('/tempLocations1', (req, res) => {
-    res.sendFile(__dirname + '/tempLocations1.json');
+// app.get('/tempLocations1', (req, res) => {
+//     res.sendFile(__dirname + '/tempLocations1.json');
+// });
+
+const app1 = express();
+const app2 = express();
+const PORT1 = 8000;
+const PORT2 = 9000;
+app1.use(cors());
+app2.use(cors());
+
+app1.use(express.json());
+app2.use(express.json());
+
+
+app1.listen(PORT1, () => console.log(`Server listening on port ${PORT1}`));
+app2.listen(PORT2, () => console.log(`Server listening on port ${PORT2}`));
+
+app1.get('/tempLocations1', (req, res) => {
+  res.sendFile(__dirname + '/tempLocations1.json');
 });
+
+app2.get('/tempLocations1', (req, res) => {
+  res.sendFile(__dirname + '/tempLocations1.json');
+});
+
 
 // Firebase config
 const firebaseConfig = {
@@ -110,6 +134,47 @@ admin.initializeApp({
 });
 
 const db = admin.firestore();
+
+app2.post('/submitPreferences', (req, res) => {
+  try {
+    const data = req.body;
+
+    // Write data to rankingtest.json file
+    fs.readFile('rankingtest.json', 'utf8', (err, fileData) => {
+      if (err) {
+        console.error('Error reading rankingtest.json:', err);
+        res.status(500).send('Error storing preferences');
+        return;
+      }
+
+      let preferences = [];
+      try {
+        preferences = JSON.parse(fileData);
+      } catch (parseError) {
+        console.error('Error parsing rankingtest.json:', parseError);
+        res.status(500).send('Error storing preferences');
+        return;
+      }
+
+      preferences.push(data);
+
+      const preferencesJSON = JSON.stringify(preferences);
+
+      fs.writeFile('rankingtest.json', preferencesJSON, 'utf8', (writeErr) => {
+        if (writeErr) {
+          console.error('Error writing rankingtest.json:', writeErr);
+          res.status(500).send('Error storing preferences');
+          return;
+        }
+        console.log('Preferences stored in rankingtest.json');
+        res.status(200).send('Preferences stored successfully');
+      });
+    });
+  } catch (error) {
+    console.error('An error occurred during submission:', error);
+    res.status(500).send('Error storing preferences');
+  }
+});
 
 async function readAndWriteData() {
   try {
