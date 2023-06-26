@@ -79,37 +79,15 @@
 const express = require('express');
 const admin = require('firebase-admin');
 const cors = require('cors');
-const path = require('path');
-
 
 const app = express();
-const PORT = 9000;
+const PORT = 7000;
 app.use(cors());
 
-app.get('/', (req, res) => {
-    res.json({message: 'Server is running'});
-});
+app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
 
-
-app.get('/files/:filename', (req, res) => {
-    const filename = req.params.filename;
-    const filepath = path.join(__dirname, filename);
-    res.sendFile(filepath, (err) => {
-        if (err) {
-            console.error('Error sending file:', err);
-            res.status(404).json({error: 'File not found'});
-        }
-    });
-});
-
-
-
-// app.get('/tempLocations1', (req, res) => {
-//     res.sendFile(__dirname + '/tempLocations1.json');
-// });
-
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+app.get('/tempLocations1', (req, res) => {
+    res.sendFile(__dirname + '/tempLocations1.json');
 });
 
 
@@ -135,6 +113,47 @@ admin.initializeApp({
 const db = admin.firestore();
 module.exports = { admin, db };
 
+
+app2.post('/submitPreferences', (req, res) => {
+  try {
+    const data = req.body;
+
+    // Write data to rankingtest.json file
+    fs.readFile('rankingtest.json', 'utf8', (err, fileData) => {
+      if (err) {
+        console.error('Error reading rankingtest.json:', err);
+        res.status(500).send('Error storing preferences');
+        return;
+      }
+
+      let preferences = [];
+      try {
+        preferences = JSON.parse(fileData);
+      } catch (parseError) {
+        console.error('Error parsing rankingtest.json:', parseError);
+        res.status(500).send('Error storing preferences');
+        return;
+      }
+
+      preferences.push(data);
+
+      const preferencesJSON = JSON.stringify(preferences);
+
+      fs.writeFile('rankingtest.json', preferencesJSON, 'utf8', (writeErr) => {
+        if (writeErr) {
+          console.error('Error writing rankingtest.json:', writeErr);
+          res.status(500).send('Error storing preferences');
+          return;
+        }
+        console.log('Preferences stored in rankingtest.json');
+        res.status(200).send('Preferences stored successfully');
+      });
+    });
+  } catch (error) {
+    console.error('An error occurred during submission:', error);
+    res.status(500).send('Error storing preferences');
+  }
+});
 
 async function readAndWriteData() {
   try {
