@@ -1,13 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Card, Button } from 'antd';
 import SuggLocations from "./SuggLocations";
-<<<<<<< HEAD
 import "./Explore.css";
 import { getFirestore } from 'firebase/firestore';
 import { db, firebase } from '../../firebase';
 import { collection, query, getDocs, addDoc, doc, setDoc } from "firebase/firestore";
-=======
->>>>>>> ce3a5a086966eb198c43eb5d91a509f23e9e5953
+
 import axios from 'axios';
 
 const SuggestedLocations = () => {
@@ -16,15 +14,10 @@ const SuggestedLocations = () => {
   const [error, setError] = useState(null);
   const [apiData, setApiData] = useState(null);
 
-<<<<<<< HEAD
   const toggleSelected = (props) => {
     const { locationId, photo, name, formatted_address, price } = props;
   
     setSelectedLocations(prevSelected => ({
-=======
-  const toggleSelected = (locationId) => {
-    setSelectedLocations((prevSelected) => ({
->>>>>>> ce3a5a086966eb198c43eb5d91a509f23e9e5953
       ...prevSelected,
       [locationId]: prevSelected[locationId]
         ? undefined 
@@ -38,7 +31,6 @@ const SuggestedLocations = () => {
   //   userID: '2',
   // })    
 
-<<<<<<< HEAD
   const submitData = async () => {
     const selectedData = Object.values(selectedLocations).filter(location => location);
 
@@ -99,39 +91,6 @@ const SuggestedLocations = () => {
   //     .then((data) => setLocations(data))
   //     .catch((err) => setError(err.message));
   // }, []);
-=======
-  const submitData = () => {
-    const options = {
-      method: 'GET',
-      url: 'https://api.foursquare.com/v3/places/search',
-      headers: {
-        accept: 'application/json',
-        Authorization: 'fsq3qCGoblyIuPq8VtotDLf6IE9Ez0wVz7WK2nuS4xZXyAk='
-      }
-    };
-
-    axios
-      .request(options)
-      .then(function (response) {
-        setApiData(response.data);
-      })
-      .catch(function (error) {
-        console.error(error);
-      });
-  };
-
-  useEffect(() => {
-    fetch("http://localhost:8000/tempLocations1")
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error("Network response was not ok");
-        }
-        return response.json();
-      })
-      .then((data) => setLocations(data))
-      .catch((err) => setError(err.message));
-  }, []);
->>>>>>> ce3a5a086966eb198c43eb5d91a509f23e9e5953
 
   return (
     <>
