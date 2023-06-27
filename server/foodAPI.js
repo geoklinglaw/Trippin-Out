@@ -43,6 +43,9 @@ async function getAllFood(latlong) {
         try {
             const response = await getFoodOptions(cat, cat_id, country);
             const results = response.results;
+            results.forEach(result => {
+                result.activity_duration = 1;
+            });
             console.log(results);
             aggregatedResults.push(...results);
         } catch (error) {

@@ -19,7 +19,7 @@
     "hours": {
       "display": "Mon-Sat 11:30-15:00, 18:00-23:00",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "1500",
@@ -138,7 +138,8 @@
     ],
     "popularity": 0.9795632529189614,
     "price": 1,
-    "rating": 8.1
+    "rating": 8.1,
+    "activity_duration": 1
   },
   {
     "fsq_id": "5040a505e4b0068b1feba467",
@@ -288,7 +289,8 @@
     ],
     "popularity": 0.676388090514071,
     "price": 2,
-    "rating": 7.9
+    "rating": 7.9,
+    "activity_duration": 1
   },
   {
     "fsq_id": "54119564498e4371f8dce458",
@@ -310,7 +312,7 @@
     "hours": {
       "display": "Open Daily 7:00-10:00, 11:30-14:30, 18:00-22:00",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "1000",
@@ -483,7 +485,8 @@
     ],
     "popularity": 0.9488141816091528,
     "price": 2,
-    "rating": 7.7
+    "rating": 7.7,
+    "activity_duration": 1
   },
   {
     "fsq_id": "5388afe7498e0c921f99f2af",
@@ -501,7 +504,7 @@
     "hours": {
       "display": "Mon-Fri 11:30-15:00, 17:00-22:00; Sat-Sun 11:30-22:00",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "1500",
@@ -619,7 +622,8 @@
       }
     ],
     "popularity": 0.9982520227212323,
-    "rating": 7.5
+    "rating": 7.5,
+    "activity_duration": 1
   },
   {
     "fsq_id": "4b911562f964a520eca233e3",
@@ -637,7 +641,7 @@
     "hours": {
       "display": "Mon-Thu 12:00-23:00; Fri-Sat 12:00-23:30; Sun 12:00-23:00",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "2300",
@@ -731,7 +735,8 @@
     ],
     "popularity": 0.9974114113000426,
     "price": 2,
-    "rating": 7.1
+    "rating": 7.1,
+    "activity_duration": 1
   },
   {
     "fsq_id": "517286c2e4b01640fba18c02",
@@ -749,7 +754,7 @@
     "hours": {
       "display": "Open Daily 11:30-15:00, 17:30-22:00",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "1500",
@@ -878,7 +883,8 @@
     ],
     "popularity": 0.9412486788184464,
     "price": 2,
-    "rating": 7.1
+    "rating": 7.1,
+    "activity_duration": 1
   },
   {
     "fsq_id": "54294005498e2d89dffc36af",
@@ -985,7 +991,8 @@
     ],
     "popularity": 0.26516345565465704,
     "price": 2,
-    "rating": 7
+    "rating": 7,
+    "activity_duration": 1
   },
   {
     "fsq_id": "57d9315c498efa7a6b29706d",
@@ -1003,7 +1010,7 @@
     "hours": {
       "display": "Mon-Fri 11:30-15:00, 17:30-22:30; Sat-Sun 11:30-22:30",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "1500",
@@ -1128,7 +1135,8 @@
     ],
     "popularity": 0.02280776576609987,
     "price": 2,
-    "rating": 6.9
+    "rating": 6.9,
+    "activity_duration": 1
   },
   {
     "fsq_id": "52f72dfe498ee5ec7bc9a6bb",
@@ -1150,7 +1158,7 @@
     "hours": {
       "display": "Open Daily 11:30-14:30, 18:00-22:00",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "1430",
@@ -1278,7 +1286,8 @@
     ],
     "popularity": 0.9437223015446234,
     "price": 2,
-    "rating": 6.7
+    "rating": 6.7,
+    "activity_duration": 1
   },
   {
     "fsq_id": "4c1da4c9b306c928d4fe65b7",
@@ -1296,7 +1305,7 @@
     "hours": {
       "display": "Open Daily 11:30-14:30, 18:00-22:30",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "1430",
@@ -1425,7 +1434,8 @@
     ],
     "popularity": 0.989095539196598,
     "price": 2,
-    "rating": 6.3
+    "rating": 6.3,
+    "activity_duration": 1
   },
   {
     "fsq_id": "592a8cdd9b047373f119a291",
@@ -1447,7 +1457,7 @@
     "hours": {
       "display": "Mon-Thu 17:00-23:00; Fri-Sun 11:30-14:30, 17:00-23:00",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "2300",
@@ -1548,7 +1558,8 @@
     ],
     "popularity": 0.9958216667593811,
     "price": 2,
-    "rating": 9.1
+    "rating": 9.1,
+    "activity_duration": 1
   },
   {
     "fsq_id": "4ca5f522d971b1f72a35fbe0",
@@ -1660,7 +1671,8 @@
     ],
     "popularity": 0.9893922255805473,
     "price": 2,
-    "rating": 9
+    "rating": 9,
+    "activity_duration": 1
   },
   {
     "fsq_id": "55f9641d498eaceb29f0e5bb",
@@ -1678,7 +1690,7 @@
     "hours": {
       "display": "Open Daily 6:30-10:30, 12:00-14:30, 18:30-22:30",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "1030",
@@ -1841,7 +1853,8 @@
       }
     ],
     "popularity": 0.996793314666815,
-    "rating": 9
+    "rating": 9,
+    "activity_duration": 1
   },
   {
     "fsq_id": "4ca1e24946978cfa098dbf7f",
@@ -1859,7 +1872,7 @@
     "hours": {
       "display": "Open Daily 18:00-23:30",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "2330",
@@ -1959,7 +1972,8 @@
     ],
     "popularity": 0.9795508909862968,
     "price": 2,
-    "rating": 8.9
+    "rating": 8.9,
+    "activity_duration": 1
   },
   {
     "fsq_id": "54103dbd498e9db793f05b47",
@@ -1981,7 +1995,7 @@
     "hours": {
       "display": "Mon-Thu 12:00-14:00, 18:00-22:00; Fri 12:00-14:00, 18:00-22:30; Sat 18:00-22:30",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "1400",
@@ -2100,7 +2114,8 @@
     ],
     "popularity": 0.9908051944841056,
     "price": 2,
-    "rating": 8.9
+    "rating": 8.9,
+    "activity_duration": 1
   },
   {
     "fsq_id": "4b9b68a5f964a5208a0536e3",
@@ -2211,7 +2226,8 @@
     ],
     "popularity": 0.9942813699493779,
     "price": 2,
-    "rating": 8.9
+    "rating": 8.9,
+    "activity_duration": 1
   },
   {
     "fsq_id": "5b0783a3829b0c002c3ad31e",
@@ -2229,7 +2245,7 @@
     "hours": {
       "display": "Mon-Thu 8:00-21:00; Fri 8:00-21:30; Sat 9:00-21:30; Sun 9:00-20:00",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "2100",
@@ -2322,7 +2338,8 @@
     ],
     "popularity": 0.9805880571368528,
     "price": 1,
-    "rating": 8.9
+    "rating": 8.9,
+    "activity_duration": 1
   },
   {
     "fsq_id": "553b2460498e8cfc0a3cdc32",
@@ -2344,7 +2361,7 @@
     "hours": {
       "display": "Mon-Sat 18:00-23:59",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "2359",
@@ -2441,7 +2458,8 @@
     ],
     "popularity": 0.1950441011947808,
     "price": 2,
-    "rating": 8.8
+    "rating": 8.8,
+    "activity_duration": 1
   },
   {
     "fsq_id": "57c12529498e382e51d5bf3f",
@@ -2455,7 +2473,7 @@
     "hours": {
       "display": "Mon-Thu 12:00-15:00, 18:00-22:00; Fri-Sun 12:00-22:00",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "1500",
@@ -2580,7 +2598,8 @@
     ],
     "popularity": 0.9526797579533585,
     "price": 1,
-    "rating": 8.8
+    "rating": 8.8,
+    "activity_duration": 1
   },
   {
     "fsq_id": "4d41cbdb9fa82c0f9a8ab08a",
@@ -2598,7 +2617,7 @@
     "hours": {
       "display": "Mon-Thu 6:00-22:00; Fri-Sat 6:00-23:00; Sun 6:00-22:00",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "2200",
@@ -2684,7 +2703,8 @@
     ],
     "popularity": 0.9982816913596272,
     "price": 4,
-    "rating": 8.8
+    "rating": 8.8,
+    "activity_duration": 1
   },
   {
     "fsq_id": "575a76e1498ed10a81251ad0",
@@ -2786,7 +2806,8 @@
     ],
     "popularity": 0.9958933659688356,
     "price": 1,
-    "rating": 9
+    "rating": 9,
+    "activity_duration": 1
   },
   {
     "fsq_id": "5b0783a3829b0c002c3ad31e",
@@ -2804,7 +2825,7 @@
     "hours": {
       "display": "Mon-Thu 8:00-21:00; Fri 8:00-21:30; Sat 9:00-21:30; Sun 9:00-20:00",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "2100",
@@ -2897,7 +2918,8 @@
     ],
     "popularity": 0.9805880571368528,
     "price": 1,
-    "rating": 8.9
+    "rating": 8.9,
+    "activity_duration": 1
   },
   {
     "fsq_id": "4f9f3ff3e4b01426c55d112b",
@@ -3007,7 +3029,8 @@
     ],
     "popularity": 0.9939426529943691,
     "price": 1,
-    "rating": 8.8
+    "rating": 8.8,
+    "activity_duration": 1
   },
   {
     "fsq_id": "595b27ae8e886a485ccb3fa2",
@@ -3115,7 +3138,8 @@
     ],
     "popularity": 0.9800243530073491,
     "price": 1,
-    "rating": 8.6
+    "rating": 8.6,
+    "activity_duration": 1
   },
   {
     "fsq_id": "5c174105c0c0840025cdf11c",
@@ -3217,7 +3241,8 @@
     ],
     "popularity": 0.978565644952932,
     "price": 1,
-    "rating": 8.6
+    "rating": 8.6,
+    "activity_duration": 1
   },
   {
     "fsq_id": "4b174179f964a52049c423e3",
@@ -3327,7 +3352,8 @@
       }
     ],
     "popularity": 0.9951590671685612,
-    "rating": 8.5
+    "rating": 8.5,
+    "activity_duration": 1
   },
   {
     "fsq_id": "5906f0411543c754e182a6f5",
@@ -3349,7 +3375,7 @@
     "hours": {
       "display": "Tue 11:00-23:00; Thu-Sat 11:00-23:00; Sun 9:00-21:00",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "2300",
@@ -3436,7 +3462,8 @@
     ],
     "popularity": 0.9875861472182561,
     "price": 1,
-    "rating": 8.5
+    "rating": 8.5,
+    "activity_duration": 1
   },
   {
     "fsq_id": "4b08ac7df964a520951023e3",
@@ -3454,7 +3481,7 @@
     "hours": {
       "display": "Mon-Fri 11:30-23:59; Sat-Sun 00:00-2:00, 9:30-23:59",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "2359",
@@ -3552,7 +3579,8 @@
     ],
     "popularity": 0.9902909380852603,
     "price": 3,
-    "rating": 8.5
+    "rating": 8.5,
+    "activity_duration": 1
   },
   {
     "fsq_id": "50924964e4b0948956762c4a",
@@ -3570,7 +3598,7 @@
     "hours": {
       "display": "Open Daily 10:00-22:00",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "2200",
@@ -3671,7 +3699,8 @@
       }
     ],
     "popularity": 0.9967908422802821,
-    "rating": 8.4
+    "rating": 8.4,
+    "activity_duration": 1
   },
   {
     "fsq_id": "5205c76d11d2072b2bd3aa80",
@@ -3689,7 +3718,7 @@
     "hours": {
       "display": "Mon-Fri 12:00-14:30, 18:30-22:30; Sat-Sun 12:00-15:00, 18:30-22:30",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "1430",
@@ -3818,7 +3847,8 @@
     ],
     "popularity": 0.9801875305185213,
     "price": 1,
-    "rating": 8.4
+    "rating": 8.4,
+    "activity_duration": 1
   },
   {
     "fsq_id": "57e7522b498e3f249787e079",
@@ -3836,7 +3866,7 @@
     "hours": {
       "display": "Mon-Thu 12:00-22:00; Fri 12:00-23:59; Sat 00:00-23:59; Sun 00:00-22:00",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "2200",
@@ -3942,7 +3972,8 @@
     ],
     "popularity": 0.9912069572957036,
     "price": 1,
-    "rating": 8.8
+    "rating": 8.8,
+    "activity_duration": 1
   },
   {
     "fsq_id": "51763f4be4b0888c3d9f42a9",
@@ -4053,7 +4084,8 @@
     ],
     "popularity": 0.988348878463659,
     "price": 2,
-    "rating": 8.6
+    "rating": 8.6,
+    "activity_duration": 1
   },
   {
     "fsq_id": "4bd811e909ecb7133ffc477c",
@@ -4075,7 +4107,7 @@
     "hours": {
       "display": "Mon-Thu 12:00-21:30; Fri-Sat 12:00-22:00; Sun 13:00-19:00",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "2130",
@@ -4127,6 +4159,14 @@
     "name": "Tom's Palette",
     "photos": [
       {
+        "id": "64993b6a8aed262e1a1ae041",
+        "created_at": "2023-06-26T07:16:58.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/115160_7TSho58gktiSpXYa0AEhEldl8MbaTh5cX397AsOtAK4.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
         "id": "643251d0135a0b0fc641997a",
         "created_at": "2023-04-09T05:49:04.000Z",
         "prefix": "https://fastly.4sqi.net/img/general/",
@@ -4157,19 +4197,12 @@
         "suffix": "/2540105_tfaHJ4RcEPxglp0xaRuRtbEsKtH2-ybRUFG7sXUtJ4M.jpg",
         "width": 1440,
         "height": 1920
-      },
-      {
-        "id": "6354f4bafd60426f8587b516",
-        "created_at": "2022-10-23T08:00:58.000Z",
-        "prefix": "https://fastly.4sqi.net/img/general/",
-        "suffix": "/2540105_lGxwSatGpPK1jo8VLUej3-f-xvmNCqBioHmxsDU8b4I.jpg",
-        "width": 1440,
-        "height": 1920
       }
     ],
     "popularity": 0.9776706410280184,
     "price": 1,
-    "rating": 8.5
+    "rating": 8.5,
+    "activity_duration": 1
   },
   {
     "fsq_id": "5dc1302d49c3d90008e1229b",
@@ -4271,7 +4304,8 @@
     ],
     "popularity": 0.9831692286772113,
     "price": 1,
-    "rating": 8.4
+    "rating": 8.4,
+    "activity_duration": 1
   },
   {
     "fsq_id": "56dbf47f498e11eedb30ae20",
@@ -4289,7 +4323,7 @@
     "hours": {
       "display": "Tue-Thu 12:00-22:00; Fri-Sat 12:00-23:00; Sun 12:00-22:00",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "2200",
@@ -4383,7 +4417,8 @@
     ],
     "popularity": 0.9739942022535804,
     "price": 1,
-    "rating": 8.3
+    "rating": 8.3,
+    "activity_duration": 1
   },
   {
     "fsq_id": "4ee9fb2caa1f7c7810a14c3c",
@@ -4401,7 +4436,7 @@
     "hours": {
       "display": "Open Daily 10:00-22:00",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "2200",
@@ -4498,7 +4533,8 @@
     ],
     "popularity": 0.9324333846353539,
     "price": 1,
-    "rating": 8.3
+    "rating": 8.3,
+    "activity_duration": 1
   },
   {
     "fsq_id": "592a85ba8d0a53502937bbd2",
@@ -4520,7 +4556,7 @@
     "hours": {
       "display": "Mon-Thu 12:00-22:00; Fri-Sat 12:00-23:00; Sun 12:00-19:00",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "2200",
@@ -4613,7 +4649,8 @@
     ],
     "popularity": 0.9720286549599164,
     "price": 1,
-    "rating": 8.3
+    "rating": 8.3,
+    "activity_duration": 1
   },
   {
     "fsq_id": "4b6aca15f964a5205fe02be3",
@@ -4631,7 +4668,7 @@
     "hours": {
       "display": "Mon-Thu 11:00-21:00; Fri-Sat 11:00-22:00; Sun 14:00-21:00",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "2100",
@@ -4728,7 +4765,8 @@
     ],
     "popularity": 0.9588792671846317,
     "price": 1,
-    "rating": 8.3
+    "rating": 8.3,
+    "activity_duration": 1
   },
   {
     "fsq_id": "5290969d11d216c8e052ff16",
@@ -4746,7 +4784,7 @@
     "hours": {
       "display": "Tue-Sun 12:00-21:00",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "2100",
@@ -4847,7 +4885,8 @@
     ],
     "popularity": 0.9884131605135147,
     "price": 1,
-    "rating": 8.2
+    "rating": 8.2,
+    "activity_duration": 1
   },
   {
     "fsq_id": "581ad17bffb2191b8ca7c4cd",
@@ -4869,7 +4908,7 @@
     "hours": {
       "display": "Open Daily 10:30-21:00",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "2100",
@@ -4962,7 +5001,8 @@
     ],
     "popularity": 0.986524257202371,
     "price": 1,
-    "rating": 8.2
+    "rating": 8.2,
+    "activity_duration": 1
   },
   {
     "fsq_id": "51763f4be4b0888c3d9f42a9",
@@ -5073,7 +5113,8 @@
     ],
     "popularity": 0.988348878463659,
     "price": 2,
-    "rating": 8.6
+    "rating": 8.6,
+    "activity_duration": 1
   },
   {
     "fsq_id": "5dc1302d49c3d90008e1229b",
@@ -5175,7 +5216,8 @@
     ],
     "popularity": 0.9831692286772113,
     "price": 1,
-    "rating": 8.4
+    "rating": 8.4,
+    "activity_duration": 1
   },
   {
     "fsq_id": "5b1a1d29088158002cf29e02",
@@ -5249,49 +5291,50 @@
     "name": "Tiong Bahru Bakery",
     "photos": [
       {
-        "id": "645dc6d49b29d9620b590e79",
-        "created_at": "2023-05-12T04:55:48.000Z",
+        "id": "6497b4d0d40a8430999b4f01",
+        "created_at": "2023-06-25T03:30:24.000Z",
         "prefix": "https://fastly.4sqi.net/img/general/",
-        "suffix": "/3211319_jfCKb0dhCDGbppLz1b3v0TdI69yvFaK8_eEBqgvCEF0.jpg",
-        "width": 1280,
-        "height": 1920
-      },
-      {
-        "id": "63e4c9445f0d363d6f3820dc",
-        "created_at": "2023-02-09T10:21:56.000Z",
-        "prefix": "https://fastly.4sqi.net/img/general/",
-        "suffix": "/3211319_W5YojUHWfEnkdGkvPRXz0e5p8jAXwJbozZxRfiFrN_c.jpg",
+        "suffix": "/8081033_jGfzAyrd8QLvPRlrnAlKVMxlNUQSZaucQ0RIh92IrpY.jpg",
         "width": 1440,
         "height": 1920
       },
       {
-        "id": "631d43d9d09212504f7c04e6",
-        "created_at": "2022-09-11T02:11:37.000Z",
+        "id": "6497b4be051d2e54f1203bb4",
+        "created_at": "2023-06-25T03:30:06.000Z",
         "prefix": "https://fastly.4sqi.net/img/general/",
-        "suffix": "/46708380_96CXwXUDofwKWxKpUgoi5qumQ_iFYpdFSFCqc2Wx9CQ.jpg",
+        "suffix": "/8081033_V2-9BcYoorkdFi54XJPfyxSI8_0_R3YsgHb2ugVX_uc.jpg",
         "width": 1920,
         "height": 1440
       },
       {
-        "id": "61e54ba18fa7611e35d742cd",
-        "created_at": "2022-01-17T10:57:37.000Z",
+        "id": "6497b4a841d4a73a3b865b6b",
+        "created_at": "2023-06-25T03:29:44.000Z",
         "prefix": "https://fastly.4sqi.net/img/general/",
-        "suffix": "/3211319_EZYYl5CDcCK_lkItsig73j_CBmvLHepv9v525DMjWeQ.jpg",
-        "width": 1440,
-        "height": 1800
+        "suffix": "/8081033_lhl3ImeoW82SkF2RXzyOoRgzFXqOQEo2FS3bVhDnVvw.jpg",
+        "width": 1920,
+        "height": 1440
       },
       {
-        "id": "61c92e7ce816b708fd52b93f",
-        "created_at": "2021-12-27T03:09:48.000Z",
+        "id": "6497b4a7da94014499a48ff8",
+        "created_at": "2023-06-25T03:29:43.000Z",
         "prefix": "https://fastly.4sqi.net/img/general/",
-        "suffix": "/3211319_HCp-Dj5oTuv90MQbCDLCVBFiNzFIiaQJ554QbFPdgyk.jpg",
-        "width": 1440,
-        "height": 1920
+        "suffix": "/8081033_H2e5sAn9891mEs1sCPX8P2iSlZQ4pE7LK84YIaISBpI.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "6497b4a65d39fd76a54a97f3",
+        "created_at": "2023-06-25T03:29:42.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8081033_ysCyQGyjYwzhYqbjmbTOWI7P56VaLEMEi1w5PiyP9NE.jpg",
+        "width": 1920,
+        "height": 1440
       }
     ],
     "popularity": 0.9818304313696403,
     "price": 1,
-    "rating": 8.4
+    "rating": 8.4,
+    "activity_duration": 1
   },
   {
     "fsq_id": "4ebca9a7d3e38e6b0bcf6f1a",
@@ -5309,7 +5352,7 @@
     "hours": {
       "display": "Open Daily 11:30-15:00, 18:00-22:00",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "1500",
@@ -5437,7 +5480,8 @@
       }
     ],
     "popularity": 0.9905406491250842,
-    "rating": 8.4
+    "rating": 8.4,
+    "activity_duration": 1
   },
   {
     "fsq_id": "4c957b9c1582952195fa23a8",
@@ -5455,7 +5499,7 @@
     "hours": {
       "display": "Mon-Fri 7:30-21:30",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "2130",
@@ -5548,7 +5592,8 @@
     ],
     "popularity": 0.9838318282680314,
     "price": 1,
-    "rating": 8.2
+    "rating": 8.2,
+    "activity_duration": 1
   },
   {
     "fsq_id": "542a512e498ef4e6e7d1555e",
@@ -5669,7 +5714,8 @@
     ],
     "popularity": 0.9910240006922683,
     "price": 1,
-    "rating": 8.2
+    "rating": 8.2,
+    "activity_duration": 1
   },
   {
     "fsq_id": "581ad17bffb2191b8ca7c4cd",
@@ -5691,7 +5737,7 @@
     "hours": {
       "display": "Open Daily 10:30-21:00",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "2100",
@@ -5784,7 +5830,8 @@
     ],
     "popularity": 0.986524257202371,
     "price": 1,
-    "rating": 8.2
+    "rating": 8.2,
+    "activity_duration": 1
   },
   {
     "fsq_id": "4bc9a4eafb84c9b6d55a1b3e",
@@ -5894,7 +5941,8 @@
     ],
     "popularity": 0.9896604795193681,
     "price": 1,
-    "rating": 8.2
+    "rating": 8.2,
+    "activity_duration": 1
   },
   {
     "fsq_id": "52a3109a11d2d5f6e87aa8da",
@@ -5912,7 +5960,7 @@
     "hours": {
       "display": "Open Daily 10:00-22:00",
       "is_local_holiday": false,
-      "open_now": false,
+      "open_now": true,
       "regular": [
         {
           "close": "2200",
@@ -6009,7 +6057,8 @@
     ],
     "popularity": 0.9805114131543325,
     "price": 1,
-    "rating": 8.2
+    "rating": 8.2,
+    "activity_duration": 1
   },
   {
     "fsq_id": "53db460f498e18a343d830db",
@@ -6127,6 +6176,7 @@
     ],
     "popularity": 0.969621786670128,
     "price": 1,
-    "rating": 8.2
+    "rating": 8.2,
+    "activity_duration": 1
   }
 ]

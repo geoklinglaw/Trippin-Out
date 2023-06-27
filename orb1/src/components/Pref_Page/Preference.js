@@ -1,15 +1,10 @@
 import React, { useState } from "react";
 import { Form, InputNumber, Checkbox, Button } from "antd";
 import { CoffeeOutlined, ShoppingOutlined, StarOutlined } from "@ant-design/icons";
-import {firestore} from "../.././pages/firebase";
-import {firebase} from "../.././pages/firebase"
-import {addDoc, collection} from "firebase/firestore"
-
-
+// import {firestore} from "../.././pages/firebase";
+// import {firebase} from "../.././pages/firebase"
+// import {addDoc, collection} from "firebase/firestore"
 import "./Preference.css";
-
-console.log(firestore);
-
 
 function Preference() {
   const [preferences, setPreferences] = useState({
@@ -46,16 +41,17 @@ function Preference() {
   //const ref = collection(firebase, "messages");
 
   const handleSubmit = async () => {
-    try {
-      // Perform actions with the preferences data
-      console.log(preferences);
+    console.log("submitting")
+    // try {
+    //   // Perform actions with the preferences data
+    //   console.log(preferences);
 
-      // Store preferences in Firestore
-      await addDoc(collection(firestore, "users"), preferences);
-      console.log("Preferences stored in Firestore");
-    } catch (error) {
-      console.error("Error storing preferences:", error);
-    }
+    //   // Store preferences in Firestore
+    //   await addDoc(collection(firestore, "users"), preferences);
+    //   console.log("Preferences stored in Firestore");
+    // } catch (error) {
+    //   console.error("Error storing preferences:", error);
+    // }
   };
 
   return (

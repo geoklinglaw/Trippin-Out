@@ -71,8 +71,8 @@ const SuggestedLocations = () => {
 
   useEffect(() => {
     // filename: location_list_20230625T195008389Z.json
-    const filename = 'location_list_20230625T195008389Z.json';
-    fetch(`http://localhost:9000/files/${filename}`)
+    const filename = 'location_list_20230627T192603047Z.json';
+    fetch(`http://localhost:5000/files/${filename}`)
           .then(response => response.json())
           .then(data => {
               console.log(data);
