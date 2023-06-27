@@ -81,7 +81,9 @@ const admin = require('firebase-admin');
 const cors = require('cors');
 
 const app = express();
-const PORT = 7000;
+
+const PORT = 5000;
+// const PORT = 7000;
 app.use(cors());
 
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));

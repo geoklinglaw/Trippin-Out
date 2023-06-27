@@ -1,16 +1,19 @@
 // const {Client} = require("@googlemaps/google-maps-services-js");
-const locations = require('./locations.json'); // assuming locations.json is in the same directory
+// COMMENTED FOR UNIT TEST
+// const locations = require('./locations.json'); 
 const fs = require('fs');
 var path = require('path');
 var filePath = path.resolve('./timeMatrix')
+const accoms = '1.3589691105622246, 103.95813708783058'
 
-var axios = require('axios'); // first address must be airbnb
-const origins = locations.map(location => `${location.location.lat},${location.location.lng}`).join('|');
-const destinations = locations.map(location => `${location.location.lat},${location.location.lng}`).join('|');
 
-async function getDistanceMatrix() {
-    const origins = locations.map(location => `${location.location.lat},${location.location.lng}`).join('|');
-    const destinations = locations.map(location => `${location.location.lat},${location.location.lng}`).join('|');
+async function getDistanceMatrix(accoms, locations) {
+    var axios = require('axios'); // first address must be airbnb
+    const origins = [accoms].concat(locations.map(location => `${location.geocodes.main.latitude},${location.geocodes.main.longitude}`)).join('|');
+    const destinations = [accoms].concat(locations.map(location => `${location.geocodes.main.latitude},${location.geocodes.main.longitude}`)).join('|');    
+
+    // const origins = locations.map(location => `${location.location.lat},${location.location.lng}`).join('|');
+    // const destinations = locations.map(location => `${location.location.lat},${location.location.lng}`).join('|');
 
     // request based on bus 
     
@@ -24,10 +27,13 @@ async function getDistanceMatrix() {
     .then(function (response) {
         console.log(JSON.stringify(response.data));
 
-        // write the data to a JSON file
-        fs.writeFile('output.json', JSON.stringify(response.data, null, 2), (err) => {
-            if (err) throw err;
-            console.log('Data written to file');
+        function generateUniqueFilename(prefix) {
+            const timestamp = new Date().toISOString().replace(/[:.-]/g, '');
+            return `${prefix}_${timestamp}.json`;
+        }
+        const filename = generateUniqueFilename('distance_matrix_results1');
+
+        fs.writeFile(`${filename}`, JSON.stringify(response.data, null, 2), (err) => {
         });
 
         return response.data;

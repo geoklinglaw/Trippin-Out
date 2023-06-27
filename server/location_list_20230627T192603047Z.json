@@ -1,0 +1,585 @@
+[
+  {
+    "fsq_id": "4c35c5693ffc9521753b91f5",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.281165,
+        "longitude": 103.855438
+      }
+    },
+    "hours": {
+      "display": "Open Daily 0:00-24:00",
+      "is_local_holiday": false,
+      "open_now": true,
+      "regular": [
+        {
+          "close": "+0000",
+          "day": 1,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 2,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 3,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 4,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 5,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 6,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 7,
+          "open": "0000"
+        }
+      ]
+    },
+    "location": {
+      "country": "SG",
+      "formatted_address": "010000",
+      "locality": "Singapore",
+      "post_town": "Marina Area",
+      "postcode": "010000"
+    },
+    "name": "Marina Bay Waterfront Promenade",
+    "photos": [
+      {
+        "id": "6497b7fe718da667cdd5a68e",
+        "created_at": "2023-06-25T03:43:58.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/592685019_yk49PSZ3XxDNIykexhlnqEfSgX4y-T4jhRyqTS_UAEw.jpg",
+        "width": 1440,
+        "height": 1606
+      },
+      {
+        "id": "6497b5ce9f9677684f56a860",
+        "created_at": "2023-06-25T03:34:38.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/592685019_37lSIJI-uRTTo79ZR0YgW-bBsSinShQZZLfKH9GIBNE.jpg",
+        "width": 1406,
+        "height": 1919
+      },
+      {
+        "id": "6497b5ce5d39fd76a54d1a76",
+        "created_at": "2023-06-25T03:34:38.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/592685019_J6HdJql5YWr_vJ8cQB5ljKr0BYuD9oueyfUoYgxF4Xg.jpg",
+        "width": 1440,
+        "height": 1859
+      },
+      {
+        "id": "645224691368322efe37e3f4",
+        "created_at": "2023-05-03T09:07:53.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8414682_UOZqc7whL7HZ8TRteZrswYTLpTvVftO7OsI_Fv2VeXE.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "64301fffb4141a1c29a25e29",
+        "created_at": "2023-04-07T13:51:59.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/500120810_fttiDKXllpzJiPt3KmZUSibMZ7Jy4M2fj-e-OVqG6eo.jpg",
+        "width": 1920,
+        "height": 1440
+      }
+    ],
+    "popularity": 0.9991927657970047,
+    "rating": 9.2,
+    "activity_duration": 3
+  },
+  {
+    "fsq_id": "4e2a8fe5a809f1b164062159",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.289553,
+        "longitude": 103.86908
+      }
+    },
+    "hours": {
+      "display": "Open Daily 0:00-24:00",
+      "is_local_holiday": false,
+      "open_now": true,
+      "regular": [
+        {
+          "close": "+0000",
+          "day": 1,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 2,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 3,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 4,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 5,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 6,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 7,
+          "open": "0000"
+        }
+      ]
+    },
+    "location": {
+      "country": "SG",
+      "cross_street": "Gardens by the Bay",
+      "formatted_address": "Gardens by the Bay",
+      "locality": "Singapore"
+    },
+    "name": "Bay East Garden",
+    "photos": [
+      {
+        "id": "5987497bdec1d67276003ac7",
+        "created_at": "2017-08-06T16:53:15.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/85876717_1-0pLucGXbggG7_4FI7aS50bG_u5Ghwze3eAwRE14UI.jpg",
+        "width": 1080,
+        "height": 1920
+      },
+      {
+        "id": "5d22a4a8c56f480023bed738",
+        "created_at": "2019-07-08T02:04:24.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/27151952_q_5x_cANFXriYXqiNN8aU7dIBPsnx_PfNbnFc7KRM64.jpg",
+        "width": 1920,
+        "height": 1440,
+        "classifications": [
+          "outdoor"
+        ]
+      },
+      {
+        "id": "63c7d69af8617b4b28727eba",
+        "created_at": "2023-01-18T11:23:06.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/426073_dDbbCoSuCpcNF--d131PKvxM-H7OBjKPSYeKijVzj9U.jpg",
+        "width": 1080,
+        "height": 1920
+      },
+      {
+        "id": "63b06caa323cda63c5f60a3d",
+        "created_at": "2022-12-31T17:08:58.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/6783618_QLy_lHm_ZTlhlIOFAXqfKuam5MWctzl0ZMBmLU_L4n4.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "63b069a8ba94ed179db89beb",
+        "created_at": "2022-12-31T16:56:08.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/6783618_35abgN04_QHFQJo9bEhKssSvWFriZDP928ye8kXnY1c.jpg",
+        "width": 1920,
+        "height": 1440
+      }
+    ],
+    "popularity": 0.9980282717400039,
+    "rating": 9.2,
+    "activity_duration": 3
+  },
+  {
+    "fsq_id": "4cbd4232985db7137a284d19",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.287609,
+        "longitude": 103.854103
+      }
+    },
+    "hours": {
+      "display": "Mon-Thu 19:30-23:00; Fri-Sat 19:30-24:00; Sun 19:30-23:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2300",
+          "day": 1,
+          "open": "1930"
+        },
+        {
+          "close": "2300",
+          "day": 2,
+          "open": "1930"
+        },
+        {
+          "close": "2300",
+          "day": 3,
+          "open": "1930"
+        },
+        {
+          "close": "2300",
+          "day": 4,
+          "open": "1930"
+        },
+        {
+          "close": "+0000",
+          "day": 5,
+          "open": "1930"
+        },
+        {
+          "close": "+0000",
+          "day": 6,
+          "open": "1930"
+        },
+        {
+          "close": "2300",
+          "day": 7,
+          "open": "1930"
+        }
+      ]
+    },
+    "location": {
+      "country": "SG",
+      "cross_street": "",
+      "formatted_address": "",
+      "locality": "Singapore"
+    },
+    "name": "I Light Singapore",
+    "photos": [
+      {
+        "id": "648330763f23a93acd38939e",
+        "created_at": "2023-06-09T14:00:22.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/951387_Zm2HbGtxgq--5ehNqxauTxbPxehDJfrtGajr2lqCTFs.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "62b708c8dc15da70e2dd5a86",
+        "created_at": "2022-06-25T13:08:24.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/951387_7xDqsLOTv4R6j96deL8T9PaqgagmoOi_gnEPqfONGvE.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "62b708c5bc87e16678917479",
+        "created_at": "2022-06-25T13:08:21.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/951387_CVgUyglmcGaXpAvG8FJa8thypHiMOY3tkhDPDgZV7j4.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "62ac921826b64376bf2d7706",
+        "created_at": "2022-06-17T14:39:20.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4549417_ZqVY1jPAFctIXpMKhwLFEEx41XyG4lMfsEiYkdppOCA.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "62ac677fc4fd2f6f32f7d4fc",
+        "created_at": "2022-06-17T11:37:35.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/231366_AhcPEDMaewEqA322N-rLmOJH0XwkujZrVyh6WiI1MMQ.jpg",
+        "width": 1920,
+        "height": 1440
+      }
+    ],
+    "popularity": 0.21491961653284875,
+    "rating": 7.5,
+    "activity_duration": 3
+  },
+  {
+    "fsq_id": "57a5be48498e1c2e446b8cb8",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 1.287818,
+        "longitude": 103.849375
+      },
+      "main": {
+        "latitude": 1.287825,
+        "longitude": 103.849311
+      },
+      "roof": {
+        "latitude": 1.287825,
+        "longitude": 103.849311
+      }
+    },
+    "hours": {
+      "display": "Wed 22:00-24:00; Thu-Sat 0:00-3:00; Sun 0:00-4:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "+0000",
+          "day": 3,
+          "open": "2200"
+        },
+        {
+          "close": "0300",
+          "day": 4,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 4,
+          "open": "2200"
+        },
+        {
+          "close": "0300",
+          "day": 5,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 5,
+          "open": "2200"
+        },
+        {
+          "close": "0300",
+          "day": 6,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 6,
+          "open": "2200"
+        },
+        {
+          "close": "0400",
+          "day": 7,
+          "open": "0000"
+        }
+      ]
+    },
+    "location": {
+      "address": "66 Boat Quay, Singapore",
+      "country": "SG",
+      "cross_street": "",
+      "formatted_address": "66 Boat Quay, Singapore, 049852",
+      "locality": "Singapore",
+      "post_town": "Marina Area",
+      "postcode": "049852"
+    },
+    "name": "Headquarters",
+    "photos": [
+      {
+        "id": "635423cf0edf8d5224d59426",
+        "created_at": "2022-10-22T17:09:35.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/71401279_NLXTETvMJao8Z-Cb6T0n079RNCguW8QKegLmbz3RX6U.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6281081bb61e63089936adfc",
+        "created_at": "2022-05-15T14:03:07.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/71401279_ZXjKo8TKd6jMzruoAjVWRhBfj3-Uwso2LuIW_HWNkv0.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "5c430f4a16fa040039c0f73f",
+        "created_at": "2019-01-19T11:51:38.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/30260393_8zou0ibBTlD6WmBGoZgUL9DjTx1KHsp40HOo6fl4czw.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "5b2be826b9ac38002c8ee00b",
+        "created_at": "2018-06-21T18:02:14.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/142704679_MF_FGU0RNTwK3s3U3sqAlQftkfSw8UkqXhHq3vlK2L8.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "5a6ca79582644406ca0f768e",
+        "created_at": "2018-01-27T16:23:49.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/44281384_Pp4qw-i82JD_3DI-UF_4ML7DA3EsKR4HJXRBIK2ZbGE.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9761068565459524,
+    "price": 3,
+    "rating": 8.3,
+    "activity_duration": 3
+  },
+  {
+    "fsq_id": "4b949b12f964a5208e7e34e3",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 1.281568,
+        "longitude": 103.863775
+      },
+      "roof": {
+        "latitude": 1.281568,
+        "longitude": 103.863775
+      }
+    },
+    "hours": {
+      "display": "Open Daily 00:00-2:00, 5:00-23:59",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "0200",
+          "day": 1,
+          "open": "0000"
+        },
+        {
+          "close": "2359",
+          "day": 1,
+          "open": "0500"
+        },
+        {
+          "close": "0200",
+          "day": 2,
+          "open": "0000"
+        },
+        {
+          "close": "2359",
+          "day": 2,
+          "open": "0500"
+        },
+        {
+          "close": "0200",
+          "day": 3,
+          "open": "0000"
+        },
+        {
+          "close": "2359",
+          "day": 3,
+          "open": "0500"
+        },
+        {
+          "close": "0200",
+          "day": 4,
+          "open": "0000"
+        },
+        {
+          "close": "2359",
+          "day": 4,
+          "open": "0500"
+        },
+        {
+          "close": "0200",
+          "day": 5,
+          "open": "0000"
+        },
+        {
+          "close": "2359",
+          "day": 5,
+          "open": "0500"
+        },
+        {
+          "close": "0200",
+          "day": 6,
+          "open": "0000"
+        },
+        {
+          "close": "2359",
+          "day": 6,
+          "open": "0500"
+        },
+        {
+          "close": "0200",
+          "day": 7,
+          "open": "0000"
+        },
+        {
+          "close": "2359",
+          "day": 7,
+          "open": "0500"
+        }
+      ]
+    },
+    "location": {
+      "address": "18 Marina Gardens Dr",
+      "address_extended": "Visitor Centre",
+      "country": "SG",
+      "formatted_address": "18 Marina Gardens Dr, 018953",
+      "locality": "Singapore",
+      "post_town": "Marina Area",
+      "postcode": "018953"
+    },
+    "name": "Gardens by the Bay",
+    "photos": [
+      {
+        "id": "55ae671a498e33ff238ea913",
+        "created_at": "2015-07-21T15:36:58.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/23551644_swtqZGXnSlMhPB0qSfR2IOGueUKxxv1aky8coef4VEY.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "55522627498ed9de69bf7355",
+        "created_at": "2015-05-12T16:11:19.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/50466142_hDIVMyC7qFFUjbmUEMwfjqjRvQiKB7U6q9qJVPblxYs.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "57c18999498e379ca3d2b368",
+        "created_at": "2016-08-27T12:37:45.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/758077_W1whvW3BLSbo4NKH0C1nWCdSNdyw5hyHqJu6SiBlWEY.jpg",
+        "width": 4160,
+        "height": 3088
+      },
+      {
+        "id": "57ada020498eb07bbbf8d0ba",
+        "created_at": "2016-08-12T10:08:32.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/141120412_2FRtaB_LP8cBA_rOOm4375SlIuvSrpwTWw4W895jUJo.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "517fce94e4b060c18afac1d8",
+        "created_at": "2013-04-30T14:00:52.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/17870043_umvEPsehCYF-9Gjy8ZJtsJgAomYgDZTef_oA0hDHEmY.jpg",
+        "width": 1920,
+        "height": 1440
+      }
+    ],
+    "popularity": 0.9999752761346709,
+    "rating": 9.4,
+    "activity_duration": 2
+  }
+]

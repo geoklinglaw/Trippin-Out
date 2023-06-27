@@ -1,15 +1,10 @@
 import React, { useState } from "react";
 import { Form, InputNumber, Checkbox, Button } from "antd";
 import { CoffeeOutlined, ShoppingOutlined, StarOutlined } from "@ant-design/icons";
-import {firestore} from "../.././pages/firebase";
-import {firebase} from "../.././pages/firebase"
-import {addDoc, collection} from "firebase/firestore"
-
-
+// import {firestore} from "../.././pages/firebase";
+// import {firebase} from "../.././pages/firebase"
+// import {addDoc, collection} from "firebase/firestore"
 import "./Preference.css";
-
-console.log(firestore);
-
 
 function Preference() {
   const [preferences, setPreferences] = useState({
@@ -46,30 +41,40 @@ function Preference() {
   //const ref = collection(firebase, "messages");
 
   const handleSubmit = async () => {
-    try {
-      // Perform actions with the preferences data
-      console.log(preferences);
+    console.log("submitting")
+    // try {
+    //   // Perform actions with the preferences data
+    //   console.log(preferences);
 
-     // Convert preferences to JSON format
-    const preferencesJSON = JSON.stringify(preferences);
 
-    // Send preferences JSON to the server
-    const response = await fetch('http://localhost:9000/submitPreferences', {
-      method: 'POST',
-      headers: {
-        'Content-Type': 'application/json',
-      },
-      body: preferencesJSON,
-    });
+//     //   // Store preferences in Firestore
+//     //   await addDoc(collection(firestore, "users"), preferences);
+//     //   console.log("Preferences stored in Firestore");
+//     // } catch (error) {
+//     //   console.error("Error storing preferences:", error);
+//     // }
+// =======
+//      // Convert preferences to JSON format
+//     const preferencesJSON = JSON.stringify(preferences);
 
-    if (response.ok) {
-      console.log('Preferences successfully sent to the server.');
-    } else {
-      console.error('Error sending preferences to the server.');
-    }
-  } catch (error) {
-    console.error('An error occurred during submission:', error);
-  }
+//     // Send preferences JSON to the server
+//     const response = await fetch('http://localhost:9000/submitPreferences', {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       body: preferencesJSON,
+//     });
+
+//     if (response.ok) {
+//       console.log('Preferences successfully sent to the server.');
+//     } else {
+//       console.error('Error sending preferences to the server.');
+//     }
+//   } catch (error) {
+//     console.error('An error occurred during submission:', error);
+//   }
+
   };
 
   return (

@@ -5,6 +5,9 @@ import './FoodOptions.css';
 import { getFirestore } from 'firebase/firestore';
 import { db, firebase } from '../../firebase';
 import { collection, query, getDocs, addDoc, doc, setDoc } from "firebase/firestore";
+import { Routes, Route, NavLink, useNavigate } from "react-router-dom";
+import itinerary from './../../pages/itinerary';
+
 // import Breakfast from './Meals/Breakfast';
 // import Lunch from './Meals/Lunch';
 // import Dinner from './Meals/Dinner';
@@ -15,6 +18,9 @@ const FoodOptions = () => {
   const [locations, setLocations] = useState([]);
   const [selectedLocations, setSelectedLocations] = useState({}); // keep track of selected locations
   const [error, setError] = useState(null);
+  const navigate = useNavigate();
+
+
 
   const toggleSelected = (props) => {
     const { locationId, photo, name, formatted_address, price } = props;
@@ -27,9 +33,21 @@ const FoodOptions = () => {
     }));
   };
 
+  const handleClick = (e) => {
+    submitData();
+    generateItinerary();
+  
+  }
+
+  const generateItinerary = () => {
+    console.log("generateItinerary");
+    navigate("/itinerary");
+    <Route path="orb1/src/pages/itinerary" element={<itinerary />} />
+  };
+
   useEffect(() => {
-    const filename = 'food_options_20230625T194520517Z.json';
-    fetch(`http://localhost:9000/files/${filename}`)
+    const filename = 'food_options_20230627T123722044Z.json';
+    fetch(`http://localhost:5000/files/${filename}`)
           .then(response => response.json())
           .then(data => {
               console.log(data);
@@ -110,7 +128,7 @@ const FoodOptions = () => {
         </div>
       </div>
       <div style={{justifyContent: 'end'}}>
-            <Button type="primary" onClick={submitData}> Submit </Button>
+            <Button type="primary" onClick={handleClick}> Submit </Button>
       </div>
     </>
   );
