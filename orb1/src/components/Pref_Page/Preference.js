@@ -46,12 +46,35 @@ function Preference() {
     //   // Perform actions with the preferences data
     //   console.log(preferences);
 
-    //   // Store preferences in Firestore
-    //   await addDoc(collection(firestore, "users"), preferences);
-    //   console.log("Preferences stored in Firestore");
-    // } catch (error) {
-    //   console.error("Error storing preferences:", error);
-    // }
+
+//     //   // Store preferences in Firestore
+//     //   await addDoc(collection(firestore, "users"), preferences);
+//     //   console.log("Preferences stored in Firestore");
+//     // } catch (error) {
+//     //   console.error("Error storing preferences:", error);
+//     // }
+// =======
+//      // Convert preferences to JSON format
+//     const preferencesJSON = JSON.stringify(preferences);
+
+//     // Send preferences JSON to the server
+//     const response = await fetch('http://localhost:9000/submitPreferences', {
+//       method: 'POST',
+//       headers: {
+//         'Content-Type': 'application/json',
+//       },
+//       body: preferencesJSON,
+//     });
+
+//     if (response.ok) {
+//       console.log('Preferences successfully sent to the server.');
+//     } else {
+//       console.error('Error sending preferences to the server.');
+//     }
+//   } catch (error) {
+//     console.error('An error occurred during submission:', error);
+//   }
+
   };
 
   return (
