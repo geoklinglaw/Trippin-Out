@@ -10,7 +10,7 @@ import "./Login.css";
 import { getAuth, signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword } from "firebase/auth";
 import { initializeApp } from "firebase/app";
 import { doc, setDoc } from "firebase/firestore"; 
-import { auth, firestore } from "./firebase";
+// import { auth, firestore } from "./firebase";
 
 
 const Login = () => {
@@ -55,12 +55,12 @@ const Login = () => {
       const user = userCredential.user;
   
       // Save user to Firestore
-      await setDoc(doc(firestore, 'users', user.uid), {
-        email: user.email,
-        // any other details you want to save, for example:
-        // name: user.displayName,
-        // photoURL: user.photoURL,
-      });
+      // await setDoc(doc(firestore, 'users', user.uid), {
+      //   email: user.email,
+      //   // any other details you want to save, for example:
+      //   // name: user.displayName,
+      //   // photoURL: user.photoURL,
+      // });
   
       alert("You have logged in successfully!");
       console.log(user);
