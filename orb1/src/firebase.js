@@ -2,13 +2,9 @@
 
 // // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
-//import {} from 'firebase/firestore';
-// import firebase from "firebase/app";
-// import "firebase/auth";
-// import * as firebase from 'firebase';
-// import { getAnalytics } from "firebase/analytics";
+
 import { getAuth, GoogleAuthProvider } from "firebase/auth";
-// import { getStorage } from "firebase/storage";
+
 import { getFirestore } from "firebase/firestore";
 
 
@@ -17,7 +13,7 @@ import { getFirestore } from "firebase/firestore";
 
 // // Your web app's Firebase configuration
 // // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = initializeApp({
+const firebaseConfig = ({
   apiKey: "AIzaSyC_SyZezplGnJqMLfuYCjt69y_wiYZXmsU",
   authDomain: "trippin-out-4b976.firebaseapp.com",
   databaseURL: "https://trippin-out-4b976-default-rtdb.asia-southeast1.firebasedatabase.app",
@@ -28,19 +24,10 @@ const firebaseConfig = initializeApp({
   measurementId: "G-Y5RFEGS41E"
 });
 
-// const app = initializeApp(firebaseConfig);
-// const firestore = getFirestore(app);
-// const auth = getAuth(app);
 
 const app = initializeApp(firebaseConfig);
 
 
-// const analytics = getAnalytics(app);
-// export const firestore = getFirestore(app);
-
 export const provider = new GoogleAuthProvider();
 export const auth = getAuth(app);
 export const firestore = getFirestore(app);
-// export const storage = getStorage();
-
-// export const firebase = app;

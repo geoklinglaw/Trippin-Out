@@ -4,13 +4,13 @@ import React, { useState } from "react";
 import Axios from "axios";
 import { Card, Input, Button } from "antd";
 import LoginImage from "../images/login.png";
-import logo from "../images/logo.png";
+
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 import { getAuth, signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword } from "firebase/auth";
-import { initializeApp } from "firebase/app";
+
 import { doc, setDoc } from "firebase/firestore"; 
-import { auth, firestore } from "./firebase";
+import { auth, firestore } from "../firebase";
 
 
 const Login = () => {
@@ -21,30 +21,7 @@ const Login = () => {
 
   const navigate = useNavigate();
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   console.log(email, password);
-  //   alert("You have logged in successfully!");
-
-  //   try {
-  //     // Make a request to the login endpoint
-  //     const response = await Axios.post("http://localhost:3029/login", {
-  //       email: email,
-  //       password: password,
-  //     });
-  //     console.log(response);
-
-  //     if (response.data.message) {
-  //       setLoginStatus("Wrong email or password!");
-  //     }
-
-  //     // If the login was successful, store the user data or token
-  //     //   localStorage.setItem("user", JSON.stringify(response.data));
-  //   } catch (err) {
-  //     // If there was an error, update the error state
-  //     setError(err.message);
-  //   }
-  // };
+  
   const handleSubmit = async (e) => {
     e.preventDefault();
   
