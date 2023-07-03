@@ -1,120 +1,119 @@
 import React, { useState } from "react";
-import { Form, InputNumber, Checkbox, Button } from "antd";
-import { CoffeeOutlined, ShoppingOutlined, StarOutlined } from "@ant-design/icons";
-// import {firestore} from "../.././pages/firebase";
-// import {firebase} from "../.././pages/firebase"
-// import {addDoc, collection} from "firebase/firestore"
+import { InputNumber, Button, message } from "antd";
+import axios from 'axios';
 import "./Preference.css";
+import '../../tailwind.css';
+
+
 
 function Preference() {
-  const [preferences, setPreferences] = useState({
-    Food: undefined,
-    Shopping: undefined,
-    "Night Life": undefined,
-    "Outdoor Activities": undefined,
-    "Cultural Experiences": undefined,
-    Sightseeing: undefined,
-    "Beauty And Wellness": undefined,
-    "Special Events": undefined
-  });
+  const [preferences, setPreferences] = useState([
+    {
+      "category": "Arts & Entertainment",
+      "category_id": "10000",
+      "activity_duration": 2,
+      "rank": undefined
+    },
+    {
+      "category": "Sports and Recreation",
+      "category_id": "18067",
+      "activity_duration": 2,
+      "rank": undefined
+    },
+    {
+      "category": "Night Clubs",
+      "category_id": "10032",
+      "activity_duration": 3,
+      "rank": undefined
+    },
+    {
+      "category": "Historic and Protected Sites",
+      "category_id": "16020",
+      "activity_duration": 3,
+      "rank": undefined
+    },
+    {
+      "category": "Landmark & Outdoors",
+      "category_id": "16000",
+      "activity_duration": 3,
+      "rank": undefined
+    },
+    {
+      "category": "Entertainment Events",
+      "category_id": "14003",
+      "activity_duration": 3,
+      "rank": undefined
+    },
+    {
+      "category": "Dining",
+      "category_id": "13000",
+      "activity_duration": 1,
+      "rank": undefined
+    }
+  ]);
 
-  const handlePreferenceChange = (name) => (value) => {
-    const newValue = Math.min(Math.max(value, 1), 8);
-    setPreferences((prevPreferences) => ({
-      ...prevPreferences,
-      [name]: newValue,
-    }));
+  const handlePreferenceChange = (index) => (value) => {
+    const newValue = Math.min(Math.max(value, 1), 7);
+    const newPreferences = [...preferences];
+    newPreferences[index].rank = newValue;
+    setPreferences(newPreferences);
   };
-
-  const handleIncludeChange = (name) => (event) => {
-    const checked = event.target.checked;
-    setPreferences((prevPreferences) => ({
-      ...prevPreferences,
-      [name]: checked ? 1 : undefined,
-    }));
-  };
-
-  // const handleSubmit = () => {
-  //   // Perform actions with the preferences data
-  //   console.log(preferences);
-  // };
-  //const ref = collection(firebase, "messages");
 
   const handleSubmit = async () => {
-    console.log("submitting")
-    // try {
-    //   // Perform actions with the preferences data
-    //   console.log(preferences);
+    // Check if rankings are unique
+    const ranks = preferences.map(p => p.rank);
+    const uniqueRanks = new Set(ranks);
 
+    if (uniqueRanks.size !== ranks.length) {
+      message.error("Please ensure that all rankings are unique.");
+      return;
+    }
 
-//     //   // Store preferences in Firestore
-//     //   await addDoc(collection(firestore, "users"), preferences);
-//     //   console.log("Preferences stored in Firestore");
-//     // } catch (error) {
-//     //   console.error("Error storing preferences:", error);
-//     // }
-// =======
-//      // Convert preferences to JSON format
-//     const preferencesJSON = JSON.stringify(preferences);
+    const endpoint = 'YOUR_BACKEND_API_ENDPOINT';
 
-//     // Send preferences JSON to the server
-//     const response = await fetch('http://localhost:9000/submitPreferences', {
-//       method: 'POST',
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//       body: preferencesJSON,
-//     });
-
-//     if (response.ok) {
-//       console.log('Preferences successfully sent to the server.');
-//     } else {
-//       console.error('Error sending preferences to the server.');
-//     }
-//   } catch (error) {
-//     console.error('An error occurred during submission:', error);
-//   }
-
+    try {
+      const response = await axios.post(endpoint, { preferences });
+      console.log('Response from backend:', response.data);
+    } catch (error) {
+      console.error('Error submitting data:', error);
+    }
   };
 
   return (
-    <div className="container">
-      <div className="form-wrapper">
-        {Object.entries(preferences).map(([name, value]) => (
-          <div className="preference" key={name}>
-            <div>
-              <span className="preference-name">
-                {name}
-                {name === "Food" && <CoffeeOutlined className="preference-icon" />}
-                {name === "Shopping" && <ShoppingOutlined className="preference-icon" />}
-                {name === "Night Life" && <StarOutlined className="preference-icon" />}
-              </span>
+    <div className="container mx-auto p-4">
+      <div >
+        {preferences.map((preference, index) => (
+          <div
+            key={preference.category_id}
+            className="preference-item"
+          >
+            <div className="category-text">
+              {preference.category}
             </div>
-            <Checkbox
-              name={name}
-              checked={value !== undefined}
-              onChange={handleIncludeChange(name)}
-              className="include-checkbox"
+            <InputNumber
+              min={1}
+              max={7}
+              value={preference.rank}
+              onChange={handlePreferenceChange(index)}
+              className="input"
             />
-            {value !== undefined && (
-              <InputNumber
-                min={1}
-                max={8}
-                value={value}
-                onChange={handlePreferenceChange(name)}
-                className="input"
-              />
-            )}
           </div>
         ))}
-        <div className="submit-button-wrapper">
-          <Button type="primary" onClick={handleSubmit} className="submit-button">
-            Submit
-          </Button>
-        </div>
+      </div>
+      <div className="submit-button-wrapper">
+        <Button
+          type="primary"
+          onClick={handleSubmit}
+          className="submit-button"
+        >
+          Submit
+        </Button>
       </div>
     </div>
   );
+  
+  
+  
 }
 
 export default Preference;
