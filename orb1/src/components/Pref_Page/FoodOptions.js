@@ -47,7 +47,7 @@ const FoodOptions = () => {
 
   useEffect(() => {
     const filename = 'food_options_20230627T123722044Z.json';
-    fetch(`http://localhost:5000/files/${filename}`)
+    fetch(`http://localhost:5123/files/${filename}`)
           .then(response => response.json())
           .then(data => {
               console.log(data);

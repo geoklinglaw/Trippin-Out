@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Form, Input, Button, Collapse } from "antd";
 import { DeleteOutlined } from "@ant-design/icons";
 import DateTimePicker from "../../components/DateTimePicker";
-// import {firestore} from "../.././pages/firebase";
+
 import "./Accommodation.css";
-// import {firebase} from "../.././pages/firebase";
+
 const { Panel } = Collapse;
 
 function Accommodation({
@@ -48,16 +48,7 @@ function Accommodation({
 
   const handleSubmit = async () => {
     console.log("submitting");
-    // try {
-    //   const db = firebase.firestore();
-    //   // Store accommodations in Firestore
-    //   accommodations.forEach(async (accommodation) => {
-    //     await db.collection("accommodations").add(accommodation);
-    //   });
-    //   console.log("Accommodations stored in Firestore");
-    // } catch (error) {
-    //   console.error("Error storing accommodations:", error);
-    // }
+    
   };
 
   return (

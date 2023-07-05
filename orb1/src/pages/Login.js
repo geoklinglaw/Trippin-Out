@@ -1,72 +1,38 @@
 
 
 import React, { useState } from "react";
-import Axios from "axios";
 import { Card, Input, Button } from "antd";
 import LoginImage from "../images/login.png";
-import logo from "../images/logo.png";
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 import { getAuth, signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword } from "firebase/auth";
-import { initializeApp } from "firebase/app";
-import { doc, setDoc } from "firebase/firestore"; 
-// import { auth, firestore } from "./firebase";
-
+import useAuthStore from "./authStore";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
-  const [password, setPassword] = useState("");
-  const [error, setError] = useState(null);
-  const [loginStatus, setLoginStatus] = useState("");
+  // const [email, setEmail] = useState("");
+  // const [password, setPassword] = useState("");
+  // const [error, setError] = useState(null);
+  // const [loginStatus, setLoginStatus] = useState("");
+  const store = useAuthStore();
 
   const navigate = useNavigate();
 
-  // const handleSubmit = async (e) => {
-  //   e.preventDefault();
-  //   console.log(email, password);
-  //   alert("You have logged in successfully!");
-
-  //   try {
-  //     // Make a request to the login endpoint
-  //     const response = await Axios.post("http://localhost:3029/login", {
-  //       email: email,
-  //       password: password,
-  //     });
-  //     console.log(response);
-
-  //     if (response.data.message) {
-  //       setLoginStatus("Wrong email or password!");
-  //     }
-
-  //     // If the login was successful, store the user data or token
-  //     //   localStorage.setItem("user", JSON.stringify(response.data));
-  //   } catch (err) {
-  //     // If there was an error, update the error state
-  //     setError(err.message);
-  //   }
-  // };
   const handleSubmit = async (e) => {
     e.preventDefault();
   
     const auth = getAuth();
     try {
+      const {email, password} = store;
       // Sign in existing user
       const userCredential = await signInWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
-  
-      // Save user to Firestore
-      // await setDoc(doc(firestore, 'users', user.uid), {
-      //   email: user.email,
-      //   // any other details you want to save, for example:
-      //   // name: user.displayName,
-      //   // photoURL: user.photoURL,
-      // });
-  
-      alert("You have logged in successfully!");
+      store.setLoginStatus("you have successfully login");
+      
       console.log(user);
+      navigate('/')
     } catch (error) {
       console.error("Error signing in with password and email", error);
-      setError(error.message);
+      store.setError(error.message);
     }
   };
   
@@ -92,7 +58,7 @@ const Login = () => {
       <img className="login-image" src={LoginImage} alt="login" />
       <form onSubmit={handleSubmit}>
         <Card className="form-container">
-          {error && <p className="error-label">{error}</p>}
+          {store.error && <p className="error-label">{store.error}</p>}
           {/* <img className="logo-image" src={logo} alt="logo"/> */}
           <h2 className="login-title">Welcome Back</h2>
 
@@ -102,8 +68,8 @@ const Login = () => {
               placeholder="Email"
               type="email"
               name="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
+              value={store.email}
+              onChange={(e) => store.setEmail(e.target.value)}
               required
             />
           </label>
@@ -114,8 +80,8 @@ const Login = () => {
               placeholder="Password"
               type="password"
               name="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
+              value={store.password}
+              onChange={(e) => store.setPassword(e.target.value)}
               required
             />
           </label>
@@ -135,7 +101,7 @@ const Login = () => {
               <Link to="/google-login">Login with Google</Link>
             </Button>
           </div>
-          <label className="login-status">{loginStatus}</label>
+          <label className="login-status">{store.loginStatus}</label>
         </Card>
       </form>
     </div>

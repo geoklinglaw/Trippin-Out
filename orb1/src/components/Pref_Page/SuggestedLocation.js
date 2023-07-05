@@ -72,7 +72,7 @@ const SuggestedLocations = () => {
   useEffect(() => {
     // filename: location_list_20230625T195008389Z.json
     const filename = 'location_list_20230627T131746308Z.json';
-    fetch(`http://localhost:5000/files/${filename}`)
+    fetch(`http://localhost:5123/files/${filename}`)
           .then(response => response.json())
           .then(data => {
               console.log(data);
@@ -81,16 +81,7 @@ const SuggestedLocations = () => {
           .catch(error => console.error('Error fetching data:', error));
     }, []);
 
-  //   fetch("http://localhost:9000/list_of_locations_26062023,0204am")
-  //     .then((response) => {
-  //       if (!response.ok) {
-  //         throw new Error("Network response was not ok");
-  //       }
-  //       return response.json();
-  //     })
-  //     .then((data) => setLocations(data))
-  //     .catch((err) => setError(err.message));
-  // }, []);
+ 
 
   return (
     <>
