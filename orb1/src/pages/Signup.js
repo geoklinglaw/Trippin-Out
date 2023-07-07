@@ -1,6 +1,3 @@
-
-
-
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Card, Input, Button, Alert } from "antd";
@@ -16,7 +13,6 @@ const SignUp = () => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [error, setError] = useState(null);
-  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -40,11 +36,10 @@ const SignUp = () => {
       setConfirmPassword("");
       setError(null);
   
-        // Handle the signup response if needed
-        console.log(user);
-        navigate("/login");
-      }
-      catch (err) {
+      // Handle the signup response if needed
+      console.log(user);
+      navigate("/login");
+    } catch (err) {
       // If there was an error, update the error state
       setError(err.message);
     }
@@ -95,7 +90,12 @@ const SignUp = () => {
           </Button>
         </div>
         <div style={{ display: "flex", justifyContent: "center", marginTop: 10 }}>
-          <p>Already have an account? <a href="/login">Log in</a></p>
+          <p>
+            Already have an account?{" "}
+            <Button type="link" onClick={() => navigate("/login")}>
+              Log in
+            </Button>
+          </p>
         </div>
       </Card>
     </div>
@@ -103,4 +103,3 @@ const SignUp = () => {
 };
 
 export default SignUp;
-

@@ -14,8 +14,8 @@ import { useEffect } from "react";
 
 function App() {
   useEffect(() => {
-    if (window.location.pathname !== "/login") {
-      window.location.href = "/login";
+    if (window.location.pathname !== "/signup") {
+      window.location.href = "/signup";
     }
   }, []);
   

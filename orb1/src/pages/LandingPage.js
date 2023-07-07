@@ -7,10 +7,12 @@ import DateSelector from "../components/DateSelector";
 import NumberInput from "../components/NumberInput";
 import "./LandingPage.css";
 import { db, auth } from "../firebase";
-import { collection, doc, setDoc } from "firebase/firestore";
+import { doc, setDoc } from "firebase/firestore";
 import useAuthStore from "./authStore";
 import moment from "moment";
-import {useNavigate} from "react-router-dom"
+import {useNavigate} from "react-router-dom";
+import Accommodation from ".././components/Pref_Page/Accommodation"; // Import the Accommodation component
+
 
 
 function LandingPage() {
@@ -20,6 +22,8 @@ function LandingPage() {
   const [destination, setDestination] = useState("");
   const [guests, setGuests] = useState("");
   const navigate = useNavigate();
+  const [tripId, setTripId] = useState(""); // State for tripId
+  const authStore = useAuthStore();
 
   const peopleChangeHandler = (value) => {
     setGuests(value);
@@ -30,6 +34,7 @@ function LandingPage() {
 
       const userId = auth.currentUser.uid;
       const tripId = Math.random().toString();
+      authStore.setTripId(tripId); // Update the tripId in the authStore
       const tripRef = doc(db, "users", userId, "trips", tripId);
 
       const duration = moment(values.duration); // Convert to moment object
@@ -44,7 +49,9 @@ function LandingPage() {
 
       message.success("Submit success!");
       form.resetFields();
-      navigate("/preferences"); 
+      setTripId(tripId); // Set the generated tripId in state
+      navigate("/preferences?tripId=" + tripId);
+
 
     } catch (error) {
       console.error("Error storing data:", error);
@@ -155,6 +162,7 @@ const destinationChangeHandler = (e) => {
           </Space>
         </div>
       </Form>
+      <Accommodation tripId={tripId}/>
       
     </>
   );
