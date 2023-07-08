@@ -1,43 +1,39 @@
 .Signup {
-    /* background-color: #DCD5DC; */
-    display: flex;
-    padding: 10px;
-    width: 100%;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .Signup-logo {
-    position: absolute;
-    top: 0;
-    left: 0;
-  }
-  
-  .Signup-logo-image {
-    width: 100px;
-    height: 50px;
-    margin-right: 0;
-  }
-  
-  .Signup-heading {
-    position: absolute;
-    top: 10%;
-    left: 0;
-    right: 0;
-    text-align: center;
-  }
-  
-  .Signup-heading h2 {
-    font-size: 62px;
-    color: #E8AA9B;
-    text-shadow: 2px 2px 0px #000, -2px -2px 0px #000, 2px -2px 0px #000, -1px 1px 0px #000;
-  }
-  
-  .Signup-card {
-    width: 500px;
-    padding: 20px;
-    background-color: transparent;
-    border: 1px solid #1A385A;
-  }
-  
+  /* background-color: #DCD5DC; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  height: 100vh;
+}
+
+.Signup-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.Signup-logo-image {
+  width: 100px;
+  height: 50px;
+  margin-right: 0;
+}
+
+.Signup-heading {
+  margin-top: 10%;
+  text-align: center;
+}
+
+.Signup-heading h2 {
+  font-size: 42px;
+  color: #E8AA9B;
+  text-shadow: 2px 2px 0px #000, -2px -2px 0px #000, 2px -2px 0px #000, -1px 1px 0px #000;
+}
+
+.Signup-card {
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  background-color: transparent;
+  border: 1px solid #1A385A;
+}

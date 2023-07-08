@@ -31,6 +31,7 @@ const useAuthStore = create((set) => ({
   email: '',
   password: '',
   confirmPassword: '',
+  username: '',
   error: null,
   loginStatus: '',
   accommodation: [], // New field for storing accommodation details
@@ -39,6 +40,7 @@ const useAuthStore = create((set) => ({
   setEmail: (value) => set((state) => ({ email: value })),
   setPassword: (value) => set((state) => ({ password: value })),
   setConfirmPassword: (value) => set((state) => ({ confirmPassword: value })),
+  setUsername: (value) => set((state) => ({ username: value })),
   setError: (value) => set((state) => ({ error: value })),
   setLoginStatus: (value) => set((state) => ({ loginStatus: value })),
   setAccommodation: (value) => set((state) => ({ accommodation: value })),

@@ -3,8 +3,8 @@ import { useNavigate } from "react-router-dom";
 import { Card, Input, Button, Alert } from "antd";
 import "./Signup.css";
 import logo from "../images/logo.png";
-import { createUserWithEmailAndPassword } from "firebase/auth";
-import { db, auth } from "../firebase"; 
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { db, auth } from "../firebase";
 import { collection, doc, setDoc } from "firebase/firestore";
 
 const SignUp = () => {
@@ -12,30 +12,36 @@ const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [username, setUsername] = useState("");
   const [error, setError] = useState(null);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-  
+
     if (password !== confirmPassword) {
       setError("Passwords do not match");
       return;
     }
-  
+
     try {
       // Create a new user with email and password
       const { user } = await createUserWithEmailAndPassword(auth, email, password);
-  
+
+      // Store user details in Cloud Firestore
       await setDoc(doc(collection(db, "users"), user.uid), {
         email: user.email,
+        username: username,
         // Add any other desired user details here
       });
+
+      localStorage.setItem("username", username);
 
       setEmail("");
       setPassword("");
       setConfirmPassword("");
+      setUsername("");
       setError(null);
-  
+
       // Handle the signup response if needed
       console.log(user);
       navigate("/login");
@@ -44,7 +50,6 @@ const SignUp = () => {
       setError(err.message);
     }
   };
-  
 
   return (
     <div className="Signup">
@@ -76,6 +81,13 @@ const SignUp = () => {
           placeholder="Confirm Password"
           value={confirmPassword}
           onChange={(e) => setConfirmPassword(e.target.value)}
+          style={{ marginBottom: 20 }}
+          required
+        />
+        <Input
+          placeholder="Username"
+          value={username}
+          onChange={(e) => setUsername(e.target.value)}
           style={{ marginBottom: 20 }}
           required
         />
