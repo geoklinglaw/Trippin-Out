@@ -8,10 +8,6 @@ import { collection, query, getDocs, addDoc, doc, setDoc } from "firebase/firest
 import { Routes, Route, NavLink, useNavigate } from "react-router-dom";
 import itinerary from './../../pages/itinerary';
 
-// import Breakfast from './Meals/Breakfast';
-// import Lunch from './Meals/Lunch';
-// import Dinner from './Meals/Dinner';
-// import Dessert from './Meals/Dessert';
 
 const FoodOptions = () => {
   // const { userID, setUserID } = useContext(UserContext);

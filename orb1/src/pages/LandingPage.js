@@ -162,7 +162,7 @@ const destinationChangeHandler = (e) => {
           </Space>
         </div>
       </Form>
-      <Accommodation tripId={tripId}/>
+     
       
     </>
   );

@@ -91,7 +91,7 @@ function Accommodation(props) {
       const userId = auth.currentUser.uid; // Get the user ID here
       
       
-      const tripId = "0.8137759427181017";
+      const tripId =Math.random().toString();
   
       // Save the accommodation details to Firestore using the tripId
       await saveAccommodationDetails(userId, tripId, accommodationDetails);
@@ -107,7 +107,7 @@ function Accommodation(props) {
   
 
   return (
-    <div className="container">
+    <div className="accommodation-container">
       <Collapse>
         {accommodations.map((accommodation, index) => (
           <Panel

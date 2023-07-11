@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Card, Input, Button, Alert } from "antd";
 import "./Signup.css";
 import logo from "../images/logo.png";
-import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { createUserWithEmailAndPassword } from "firebase/auth";
 import { db, auth } from "../firebase";
 import { collection, doc, setDoc } from "firebase/firestore";
 
