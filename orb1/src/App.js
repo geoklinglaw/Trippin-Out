@@ -10,6 +10,8 @@ import FoodOptions from "./components/Pref_Page/FoodOptions";
 import { useEffect } from "react";
 
 
+
+
 function App() {
   useEffect(() => {
     if (window.location.pathname !== "/signup") {

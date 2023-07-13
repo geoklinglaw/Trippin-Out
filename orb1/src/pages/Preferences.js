@@ -10,70 +10,66 @@ import FoodOptions from "../components/Pref_Page/FoodOptions";
 import SuggestedLocations from "../components/Pref_Page/SuggestedLocation";
 
 //const description = "This is a description.";
+const A = () => <Explore />;
 
+// const B = () => {
+//   return <h1>Accomodation</h1>;
+// };
+
+const handleCheckInDateTimeChange = (value) => {
+  console.log("Check-in date and time: ", value);
+};
+const handleCheckOutDateTimeChange = (value) => {
+  console.log("Check-out date and time: ", value);
+};
+
+const handleLocationChange = (event) => {
+  console.log("Location: ", event.target.value);
+};
+
+const handleHotelNameChange = (event) => {
+  console.log("Hotel Name: ", event.target.value);
+};
+
+
+const B = () => (
+  <>
+    <h1>Accommodation</h1>
+    <Accommodation
+    onCheckInDateTimeChange={handleCheckInDateTimeChange}
+    onCheckOutDateTimeChange={handleCheckOutDateTimeChange}
+    onLocationChange={handleLocationChange}
+    onHotelNameChange={handleHotelNameChange}
+     />
+  </>
+);
+
+
+const C = () => (
+  <>
+    <h1>Preferences</h1>
+    <Preference/>
+  </>
+);
+
+//const C = () => <h1>Preferences</h1>;
+
+
+const D = () => (
+  <>
+   <h1 style={{ marginBottom: '5px' }}>Suggested Locations</h1>
+    <h6 style={{ opacity: 0.7, fontSize: '14px', marginTop: '0' }}>tick the locations if you wish to include it in your itinerary</h6>
+  <SuggestedLocations/>
+  </>
+)
+const E = () => (
+  <>
+   <h1 style={{ marginBottom: '5px' }}>Food Options</h1>
+    <h6 style={{ opacity: 0.7, fontSize: '14px', marginTop: '0' }}>Pick the food you would like to include</h6>
+  <FoodOptions />
+  </>
+);
 const App = () => {
-  const [generatedLocations, setGeneratedLocations] = useState([]);
-
-  const handlePreferencesSubmitted = (data) => {
-    console.log("Preferences submitted: ", data);
-    setGeneratedLocations(data);
-  }
-
-  const A = () => <Explore />;
-
-  const handleCheckInDateTimeChange = (value) => {
-    console.log("Check-in date and time: ", value);
-  };
-  const handleCheckOutDateTimeChange = (value) => {
-    console.log("Check-out date and time: ", value);
-  };
-  
-  const handleLocationChange = (event) => {
-    console.log("Location: ", event.target.value);
-  };
-  
-  const handleHotelNameChange = (event) => {
-    console.log("Hotel Name: ", event.target.value);
-  };
-  
-  
-  const B = () => (
-    <>
-      <h1>Accommodation</h1>
-      <Accommodation
-      onCheckInDateTimeChange={handleCheckInDateTimeChange}
-      onCheckOutDateTimeChange={handleCheckOutDateTimeChange}
-      onLocationChange={handleLocationChange}
-      onHotelNameChange={handleHotelNameChange}
-       />
-    </>
-  );
-  
-  
-  const C = () => (
-    <>
-      <h1>Preferences</h1>
-      <Preference onSubmit={() => setHeader(3)} onPreferencesSubmitted={handlePreferencesSubmitted}/>
-    </>
-  );
-  
-
-  const D = () => (
-    <>
-     <h1 style={{ marginBottom: '5px' }}>Suggested Locations</h1>
-      <h6 style={{ opacity: 0.7, fontSize: '14px', marginTop: '0' }}>tick the locations if you wish to include it in your itinerary</h6>
-    <SuggestedLocations data={generatedLocations}/>
-    </>
-  )
-  const E = () => (
-    <>
-     <h1 style={{ marginBottom: '5px' }}>Food Options</h1>
-      <h6 style={{ opacity: 0.7, fontSize: '14px', marginTop: '0' }}>Pick the food you would like to include</h6>
-    <FoodOptions />
-    </>
-  );
-
-
   const [header, setHeader] = useState(0);
   return (
     <>
