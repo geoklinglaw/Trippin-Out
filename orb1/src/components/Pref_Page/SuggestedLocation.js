@@ -3,10 +3,10 @@ import { Card, Button } from 'antd';
 import SuggLocations from "./SuggLocations";
 import "./Explore.css";
 import { getFirestore } from 'firebase/firestore';
-import { firestore, firebase } from '../../firebase';
+import { db, firebase } from '../../firebase';
 import { collection, query, getDocs, addDoc, doc, setDoc } from "firebase/firestore";
-
 import axios from 'axios';
+
 
 const SuggestedLocations = (props) => {
   const {data} = props;
@@ -34,7 +34,7 @@ const SuggestedLocations = (props) => {
     const userID = 'pVOrWYawmnkMvUu3IFtn';
     const tripID = 'V1NBZp7HSK7hnEkKT0Aw';
 
-    const locationsRef = collection(firestore, 'users', userID, 'trips', tripID, 'locations');
+    const locationsRef = collection(db, 'users', userID, 'trips', tripID, 'locations');
     for (const location of selectedData) {
         try {
             console.log("id: " + location.locationId);

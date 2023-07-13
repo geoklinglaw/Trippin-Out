@@ -1,9 +1,9 @@
 import React from "react";
 import { Card } from "antd";
 import "./Explore.css";
-import { tips } from "./traveltips";
+// import { tips } from "./traveltips";
 
-const { Meta } = Card;
+// const { Meta } = Card; 
 
 function Explore() {
   const handleClick = (url) => {
@@ -13,7 +13,7 @@ function Explore() {
   return (
     <div>
       <h1 className="h1Style">Explore Travel Tips</h1>
-      <div className="tips-container">
+      {/* <div className="tips-container">
         {tips.map((tip) => (
           <Card
             className="product"
@@ -26,7 +26,7 @@ function Explore() {
             <Meta title={tip.title} description={tip.description}/>
           </Card>
         ))}
-      </div>
+      </div> */}
     </div>
   );
 }

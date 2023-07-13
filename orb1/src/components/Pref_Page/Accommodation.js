@@ -5,7 +5,6 @@ import { saveAccommodationDetails } from "../../pages/authStore";
 import useAuthStore from "../../pages/authStore";
 import "./Accommodation.css";
 import { db, auth } from "../../firebase";
-import { doc, getDoc } from 'firebase/firestore';
 import { useLocation } from "react-router-dom";
 const { Panel } = Collapse;
 

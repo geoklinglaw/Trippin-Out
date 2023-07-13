@@ -6,7 +6,6 @@ import LandingPage from "./pages/LandingPage";
 import Preferences from "./pages/Preferences";
 import Itinerary from "./pages/itinerary";
 import Explore from "./components/Pref_Page/Explore";
-import SuggestedLocations from "./components/Pref_Page/SuggestedLocation";
 import FoodOptions from "./components/Pref_Page/FoodOptions";
 import { useEffect } from "react";
 
@@ -37,10 +36,8 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/preferences" element={<Preferences />} />
-        <Route path="/Pref_Page/SuggestedLocation" element={<SuggestedLocations />} />
         <Route path="/food-options/*" element={<FoodOptions />} />
         <Route path="/itinerary/*" element={<Itinerary />} />
-
 
   
       </Routes>
