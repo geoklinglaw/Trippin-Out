@@ -7,6 +7,9 @@ import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
 import { getAuth, signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword } from "firebase/auth";
 import useAuthStore from "./authStore";
+import { doc, setDoc } from "firebase/firestore"; 
+import { auth, firestore } from "../firebase";
+
 
 const Login = () => {
   // const [email, setEmail] = useState("");

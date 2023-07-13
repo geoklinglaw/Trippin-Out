@@ -3,11 +3,10 @@ import { Segmented, Button } from 'antd';
 import SuggLocations from "./SuggLocations";
 import './FoodOptions.css';
 import { getFirestore } from 'firebase/firestore';
-import { db, firebase } from '../../firebase';
+import { firestore, firebase } from '../../firebase';
 import { collection, query, getDocs, addDoc, doc, setDoc } from "firebase/firestore";
 import { Routes, Route, NavLink, useNavigate } from "react-router-dom";
 import itinerary from './../../pages/itinerary';
-
 
 const FoodOptions = () => {
   // const { userID, setUserID } = useContext(UserContext);
@@ -59,7 +58,7 @@ const FoodOptions = () => {
     const tripID = 'V1NBZp7HSK7hnEkKT0Aw';
 
     // Reference to the locations collection
-    const locationsRef = collection(db, 'users', userID, 'trips', tripID, 'food');
+    const locationsRef = collection(firestore, 'users', userID, 'trips', tripID, 'food');
 
     // Loop through each selected location and save it to Firestore
     for (const location of selectedData) {

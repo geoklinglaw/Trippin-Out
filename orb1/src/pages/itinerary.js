@@ -6,7 +6,7 @@ const Itinerary = () => {
 
     useEffect(() => {
         const filename = 'sorted_routes.json';
-        fetch(`http://localhost:5000/files/${filename}`)
+        fetch(`http://localhost:5123/files/${filename}`)
               .then(response => response.json())
               .then(data => {
                   console.log(data);
