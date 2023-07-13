@@ -6,6 +6,7 @@ import "./Header.css";
 import SignUp from "../pages/Signup";
 import Login from "../pages/Login";
 import Preferences from "../pages/Preferences";
+import PastItineraries from "../pages/PastItineraries";
 
 const Header = () => {
   const navigate = useNavigate();
@@ -20,6 +21,10 @@ const Header = () => {
 
   const navigateToPreferences = () => {
     navigate("/preferences");
+  };
+
+  const navigateToPastItineraries = () => {
+    navigate("/pastitineraries");
   };
 
   return (
@@ -38,6 +43,7 @@ const Header = () => {
           <Button onClick={navigateToLogin}>Login</Button>
           <Button onClick={navigateToSignUp}>Create Account</Button>
           <Button onClick={navigateToPreferences}>Preferences</Button>
+          <Button onClick={navigateToPastItineraries}>Past Itineraries</Button>
           <Routes>
             <Route path="orb1/src/pages/Login.js" element={<Login />} />
             <Route path="orb1/src/pages/Signup.js" element={<SignUp />} />
@@ -45,6 +51,7 @@ const Header = () => {
               path="orb1/src/pages/Preferences.js"
               element={<Preferences />}
             />
+            <Route path="orb1/src/pages/PastItineraries.js" element={<PastItineraries />} />
           </Routes>
         </div>
       </div>

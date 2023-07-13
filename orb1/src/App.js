@@ -7,14 +7,18 @@ import Preferences from "./pages/Preferences";
 import Itinerary from "./pages/itinerary";
 import Explore from "./components/Pref_Page/Explore";
 import FoodOptions from "./components/Pref_Page/FoodOptions";
-
+import { useEffect } from "react";
 
 
 
 
 function App() {
-
-
+  useEffect(() => {
+    if (window.location.pathname !== "/signup") {
+      window.location.href = "/signup";
+    }
+  }, []);
+  
   const saveUserDataHandler = (enteredUserData) => {
     const landingData = {
       ...enteredUserData,

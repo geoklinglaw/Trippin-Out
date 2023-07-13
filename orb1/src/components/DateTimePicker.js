@@ -11,7 +11,7 @@ const DateTimePicker = ({ onChange, checkInDate, pickerType, className }) => {
       const dateTime = moment(`${date.format('YYYY-MM-DD')} ${time.format('HH:mm')}`, 'YYYY-MM-DD HH:mm');
       onChange(dateTime);
     }
-  }, [date, time, onChange]);
+  }, [date, time]);
 
   const handleDateChange = (value) => {
     setDate(value);

@@ -1,82 +1,85 @@
 .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
-  
-  .login-image {
-    width: 550px;
-  }
-  
-  .form-container {
-    width: 520px;
-    height: 460px;
-    padding: 20px;
-    border: 2px solid #d9d9d9;
-  }
-  
-  .login-title {
-    font-size: 35px;
-    display: flex;
-    justify-content: center;
-    color: #1c395b;
-  }
-  
-  .form-input {
-    font-size: 17px;
-    padding: 14px;
-  }
-  
-  .form-buttons {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-  }
-  
-  .login-button {
-    font-size: 18px;
-    background-color: #5186cd;
-    color: white;
-    padding: 0px 60px;
-    height: 40px;
-    margin-bottom: 10px;
-  }
-  
-  .login-button:hover {
-    background-color: #416db5;
-  }
-  
-  .login-button:active {
-    background-color: #355791;
-  }
-  
-  .google-button {
-    font-size: 16px;
-    background-color: #db4437;
-    color: white;
-    padding: 0px 60px;
-    height: 40px;
-  }
-  
-  .google-button:hover {
-    background-color: #b93227;
-  }
-  
-  .google-button:active {
-    background-color: #94241c;
-  }
-  
-  .line {
-    height: 1px;
-    width: 100%;
-    background-color: #d9d9d9;
-    margin-bottom: 20px;
-  }
-  
-  .error-label {
-    color: red;
-  }
-  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login-image {
+  width: 100%;
+  max-width: 550px;
+  height: auto;
+}
+
+.form-container {
+  width: 100%;
+  max-width: 520px;
+  padding: 20px;
+  border: 2px solid #d9d9d9;
+}
+
+.login-title {
+  font-size: 35px;
+  text-align: center;
+  color: #1c395b;
+}
+
+.form-input {
+  font-size: 17px;
+  padding: 14px;
+  width: 100%;
+}
+
+.form-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.login-button {
+  font-size: 18px;
+  background-color: #5186cd;
+  color: white;
+  padding: 0px 60px;
+  height: 40px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.login-button:hover {
+  background-color: #416db5;
+}
+
+.login-button:active {
+  background-color: #355791;
+}
+
+.google-button {
+  font-size: 16px;
+  background-color: #db4437;
+  color: white;
+  padding: 0px 60px;
+  height: 40px;
+  width: 100%;
+}
+
+.google-button:hover {
+  background-color: #b93227;
+}
+
+.google-button:active {
+  background-color: #94241c;
+}
+
+.line {
+  height: 1px;
+  width: 100%;
+  background-color: #d9d9d9;
+  margin-bottom: 20px;
+}
+
+.error-label {
+  color: red;
+}
