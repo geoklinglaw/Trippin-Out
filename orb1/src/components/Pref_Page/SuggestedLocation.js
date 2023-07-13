@@ -8,7 +8,8 @@ import { collection, query, getDocs, addDoc, doc, setDoc } from "firebase/firest
 
 import axios from 'axios';
 
-const SuggestedLocations = () => {
+const SuggestedLocations = (props) => {
+  const {data} = props;
   const [locations, setLocations] = useState([]);
   const [selectedLocations, setSelectedLocations] = useState({});
   const [error, setError] = useState(null);
@@ -25,11 +26,7 @@ const SuggestedLocations = () => {
     }));
   };
   
-  // const trytry = collection(db, 'users')
-  // await setDoc(doc(trytry), {
-  //   name: 'Lexuan',
-  //   userID: '2',
-  // })    
+
 
   const submitData = async () => {
     const selectedData = Object.values(selectedLocations).filter(location => location);
@@ -81,16 +78,6 @@ const SuggestedLocations = () => {
           .catch(error => console.error('Error fetching data:', error));
     }, []);
 
-  //   fetch("http://localhost:9000/list_of_locations_26062023,0204am")
-  //     .then((response) => {
-  //       if (!response.ok) {
-  //         throw new Error("Network response was not ok");
-  //       }
-  //       return response.json();
-  //     })
-  //     .then((data) => setLocations(data))
-  //     .catch((err) => setError(err.message));
-  // }, []);
 
   return (
     <>
@@ -126,6 +113,21 @@ const SuggestedLocations = () => {
                   />
                 ))
               )}
+              {/* {data.map((location, index) => (
+                  <SuggLocations
+                    key={index}
+                    locationId={index}
+                    selected={!!selectedLocations[index]}
+                    toggleSelected={toggleSelected}
+                    photo={location.photos ? location.photos[0] : null}
+                    name={location.name}
+                    formatted_address={
+                      location.location ? location.location.formatted_address : ""
+                    }
+                    price={location.price}
+                  />
+                ))
+              }; */}
             </div>
           </div>
         </div>

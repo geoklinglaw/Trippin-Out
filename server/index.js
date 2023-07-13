@@ -76,14 +76,15 @@
 //         }
 //     );
 // });
+
 const express = require('express');
 const admin = require('firebase-admin');
 const cors = require('cors');
 const path = require('path');
 const app = express();
+app.use(express.json());
 
 const PORT = 5000;
-// const PORT = 7000;
 app.use(cors());
 
 
@@ -102,6 +103,16 @@ app.get('/files/:filename', (req, res) => {
       }
   });
 });
+
+
+const locationsAPI = require('./routes/locationsAPI');
+app.post('/Preferences', (req, res) => {
+  const preferences = req.body.preferences;
+  console.log('Received preferences:', preferences);
+  const generateLocations = locationsAPI.processPreferences(preferences); 
+  res.json({message: 'Preferences received successfully', data: generateLocations});
+});
+
 
 
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));

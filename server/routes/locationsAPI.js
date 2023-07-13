@@ -2,7 +2,7 @@
 // Generates list of locations based on categories and search query
 // DO NOT USE IMPORT FOR COMMON JS MODULES
 const { get } = require('http');
-const data = require('./rankingtest.json');
+const data = require('../rankingtest.json');
 const fs = require('fs');
 const sdk = require('api')('@fsq-developer/v1.0#x6xjhzlic2gi70');
 
@@ -104,7 +104,7 @@ async function getListPerCategory(cat, cat_id, duration, country) {
 // getListPerCategory('Night Clubs', '10032', 3, '1.3521,103.8198');
 // find lat long based on country
 
-getListPerCategory('Night Clubs', '10032', '1.3521,103.8198');
+// getListPerCategory('Night Clubs', '10032', '1.3521,103.8198');
 obtainListOfLocations(data, rankRule)
     .then(list => {
         console.log(list);
@@ -124,39 +124,29 @@ obtainListOfLocations(data, rankRule)
         console.error(`Error: ${error}`);
     });
 
-// Categories and its Code
-// let categories = {
-//     ArtsEntertainment: {
-//         code: '10000',
-//         duration: 3,
-//      },
-//       // Arts & Entertainment
-//     NightClubs: {
-//         code: '10032',
-//         duration: 3,
-//     },
-//     Bar: {
-//         code: '13003',
-//         duration: 3,
-//     },
-//     Museum: {
-//         code: '10027', 
-//         duration: 2,
-//     },
-//     HistoricProtectedSites: {
-//         code: '16020', 
-//         duration: 3,
-//     },
-//     LandmarkOutdoors: {
-//         code: '16000', 
-//         duration: 3,
-//     },
-//     Parks: {
-//         code: '16032', 
-//         duration: 3,
-//     },
-//     EntertainmentEvents: {
-//         code: '14003', 
-//         duration: 3,
-//     }
-// };
+
+    module.exports = {
+        processPreferences: function(preferences) {
+            obtainListOfLocations(preferences, rankRule)
+            .then(list => {
+                console.log(list);
+        
+                // function generateUniqueFilename(prefix) {
+                //     const timestamp = new Date().toISOString().replace(/[:.-]/g, '');
+                //     return `${prefix}_${timestamp}.json`;
+                // }
+        
+                // const filename = generateUniqueFilename('location_list');
+                // fs.writeFile(`${filename}`, JSON.stringify(list, null, 2), (err) => {
+                //     if (err) throw err;
+                //     console.log('Data written to file');
+                // });
+
+                return list;
+            })
+            .catch(error => {
+                console.error(`Error: ${error}`);
+            });
+        }
+      };
+      
