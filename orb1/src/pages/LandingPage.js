@@ -1,56 +1,81 @@
-// LandingPage.js
+
 import { Card, Space, Form, message, Button } from "antd";
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/Header.js";
 import DropdownButton from "../components/DropdownButton";
 import DateSelector from "../components/DateSelector";
 import NumberInput from "../components/NumberInput";
 import "./LandingPage.css";
-import LoginPopUp from "../components/LoginPopUp";
-import { useState, useEffect } from "react";
-import Accommodation from "../components/Pref_Page/Accommodation.js";
+import { db, auth } from "../firebase";
+import { doc, setDoc } from "firebase/firestore";
+import useAuthStore from "./authStore";
+import moment from "moment";
+import {useNavigate} from "react-router-dom";
+import Accommodation from ".././components/Pref_Page/Accommodation"; // Import the Accommodation component
 
-function LandingPage(props) {
+
+
+function LandingPage() {
   const [form] = Form.useForm();
+  const [error, setError] = useState(null);
+  const { email } = useAuthStore();
+  const [destination, setDestination] = useState("");
+  const [guests, setGuests] = useState("");
+  const navigate = useNavigate();
+  const [tripId, setTripId] = useState(""); // State for tripId
+  const authStore = useAuthStore();
 
-  const onFinish = (values) => {
-    console.log("Success:", values);
-    message.success("Submit success!");
-    const landingData = {
-      destination: values.destination,
-      duration: values.duration,
-      guests: values.guests,
-    };
-    props.onSaveUserData(landingData);
-    setButtonPopup(true);
-    form.resetFields();
+  const peopleChangeHandler = (value) => {
+    setGuests(value);
+  };
+
+  const onFinish = async (values) => {
+    try {
+
+      const userId = auth.currentUser.uid;
+      const tripId = Math.random().toString();
+      authStore.setTripId(tripId); // Update the tripId in the authStore
+      const tripRef = doc(db, "users", userId, "trips", tripId);
+
+      const duration = moment(values.duration); // Convert to moment object
+      const formattedDuration = duration.format("YYYY-MM-DD HH:mm"); // Format the duration
+      
+      await setDoc(tripRef, {
+        email: email,
+        destination: destination,
+        duration: formattedDuration,
+        guests: parseInt(values.guests),
+      });
+
+      message.success("Submit success!");
+      form.resetFields();
+      setTripId(tripId); // Set the generated tripId in state
+      navigate("/preferences?tripId=" + tripId);
+
+
+    } catch (error) {
+      console.error("Error storing data:", error);
+      setError("Submit failed!");
+    }
   };
 
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
-    message.error("Submit failed!");
+    setError("Submit failed!");
   };
 
-  const [destination, setDestination] = useState("");
-  const destinationChangeHandler = (e) => {
-    setDestination(e.key);
-    console.log(e.key);
-  };
+  
+  
+const destinationChangeHandler = (e) => {
+  setDestination(e.key); // Update destination state with the selected value
+};
 
-  const [duration, setDuration] = useState("");
-  const dateChangeHandler = (value, dateString) => {
-    setDuration(dateString);
+
+  const dateChangeHandler = (_, dateString) => {
     console.log(dateString);
   };
 
-  const [guests, setGuests] = useState("");
-  const peopleChangeHandler = (e) => {
-    setGuests(e.key);
-    console.log(e.key);
-  };
-
-  const [buttonPopup, setButtonPopup] = useState(false);
-
+  
   return (
     <>
       <Header />
@@ -83,8 +108,7 @@ function LandingPage(props) {
                 className="Title"
                 style={{ textAlign: "center", marginTop: "50px" }}
               >
-                {" "}
-                We've Got Your Journey Covered &#128526;{" "}
+                We've Got Your Journey Covered &#128526;
               </h2>
               <div className="Card">
                 <Form.Item
@@ -107,7 +131,6 @@ function LandingPage(props) {
                 </Form.Item>
                 <Form.Item
                   name="guests"
-                  onChange={peopleChangeHandler}
                   label="Number of Guests"
                   rules={[
                     {
@@ -132,20 +155,15 @@ function LandingPage(props) {
                     >
                       Submit
                     </Button>
-                    <LoginPopUp
-                      trigger={buttonPopup}
-                      setTrigger={setButtonPopup}
-                    >
-                      <h1> Login Popup </h1>
-                    </LoginPopUp>
                   </Space>
                 </Form.Item>
               </div>
-            </Card>  
-          
+            </Card>
           </Space>
         </div>
       </Form>
+     
+      
     </>
   );
 }
