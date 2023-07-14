@@ -1,4 +1,5 @@
-// data/tips.js
+
+
 
 export const tips = [
     {
@@ -79,6 +80,4 @@ export const tips = [
         img:"https://www.forbes.com/advisor/wp-content/uploads/2021/05/Travel-Insurance.svg"
       },
 
-
-  ];
-  
+    ]

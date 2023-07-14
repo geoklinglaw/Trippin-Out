@@ -43,7 +43,6 @@ function App() {
         <Route path="/food-options/*" element={<FoodOptions />} />
         <Route path="/itinerary/*" element={<Itinerary />} />
 
-
   
       </Routes>
     </Router>

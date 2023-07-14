@@ -1,14 +1,18 @@
 
-import React, { createContext, useState } from 'react';
+// // import React, { createContext, useState } from 'react';
 
-export const UserContext = createContext();
+// const { useRef } = require("react");
 
-export const UserProvider = ({ children }) => {
-  const [userID, setUserID] = useState(null);
+// // export const UserContext = createContext();
 
-  return (
-    <UserContext.Provider value={{ userID, setUserID }}>
-      {children}
-    </UserContext.Provider>
-  );
-};
+// // export const UserProvider = ({ children }) => {
+// //   const [userID, setUserID] = useState(null);
+
+// //   return (
+// //     <UserContext.Provider value={{ userID, setUserID }}>
+// //       {children}
+// //     </UserContext.Provider>
+// //   );
+// // };
+
+// useRef

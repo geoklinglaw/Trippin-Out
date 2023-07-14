@@ -3,8 +3,6 @@ import { db } from '../firebase';
 import { doc, setDoc, getDoc } from 'firebase/firestore';
 
 
-
-
 export const saveAccommodationDetails = async (userId, tripId, accommodationDetails) => {
   try {
     console.log('Received parameters:');

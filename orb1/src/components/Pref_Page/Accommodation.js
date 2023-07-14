@@ -3,7 +3,10 @@ import { Form, Input, Button, Collapse, DatePicker, message } from "antd";
 import { DeleteOutlined } from "@ant-design/icons";
 import { saveAccommodationDetails } from "../../pages/authStore";
 import "./Accommodation.css";
-import { auth } from "../../firebase";
+
+import { db, auth } from "../../firebase";
+import { useLocation } from "react-router-dom";
+
 
 const { Panel } = Collapse;
 
