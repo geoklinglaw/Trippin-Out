@@ -69,7 +69,7 @@ data.sort((a, b) => {
         }
     }
 
-    console.log(locations);
+    // console.log(locations);
     return locations;
 }
 
@@ -92,7 +92,7 @@ async function getListPerCategory(cat, cat_id, duration, country) {
             data.results.forEach(item => {
                 item.activity_duration = duration;
             });
-            console.log(data)
+            // console.log(data)
             return data
         } else {
             return []; // return an empty array if data doesn't have results or results is not an array
@@ -107,30 +107,38 @@ async function getListPerCategory(cat, cat_id, duration, country) {
 // getListPerCategory('Night Clubs', '10032', '1.3521,103.8198');
 obtainListOfLocations(data, rankRule)
     .then(list => {
-        console.log(list);
+        // console.log(list);
 
-        function generateUniqueFilename(prefix) {
-            const timestamp = new Date().toISOString().replace(/[:.-]/g, '');
-            return `${prefix}_${timestamp}.json`;
-        }
+        // function generateUniqueFilename(prefix) {
+        //     const timestamp = new Date().toISOString().replace(/[:.-]/g, '');
+        //     return `${prefix}_${timestamp}.json`;
+        // }
 
-        const filename = generateUniqueFilename('location_list');
-        fs.writeFile(`${filename}`, JSON.stringify(list, null, 2), (err) => {
-            if (err) throw err;
-            console.log('Data written to file');
-        });
+        // const filename = generateUniqueFilename('location_list');
+        // fs.writeFile(`${filename}`, JSON.stringify(list, null, 2), (err) => {
+        //     if (err) throw err;
+        //     console.log('Data written to file');
+        // });
     })
     .catch(error => {
         console.error(`Error: ${error}`);
     });
 
 
-    module.exports = {
-        processPreferences: function(preferences) {
-            obtainListOfLocations(preferences, rankRule)
-            .then(list => {
-                console.log(list);
+module.exports = {
+    processPreferences: async function(preferences) {
+        try {
+            const list = await obtainListOfLocations(preferences, rankRule);
+            // console.log(list);
+            return list;
+        } catch (error) {
+            console.error(`Error: ${error}`);
+        }
+        }
         
+    };
+      
+
                 // function generateUniqueFilename(prefix) {
                 //     const timestamp = new Date().toISOString().replace(/[:.-]/g, '');
                 //     return `${prefix}_${timestamp}.json`;
@@ -141,12 +149,3 @@ obtainListOfLocations(data, rankRule)
                 //     if (err) throw err;
                 //     console.log('Data written to file');
                 // });
-
-                return list;
-            })
-            .catch(error => {
-                console.error(`Error: ${error}`);
-            });
-        }
-      };
-      

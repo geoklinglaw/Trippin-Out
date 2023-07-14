@@ -63,15 +63,18 @@ function Preference(props) {
   async function submitPreferences() {
     const endpoint = 'http://localhost:5000/Preferences';
     try {
-        const response = await axios.post(endpoint, { preferences });
-        console.log('Sent preferences to backend:');
-        return response.data;
+      const response = await axios.post(endpoint, { 
+        "preferences": preferences
+      });
+      console.log(response.data)
+      return response.data;
     } catch (error) {
-        console.error('Error submitting data:', error);
+      console.error('Error submitting data:', error)
+      return null;
     }
   }
+  
   const handleSubmit = async () => {
-    // Check if rankings are unique
     const ranks = preferences.map(p => p.rank);
     const uniqueRanks = new Set(ranks);
 
@@ -80,6 +83,7 @@ function Preference(props) {
       return;
     } else {
       const responseData = await submitPreferences();
+      console.log(responseData);
       props.onPreferencesSubmitted(responseData);
       props.onSubmit();
 
@@ -120,9 +124,6 @@ function Preference(props) {
       </div>
     </div>
   );
-  
-  
-  
 }
 
 export default Preference;

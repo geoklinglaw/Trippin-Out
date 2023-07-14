@@ -83,6 +83,7 @@ const cors = require('cors');
 const path = require('path');
 const app = express();
 app.use(express.json());
+const locationsAPI = require('./routes/locationsAPI');
 
 const PORT = 5000;
 app.use(cors());
@@ -105,11 +106,10 @@ app.get('/files/:filename', (req, res) => {
 });
 
 
-const locationsAPI = require('./routes/locationsAPI');
-app.post('/Preferences', (req, res) => {
+app.post('/Preferences', async (req, res) => {
   const preferences = req.body.preferences;
   console.log('Received preferences:', preferences);
-  const generateLocations = locationsAPI.processPreferences(preferences); 
+  const generateLocations = await locationsAPI.processPreferences(preferences); 
   res.json({message: 'Preferences received successfully', data: generateLocations});
 });
 

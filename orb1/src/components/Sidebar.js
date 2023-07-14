@@ -3,10 +3,12 @@ import "./Sidebar.css";
 import { Steps, Layout, Menu, theme, Divider } from "antd";
 import { useState } from "react";
 import img from "../images/Asset 1.png";
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 const { Step } = Steps;
 
-function Sidebar({ setHeader }) {
+function Sidebar({ setHeader, isPreferencesSubmitted, currentStep }) {
   const [current, setCurrent] = useState(0);
   const arr = [
     "Explore",
@@ -15,29 +17,25 @@ function Sidebar({ setHeader }) {
     "Locations",
     "Food Options",
   ];
+
   const onChange = (value) => {
     console.log("onChange:", value);
     setHeader(value);
     setCurrent(value);
   };
-  const description = "This is a description.";
 
+  const notify = () => toast("Submit your preferences first before accessing the locations and food options!");
+
+  const handleClick = (value) => {
+    if (!isPreferencesSubmitted && (value === 3 || value === 4)) {
+      notify();
+    } else {
+      onChange(value);
+    }
+  };
+  
   return (
     <>
-      {/* <div className='sidebar-container'> 
-            <ul>
-                {SidebarData.map((item, key) => {
-                    return (
-                        <Link to={item.link} key={key}>
-                            <li>
-                                <div>{item.icon}</div> {" "}
-                                <div>{item.title}</div>
-                            </li>
-                        </Link>
-                    );
-                })}
-            </ul>
-        </div> */}
       <div className="sidebar-container">
         <div className="sidebar-user">
           <img src={img} alt="logo" className="sidebar-user img" />
@@ -46,15 +44,14 @@ function Sidebar({ setHeader }) {
         <div className="sidebar-content">
           <Steps
             className="sidebar-list"
-            current={current}
-            onChange={onChange}
+            current={currentStep}
             direction="vertical"
           >
-            <Step title="Explore" />
-            <Step title="Accomodation" />
-            <Step title="Preferences" />
-            <Step title="Locations" />
-            <Step title="Food Options" />
+            <Step title="Explore" onClick={() => handleClick(0)} />
+            <Step title="Accomodation" onClick={() => handleClick(1)} />
+            <Step title="Preferences" onClick={() => handleClick(2)} />
+            <Step title="Locations" onClick={() => handleClick(3)} />
+            <Step title="Food Options" onClick={() => handleClick(4)} />
           </Steps>
         </div>
       </div>
@@ -63,4 +60,3 @@ function Sidebar({ setHeader }) {
 }
 
 export default Sidebar;
-
