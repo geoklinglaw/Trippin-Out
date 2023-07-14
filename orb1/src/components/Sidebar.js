@@ -1,7 +1,6 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./Sidebar.css";
-import { Steps, Layout, Menu, theme, Divider } from "antd";
-import { useState } from "react";
+import { Steps } from "antd";
 import img from "../images/Asset 1.png";
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
@@ -10,9 +9,18 @@ const { Step } = Steps;
 
 function Sidebar({ setHeader, isPreferencesSubmitted, currentStep }) {
   const [current, setCurrent] = useState(0);
+  const [username, setUsername] = useState("");
+
+  useEffect(() => {
+    const storedUsername = localStorage.getItem("username");
+    if (storedUsername) {
+      setUsername(storedUsername);
+    }
+  }, []);
+
   const arr = [
     "Explore",
-    "Accomodation",
+    "Accommodation",
     "Preferences",
     "Locations",
     "Food Options",
@@ -35,27 +43,26 @@ function Sidebar({ setHeader, isPreferencesSubmitted, currentStep }) {
   };
   
   return (
-    <>
-      <div className="sidebar-container">
-        <div className="sidebar-user">
-          <img src={img} alt="logo" className="sidebar-user img" />
-          <span className="username">Law Geok Ling</span>
-        </div>
-        <div className="sidebar-content">
-          <Steps
-            className="sidebar-list"
-            current={currentStep}
-            direction="vertical"
-          >
-            <Step title="Explore" onClick={() => handleClick(0)} />
-            <Step title="Accomodation" onClick={() => handleClick(1)} />
-            <Step title="Preferences" onClick={() => handleClick(2)} />
-            <Step title="Locations" onClick={() => handleClick(3)} />
-            <Step title="Food Options" onClick={() => handleClick(4)} />
-          </Steps>
-        </div>
+
+    <div className="sidebar-container">
+      <div className="sidebar-user">
+        <img src={img} alt="logo" className="sidebar-user img" />
+        <span className="username">{username}</span>
+
       </div>
-    </>
+      <div className="sidebar-content">
+        <Steps
+          className="sidebar-list"
+          current={current}
+          onChange={onChange}
+          direction="vertical"
+        >
+          {arr.map((title) => (
+            <Step key={title} title={title} />
+          ))}
+        </Steps>
+      </div>
+    </div>
   );
 }
 

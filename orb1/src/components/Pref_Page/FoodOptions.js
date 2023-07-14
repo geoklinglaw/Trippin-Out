@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Segmented, Button } from 'antd';
 import SuggLocations from "./SuggLocations";
 import './FoodOptions.css';
-import { getFirestore } from 'firebase/firestore';
+
 import { db, firebase } from '../../firebase';
 import { collection, query, getDocs, addDoc, doc, setDoc } from "firebase/firestore";
 import { Routes, Route, NavLink, useNavigate } from "react-router-dom";
@@ -42,6 +42,7 @@ const FoodOptions = () => {
     <Route path="orb1/src/pages/itinerary" element={<itinerary />} />
   };
 
+
   // useEffect(() => {
   //   const filename = 'food_options_20230627T123722044Z.json';
   //   fetch(`http://localhost:5000/files/${filename}`)
@@ -68,6 +69,18 @@ const FoodOptions = () => {
           return null;
       }
   }
+
+  useEffect(() => {
+    const filename = 'food_options_20230627T123722044Z.json';
+    fetch(`http://localhost:5123/files/${filename}`)
+          .then(response => response.json())
+          .then(data => {
+              console.log(data);
+              setLocations(data); 
+          })
+          .catch(error => console.error('Error fetching data:', error));
+  }, []);
+
 
   const submitData = async () => {
     const selectedData = Object.values(selectedLocations).filter(location => location);
