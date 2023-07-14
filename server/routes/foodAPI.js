@@ -1,6 +1,6 @@
 const fs = require('fs');
 const sdk = require('api')('@fsq-developer/v1.0#x6xjhzlic2gi70');
-const { admin, db, collection } = require('./index.js');
+const { admin, db, collection } = require('../index.js');
 
 
 let categories = {
@@ -102,3 +102,14 @@ async function getAllFood(latlong) {
 // ------------------ UNIT TEST ------------------ //
 // Obtain list of food options in Singapore
 getAllFood('1.3521,103.8198')
+// module.exports = {
+//     processPreferences: async function(preferences) {
+//         try {
+//             const list = await obtainListOfLocations(preferences, rankRule);
+//             // console.log(list);
+//             return list;
+//         } catch (error) {
+//             console.error(`Error: ${error}`);
+//         }
+//     }  
+// };

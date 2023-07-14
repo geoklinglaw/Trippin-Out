@@ -134,9 +134,8 @@ module.exports = {
         } catch (error) {
             console.error(`Error: ${error}`);
         }
-        }
-        
-    };
+    }  
+};
       
 
                 // function generateUniqueFilename(prefix) {

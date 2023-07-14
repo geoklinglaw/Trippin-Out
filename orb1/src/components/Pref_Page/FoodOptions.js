@@ -7,11 +7,8 @@ import { db, firebase } from '../../firebase';
 import { collection, query, getDocs, addDoc, doc, setDoc } from "firebase/firestore";
 import { Routes, Route, NavLink, useNavigate } from "react-router-dom";
 import itinerary from './../../pages/itinerary';
+import axios from 'axios';
 
-// import Breakfast from './Meals/Breakfast';
-// import Lunch from './Meals/Lunch';
-// import Dinner from './Meals/Dinner';
-// import Dessert from './Meals/Dessert';
 
 const FoodOptions = () => {
   // const { userID, setUserID } = useContext(UserContext);
@@ -45,16 +42,32 @@ const FoodOptions = () => {
     <Route path="orb1/src/pages/itinerary" element={<itinerary />} />
   };
 
-  useEffect(() => {
-    const filename = 'food_options_20230627T123722044Z.json';
-    fetch(`http://localhost:5000/files/${filename}`)
-          .then(response => response.json())
-          .then(data => {
-              console.log(data);
-              setLocations(data); 
-          })
-          .catch(error => console.error('Error fetching data:', error));
-  }, []);
+  // useEffect(() => {
+  //   const filename = 'food_options_20230627T123722044Z.json';
+  //   fetch(`http://localhost:5000/files/${filename}`)
+  //         .then(response => response.json())
+  //         .then(data => {
+  //             console.log(data);
+  //             setLocations(data); 
+  //         })
+  //         .catch(error => console.error('Error fetching data:', error));
+  // }, []);
+
+  async function fetchDataWithParams() {
+      const endpoint = 'http://localhost:5000/foodoptions';
+      const params = {
+          param1: 'value1',
+          param2: 'value2',
+      };
+      try {
+          const response = await axios.get(endpoint, { params });
+          console.log(response.data);
+          return response.data;
+      } catch (error) {
+          console.error('Error fetching data:', error);
+          return null;
+      }
+  }
 
   const submitData = async () => {
     const selectedData = Object.values(selectedLocations).filter(location => location);
