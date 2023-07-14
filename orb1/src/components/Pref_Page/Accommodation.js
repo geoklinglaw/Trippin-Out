@@ -1,14 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { Form, Input, Button, Collapse, DatePicker, message } from "antd";
 import { DeleteOutlined } from "@ant-design/icons";
 import { saveAccommodationDetails } from "../../pages/authStore";
-import useAuthStore from "../../pages/authStore";
 import "./Accommodation.css";
-import { db, auth } from "../../firebase";
-import { doc, getDoc } from 'firebase/firestore';
-import { useLocation } from "react-router-dom";
-const { Panel } = Collapse;
+import { auth } from "../../firebase";
 
+const { Panel } = Collapse;
 
 function Accommodation(props) {
   const [accommodations, setAccommodations] = useState([
@@ -73,11 +70,6 @@ function Accommodation(props) {
     setAccommodations(updatedAccommodations);
   };
 
-  const authStore = useAuthStore();
-  const location = useLocation();
-  const {tripId} = props;
- 
- 
   const handleSubmit = async () => {
     try {
       const accommodationDetails = accommodations.map((accommodation) => ({
@@ -87,13 +79,10 @@ function Accommodation(props) {
         checkOutDateTime: accommodation.checkOutDateTime,
       }));
   
-      // Save the accommodation deTails to Firestore
-      const userId = auth.currentUser.uid; // Get the user ID here
-      
-      
-      const tripId =Math.random().toString();
+      // Save the accommodation details to Firestore
+      const userId = auth.currentUser.uid;
+      const tripId = Math.random().toString();
   
-      // Save the accommodation details to Firestore using the tripId
       await saveAccommodationDetails(userId, tripId, accommodationDetails);
   
       console.log("Accommodation details saved to Firestore");
@@ -104,31 +93,26 @@ function Accommodation(props) {
       message.error("Error saving accommodation details");
     }
   };
-  
 
   return (
-    <div className="accommodation-container">
-      <Collapse>
-        {accommodations.map((accommodation, index) => (
-          <Panel
-            header={
-              <div className="panel-header">
-                <span>Accommodation {index + 1}</span>
-                <Button
-                  type="text"
-                  icon={<DeleteOutlined />}
-                  onClick={() => removeAccommodation(index)}
-                />
-              </div>
-            }
-            key={index.toString()}
-            forceRender={true}
-          >
-            <div className="form-wrapper">
-              <Form
-                name={`accommodation-form-${index}`}
-                initialValues={accommodation}
-              >
+    <div className="container">
+      <div className="form-wrapper">
+        <Collapse activeKey={accommodations.length > 0 ? String(accommodations.length - 1) : ""}>
+          {accommodations.map((accommodation, index) => (
+            <Panel
+              header={
+                <div className="panel-header">
+                  <span>Accommodation {index + 1}</span>
+                  <Button
+                    type="text"
+                    icon={<DeleteOutlined />}
+                    onClick={() => removeAccommodation(index)}
+                  />
+                </div>
+              }
+              key={index.toString()}
+            >
+              <Form name={`accommodation-form-${index}`} initialValues={accommodation}>
                 <Form.Item
                   name={`hotelName-${index}`}
                   label="Hotel Name"
@@ -174,19 +158,19 @@ function Accommodation(props) {
                   />
                 </Form.Item>
               </Form>
-            </div>
-          </Panel>
-        ))}
-      </Collapse>
-      <div className="button-wrapper">
-        <Button type="dashed" onClick={addAccommodation}>
-          Add Accommodation
-        </Button>
-        <Button type="primary" onClick={handleSubmit}>
-          Submit
-        </Button>
+            </Panel>
+          ))}
+        </Collapse>
+        <div className="button-wrapper">
+          <Button type="dashed" onClick={addAccommodation}>
+            Add Accommodation
+          </Button>
+          <Button type="primary" onClick={handleSubmit}>
+            Submit
+          </Button>
+        </div>
+        {isSaved && <div className="success-message">Accommodation details saved successfully!</div>}
       </div>
-      {isSaved && <div className="success-message">Accommodation details saved successfully!</div>}
     </div>
   );
 }

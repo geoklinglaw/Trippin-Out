@@ -3,7 +3,7 @@ import { useNavigate } from "react-router-dom";
 import { Card, Input, Button, Alert } from "antd";
 import "./Signup.css";
 import logo from "../images/logo.png";
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
 import { db, auth } from "../firebase";
 import { collection, doc, setDoc } from "firebase/firestore";
 
@@ -26,6 +26,9 @@ const SignUp = () => {
     try {
       // Create a new user with email and password
       const { user } = await createUserWithEmailAndPassword(auth, email, password);
+
+       // Send email verification
+       await sendEmailVerification(user);
 
       // Store user details in Cloud Firestore
       await setDoc(doc(collection(db, "users"), user.uid), {

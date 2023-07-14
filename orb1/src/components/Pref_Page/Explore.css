@@ -1,10 +1,10 @@
 .tips-container {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px;
   }
-
-.product {
+  
+  .product {
     padding: 20px;
     background-color: #f8f9fa;
     border-radius: 10px;
@@ -15,7 +15,7 @@
   .product h3 {
     color: #343a40;
     margin-bottom: 10px;
-    font-size: 50px;
+    font-size: 20px;
   }
   
   .product p {

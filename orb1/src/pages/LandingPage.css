@@ -45,3 +45,27 @@
 } 
 
 
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+}
+
+.form-card {
+  border: 2px solid #d9d9d9;
+  max-width: 650px;
+  width: 100%;
+  padding: 40px;
+  text-align: center;
+}
+
+.ant-form-item-label {
+  text-align: right;
+}
+
+.ant-form-item-label > label {
+  width: 120px;
+  font-size: 17px;
+  font-family: 'futera', sans-serif;
+}

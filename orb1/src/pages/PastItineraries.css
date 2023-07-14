@@ -1,0 +1,28 @@
+.past-itinerary-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .empty-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    font-family: sans-serif;
+    font-size: 20px;
+    color: #1C395B;
+    text-align: center;
+  }
+  
+  .empty-message p {
+    margin: 0;
+  }
+  .empty-message .create-button {
+    font-family: sans-serif;
+    font-size: 20px;
+  
+  }
+  

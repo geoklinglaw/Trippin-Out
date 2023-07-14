@@ -1,4 +1,4 @@
-import create from 'zustand';
+import {create} from 'zustand';
 import { db } from '../firebase';
 import { doc, setDoc, getDoc } from 'firebase/firestore';
 

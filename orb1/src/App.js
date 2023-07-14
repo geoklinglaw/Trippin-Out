@@ -3,6 +3,7 @@ import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import SignUp from "./pages/Signup";
 import Login from "./pages/Login";
 import LandingPage from "./pages/LandingPage";
+import PastItineraries from "./pages/PastItineraries";
 import Preferences from "./pages/Preferences";
 import Itinerary from "./pages/itinerary";
 import Explore from "./components/Pref_Page/Explore";
@@ -36,6 +37,7 @@ function App() {
         />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/pastitineraries" element={<PastItineraries />} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/preferences" element={<Preferences />} />
         <Route path="/food-options/*" element={<FoodOptions />} />

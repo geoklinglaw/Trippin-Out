@@ -7,7 +7,7 @@ import DateSelector from "../components/DateSelector";
 import NumberInput from "../components/NumberInput";
 import "./LandingPage.css";
 import { db, auth } from "../firebase";
-import { doc, setDoc } from "firebase/firestore";
+import { doc, setDoc, Timestamp } from "firebase/firestore";
 import useAuthStore from "./authStore";
 import moment from "moment";
 import {useNavigate} from "react-router-dom";
@@ -36,14 +36,20 @@ function LandingPage() {
       const tripId = Math.random().toString();
       authStore.setTripId(tripId); // Update the tripId in the authStore
       const tripRef = doc(db, "users", userId, "trips", tripId);
-
-      const duration = moment(values.duration); // Convert to moment object
-      const formattedDuration = duration.format("YYYY-MM-DD HH:mm"); // Format the duration
       
+      const startDate = moment(values.duration[0], 'YYYY-MM-DD');
+      console.log("startDate",startDate)
+      const endDate = moment(values.duration[1], 'YYYY-MM-DD');
+      console.log("endDate",endDate)
+
+      const duration = endDate.diff(startDate,'days') + 1;
+      console.log("duration is:",duration);
+     
+
       await setDoc(tripRef, {
         email: email,
         destination: destination,
-        duration: formattedDuration,
+        duration: duration,
         guests: parseInt(values.guests),
       });
 
@@ -143,6 +149,7 @@ const destinationChangeHandler = (e) => {
                       message: "Number of guests must be at least 1!",
                     },
                   ]}
+                  
                 >
                   <NumberInput onChange={peopleChangeHandler} />
                 </Form.Item>
