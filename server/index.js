@@ -11,7 +11,7 @@ const app = express();
 app.use(express.json());
 const locationsAPI = require('./routes/locationsAPI');
 
-const PORT = 5000;
+const PORT = 5123;
 
 app.use(cors());
 
