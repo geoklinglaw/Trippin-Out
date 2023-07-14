@@ -4,49 +4,15 @@
 const { get } = require('http');
 const data = require('../rankingtest.json');
 const fs = require('fs');
+const { DocumentSnapshot } = require('firebase-admin/firestore');
 const sdk = require('api')('@fsq-developer/v1.0#x6xjhzlic2gi70');
 
 
-data.sort((a, b) => {
-    return a.rank - b.rank;
-});
-
-// console.log(data);
-
-// const numDays = 5; // number of days
-
-// // Generates the number of locations that would be provided to the user based on the number of days and its rank
-// const rankRule = {
-//     1: (numDays * 8),
-//     2: (numDays * 7),
-//     3: (numDays * 6),
-//     4: (numDays * 5),
-//     5: (numDays * 4),
-//     6: (numDays * 3),
-//     // 7: (numDays * 2),
-//     // 8: (numDays * 1),
-//   };
-
-  const numDays = 1; // number of days
-
-  // Generates the number of locations that would be provided to the user based on the number of days and its rank
-  const rankRule = {
-      1: (numDays * 2),
-      2: (numDays * 2),
-      3: (numDays * 2),
-      4: (numDays * 2),
-      5: (numDays * 2),
-      6: (numDays * 2),
-      7: (numDays * 5),
-      
-      // 7: (numDays * 2),
-      // 8: (numDays * 1),
-    };
-
   // Obtain the list of locations based on the rank rule
   // for example: the category that is ranked 1 will have 40 locations assuming duration of travel is 5 days (5 * 8)
-  async function obtainListOfLocations(data, rankRule) {
-    const destination_location = '1.3521,103.8198'; // Singapore '37.5519,126.9918'; // Korea
+  async function obtainListOfLocations(data, rankRule, destination) {
+    // const destination_location = '1.3521,103.8198'; // Singapore '37.5519,126.9918'; // Korea
+    const destination_location = destination;
     let locations = [];
 
     for (let i = 0; i < data.length; i++) {
@@ -74,40 +40,99 @@ data.sort((a, b) => {
 }
 
 
-sdk.auth('fsq3Nq0mkZ3S3E6kiHea7RjQXE+XsDmAnkvZKzvsJOpGcQE=');
-async function getListPerCategory(cat, cat_id, duration, country) {
-    console.log(duration)
-    return sdk.placeSearch({
-        query: cat.toString(),  // keyword search
-        ll: country, // the lat/long for Singapore // ideally should be airbnb location
-        radius: 10000,  // search within a radius (in terms of m)
-        categories: cat_id.toString(),
-        fields: 'fsq_id%2Cname%2Cgeocodes%2Clocation%2Cchains%2Chours%2Crating%2Cpopularity%2Cprice%2Cphotos',
-        sort: 'RATING', // sort by rating
-        
-    })
-    .then(({ data }) => {
-        if (data && Array.isArray(data.results)) {
-            // Append activity_duration to each item in results array
-            data.results.forEach(item => {
-                item.activity_duration = duration;
-            });
-            // console.log(data)
-            return data
-        } else {
-            return []; // return an empty array if data doesn't have results or results is not an array
-        }
-    })
-    .catch(err => console.error(err));
-}
+    sdk.auth('fsq3Nq0mkZ3S3E6kiHea7RjQXE+XsDmAnkvZKzvsJOpGcQE=');
+    async function getListPerCategory(cat, cat_id, duration, country) {
+        console.log(duration)
+        return sdk.placeSearch({
+            query: cat.toString(),  // keyword search
+            ll: country, // the lat/long for Singapore // ideally should be airbnb location
+            radius: 20000,  // search within a radius (in terms of m)
+            categories: cat_id.toString(),
+            fields: 'fsq_id%2Cname%2Cgeocodes%2Clocation%2Cchains%2Chours%2Crating%2Cpopularity%2Cprice%2Cphotos',
+            sort: 'RATING', // sort by rating
+            
+        })
+        .then(({ data }) => {
+            if (data && Array.isArray(data.results)) {
+                // Append activity_duration to each item in results array
+                data.results.forEach(item => {
+                    item.activity_duration = duration;
+                });
+                // console.log(data)
+                return data
+            } else {
+                return []; // return an empty array if data doesn't have results or results is not an array
+            }
+        })
+        .catch(err => console.error(err));
+    }
 
 // getListPerCategory('Night Clubs', '10032', 3, '1.3521,103.8198');
 // find lat long based on country
 
 // getListPerCategory('Night Clubs', '10032', '1.3521,103.8198');
-obtainListOfLocations(data, rankRule)
-    .then(list => {
-        // console.log(list);
+// obtainListOfLocations(data, rankRule)
+//     .then(list => {
+//     })
+//     .catch(error => {
+//         console.error(`Error: ${error}`);
+//     });
+
+    async function fetchfromFirebase() {
+        const { db } = require('.././index.js');
+        const userID = "dBLCC8TXlrYkYQXDZ7f5eFyvex92" // "pVOrWYawmnkMvUu3IFtn";
+        const tripID = "sdIccla3xbdTQLpCjn7Y" // "V1NBZp7HSK7hnEkKT0Aw";
+        
+        const destinationRef = db.doc(`users/${userID}/trips/${tripID}`);
+        const DocumentSnapshot = await destinationRef.get();
+        let data = DocumentSnapshot.data();
+        const accommodation = data.latlong;
+        const duration = data.Duration; // Note the capitalized 'D'
+        return [accommodation, duration];    
+            
+    };
+    
+        // if (destinationSnap.exists()) {
+        //   const accommodation = destinationSnap.data().latlong;
+        //   const duration = destinationSnap.data().duration;
+        //   return [accommodation, duration];
+        // } else {
+        //   console.error("No such document exists!");
+        // }
+    
+
+  // Generates the number of locations that would be provided to the user based on the number of days and its rank
+  const rankRule = (numDays) =>{
+    return {
+        1: (numDays * 10),
+        2: (numDays * 8),
+        3: (numDays * 8),
+        4: (numDays * 6),
+        5: (numDays * 5),
+        6: (numDays * 5),
+        };
+    };
+    
+module.exports = {
+    processPreferences: async function(preference) {
+        const preferences = preference.sort((a, b) => {
+            return a.rank - b.rank;
+        });
+
+        try {
+            const [destination_location, duration] = await fetchfromFirebase();
+            // console.log(destination_location, duration);
+            const rank = rankRule(duration);
+            // console.log(rank);
+            const list = await obtainListOfLocations(preferences, rankRule, destination_location);
+            // console.log(list);
+            return list;
+        } catch (error) {
+            console.error(`Error: ${error}`);
+        }
+    }  
+};
+      
 
         // function generateUniqueFilename(prefix) {
         //     const timestamp = new Date().toISOString().replace(/[:.-]/g, '');
@@ -119,32 +144,3 @@ obtainListOfLocations(data, rankRule)
         //     if (err) throw err;
         //     console.log('Data written to file');
         // });
-    })
-    .catch(error => {
-        console.error(`Error: ${error}`);
-    });
-
-
-module.exports = {
-    processPreferences: async function(preferences) {
-        try {
-            const list = await obtainListOfLocations(preferences, rankRule);
-            // console.log(list);
-            return list;
-        } catch (error) {
-            console.error(`Error: ${error}`);
-        }
-    }  
-};
-      
-
-                // function generateUniqueFilename(prefix) {
-                //     const timestamp = new Date().toISOString().replace(/[:.-]/g, '');
-                //     return `${prefix}_${timestamp}.json`;
-                // }
-        
-                // const filename = generateUniqueFilename('location_list');
-                // fs.writeFile(`${filename}`, JSON.stringify(list, null, 2), (err) => {
-                //     if (err) throw err;
-                //     console.log('Data written to file');
-                // });

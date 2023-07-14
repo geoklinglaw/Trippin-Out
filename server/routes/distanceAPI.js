@@ -7,7 +7,7 @@ var filePath = path.resolve('./timeMatrix')
 const accoms = '1.3589691105622246, 103.95813708783058'
 
 
-async function getDistanceMatrix(accoms, locations) {
+async function getDistanceMatrix(locations, food, accoms) {
     var axios = require('axios'); // first address must be airbnb
     const origins = [accoms].concat(locations.map(location => `${location.geocodes.main.latitude},${location.geocodes.main.longitude}`)).join('|');
     const destinations = [accoms].concat(locations.map(location => `${location.geocodes.main.latitude},${location.geocodes.main.longitude}`)).join('|');    

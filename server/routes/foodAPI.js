@@ -1,6 +1,6 @@
 const fs = require('fs');
 const sdk = require('api')('@fsq-developer/v1.0#x6xjhzlic2gi70');
-const { admin, db, collection } = require('../index.js');
+// const { admin, db, collection } = require('.././index.js');
 
 
 let categories = {
@@ -9,7 +9,14 @@ let categories = {
     Cafes: '13032',
     Desserts: '13040',
     Bakery: '13002',
-    NightMarket: '13062'
+    NightMarket: '13062',
+    KaraokeBar: '13015',
+    RooftopBar: '13019',
+    BreakfastSpot: '13028',
+    Bistro: '13027',
+    CafeCoffee: '13032',
+    Buffet: '13030',
+
   };
 
 sdk.auth('fsq3Nq0mkZ3S3E6kiHea7RjQXE+XsDmAnkvZKzvsJOpGcQE=');
@@ -46,70 +53,24 @@ async function getAllFood(latlong) {
             results.forEach(result => {
                 result.activity_duration = 1;
             });
-            console.log(results);
+            // console.log(results);
             aggregatedResults.push(...results);
         } catch (error) {
             console.error(`Error: ${error}`);
         }
     }
-
-    function generateUniqueFilename(prefix) {
-        const timestamp = new Date().toISOString().replace(/[:.-]/g, '');
-        return `${prefix}_${timestamp}.json`;
-    }
-    const filename = generateUniqueFilename('food_options');
-    fs.writeFile(`${filename}`, JSON.stringify(aggregatedResults, null, 2), (err) => {
-        if (err) throw err;
-        console.log('Data written to file');
-    });
-
-        // for (let result of response.results) {
-            // add to firebase database
-            // const foodDB = await db.collection('users').doc(userID).collection('trips').doc(tripID).collection('food').add ({
-            //     name: result.name,
-            //     address: result.location.formatted_address,
-            //     rating: result.rating,
-            //     hours: result.hours,
-            //     outlet: result.chains,
-            // });
-    
-            // data.push(result);
-        // }
-        
-    
-        // var results = await getFoodOptions(cat, cat_id, country);
-        // const foodInfo = {
-        //     name: results.name,
-        //     // address: results.location.formatted_address,
-        //     rating: results.results.rating,
-        //     hours: results.results.hours,
-        //     outlet: results.results.chains,
-        // }
-        // console.log(foodInfo);
-
-        // // const foodDB =  await db.collection('users').doc(userID).collection('trips').doc(tripID).collection('food').add ({
-        // //     name: foodInfo.name,
-        // //     // address: foodInfo.address,
-        // //     rating: foodInfo.rating,
-        // //     hours: foodInfo.hours,
-        // //     outlet: foodInfo.chains,
-        // //     // price: location.price
-        // // });
-        // data.push(results);
-    
+    return aggregatedResults;
 }
 
-// ------------------ UNIT TEST ------------------ //
-// Obtain list of food options in Singapore
-getAllFood('1.3521,103.8198')
-// module.exports = {
-//     processPreferences: async function(preferences) {
-//         try {
-//             const list = await obtainListOfLocations(preferences, rankRule);
-//             // console.log(list);
-//             return list;
-//         } catch (error) {
-//             console.error(`Error: ${error}`);
-//         }
-//     }  
-// };
+
+module.exports = {
+    processFood: async function(accoms) {
+        try {
+            const list = await getAllFood(accoms);
+            console.log(list);
+            return list;
+        } catch (error) {
+            console.error(`Error: ${error}`);
+        }
+    }  
+};

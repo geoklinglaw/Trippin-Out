@@ -1,0 +1,4160 @@
+[
+  {
+    "fsq_id": "5950f00e0d8a0f1433357ef6",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 37.515546,
+        "longitude": 127.031091
+      },
+      "main": {
+        "latitude": 37.515643,
+        "longitude": 127.03106
+      },
+      "roof": {
+        "latitude": 37.515643,
+        "longitude": 127.03106
+      }
+    },
+    "hours": {
+      "display": "Mon 18:00-24:00; Tue-Sat 0:00-24:00; Sun 0:00-1:00",
+      "is_local_holiday": false,
+      "open_now": true,
+      "regular": [
+        {
+          "close": "+0000",
+          "day": 1,
+          "open": "1800"
+        },
+        {
+          "close": "0100",
+          "day": 2,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 2,
+          "open": "1800"
+        },
+        {
+          "close": "0100",
+          "day": 3,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 3,
+          "open": "1800"
+        },
+        {
+          "close": "0100",
+          "day": 4,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 4,
+          "open": "1800"
+        },
+        {
+          "close": "0100",
+          "day": 5,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 5,
+          "open": "1800"
+        },
+        {
+          "close": "0100",
+          "day": 6,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 6,
+          "open": "1800"
+        },
+        {
+          "close": "0100",
+          "day": 7,
+          "open": "0000"
+        }
+      ]
+    },
+    "location": {
+      "address": "논현동 81-10",
+      "country": "KR",
+      "cross_street": "2호점",
+      "formatted_address": "논현동 81-10 (2호점), 논현2동, 강남구, 서울특별시, 135-010",
+      "locality": "서울특별시",
+      "post_town": "강남구",
+      "postcode": "135-010",
+      "region": "서울특별시"
+    },
+    "name": "Washu Dining Shuto (와슈다이닝 슈토)",
+    "photos": [
+      {
+        "id": "5be217a5d4cc98002c27fbcd",
+        "created_at": "2018-11-06T22:37:25.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1123273_TiWKUFVa_LU44y2SI4_Y1ypErmpO7qxw91-1mijA3H4.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5cff92ba250cab002c77c242",
+        "created_at": "2019-06-11T11:38:34.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/488353884_zvATp2M6ZQuUGvys_V4eQZcoFIw2EtJSQFhyMZKzf9I.jpg",
+        "width": 1900,
+        "height": 1900,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5951c6eba0215b045dea8506",
+        "created_at": "2017-06-27T02:46:03.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/45059614_Yb4qAcpLEmYrRxX_xOf42f83CP_fAcBJ2DHtfRR3gBA.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5ab0d450f4b5254dd7190c64",
+        "created_at": "2018-03-20T09:28:48.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/6769242_QGmuLcpyVbkHjdHvg2WRjk_k9kQLkMCm9NwqBR0GJrg.jpg",
+        "width": 1440,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "59a9f1e7eacf45447d871db7",
+        "created_at": "2017-09-01T23:48:55.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/39804254_1eXhDps2WUNf6K4_JEgHwsMW9yS9p7rwzl0uR2RNQgM.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.983947634573434,
+    "price": 2,
+    "rating": 9,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "566aa810498e5da2a8591ab6",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 37.505112,
+        "longitude": 127.042593
+      }
+    },
+    "hours": {
+      "is_local_holiday": false,
+      "open_now": false
+    },
+    "location": {
+      "address": "역삼동 699-3",
+      "country": "KR",
+      "cross_street": "",
+      "formatted_address": "역삼동 699-3, 역삼1동, 서울특별시, 서울특별시",
+      "locality": "서울특별시",
+      "post_town": "강남구",
+      "region": "서울특별시"
+    },
+    "name": "JAPANESE DINING 安心(안심) (재패니즈 다이닝 안심)",
+    "photos": [
+      {
+        "id": "63a1c6d3572701619b04cb8b",
+        "created_at": "2022-12-20T14:29:39.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/10709638_z-Rbj5bqIUQ6Xg4hKIiHtohjsRkyOCGcTuV60JjjcmU.jpg",
+        "width": 1080,
+        "height": 1918
+      },
+      {
+        "id": "63a1c6c623d3bf6db808b35b",
+        "created_at": "2022-12-20T14:29:26.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/10709638_zVzT06TJkV-SbNmPYRx6FEjeEpgRBOrXi3DV0DHMVXg.jpg",
+        "width": 1080,
+        "height": 1918
+      },
+      {
+        "id": "63a1c6c0a398134bc3f229df",
+        "created_at": "2022-12-20T14:29:20.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/10709638_c8C3bUuM3du27gGox-4yRq4prXPhlnvELuTkn2FDE00.jpg",
+        "width": 1080,
+        "height": 1918
+      },
+      {
+        "id": "6399e0bf729c42089d5e9d6e",
+        "created_at": "2022-12-14T14:42:07.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1209239_hvvUckxwJXeJv5207jZvBYR8bU0GIJ8t0Y77B6oj42Q.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6107bb27e358cb4bdb076ce3",
+        "created_at": "2021-08-02T09:30:15.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/892830_0ebmrQ2jrwQeESfXEsrp-rG_1MvA3LwO7GmQJKrDJDk.jpg",
+        "width": 1440,
+        "height": 1440
+      }
+    ],
+    "popularity": 0.9623085382192278,
+    "price": 2,
+    "rating": 8.3,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "59ca3173345cbe4381a1a669",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 37.519414,
+        "longitude": 127.023858
+      },
+      "main": {
+        "latitude": 37.51944,
+        "longitude": 127.023995
+      },
+      "roof": {
+        "latitude": 37.51944,
+        "longitude": 127.023995
+      }
+    },
+    "hours": {
+      "is_local_holiday": false,
+      "open_now": false
+    },
+    "location": {
+      "address": "도산대로15길 18",
+      "country": "KR",
+      "cross_street": "",
+      "formatted_address": "도산대로15길 18, 신사동, 서울특별시",
+      "post_town": "강남구",
+      "region": "서울특별시"
+    },
+    "name": "Negi Dining Lounge (네기 다이닝라운지)",
+    "photos": [
+      {
+        "id": "63ad7b426b85824ca2344690",
+        "created_at": "2022-12-29T11:34:26.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/26056341_pYv4V9Yt4QmkLhYPEivFvmenwg4ctT5J-P04x5a47yU.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "63ad7b3f3285284a6add984c",
+        "created_at": "2022-12-29T11:34:23.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/26056341_JjiIXhIiUAdNdYqa_InmIy31oHZRAzQZB5Zm9cUPpHk.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "63ad7b0950bbb833137c436d",
+        "created_at": "2022-12-29T11:33:29.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/26056341_sBPmGqEeYL5GSPM5_wdW9X7PdCqRae47lM2Rkw8ahLk.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "63ad7ae56e2e572a90d918c3",
+        "created_at": "2022-12-29T11:32:53.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/26056341_r17Enz3yj3v-7EA3K7uXmCjyZdSyQCvv3u1mlRsCsbY.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "63ad7ae1d1c54d7732080c33",
+        "created_at": "2022-12-29T11:32:49.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/26056341_7-fqIClGhEb1lgvA7QogpKuHivtXyc5VGHxxHMJu5-0.jpg",
+        "width": 1440,
+        "height": 1440
+      }
+    ],
+    "popularity": 0.9687093395956967,
+    "price": 2,
+    "rating": 8.2,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "4db2d379a86e8d2707619943",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 37.511254,
+        "longitude": 127.125946
+      },
+      "main": {
+        "latitude": 37.511236,
+        "longitude": 127.125976
+      }
+    },
+    "hours": {
+      "is_local_holiday": false,
+      "open_now": false
+    },
+    "location": {
+      "address": "위례성대로18길 14",
+      "country": "KR",
+      "cross_street": "",
+      "formatted_address": "위례성대로18길 14, 서울특별시, 서울특별시",
+      "locality": "서울특별시",
+      "post_town": "송파구",
+      "region": "서울특별시"
+    },
+    "name": "요시 Japanese Dining & Sake Bar (요시)",
+    "photos": [
+      {
+        "id": "604d997797c34b183f854201",
+        "created_at": "2021-03-14T05:04:55.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/90594838__oGbBDTasieHU5JFwvCDzUDx-SGACF_hLIcT6fYvW4A.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "604d9975a1947a64f412b316",
+        "created_at": "2021-03-14T05:04:53.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/90594838_lDqr6QwnLqBwtoFmYQV5EGxPyGRHyUqhott532GIV5A.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "604d9974ce3f147000a1344f",
+        "created_at": "2021-03-14T05:04:52.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/90594838_u6pGG2BtUoWszuaiy6SyVEoMa57QJ0NrvtHCdqhPgr8.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "5821d433f2c98b0b87356cbb",
+        "created_at": "2016-11-08T13:33:39.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/3905957_x2EeeJv_u6R7S0visUX14Rhc7aTaddV2BGnxoxelvgg.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "579243c6498e2db41779f00f",
+        "created_at": "2016-07-22T16:03:18.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/3905957_aWhy96AGRNsq34tu0VNIXkMbM5pG60PpWyVbILhTEsg.jpg",
+        "width": 1440,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      }
+    ],
+    "popularity": 0.9686872631089488,
+    "price": 2,
+    "rating": 8,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "57ef7cf2498ebe0e7209a03a",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 37.559228,
+        "longitude": 127.004148
+      }
+    },
+    "hours": {
+      "is_local_holiday": false,
+      "open_now": false
+    },
+    "location": {
+      "address": "동호로 272",
+      "country": "KR",
+      "cross_street": "",
+      "formatted_address": "동호로 272, 장충동, 중구, 서울특별시",
+      "locality": "서울특별시",
+      "post_town": "중구",
+      "region": "서울특별시"
+    },
+    "name": "Seoul Dining (서울다이닝)",
+    "photos": [
+      {
+        "id": "634627777a0cee4bd387ad2b",
+        "created_at": "2022-10-12T02:33:27.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/11330525_9vMWJ7cpSDAoyAGHd-U2W8lDUlqhgN00T3xN7xntTFc.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6337ce1c3fe7ad4501569575",
+        "created_at": "2022-10-01T05:20:28.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/11330525_IC0o7VzvxqNNmV1CM3P7f41o_AEWsSiS36NLTJxRfKI.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "618f2fef493852439661be24",
+        "created_at": "2021-11-13T03:24:31.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/42127499_oNMnrO93eBOLeyjzcLHXtk-93iXsEqcVTF5E9iYrUos.jpg",
+        "width": 1500,
+        "height": 1440
+      },
+      {
+        "id": "61021ff74f9ccd7be367cf15",
+        "created_at": "2021-07-29T03:26:47.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/27713707_ZEJi_G-zsv_qyg7UYsXWW_qqc991mnxwW0gJISuVzQU.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "61021ff7b29040498caf0e8c",
+        "created_at": "2021-07-29T03:26:47.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/27713707_2UyzsnodGbQh2BrkRemubjqtJf2eVaEj2UAcq43tL7g.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9667058984233249,
+    "price": 2,
+    "rating": 7.9,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "580b4f05d67c4fb1b5424a5c",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 37.525582,
+        "longitude": 127.04083
+      },
+      "main": {
+        "latitude": 37.525517,
+        "longitude": 127.040814
+      },
+      "roof": {
+        "latitude": 37.525517,
+        "longitude": 127.040814
+      }
+    },
+    "hours": {
+      "display": "Mon-Fri 0:00-24:00; Sat-Sun 0:00-2:00",
+      "is_local_holiday": false,
+      "open_now": true,
+      "regular": [
+        {
+          "close": "0100",
+          "day": 1,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 1,
+          "open": "1800"
+        },
+        {
+          "close": "0100",
+          "day": 2,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 2,
+          "open": "1800"
+        },
+        {
+          "close": "0100",
+          "day": 3,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 3,
+          "open": "1800"
+        },
+        {
+          "close": "0100",
+          "day": 4,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 4,
+          "open": "1800"
+        },
+        {
+          "close": "0100",
+          "day": 5,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 5,
+          "open": "1800"
+        },
+        {
+          "close": "0200",
+          "day": 6,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 6,
+          "open": "1800"
+        },
+        {
+          "close": "0200",
+          "day": 7,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 7,
+          "open": "1800"
+        }
+      ]
+    },
+    "location": {
+      "address": "선릉로158길 10",
+      "country": "KR",
+      "cross_street": "",
+      "formatted_address": "선릉로158길 10, 청담동, 서울특별시, 서울특별시",
+      "locality": "서울특별시",
+      "post_town": "강남구",
+      "region": "서울특별시"
+    },
+    "name": "Japanese dining idon (갓포이든)",
+    "photos": [
+      {
+        "id": "63a84a3f11ff683a291a0b3e",
+        "created_at": "2022-12-25T13:03:59.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/137850384_FtxmQPwJEI298ViERuRsrldr5sGvXzCt4EEoU-GseK0.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "63a84a3e5861cc0ff18b68b5",
+        "created_at": "2022-12-25T13:03:58.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/137850384_33Nkx6U3uSsFNfUd4-2QVCufAkNSGLUsyoVZFG2PxVo.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "62a2c6cf0cea09397998b446",
+        "created_at": "2022-06-10T04:21:35.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/414672019_sKrxADps4KVKfYH-fABtWNzVDHR2Fn8dQTfovl_ejjw.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "62a2c6ce976a753c7761d13d",
+        "created_at": "2022-06-10T04:21:34.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/414672019_hkV6tbWQFGvtjX6krxke0iAz7YXZ_f0gdnXhQTRv6r0.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "62a2c6c8834a9e569a73de6c",
+        "created_at": "2022-06-10T04:21:28.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/414672019_2ntuQey3t9dpc8o3Gt8LsjcEXsQSjjoiCx8qhxP28Ug.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9731163582627461,
+    "price": 2,
+    "rating": 7.4,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "4dba4b5ca86ede8c0f97a2b1",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 37.550024,
+        "longitude": 127.000803
+      },
+      "roof": {
+        "latitude": 37.550024,
+        "longitude": 127.000803
+      }
+    },
+    "hours": {
+      "is_local_holiday": false,
+      "open_now": false
+    },
+    "location": {
+      "address": "장충단로 60",
+      "country": "KR",
+      "cross_street": "",
+      "formatted_address": "장충단로 60, 장충동, 서울특별시, 서울특별시",
+      "locality": "서울특별시",
+      "post_town": "중구",
+      "region": "서울특별시"
+    },
+    "name": "Granum Dining Lounge (그라넘 다이닝 라운지)",
+    "photos": [
+      {
+        "id": "63a432ce047655037cd724c6",
+        "created_at": "2022-12-22T10:34:54.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1933453_oBKr5Us1wFWeTZO4b8fPNtERnFnil80NlbFuUxYA5IM.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "61cfcf97e0fdd443261b5184",
+        "created_at": "2022-01-01T03:50:47.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8778463_hh9JmAm5vcB4dxcXBkENh20-q6jbUBrbMLvVp8xxrWY.jpg",
+        "width": 1069,
+        "height": 1900
+      },
+      {
+        "id": "61cede77b5e5c557389aa84d",
+        "created_at": "2021-12-31T10:41:59.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8778463_rNbNuIhiVGQVy3kJTOhRKirsxOH42f1X0iFCG3lBeOI.jpg",
+        "width": 1069,
+        "height": 1900
+      },
+      {
+        "id": "61aae23878a68617bbf0b16f",
+        "created_at": "2021-12-04T03:36:24.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4863324_IqfSD5Xrvrg445x5HhJPJG5fULoEDDyR3du5nyu85kg.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6107603007179e0960f026dc",
+        "created_at": "2021-08-02T03:02:08.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/10721649_AkrCO8icq_FZ8Kyj7ubpefA-beo1JIjwhzNSDA67O6k.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9785526931244162,
+    "price": 3,
+    "rating": 7.2,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "4fd99abfe4b017a343ae3d58",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 37.518703,
+        "longitude": 126.977687
+      },
+      "main": {
+        "latitude": 37.518735,
+        "longitude": 126.977697
+      }
+    },
+    "hours": {
+      "is_local_holiday": false,
+      "open_now": false
+    },
+    "location": {
+      "address": "이촌로 278-1",
+      "country": "KR",
+      "cross_street": "이촌점",
+      "formatted_address": "이촌로 278-1 (이촌점), 서울특별시, 서울특별시",
+      "locality": "서울특별시",
+      "post_town": "용산구",
+      "region": "서울특별시"
+    },
+    "name": "K DINING (맛있는밥집)",
+    "photos": [
+      {
+        "id": "5da00d8ea5cc1800088a5d10",
+        "created_at": "2019-10-11T05:05:18.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/66024881_A6zK_q5p_ot1jc7z-ThMFP6UG8SU7auYXGpAaIfXQw4.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5cd15161911fc4002cfaf44b",
+        "created_at": "2019-05-07T09:35:29.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/7680557_kLjQ6KsxqlaNUsawmgMZE0RScBwxaZBVxtWD4liH-js.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5ae2ce02b9ac38002c8e07e1",
+        "created_at": "2018-04-27T07:15:14.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/480656882_jAeWUQEKWUmGDTY28URxI3aaUnfd0L3a71Yjbt3Q4j0.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5ae2cdff0d173f002c0137b6",
+        "created_at": "2018-04-27T07:15:11.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/480656882_pkpqSmtEDN6fgXIYiiXSGQch3i1SvdHgAzJb6LI06cI.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5990313bacb00b4c5e4540b9",
+        "created_at": "2017-08-13T11:00:11.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8399471_wCXDHV0qWcvLuBspVGoPToAsl3Wr4GCOBpIXizvM-Fc.jpg",
+        "width": 1920,
+        "height": 1440
+      }
+    ],
+    "popularity": 0.9599905071106984,
+    "price": 2,
+    "rating": 6.9,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "56d969db498e714bdd7fa609",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 37.524782,
+        "longitude": 127.04482
+      },
+      "roof": {
+        "latitude": 37.524782,
+        "longitude": 127.04482
+      }
+    },
+    "hours": {
+      "is_local_holiday": false,
+      "open_now": false
+    },
+    "location": {
+      "address": "선릉로152길 37 3층",
+      "country": "KR",
+      "cross_street": "",
+      "formatted_address": "선릉로152길 37 3층, 청담동, 서울특별시, 135-100",
+      "post_town": "강남구",
+      "postcode": "135-100",
+      "region": "서울특별시"
+    },
+    "name": "OLHEUM DINING (옳음다이닝)",
+    "photos": [
+      {
+        "id": "6498ff427ef0936779cdf81b",
+        "created_at": "2023-06-26T03:00:18.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1380346__XGl-2-rG_fyZ3jdxT-pqxY8Gb9LHSQq-W8Qq5uTS14.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "61c15a09d6e05e272db7ebce",
+        "created_at": "2021-12-21T04:37:29.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/3853173_Awnwm60pRXpMcu97nrrDcXmE2NazkYqvyR9iJEi_BFo.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "60b6857ebf58da34451410a1",
+        "created_at": "2021-06-01T19:07:42.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/564210261_sp2GJQWX31bElgXcqLRhvu79buK-TKtl3twplMAqpyw.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "60a5eb34cbe976759ad5099d",
+        "created_at": "2021-05-20T04:53:08.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/89453453_KTZUP_hTws9Rm5qhTt5Td5wAoI3tzjKFLGbgqF14UjI.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "60a5eb32f0495e1dbd2ac707",
+        "created_at": "2021-05-20T04:53:06.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/89453453_dCb5NmD_TPizW3IDgm9zoo18Qb0jA0k7pkkcoYL51BA.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9413952063668588,
+    "price": 2,
+    "rating": 6.3,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "50bd8817e4b0e53ea3911f85",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 37.511407,
+        "longitude": 127.049996
+      },
+      "main": {
+        "latitude": 37.511432,
+        "longitude": 127.05002
+      }
+    },
+    "hours": {
+      "is_local_holiday": false,
+      "open_now": false
+    },
+    "location": {
+      "address": "봉은사로68길 8",
+      "country": "KR",
+      "cross_street": "",
+      "formatted_address": "봉은사로68길 8, 삼성2동, 서울특별시, 서울특별시, 135-509",
+      "locality": "서울특별시",
+      "post_town": "강남구",
+      "postcode": "135-509",
+      "region": "서울특별시"
+    },
+    "name": "DINING TENT",
+    "photos": [
+      {
+        "id": "5d9c64f1ac29270008209424",
+        "created_at": "2019-10-08T10:29:05.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/12916645_E1TPky8i3tWGM33t4ImIkSV5RJN5_mY3Y3AymI-qe-A.jpg",
+        "width": 1920,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5c85d449898bdc0039ba992c",
+        "created_at": "2019-03-11T03:21:45.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/349008_rulCN8Z3_bvlRfRQ68wF1OdLnNKoI6G_bVgjqeXhzuE.jpg",
+        "width": 1920,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5c5cf46a75eee40039a75131",
+        "created_at": "2019-02-08T03:15:54.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/349008_QPRgeJQZ8jg8yE720iVP1aDgofmGE1uVrWlmIG1hg4Y.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "5c244bb0f62e09002c85cb3a",
+        "created_at": "2018-12-27T03:49:04.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/11226089__fwzNVAjGCSXUu_oVIbmjlZ6PCCn42MDdzlLDgJTxFY.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "5c20d2548afbe0002d7684e5",
+        "created_at": "2018-12-24T12:34:28.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/12916645_w9ZYawl58hosjqGqA8WjwGTwwGwyCgnKuz1H5is1tZo.jpg",
+        "width": 1079,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.7295837340445641,
+    "price": 2,
+    "rating": 6.1,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "4fc74b83e4b0d7c765175e2f",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 37.52548,
+        "longitude": 127.037599
+      },
+      "main": {
+        "latitude": 37.52544,
+        "longitude": 127.037705
+      },
+      "roof": {
+        "latitude": 37.52544,
+        "longitude": 127.037705
+      }
+    },
+    "hours": {
+      "is_local_holiday": false,
+      "open_now": false
+    },
+    "location": {
+      "address": "선릉로155길 23-3",
+      "country": "KR",
+      "cross_street": "",
+      "formatted_address": "선릉로155길 23-3, 압구정동, 서울특별시, 서울특별시",
+      "locality": "서울특별시",
+      "post_town": "강남구",
+      "region": "서울특별시"
+    },
+    "name": "Ichie (이치에)",
+    "photos": [
+      {
+        "id": "5ec0cd7a2b2aea000842d3ef",
+        "created_at": "2020-05-17T05:36:58.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/6769242_FwidAJQxViV_vMj865Q2-zbErLk3UnYDJjDU_6IYNMU.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "5c7e5c660457b7002c212239",
+        "created_at": "2019-03-05T11:24:22.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/3048864_tkJME-iQ16ILSxBgS26aAKi-0bNoSrlusnWwIAmC07I.jpg",
+        "width": 1440,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5cd6a31fb9b37b002cc65c07",
+        "created_at": "2019-05-11T10:25:35.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/83491878_UQJ9fN0rFi3h9fYEh4tDDsyXHyY7OVOKgs5PKQSg4Bo.jpg",
+        "width": 1920,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "595b81df7564f7427deb4d24",
+        "created_at": "2017-07-04T11:54:07.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/3905957_w6eKk7NgnE9u-Jr-k4niV7vLd-vm6MZcuhHWur5xVOs.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5def8e06f8f55f0008f8dd14",
+        "created_at": "2019-12-10T12:22:30.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/26056341_cOJC-bj5RyElZe2RG60yENZ5NUy3bFENJO3Bgg8oNIs.jpg",
+        "width": 1440,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      }
+    ],
+    "popularity": 0.992092478402987,
+    "price": 3,
+    "rating": 9.3,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "5ab37c7cccad6b7b51b609a9",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 37.482092,
+        "longitude": 127.010164
+      }
+    },
+    "hours": {
+      "display": "Wed-Sun 12:00-16:00, 17:30-20:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "1600",
+          "day": 3,
+          "open": "1200"
+        },
+        {
+          "close": "2000",
+          "day": 3,
+          "open": "1730"
+        },
+        {
+          "close": "1600",
+          "day": 4,
+          "open": "1200"
+        },
+        {
+          "close": "2000",
+          "day": 4,
+          "open": "1730"
+        },
+        {
+          "close": "1600",
+          "day": 5,
+          "open": "1200"
+        },
+        {
+          "close": "2000",
+          "day": 5,
+          "open": "1730"
+        },
+        {
+          "close": "1600",
+          "day": 6,
+          "open": "1200"
+        },
+        {
+          "close": "2000",
+          "day": 6,
+          "open": "1730"
+        },
+        {
+          "close": "1600",
+          "day": 7,
+          "open": "1200"
+        },
+        {
+          "close": "2000",
+          "day": 7,
+          "open": "1730"
+        }
+      ]
+    },
+    "location": {
+      "address": "반포대로7길 35",
+      "country": "KR",
+      "cross_street": "",
+      "formatted_address": "반포대로7길 35, 서초3동, 서초구, 서울특별시",
+      "locality": "서울특별시",
+      "post_town": "서초구",
+      "region": "서울특별시"
+    },
+    "name": "Maison Jo (메종조)",
+    "photos": [
+      {
+        "id": "63d4d8de1023f242ebcfffee",
+        "created_at": "2023-01-28T08:12:14.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/39651224__TIKt32bnvhLgYexvOv8qHIMONAS6HMW_oITMBUCmC8.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "63d4d8dc47fb0733d4d81daf",
+        "created_at": "2023-01-28T08:12:12.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/39651224_o-SdZi_vqR2y1VgaLawFQsNr50gwdWvl_hrqDbgRQ20.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "63d4b5e86f931c4dcdfdcdc5",
+        "created_at": "2023-01-28T05:43:04.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/39651224_0jaHFJkEMd5uShR4aV6Qu0KzTkoojuzuRkM7zH5kOLw.jpg",
+        "width": 1080,
+        "height": 1920
+      },
+      {
+        "id": "63d4b5e5ea32b14dc497015a",
+        "created_at": "2023-01-28T05:43:01.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/39651224_xb0s15kj8_IPOep-pLdfNC1G8LAhCJ62geUjkIzRP7A.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "63d4b5e147fb0733d45a88fa",
+        "created_at": "2023-01-28T05:42:57.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/39651224_SsiX55K6sdykFMiKnyHCqiAmF6r4tC8qx0qNNcNsSDY.jpg",
+        "width": 1440,
+        "height": 1440
+      }
+    ],
+    "popularity": 0.9866533839804733,
+    "price": 3,
+    "rating": 9.3,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "51e2a44c498e10d8842ff985",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 37.574379,
+        "longitude": 127.024362
+      },
+      "main": {
+        "latitude": 37.574426,
+        "longitude": 127.024385
+      }
+    },
+    "hours": {
+      "is_local_holiday": false,
+      "open_now": false
+    },
+    "location": {
+      "address": "난계로30길 16",
+      "country": "KR",
+      "cross_street": "본점",
+      "formatted_address": "난계로30길 16 (본점), 용신동, 서울특별시, 서울특별시",
+      "locality": "서울특별시",
+      "post_town": "동대문구",
+      "region": "서울특별시"
+    },
+    "name": "Yukjeon Sikdang (육전식당)",
+    "photos": [
+      {
+        "id": "5d0eb244e937f30023994937",
+        "created_at": "2019-06-22T22:57:08.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1677418_AubgFEzarR17-6d_7PaTxX6CzIMYkD3R0jA6GVVIOmM.jpg",
+        "width": 1920,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5aab4f0f9746177957f56029",
+        "created_at": "2018-03-16T04:58:55.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8655926_tHbgm9LSEE_ImGmuhnzeYUjEmKDiK_y8rdCnHCJA0O0.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "53f42df911d2a2e26dea6508",
+        "created_at": "2014-08-20T05:11:21.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/20179768_zByHY3oaFcTUEt1jgTiXSdAWZ9xKspGIJRDstB0ASPk.jpg",
+        "width": 4160,
+        "height": 2340
+      },
+      {
+        "id": "56ebe191498e3532848fe09e",
+        "created_at": "2016-03-18T11:08:01.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1804019_A1b7WFR3J8rhMhJYDKY-y5FfsSaViEWcjCxjTDxiEw0.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5b84b6670457b7002cbfdc9e",
+        "created_at": "2018-08-28T02:41:43.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8204227_LD7GDyncNi-41weep3Ax5PhD006VBW_9BN_k8eWr8Fw.jpg",
+        "width": 1920,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      }
+    ],
+    "popularity": 0.9835833725420936,
+    "price": 2,
+    "rating": 9.3,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "4cd945335e1b721e362b3ed9",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 37.531552,
+        "longitude": 127.005586
+      }
+    },
+    "hours": {
+      "display": "Mon 18:00-24:00; Tue-Sun 0:00-2:00",
+      "is_local_holiday": false,
+      "open_now": true,
+      "regular": [
+        {
+          "close": "+0000",
+          "day": 1,
+          "open": "1800"
+        },
+        {
+          "close": "0200",
+          "day": 2,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 2,
+          "open": "1800"
+        },
+        {
+          "close": "0200",
+          "day": 3,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 3,
+          "open": "1800"
+        },
+        {
+          "close": "0200",
+          "day": 4,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 4,
+          "open": "1800"
+        },
+        {
+          "close": "0200",
+          "day": 5,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 5,
+          "open": "1800"
+        },
+        {
+          "close": "0200",
+          "day": 6,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 6,
+          "open": "1800"
+        },
+        {
+          "close": "0200",
+          "day": 7,
+          "open": "0000"
+        }
+      ]
+    },
+    "location": {
+      "address": "한남동 618-6",
+      "country": "KR",
+      "cross_street": "",
+      "formatted_address": "한남동 618-6, 한남동, 서울특별시, 서울특별시",
+      "locality": "서울특별시",
+      "post_town": "용산구",
+      "region": "서울특별시"
+    },
+    "name": "Hannam Oriental Roast Chicken (한남동한방통닭)",
+    "photos": [
+      {
+        "id": "5d80b67b31155000080c8f6b",
+        "created_at": "2019-09-17T10:33:31.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/527714664__pJcyX60C_784KLzr9C4eVVZ_y3_qjJ9fsTs93HeiBY.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "5de525205afa4c000870a51b",
+        "created_at": "2019-12-02T14:52:16.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/488353884_EeJT97zU33C1yny1sawn8OS4fh17m0ImGGyAkLpwUSk.jpg",
+        "width": 1080,
+        "height": 1080,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5af9062656c89f002cd5bb52",
+        "created_at": "2018-05-14T03:44:38.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/404859712_KhdBnSViJRTwUDC66tBR_ojKufAIqfaAlDjbWj1-fFw.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "5b9ccde0bed483002c850efc",
+        "created_at": "2018-09-15T09:16:16.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/80330371_E56S7udWri5WP3OFktEKWuOOYUlJt2m_A9F0UVqQ1E0.jpg",
+        "width": 1068,
+        "height": 1900,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5b476763835c9a002c68c30c",
+        "created_at": "2018-07-12T14:36:19.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/7366241_LkGXS0tdXUjf_U3lVaKEtiwXONzMj6X5KjNZ-GrbEoc.jpg",
+        "width": 1440,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      }
+    ],
+    "popularity": 0.9915447055755547,
+    "price": 1,
+    "rating": 9.2,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "582eededd0bb3e2143c64d87",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 37.517534,
+        "longitude": 127.036192
+      }
+    },
+    "hours": {
+      "display": "Mon-Sat 17:00-24:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "+0000",
+          "day": 1,
+          "open": "1700"
+        },
+        {
+          "close": "+0000",
+          "day": 2,
+          "open": "1700"
+        },
+        {
+          "close": "+0000",
+          "day": 3,
+          "open": "1700"
+        },
+        {
+          "close": "+0000",
+          "day": 4,
+          "open": "1700"
+        },
+        {
+          "close": "+0000",
+          "day": 5,
+          "open": "1700"
+        },
+        {
+          "close": "+0000",
+          "day": 6,
+          "open": "1700"
+        }
+      ]
+    },
+    "location": {
+      "address": "논현동 106-17",
+      "country": "KR",
+      "cross_street": "",
+      "formatted_address": "논현동 106-17, 논현2동, 강남구, 서울특별시, 135-010",
+      "locality": "서울특별시",
+      "post_town": "강남구",
+      "postcode": "135-010",
+      "region": "서울특별시"
+    },
+    "name": "대삼식당",
+    "photos": [
+      {
+        "id": "6496f293d24c1f5fb4df0662",
+        "created_at": "2023-06-24T13:41:39.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/7941723_rKzyydtwTa5wOALf6Rqa0LeR6NHPnVviZuCcv-k8EDw.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "641ed39a762ea50688595ba8",
+        "created_at": "2023-03-25T10:57:30.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/23178275_vHE8iA0ctqmVQwqNkos2v0dXTcICAfVwErC8bPLMm-A.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "62c43984d37498610731d14e",
+        "created_at": "2022-07-05T13:15:48.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1280988_Cp8wkbO3Nq65EcbRLIL-noSg2KME4IzsJODCTITWzjU.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6273af13fa69113caa6c9c56",
+        "created_at": "2022-05-05T11:03:47.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/103841834_mf8cMLSznzu6WM4NqBS4sqxLNJFiEgI8TI_82V7QLaM.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9821277041971541,
+    "rating": 9.2,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "4ba614b5f964a5204a3239e3",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 37.525886,
+        "longitude": 127.038229
+      },
+      "main": {
+        "latitude": 37.525906,
+        "longitude": 127.038172
+      },
+      "roof": {
+        "latitude": 37.525906,
+        "longitude": 127.038172
+      }
+    },
+    "hours": {
+      "display": "Open Daily 0:00-5:00",
+      "is_local_holiday": false,
+      "open_now": true,
+      "regular": [
+        {
+          "close": "0500",
+          "day": 1,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 1,
+          "open": "1700"
+        },
+        {
+          "close": "0500",
+          "day": 2,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 2,
+          "open": "1700"
+        },
+        {
+          "close": "0500",
+          "day": 3,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 3,
+          "open": "1700"
+        },
+        {
+          "close": "0500",
+          "day": 4,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 4,
+          "open": "1700"
+        },
+        {
+          "close": "0500",
+          "day": 5,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 5,
+          "open": "1700"
+        },
+        {
+          "close": "0500",
+          "day": 6,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 6,
+          "open": "1700"
+        },
+        {
+          "close": "0500",
+          "day": 7,
+          "open": "0000"
+        },
+        {
+          "close": "+0000",
+          "day": 7,
+          "open": "1700"
+        }
+      ]
+    },
+    "location": {
+      "address": "도산대로51길 41",
+      "country": "KR",
+      "cross_street": "압구정로데오점",
+      "formatted_address": "도산대로51길 41 (압구정로데오점), 압구정동, 서울특별시, 서울특별시, 135-897",
+      "locality": "서울특별시",
+      "post_town": "강남구",
+      "postcode": "135-897",
+      "region": "서울특별시"
+    },
+    "name": "추풍령 칼삼겹살",
+    "photos": [
+      {
+        "id": "6465c4365ccbc82da8857be7",
+        "created_at": "2023-05-18T06:22:46.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/12112581_T9_vqkOOtgpeMoh0sBC8EbMJJ70m1XCgfhy9aKlUiPA.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6459c7145e34a149d5ef8db6",
+        "created_at": "2023-05-09T04:07:48.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/10890048_d8KOE8MR9elSBRdajepFZsGy4cIGtWdnRBnviKDf-38.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "64510092e9a146383a874568",
+        "created_at": "2023-05-02T12:22:42.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/2122888_n1aOZJ8ucZo1WgVyVvLhWZAtQrx25ENTAbEJfJg32u0.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "6451009004d29621019163aa",
+        "created_at": "2023-05-02T12:22:40.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/2122888_8PhtvHeHaZhfcnMmWgndUIEYZtX97FbFzu4tUz7O7O8.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "6444e23b6d1e165094868117",
+        "created_at": "2023-04-23T07:46:03.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/6623041_tLl6AA_nuYzefCLatxlo4jTAyEiSt7RrFb8vdcRaZ5E.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9979689632191933,
+    "price": 2,
+    "rating": 9.1,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "55b4742b498e461b44a86a58",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 37.539617,
+        "longitude": 126.991816
+      },
+      "roof": {
+        "latitude": 37.539617,
+        "longitude": 126.991816
+      }
+    },
+    "hours": {
+      "is_local_holiday": false,
+      "open_now": false
+    },
+    "location": {
+      "address": "회나무로26길 3",
+      "country": "KR",
+      "cross_street": "",
+      "formatted_address": "회나무로26길 3, 이태원2동, 서울특별시, 서울특별시",
+      "locality": "서울특별시",
+      "post_town": "용산구",
+      "region": "서울특별시"
+    },
+    "name": "California Kitchen & Craft Pub (캘리포니아키친앤크래프트펍)",
+    "photos": [
+      {
+        "id": "6468703f5ccbc82da8d56ae8",
+        "created_at": "2023-05-20T07:01:19.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/959422_zgwtStV4toQCaDyRbIaUKmamqewA4DGz_tyMHPcmq14.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "63cfa9abc5622b5c5ecd1dbb",
+        "created_at": "2023-01-24T09:49:31.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/959422_yy7Cz2BDdTuOMDabh1KNjbsaTKAqUtOjQs9jQuAxIWg.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "630055a3645d531d012da1fb",
+        "created_at": "2022-08-20T03:31:47.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/959422_rcuyMIFbrcrpIkSpGtscj-Cyfh21RNMSTrQbvrK0gIY.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "62ad472040d27b10ae73886b",
+        "created_at": "2022-06-18T03:31:44.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/959422_rTC-yRbX0ZpUzydFmV63RyepNSwKYXY3WnOzZvGTEA4.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "629c39106461144212c7cd00",
+        "created_at": "2022-06-05T05:03:12.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/959422_Cr7onvxXZpUd24URYTknHrlIzFstnSmeo56H4c7ldFU.jpg",
+        "width": 1440,
+        "height": 1440
+      }
+    ],
+    "popularity": 0.990611974010456,
+    "price": 2,
+    "rating": 9.1,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "4c39b93b93db0f47abd82392",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 37.532445,
+        "longitude": 127.005336
+      },
+      "main": {
+        "latitude": 37.532559,
+        "longitude": 127.005456
+      }
+    },
+    "hours": {
+      "is_local_holiday": false,
+      "open_now": false
+    },
+    "location": {
+      "address": "대사관로24길 27",
+      "country": "KR",
+      "cross_street": "",
+      "formatted_address": "대사관로24길 27, 한남동, 서울특별시, 서울특별시",
+      "locality": "서울특별시",
+      "post_town": "용산구",
+      "region": "서울특별시"
+    },
+    "name": "강가네맷돌빈대떡",
+    "photos": [
+      {
+        "id": "5e22fb70af4e0b0008012135",
+        "created_at": "2020-01-18T12:34:56.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/3391812_qjA0oqpi2Q-3D0pd5fnbgAZ6BdeMLRoAPyr--ZR5K4A.jpg",
+        "width": 1440,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "58e38354f697e068fae1b322",
+        "created_at": "2017-04-04T11:28:20.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/52362754_HiwX12eZzka0JpUWamc4hOkp4HHNXEk04cIsWzi4m2A.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "5f203ac8e03d5e56eecfb74b",
+        "created_at": "2020-07-28T14:48:40.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8171686_6CRa7JQ1uK7v4m30GybVos9IK1v3yKjg2mDnecT7upg.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "5d65b4a844bf8700083f7b29",
+        "created_at": "2019-08-27T22:54:32.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/427086361_ur5eWNeG9QMZl6WpGORkzBbkgaK4_IVZH78CNKvrFeY.jpg",
+        "width": 1920,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "590716e5446ea609298dc809",
+        "created_at": "2017-05-01T11:07:17.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/6832572_omq5ZX2st4ChPQBswV0PgP8Kx3UNBAE61MYdqdB3648.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      }
+    ],
+    "popularity": 0.989884829728197,
+    "price": 2,
+    "rating": 9.1,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "4ebe29f029c25ce5a139de47",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 37.501862,
+        "longitude": 127.010455
+      },
+      "roof": {
+        "latitude": 37.501862,
+        "longitude": 127.010455
+      }
+    },
+    "hours": {
+      "is_local_holiday": false,
+      "open_now": false
+    },
+    "location": {
+      "address": "반포동 54-10",
+      "address_extended": "청구빌딩 1층",
+      "country": "KR",
+      "cross_street": "본점",
+      "formatted_address": "반포동 54-10 (본점), 반포4동, 서울특별시, 서울특별시, 137-040",
+      "locality": "서울특별시",
+      "post_town": "서초구",
+      "postcode": "137-040",
+      "region": "서울특별시"
+    },
+    "name": "마루심",
+    "photos": [
+      {
+        "id": "647689c123debd7bba806748",
+        "created_at": "2023-05-30T23:41:53.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8966370_cC5x759JvSdFElI8JmBkpHXmMYOtBIoT6HBF4oywrdA.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "632afea76f11e94ce436e8db",
+        "created_at": "2022-09-21T12:08:07.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/43052166_88ZhY7tRrSdZtsokV7YtV0VB4cd49-_XCRjP1gBzD4s.jpg",
+        "width": 1920,
+        "height": 1439
+      },
+      {
+        "id": "6319cf68877a334dfacf33c1",
+        "created_at": "2022-09-08T11:18:00.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/2854556_UaDWcVZbczYdBJrfVDsoSMLrvH2cQwWU0lwjDR8es2A.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6319cf65970c8c0766088e50",
+        "created_at": "2022-09-08T11:17:57.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/2854556_7ijlmW6rJZob-1NsVu2TIWydSupjJsBBkEDpgNL9v6E.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "62bbc084553ed3306eac2381",
+        "created_at": "2022-06-29T03:01:24.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/43052166_FtF3FXuZ40HplKQJvuxMNtjwnTVUiArUmHK9wS5qH_s.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9970251934107206,
+    "price": 2,
+    "rating": 9,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "57347cb5498e8afca3a31977",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 37.52281,
+        "longitude": 127.042595
+      },
+      "main": {
+        "latitude": 37.522937,
+        "longitude": 127.042579
+      },
+      "roof": {
+        "latitude": 37.522937,
+        "longitude": 127.042579
+      }
+    },
+    "hours": {
+      "display": "Open Daily 11:30-22:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2200",
+          "day": 1,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 2,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 3,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 4,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 5,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 6,
+          "open": "1130"
+        },
+        {
+          "close": "2200",
+          "day": 7,
+          "open": "1130"
+        }
+      ]
+    },
+    "location": {
+      "address": "선릉로148길 37",
+      "country": "KR",
+      "cross_street": "청담점",
+      "formatted_address": "선릉로148길 37 (청담점), 청담동, 강남구, 서울특별시",
+      "locality": "서울특별시",
+      "post_town": "강남구",
+      "region": "서울특별시"
+    },
+    "name": "The Round (더라운드)",
+    "photos": [
+      {
+        "id": "63ce2e3c20c0467ff924817a",
+        "created_at": "2023-01-23T06:50:36.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/10012656_uYmTM4BIKN9HeiZOy4xvlvL6aAurkCPpnN6WwPMZiG0.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "63ce2e3b8140d832cc9cc2a0",
+        "created_at": "2023-01-23T06:50:35.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/10012656_RyDxzZbnu0TJbOFZVao5EH2jUL-mnEtFamUhityfLTk.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6345f31940d06d5f7e794fb7",
+        "created_at": "2022-10-11T22:50:01.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/7687294_NCP84-7RVXddMpl0KBP-YHkyUp9POeXhBA-cKuq6PA0.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "62a17f3cea6bac3f315a3f1c",
+        "created_at": "2022-06-09T05:03:56.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/58691624_eGE8Y3WXhjXmIeCTauZCMwqO5S_Wx7XJf3qDqCqgaYg.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "62402e4cdfc3616c1b5d3ba1",
+        "created_at": "2022-03-27T09:28:44.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/7687294_lEjxpUXEnUE0ZPTF6sDMRDr3t5VSBXON0FDfaqWXCh0.jpg",
+        "width": 1920,
+        "height": 1440
+      }
+    ],
+    "popularity": 0.9914177657767543,
+    "price": 1,
+    "rating": 9,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "58aa6832e786b20f3196705e",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 37.533451,
+        "longitude": 127.000751
+      },
+      "main": {
+        "latitude": 37.533486,
+        "longitude": 127.000827
+      }
+    },
+    "hours": {
+      "display": "Mon-Fri 8:00-21:00; Sat-Sun 10:00-21:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2100",
+          "day": 1,
+          "open": "0800"
+        },
+        {
+          "close": "2100",
+          "day": 2,
+          "open": "0800"
+        },
+        {
+          "close": "2100",
+          "day": 3,
+          "open": "0800"
+        },
+        {
+          "close": "2100",
+          "day": 4,
+          "open": "0800"
+        },
+        {
+          "close": "2100",
+          "day": 5,
+          "open": "0800"
+        },
+        {
+          "close": "2100",
+          "day": 6,
+          "open": "1000"
+        },
+        {
+          "close": "2100",
+          "day": 7,
+          "open": "1000"
+        }
+      ]
+    },
+    "location": {
+      "address": "대사관로8길 15",
+      "country": "KR",
+      "cross_street": "",
+      "formatted_address": "대사관로8길 15, 한남동, 용산구, 서울특별시",
+      "locality": "서울특별시",
+      "post_town": "용산구",
+      "region": "서울특별시"
+    },
+    "name": "R.about Coffee (아러바우트)",
+    "photos": [
+      {
+        "id": "6485bd6f3d566d71cd115483",
+        "created_at": "2023-06-11T12:26:23.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4885260_NEBYTaX6DBiSFL641BBYVLF6pigCmj5CGk9T9lKCeEM.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "6485bd6b511ff53bf1923d6a",
+        "created_at": "2023-06-11T12:26:19.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4885260_dCdBjebOJr7mVh7QvnD14_c4cNIkEZ3bfD2I3OL1nKk.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "6485bd6507419156d1ad21f5",
+        "created_at": "2023-06-11T12:26:13.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4885260_8_gxadN5CqU6YljSTS7q1pxa_ZJUYeU8E-CmqV18bcY.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "6485bd60a99a740b1dfffb8f",
+        "created_at": "2023-06-11T12:26:08.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4885260_gRBuX4cES9fIyKN7g56C43AyZBZdp2ulWbLWTbYwOLg.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "6485bd591c178834621369d9",
+        "created_at": "2023-06-11T12:26:01.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4885260_Y8ZBKgjMkHLE1iBCj60oJxvVXhWn2mvs0QBLyH8lm3o.jpg",
+        "width": 1439,
+        "height": 1439
+      }
+    ],
+    "popularity": 0.9904243238730989,
+    "price": 1,
+    "rating": 9.2,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "57072dd5498e4f01d87fda9a",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 37.502172,
+        "longitude": 127.034436
+      },
+      "main": {
+        "latitude": 37.50222,
+        "longitude": 127.034544
+      }
+    },
+    "hours": {
+      "display": "Tue-Sat 10:30-22:00; Sun 10:30-21:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2200",
+          "day": 2,
+          "open": "1030"
+        },
+        {
+          "close": "2200",
+          "day": 3,
+          "open": "1030"
+        },
+        {
+          "close": "2200",
+          "day": 4,
+          "open": "1030"
+        },
+        {
+          "close": "2200",
+          "day": 5,
+          "open": "1030"
+        },
+        {
+          "close": "2200",
+          "day": 6,
+          "open": "1030"
+        },
+        {
+          "close": "2100",
+          "day": 7,
+          "open": "1030"
+        }
+      ]
+    },
+    "location": {
+      "address": "논현로97길 19-11",
+      "country": "KR",
+      "cross_street": "",
+      "formatted_address": "논현로97길 19-11, 역삼1동, 서울특별시, 서울특별시",
+      "locality": "서울특별시",
+      "post_town": "강남구",
+      "region": "서울특별시"
+    },
+    "name": "Cafe 413 Project (카페 413프로젝트)",
+    "photos": [
+      {
+        "id": "59e7213d8264443e0d85ea7a",
+        "created_at": "2017-10-18T09:39:09.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/428803__a-Te0zILkIVI1Rj2urUGcGMpq3zKz_t6FCoXC1rLVE.jpg",
+        "width": 1920,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "581b02a53928620af6646ecb",
+        "created_at": "2016-11-03T09:25:57.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/200095547_sCTkOsJiVo1uWPjU_dzY4Ev3R9iStLn-UudsUW0ucr8.jpg",
+        "width": 1440,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "57170087498ed7fce04bd2b9",
+        "created_at": "2016-04-20T04:07:35.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1166692_DfThwGDZzNh95SoarMeaEhJvAt7ZFcJCR-eNb6fbI88.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "58287403b4f96246b7398241",
+        "created_at": "2016-11-13T14:09:07.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/31423327_16CwMd5HYfLdB_WGzHIj7QowjVCVZBaOeGsedfNV1UI.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "59e02ea10881586aa1e56dd6",
+        "created_at": "2017-10-13T03:10:25.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8778463_4p687IViaJ_iBfxFoUu7-KsixRzOSfSrMnylfEamjXU.jpg",
+        "width": 1425,
+        "height": 1900
+      }
+    ],
+    "popularity": 0.9808017352118584,
+    "price": 1,
+    "rating": 9.2,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "57a413f9498e914a27b62711",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 37.490298,
+        "longitude": 126.992787
+      },
+      "main": {
+        "latitude": 37.490215,
+        "longitude": 126.99282
+      }
+    },
+    "hours": {
+      "display": "Mon-Fri 9:00-22:00; Sat-Sun 12:00-21:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2200",
+          "day": 1,
+          "open": "0900"
+        },
+        {
+          "close": "2200",
+          "day": 2,
+          "open": "0900"
+        },
+        {
+          "close": "2200",
+          "day": 3,
+          "open": "0900"
+        },
+        {
+          "close": "2200",
+          "day": 4,
+          "open": "0900"
+        },
+        {
+          "close": "2200",
+          "day": 5,
+          "open": "0900"
+        },
+        {
+          "close": "2100",
+          "day": 6,
+          "open": "1200"
+        },
+        {
+          "close": "2100",
+          "day": 7,
+          "open": "1200"
+        }
+      ]
+    },
+    "location": {
+      "address": "방배동 851-18",
+      "country": "KR",
+      "cross_street": "",
+      "formatted_address": "방배동 851-18, 서울특별시, 서울특별시, 137-060",
+      "locality": "서울특별시",
+      "post_town": "서초구",
+      "postcode": "137-060",
+      "region": "서울특별시"
+    },
+    "name": "태양커피",
+    "photos": [
+      {
+        "id": "64998be932c889219e2d470b",
+        "created_at": "2023-06-26T13:00:25.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/15644969_rjjKtIfDhmYitN4qDAs9VEFQN6hJaHU_mWeQOyRgOqU.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "647594fc95f8063776a7ef6c",
+        "created_at": "2023-05-30T06:17:32.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8199270_tbnwLkNjypQlTTfi6CPe2txvfspRYRDeEz42ZGOKBic.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "64701c4437a33a2c509c785a",
+        "created_at": "2023-05-26T02:41:08.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8199270_gR4tuPgaY56g8Fny8PGwQjHMOLzYwwmPKanbXEg0ba0.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "64377b3a7a0fc038cf859fba",
+        "created_at": "2023-04-13T03:47:06.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4397818_JB2ezkCmDxlf6bE-w3-d52jimKNA38VCnVqx7LvG8lY.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "642bae7ab6893e7e817eec21",
+        "created_at": "2023-04-04T04:58:34.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4397818_Dsh0wHNR7qVFjnB4oYhrKdJ90Bg1CSHAdfOadT8wrrc.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.98641330218709,
+    "price": 1,
+    "rating": 9.1,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "5028d93ae4b0fe423e5b43fc",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 37.506826,
+        "longitude": 127.021531
+      },
+      "main": {
+        "latitude": 37.50676,
+        "longitude": 127.021553
+      }
+    },
+    "hours": {
+      "display": "Mon-Fri 9:30-23:00; Sat 11:00-23:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2300",
+          "day": 1,
+          "open": "0930"
+        },
+        {
+          "close": "2300",
+          "day": 2,
+          "open": "0930"
+        },
+        {
+          "close": "2300",
+          "day": 3,
+          "open": "0930"
+        },
+        {
+          "close": "2300",
+          "day": 4,
+          "open": "0930"
+        },
+        {
+          "close": "2300",
+          "day": 5,
+          "open": "0930"
+        },
+        {
+          "close": "2300",
+          "day": 6,
+          "open": "1100"
+        }
+      ]
+    },
+    "location": {
+      "address": "사평대로55길 65-2",
+      "country": "KR",
+      "formatted_address": "사평대로55길 65-2, 반포1동, 서울특별시, 서울특별시",
+      "locality": "서울특별시",
+      "post_town": "서초구",
+      "region": "서울특별시"
+    },
+    "name": "The Beaner (더비너)",
+    "photos": [
+      {
+        "id": "5c7b589d31fd14003812cea6",
+        "created_at": "2019-03-03T04:31:25.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/145436289_LIvBaBzlwyHx3JMHogjKfZZH42IMVj4kM91Zi_d6l28.jpg",
+        "width": 1920,
+        "height": 1440,
+        "classifications": [
+          "indoor"
+        ]
+      },
+      {
+        "id": "5cfcbfe098fbfc002c0bc669",
+        "created_at": "2019-06-09T08:14:24.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/145436289_obvufh6eGX5q7Vl96h96SQiae5aguF5BMegN832_2h0.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5f1bd9e83608be6433a9d6c6",
+        "created_at": "2020-07-25T07:06:16.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4663065_l5l-Z81-45RJ98TT0JG6sVZffbynFtuLO-6c6gcEwok.jpg",
+        "width": 1080,
+        "height": 1440
+      },
+      {
+        "id": "5df2de5846d2b90008d5afb1",
+        "created_at": "2019-12-13T00:42:00.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/3393142_tbXWAyflUDZmllxrCOEegB77qmsx7J2BvyhjeV8VDe8.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "60518aea4d6e3e208b79c6e9",
+        "created_at": "2021-03-17T04:51:54.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4162901_RrOwK7NTUrg_TtelB1F6E817uY0Wc4j_y18SdJohBuM.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9587831992416727,
+    "price": 1,
+    "rating": 9.1,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "58c62d33cc05d12d5e6e7eb8",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 37.485198,
+        "longitude": 127.03227
+      },
+      "main": {
+        "latitude": 37.485223,
+        "longitude": 127.03217
+      },
+      "roof": {
+        "latitude": 37.485223,
+        "longitude": 127.03217
+      }
+    },
+    "hours": {
+      "display": "Mon-Fri 8:00-22:00; Sat-Sun 10:00-22:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2200",
+          "day": 1,
+          "open": "0800"
+        },
+        {
+          "close": "2200",
+          "day": 2,
+          "open": "0800"
+        },
+        {
+          "close": "2200",
+          "day": 3,
+          "open": "0800"
+        },
+        {
+          "close": "2200",
+          "day": 4,
+          "open": "0800"
+        },
+        {
+          "close": "2200",
+          "day": 5,
+          "open": "0800"
+        },
+        {
+          "close": "2200",
+          "day": 6,
+          "open": "1000"
+        },
+        {
+          "close": "2200",
+          "day": 7,
+          "open": "1000"
+        }
+      ]
+    },
+    "location": {
+      "address": "강남대로37길 24-11",
+      "country": "KR",
+      "cross_street": "양재점",
+      "formatted_address": "강남대로37길 24-11 (양재점), 서초2동, 서울특별시, 서울특별시",
+      "locality": "서울특별시",
+      "post_town": "서초구",
+      "region": "서울특별시"
+    },
+    "name": "Fritz Coffee Company (프릳츠)",
+    "photos": [
+      {
+        "id": "6443853560527d033ea2f254",
+        "created_at": "2023-04-22T06:56:53.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/70945512_rVB81xS8zv-HseRG7G_5zhuIw5VhHt6_vQuqOy4SUt4.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "6441e7f307b75113664ed3f5",
+        "created_at": "2023-04-21T01:33:39.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/77901301_F5WfzV4Qx56anezh2wdClgLOYsLbd_GJLROxtBJuwZ0.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "6441e7a6b68a1978d551f43f",
+        "created_at": "2023-04-21T01:32:22.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/77901301_oWQKdkqpoX3R3WUxSMY2MpLDRqRmjnU3IN4NP228e_k.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6437eac79924cf1349f060d3",
+        "created_at": "2023-04-13T11:43:03.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/10709638_X9r-rmORb-oKVdFdlQ6jVqGDFSNzIjOICGAOWg7E3bY.jpg",
+        "width": 1080,
+        "height": 1918
+      },
+      {
+        "id": "6437eac64529d52813e3776b",
+        "created_at": "2023-04-13T11:43:02.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/10709638_K9P5jJfyF6VmyTn_FR9UJT594KAcNdm_oOUm5JOAf_Q.jpg",
+        "width": 1080,
+        "height": 1918
+      }
+    ],
+    "popularity": 0.9922842678816093,
+    "price": 1,
+    "rating": 9,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "51e7c689498eb0c634231ce7",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 37.538617,
+        "longitude": 127.075368
+      },
+      "main": {
+        "latitude": 37.538579,
+        "longitude": 127.075358
+      }
+    },
+    "hours": {
+      "display": "Mon-Fri 10:00-21:00; Sat 10:00-18:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2100",
+          "day": 1,
+          "open": "1000"
+        },
+        {
+          "close": "2100",
+          "day": 2,
+          "open": "1000"
+        },
+        {
+          "close": "2100",
+          "day": 3,
+          "open": "1000"
+        },
+        {
+          "close": "2100",
+          "day": 4,
+          "open": "1000"
+        },
+        {
+          "close": "2100",
+          "day": 5,
+          "open": "1000"
+        },
+        {
+          "close": "1800",
+          "day": 6,
+          "open": "1000"
+        }
+      ]
+    },
+    "location": {
+      "address": "아차산로 291",
+      "country": "KR",
+      "cross_street": "",
+      "formatted_address": "아차산로 291, 자양1동, 서울특별시, 서울특별시",
+      "locality": "서울특별시",
+      "post_town": "광진구",
+      "region": "서울특별시"
+    },
+    "name": "Kaleo Coffee (칼레오 커피)",
+    "photos": [
+      {
+        "id": "6487f39612e1bb059a0d3207",
+        "created_at": "2023-06-13T04:41:58.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/352994_LKZJ_TZk_l2401aUZtuNoz8as0Nnw0pBOeXKfuSstSo.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "6487f396675ced4f31491992",
+        "created_at": "2023-06-13T04:41:58.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/352994_6nfnL5VIcVfraNVX3D-Bfm4CjSEs-icHWv7NwMAIFuY.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "63f098c8197b317be61a788a",
+        "created_at": "2023-02-18T09:22:16.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/9000589_qw32owE9ZBOXGsyj_d-Acg5lqjQVPToj05zWZntGq5Q.jpg",
+        "width": 1080,
+        "height": 1920
+      },
+      {
+        "id": "63f098c76abbe20d57a87c8b",
+        "created_at": "2023-02-18T09:22:15.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/9000589_N_oxznIJE-tFuGXi2dxULyUwMWI9ZWCNjoIElrbT_iE.jpg",
+        "width": 1080,
+        "height": 1920
+      },
+      {
+        "id": "63a2c2e369af4154a2ead115",
+        "created_at": "2022-12-21T08:25:07.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/352994_muhRWgD4c2bsIyaZFBRm4tF-beyLhPTTinMf0r4C1uA.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9744105922983416,
+    "price": 1,
+    "rating": 9,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "5b8a1a8abcbf7a002cf7af16",
+    "chains": [
+      {
+        "id": "97207308-6e92-4b67-978d-bee0ccb03fce",
+        "name": "Starbucks Reserve"
+      }
+    ],
+    "geocodes": {
+      "main": {
+        "latitude": 37.527368,
+        "longitude": 127.033193
+      }
+    },
+    "hours": {
+      "display": "Open Daily 7:00-23:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2300",
+          "day": 1,
+          "open": "0700"
+        },
+        {
+          "close": "2300",
+          "day": 2,
+          "open": "0700"
+        },
+        {
+          "close": "2300",
+          "day": 3,
+          "open": "0700"
+        },
+        {
+          "close": "2300",
+          "day": 4,
+          "open": "0700"
+        },
+        {
+          "close": "2300",
+          "day": 5,
+          "open": "0700"
+        },
+        {
+          "close": "2300",
+          "day": 6,
+          "open": "0700"
+        },
+        {
+          "close": "2300",
+          "day": 7,
+          "open": "0700"
+        }
+      ]
+    },
+    "location": {
+      "address": "언주로 861",
+      "country": "KR",
+      "cross_street": "압구정R점",
+      "formatted_address": "언주로 861 (압구정R점), 압구정동, 강남구, 서울특별시",
+      "locality": "서울특별시",
+      "post_town": "강남구",
+      "region": "서울특별시"
+    },
+    "name": "Starbucks Reserve (스타벅스 리저브)",
+    "photos": [
+      {
+        "id": "6476ad099ff3c53bb8c733bf",
+        "created_at": "2023-05-31T02:12:25.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/24588517_dO3vGBS8An35bPqWq1U5geJ8jqa8Ml811x3c17Dt878.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "646c254dfddf1c08aa6d692b",
+        "created_at": "2023-05-23T02:30:37.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/756926_wU73weuPX3yTUqjABQ2FB0FLZLNai2KNTcUvgkFjdDo.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "645709ad5e34a149d5001781",
+        "created_at": "2023-05-07T02:15:09.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/892830_dLnETHiOl0MV5SeQC4rqzuKBPjMlHDPNiQUS5MvFnvc.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "641839c9a01c5d4d61725845",
+        "created_at": "2023-03-20T10:47:37.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/756926_qpsqt21TWXvc6pEbQf6KekyMQNYrZX5V5q77Sz4Lk5w.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9970265731911424,
+    "price": 1,
+    "rating": 9,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "53e23b12498e45efd3f0ca6d",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 37.566183,
+        "longitude": 127.00638
+      },
+      "main": {
+        "latitude": 37.566015,
+        "longitude": 127.00635
+      },
+      "roof": {
+        "latitude": 37.566015,
+        "longitude": 127.00635
+      }
+    },
+    "hours": {
+      "is_local_holiday": false,
+      "open_now": false
+    },
+    "location": {
+      "address": "을지로6가 23",
+      "address_extended": "타임캐슬 오피스텔 2층",
+      "country": "KR",
+      "cross_street": "동대문점",
+      "formatted_address": "을지로6가 23 (동대문점), 광희동, 서울특별시, 서울특별시",
+      "locality": "서울특별시",
+      "post_town": "중구",
+      "region": "서울특별시"
+    },
+    "name": "Sulbing (설빙)",
+    "photos": [
+      {
+        "id": "569c5ad4498eb2bf92dc1889",
+        "created_at": "2016-01-18T03:24:04.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/49824769_FevvSuZ4qni1uF-rZFuP1w7wtbJRmmCyppBfH0zVI-E.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "56791405498e995daf0aa7a7",
+        "created_at": "2015-12-22T09:12:37.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/87303232_sQpNSIK9mvFDnuQQYxn2iQzTNa18GnAodxVzPpKYGnA.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5673fea2498eafd10160b16a",
+        "created_at": "2015-12-18T12:40:02.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/85741444_GUbJGw4EDJ7XXb4_RPx5vPn-atkMx6sXgRZrIepWLs4.jpg",
+        "width": 1440,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "55605882498e5aab2b6b6f59",
+        "created_at": "2015-05-23T10:37:54.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/16554408_NhvxfNXX5U5n-Ix0HAgNXkaGK0t11eomFvVC8rwP6Gk.jpg",
+        "width": 1917,
+        "height": 1440,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5676ae73498e867ec67a8019",
+        "created_at": "2015-12-20T13:34:43.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/44092234_Em0Sl5-wLf41aHB2qEgXUhd3A9qm5Yi-qvKVcr_p-9g.jpg",
+        "width": 1438,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      }
+    ],
+    "popularity": 0.9977854524231013,
+    "price": 1,
+    "rating": 9,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "58ba49973f5a5c1c89d95196",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 37.542106,
+        "longitude": 127.002595
+      }
+    },
+    "hours": {
+      "display": "Mon-Tue 10:00-22:00; Thu-Fri 10:00-22:00; Sat 12:00-22:00; Sun 12:00-21:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2200",
+          "day": 1,
+          "open": "1000"
+        },
+        {
+          "close": "2200",
+          "day": 2,
+          "open": "1000"
+        },
+        {
+          "close": "2200",
+          "day": 4,
+          "open": "1000"
+        },
+        {
+          "close": "2200",
+          "day": 5,
+          "open": "1000"
+        },
+        {
+          "close": "2200",
+          "day": 6,
+          "open": "1200"
+        },
+        {
+          "close": "2100",
+          "day": 7,
+          "open": "1200"
+        }
+      ]
+    },
+    "location": {
+      "address": "한남대로 158",
+      "country": "KR",
+      "cross_street": "",
+      "formatted_address": "한남대로 158, 한남동, 서울특별시, 서울특별시",
+      "locality": "서울특별시",
+      "post_town": "용산구",
+      "region": "서울특별시"
+    },
+    "name": "Woolf Social Club (울프소셜클럽)",
+    "photos": [
+      {
+        "id": "620a34b2bab7b425798e4a4c",
+        "created_at": "2022-02-14T10:53:38.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/2664759_w92XWRqoYgGDqhDPGPeJEuZQdpXOALWx4dX1H22W5aE.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6187eae383781234b8382fdc",
+        "created_at": "2021-11-07T15:04:03.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/5109552_lmS3KkdjfbPcDQGpoRb9eZ1X2SpY0eO2fWyUwRQWntA.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6187d7ac88f4212e9c78812a",
+        "created_at": "2021-11-07T13:42:04.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/5109552_7RgaGKuJqRI-EcgC6Hm3JQ-fIZldpmsT-4XymWxgyYc.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "609b8031cecd5a0479b99031",
+        "created_at": "2021-05-12T07:13:53.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/31994848_OKHf3FQ7PJxJGBR94hPPWyNMTywG0W5AauKK_ivewc0.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "5f9bf0f05b2f0d66034228df",
+        "created_at": "2020-10-30T10:54:40.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/15583185_6Tic3Q1KcoHYtt8yUPQtYxO6Yjhwv0vmZrvzmh_W1iU.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9648818287057798,
+    "price": 1,
+    "rating": 8.9,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "56bab5c6498ee886ec63c998",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 37.552524,
+        "longitude": 127.010338
+      },
+      "main": {
+        "latitude": 37.552493,
+        "longitude": 127.01042
+      }
+    },
+    "hours": {
+      "display": "Mon-Fri 12:00-18:00; Sat 12:00-16:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "1800",
+          "day": 1,
+          "open": "1200"
+        },
+        {
+          "close": "1800",
+          "day": 2,
+          "open": "1200"
+        },
+        {
+          "close": "1800",
+          "day": 3,
+          "open": "1200"
+        },
+        {
+          "close": "1800",
+          "day": 4,
+          "open": "1200"
+        },
+        {
+          "close": "1800",
+          "day": 5,
+          "open": "1200"
+        },
+        {
+          "close": "1600",
+          "day": 6,
+          "open": "1200"
+        }
+      ]
+    },
+    "location": {
+      "address": "다산로8길 16-7",
+      "country": "KR",
+      "formatted_address": "다산로8길 16-7, 서울특별시, 서울특별시",
+      "locality": "서울특별시",
+      "post_town": "중구",
+      "region": "서울특별시"
+    },
+    "name": "LEESAR COFFEE ROASTERS (리사르커피로스터스)",
+    "photos": [
+      {
+        "id": "648281259cc01d51d8a0c55e",
+        "created_at": "2023-06-09T01:32:21.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/73578159_p9f0wNPq9-rBFqdZagDjetv1cmEgP5gqvpLfPxBwYGU.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "64812de04cd6b92a6b928e00",
+        "created_at": "2023-06-08T01:24:48.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/60128808_4wz-BHVn8DybHjOaC5xkJE9Fhci4mreq33DaSU3Orow.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6475827c88be524bf2b577c6",
+        "created_at": "2023-05-30T04:58:36.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/73578159_WKUxDJF3erqxGIbyqt9dto41omSuwJ0WgQ2_yUl_iIc.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6464294315c9d7344e8760be",
+        "created_at": "2023-05-17T01:09:23.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/73578159_0SJA7r4nCAuyVxnxO-IYah0S60vRGxbM3l-mhmgC2Rg.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "645f21791972b33f11d7e535",
+        "created_at": "2023-05-13T05:34:49.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4112035_II36pIG-1iqDlY7Pb_OvCGnGJ_M8ycP1_Tru9kEPNSo.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9933356605629781,
+    "price": 1,
+    "rating": 8.9,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "5cfa480f3fcee8002b0bfdf5",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 37.525913,
+        "longitude": 127.035551
+      },
+      "roof": {
+        "latitude": 37.525913,
+        "longitude": 127.035551
+      }
+    },
+    "hours": {
+      "display": "Open Daily 9:00-22:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2200",
+          "day": 1,
+          "open": "0900"
+        },
+        {
+          "close": "2200",
+          "day": 2,
+          "open": "0900"
+        },
+        {
+          "close": "2200",
+          "day": 3,
+          "open": "0900"
+        },
+        {
+          "close": "2200",
+          "day": 4,
+          "open": "0900"
+        },
+        {
+          "close": "2200",
+          "day": 5,
+          "open": "0900"
+        },
+        {
+          "close": "2200",
+          "day": 6,
+          "open": "0900"
+        },
+        {
+          "close": "2200",
+          "day": 7,
+          "open": "0900"
+        }
+      ]
+    },
+    "location": {
+      "address": "신사동 645-18",
+      "country": "KR",
+      "cross_street": "도산점",
+      "formatted_address": "신사동 645-18 (도산점), 압구정동, 강남구, 서울특별시, 135-896",
+      "locality": "서울특별시",
+      "post_town": "강남구",
+      "postcode": "135-896",
+      "region": "서울특별시"
+    },
+    "name": "TARTINE BAKERY (타르틴 베이커리)",
+    "photos": [
+      {
+        "id": "63f4437c92130300f157fddc",
+        "created_at": "2023-02-21T04:07:24.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/70193539_k6rqZ0Gvo1RAFjA-JzVIWWG3HyxqKUJI9KEOLqBEYV8.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "63b660a95cc437250a08ba9d",
+        "created_at": "2023-01-05T05:31:21.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/73578159_rWVlkOBLLk7QxRIlLL_8q3Msd0UA5oXKx2JIfxS0PFA.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "63aaf4054b1b5421dacae08d",
+        "created_at": "2022-12-27T13:32:53.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/9493514_ohEM1bix3ibbzJ7sQ2nlmQvRKprhcLl5vZogZo_xkYc.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "63aaf405323cda63c504075f",
+        "created_at": "2022-12-27T13:32:53.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/9493514_i62SDerksJYzv1mYFViQ1jmp9KKJcbSOsskMEgvNgxI.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "63aaf404667dff5b212cf846",
+        "created_at": "2022-12-27T13:32:52.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/9493514_Tv8YnASO-WIovdBgSRhCmRvcHDkmVOYsGB2lVY-uBSQ.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9934101687057522,
+    "price": 1,
+    "rating": 8.9,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "4b6d0a84f964a52051642ce3",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 37.487634,
+        "longitude": 127.051298
+      }
+    },
+    "hours": {
+      "display": "Open Daily 8:00-22:30",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2230",
+          "day": 1,
+          "open": "0800"
+        },
+        {
+          "close": "2230",
+          "day": 2,
+          "open": "0800"
+        },
+        {
+          "close": "2230",
+          "day": 3,
+          "open": "0800"
+        },
+        {
+          "close": "2230",
+          "day": 4,
+          "open": "0800"
+        },
+        {
+          "close": "2230",
+          "day": 5,
+          "open": "0800"
+        },
+        {
+          "close": "2230",
+          "day": 6,
+          "open": "0800"
+        },
+        {
+          "close": "2230",
+          "day": 7,
+          "open": "0800"
+        }
+      ]
+    },
+    "location": {
+      "address": "언주로30길 10",
+      "country": "KR",
+      "cross_street": "도곡타워팰리스점",
+      "formatted_address": "언주로30길 10 (도곡타워팰리스점), 도곡2동, 서울특별시, 서울특별시",
+      "locality": "서울특별시",
+      "post_town": "강남구",
+      "region": "서울특별시"
+    },
+    "name": "김영모과자점",
+    "photos": [
+      {
+        "id": "63918de5802cac24e01d63dc",
+        "created_at": "2022-12-08T07:10:29.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/5708704_z1keKJGMNoz0qnIRTB-ldtHz68eFTzRA1mcXJaDJbKw.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "638584d61b78966684b34915",
+        "created_at": "2022-11-29T04:04:38.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/5708704_2SJJKthNVeZu_xjC8G3A4pqUiNqYSYl3ZIgeXQUvxHU.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "63399ca25583e24ec700e436",
+        "created_at": "2022-10-02T14:13:54.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/17362991_15ZK1jnMqh9OHODxGy-pfmy739dX7-PBLJAoTp3hLqk.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "62ff09d4c103ce5bf208c335",
+        "created_at": "2022-08-19T03:56:04.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/5708704_K4ABZW35dP8EBXFHPMlXW0lUdad91bSht1VvNyrvbtE.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "628713142cfe81775523bcc3",
+        "created_at": "2022-05-20T04:03:32.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/5708704_v5bGO0Xz5FKvLGclrH4FDCtsMBAOdxen74At2JVuVug.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9962939097871965,
+    "price": 3,
+    "rating": 8.8,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "4e708cd01838f0daa09b2f8b",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 37.495119,
+        "longitude": 126.989217
+      }
+    },
+    "hours": {
+      "display": "Open Daily 8:00-22:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2200",
+          "day": 1,
+          "open": "0800"
+        },
+        {
+          "close": "2200",
+          "day": 2,
+          "open": "0800"
+        },
+        {
+          "close": "2200",
+          "day": 3,
+          "open": "0800"
+        },
+        {
+          "close": "2200",
+          "day": 4,
+          "open": "0800"
+        },
+        {
+          "close": "2200",
+          "day": 5,
+          "open": "0800"
+        },
+        {
+          "close": "2200",
+          "day": 6,
+          "open": "0800"
+        },
+        {
+          "close": "2200",
+          "day": 7,
+          "open": "0800"
+        }
+      ]
+    },
+    "location": {
+      "address": "방배동 773-1",
+      "address_extended": "서래빌딩 1층",
+      "country": "KR",
+      "formatted_address": "방배동 773-1, 서초구, 서울특별시, 137-060",
+      "locality": "서초구",
+      "post_town": "서초구",
+      "postcode": "137-060",
+      "region": "서울특별시"
+    },
+    "name": "행복의집",
+    "photos": [
+      {
+        "id": "6486c97ccbcbf864b598df01",
+        "created_at": "2023-06-12T07:30:04.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/6566341_2Pcm8rVoaplnjhe1HO0M6KuHHP2Opv01LexJzxO-Xz4.jpg",
+        "width": 1080,
+        "height": 1080
+      },
+      {
+        "id": "6486c97ae4d3321efd6e0d3f",
+        "created_at": "2023-06-12T07:30:02.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/6566341_FFD26rAUkFtEruOJF_b1b1MZ_AP7R2mypLSTzdONPis.jpg",
+        "width": 1080,
+        "height": 1080
+      },
+      {
+        "id": "5e0b01566079da0008eaff38",
+        "created_at": "2019-12-31T08:05:42.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8624794_u95Kd_pUI-1PctSyb878IQ1w_wh4GuOrPWAKhanpp78.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "5dd639e342b5860008524c6f",
+        "created_at": "2019-11-21T07:16:51.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8624794_ElUwk-PQLdzOOcR0Ygpy-Q9ClrjLdio5wXb7f0qlejc.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "5dcf71850e96d20008a32a3f",
+        "created_at": "2019-11-16T03:48:21.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8624794_s5DyeoOSB2vAix73nrb-dx2k1ZoylNzCv-f_KtZRVsU.jpg",
+        "width": 1920,
+        "height": 1440
+      }
+    ],
+    "popularity": 0.9900835181089281,
+    "price": 1,
+    "rating": 8.8,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "54cb2dd6498e6fa7b22dfe79",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 37.484081,
+        "longitude": 127.017375
+      },
+      "roof": {
+        "latitude": 37.484081,
+        "longitude": 127.017375
+      }
+    },
+    "hours": {
+      "display": "Mon-Sat 8:00-21:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2100",
+          "day": 1,
+          "open": "0800"
+        },
+        {
+          "close": "2100",
+          "day": 2,
+          "open": "0800"
+        },
+        {
+          "close": "2100",
+          "day": 3,
+          "open": "0800"
+        },
+        {
+          "close": "2100",
+          "day": 4,
+          "open": "0800"
+        },
+        {
+          "close": "2100",
+          "day": 5,
+          "open": "0800"
+        },
+        {
+          "close": "2100",
+          "day": 6,
+          "open": "0800"
+        }
+      ]
+    },
+    "location": {
+      "address": "서초동 1445-13",
+      "country": "KR",
+      "cross_street": "",
+      "formatted_address": "서초동 1445-13, 서초1동, 서초구, 서울특별시, 137-070",
+      "locality": "서울특별시",
+      "post_town": "서초구",
+      "postcode": "137-070",
+      "region": "서울특별시"
+    },
+    "name": "Ruelle de Paris (루엘드파리)",
+    "photos": [
+      {
+        "id": "641e52528efbbd5df8e2b8a4",
+        "created_at": "2023-03-25T01:45:54.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1199963_RecTOnrelFWIjC-lOSfKprBLxcK8H7MHI8TOfa_4R2I.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "641925dcc752f35a5003ad83",
+        "created_at": "2023-03-21T03:34:52.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4112035_4IEkpxw4xPGqEa3K1owUgG2Bxb6vb7nYk6J91CZ1CEw.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "63fdb838632fa7275c113036",
+        "created_at": "2023-02-28T08:15:52.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1199963_UwrVsOhmJPsbKq8oGWy8cB4ba8VMIwzLOlxpUm8RE-o.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "63ede38380397b4c399b29af",
+        "created_at": "2023-02-16T08:04:19.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1199963_zq0-oalUevJcxXww04WyCTDlPz1a1N4lEzBK5S8WyHQ.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "63cb81b8fc87460d4164537e",
+        "created_at": "2023-01-21T06:10:00.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/13103671_QCXJcb_zul8Ij3FW_6CVynbOSxxwAcWuMf4eahmbuVU.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9972376795956691,
+    "price": 1,
+    "rating": 8.8,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "5aed60a73731ee002c82c2d9",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 37.520802,
+        "longitude": 127.021571
+      },
+      "main": {
+        "latitude": 37.520853,
+        "longitude": 127.021545
+      }
+    },
+    "hours": {
+      "is_local_holiday": false,
+      "open_now": false
+    },
+    "location": {
+      "address": "강남대로162길 39",
+      "country": "KR",
+      "cross_street": "가로수길점",
+      "formatted_address": "강남대로162길 39 (가로수길점), 신사동, 강남구, 서울특별시",
+      "locality": "서울특별시",
+      "post_town": "강남구",
+      "region": "서울특별시"
+    },
+    "name": "OUR Bakery (아우어베이커리)",
+    "photos": [
+      {
+        "id": "5badc86cbd4009002cc3f7f9",
+        "created_at": "2018-09-28T06:21:32.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/83491878_73-B1EaeYO8ELF51cdfJJ3-J5ph6qsyXGhG3WPbuKRg.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "5dd6024ced00dd0008ea15ca",
+        "created_at": "2019-11-21T03:19:40.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1370290_4j_W-TNF9wMehkVBqCERcwyfiExCrqHKr9le5KhGaug.jpg",
+        "width": 1920,
+        "height": 1440,
+        "classifications": [
+          "indoor"
+        ]
+      },
+      {
+        "id": "5dec95342d5b1200077fd1ab",
+        "created_at": "2019-12-08T06:16:20.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/13103671_sjXeQO1vj93Ts_-_NL_Qnf5xagTM2ZESGRMnZ6sd1YI.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "5dd60251a948bd0008eb041a",
+        "created_at": "2019-11-21T03:19:45.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1370290_kYl1KYwhl7iLYo71i1OOpeyOXslJ4l7CfndZZ-V-Iuo.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "5bd6b3971a29250025eef9ba",
+        "created_at": "2018-10-29T07:15:35.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/11440959_egLCywOI9XZs8y_oMZwDFMx7WOtgp9JGMDCOggA0GUc.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      }
+    ],
+    "popularity": 0.9853619095057212,
+    "price": 1,
+    "rating": 8.7,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "591141bfc8b2fb133484b47f",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 37.512725,
+        "longitude": 127.04297
+      },
+      "main": {
+        "latitude": 37.512703,
+        "longitude": 127.042904
+      }
+    },
+    "hours": {
+      "display": "Mon-Fri 9:00-21:00; Sat-Sun 10:00-21:00",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2100",
+          "day": 1,
+          "open": "0900"
+        },
+        {
+          "close": "2100",
+          "day": 2,
+          "open": "0900"
+        },
+        {
+          "close": "2100",
+          "day": 3,
+          "open": "0900"
+        },
+        {
+          "close": "2100",
+          "day": 4,
+          "open": "0900"
+        },
+        {
+          "close": "2100",
+          "day": 5,
+          "open": "0900"
+        },
+        {
+          "close": "2100",
+          "day": 6,
+          "open": "1000"
+        },
+        {
+          "close": "2100",
+          "day": 7,
+          "open": "1000"
+        }
+      ]
+    },
+    "location": {
+      "address": "선릉로 629",
+      "country": "KR",
+      "cross_street": "싸이더스점",
+      "formatted_address": "선릉로 629 (싸이더스점), 논현2동, 강남구, 서울특별시",
+      "locality": "서울특별시",
+      "post_town": "강남구",
+      "region": "서울특별시"
+    },
+    "name": "OUR Bakery (아우어베이커리)",
+    "photos": [
+      {
+        "id": "6374540f02a0b72c141c8b98",
+        "created_at": "2022-11-16T03:07:59.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/6109619_kuZjZyu-WmgbwnogKZ9gtDG9uzLGMRmV42YvETEzIm0.jpg",
+        "width": 1080,
+        "height": 1440
+      },
+      {
+        "id": "623fffe78421d43b687bfe21",
+        "created_at": "2022-03-27T06:10:47.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/86635185_RYvhTCONrLE27j-ncFDktXCh_ODff1cUsrcWYSDwnOQ.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "60e2c2bc11913a782c9c08cb",
+        "created_at": "2021-07-05T08:28:44.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/564210261_6THcmsLV3GiS2aO3xjHcfN3LGwzjY6OStliNBwHhLpo.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "606d60b098c2fc262d426586",
+        "created_at": "2021-04-07T07:35:12.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/564210261_X15-yLju55bsyeglPrRoCCuc0yxMLekLvSWmvGkL-xE.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "606d608ba1d7bc4a00ab6713",
+        "created_at": "2021-04-07T07:34:35.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/564210261_UOzKW644_QwUxcd-AOb3IDTwXLcoz_jCAx4DPDT5oIk.jpg",
+        "width": 1440,
+        "height": 1440
+      }
+    ],
+    "popularity": 0.9747224226736557,
+    "price": 1,
+    "rating": 8.7,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "59e9b5ffc876c8304d210423",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 37.493748,
+        "longitude": 127.021192
+      },
+      "main": {
+        "latitude": 37.49378,
+        "longitude": 127.021279
+      },
+      "roof": {
+        "latitude": 37.49378,
+        "longitude": 127.021279
+      }
+    },
+    "hours": {
+      "is_local_holiday": false,
+      "open_now": false
+    },
+    "location": {
+      "address": "서초대로64길 41-4",
+      "country": "KR",
+      "cross_street": "서초성당점",
+      "formatted_address": "서초대로64길 41-4 (서초성당점), 서초1동, 서울특별시, 서울특별시, 137-070",
+      "locality": "서울특별시",
+      "post_town": "서초구",
+      "postcode": "137-070",
+      "region": "서울특별시"
+    },
+    "name": "김영모 과자점",
+    "photos": [
+      {
+        "id": "5ab0c1d34940bc30a6573ad3",
+        "created_at": "2018-03-20T08:09:55.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8624794_7Yb5ACr5YsHg1r33PbEZgCsI-fmN9VsF_XnwBkRT9zU.jpg",
+        "width": 1920,
+        "height": 1438,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5afd5bc9b23dfa002c866d7c",
+        "created_at": "2018-05-17T10:39:05.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/82071572_rySbazWQht25Xc4ZWEYPDV0xksCeu8-Rg5k7ipC4Jtg.jpg",
+        "width": 4032,
+        "height": 3024
+      },
+      {
+        "id": "646ac5088eb8cd446c093e31",
+        "created_at": "2023-05-22T01:27:36.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/13103671_1-P7gUR_3sVivOLWwwuZ9G2ij24G9zQWkKBvZYSFkPs.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "645afafa6a610935fd55ca93",
+        "created_at": "2023-05-10T02:01:30.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/13103671_jgpaa7Q1x0uSD5MIYSItiydD-usFPIiLhwmL8vSxr2E.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6433737f19b7716bab871f41",
+        "created_at": "2023-04-10T02:25:03.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/13103671_lYspk0EVV_gZWd8KVmDs0YcJwyYn3tcVvW7d6yjqZpU.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9857813627539314,
+    "price": 1,
+    "rating": 8.6,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "5426569b498ef4e6e764a738",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 37.51495,
+        "longitude": 127.101887
+      }
+    },
+    "hours": {
+      "is_local_holiday": false,
+      "open_now": false
+    },
+    "location": {
+      "address": "올림픽로35다길 32",
+      "country": "KR",
+      "cross_street": "잠실점",
+      "formatted_address": "올림픽로35다길 32 (잠실점), 서울특별시, 서울특별시",
+      "locality": "서울특별시",
+      "post_town": "송파구",
+      "region": "서울특별시"
+    },
+    "name": "ROLLING PIN (롤링핀)",
+    "photos": [
+      {
+        "id": "61ff5b3c98a41e7c84ddd3cd",
+        "created_at": "2022-02-06T05:23:08.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1374479143_5VSZPD1PYhl2lBLz5IA8P4z-2hrmIedCddl-utk2hd4.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "61ff5b39d86d7a70a9f8014b",
+        "created_at": "2022-02-06T05:23:05.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1374479143_msbIB6ooE_MHhvaUkAgDZadvbPCURpO0EfuGTEOGDn0.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "5f1fd49017bc50354d2ffcf4",
+        "created_at": "2020-07-28T07:32:32.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/1648140_DI5L5KSx2ElcnXepVsyuYY_wtdNh6CWuBxHd0FcaEs0.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "5da007c17c38ea000763d996",
+        "created_at": "2019-10-11T04:40:33.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4795707_RDqetTCOJplWibcKoViu-P3eF-kjvTsGIalcQaKgW5I.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "5d8a0b1270a68c0008934fbc",
+        "created_at": "2019-09-24T12:24:50.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/7228535_xU9eQy2ytKtYOH0rL0vwDz78Ofi7XKbJs5iet1tZr2o.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9784340320081463,
+    "price": 1,
+    "rating": 8.6,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "4e69a587b61cc3728d3ff677",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 37.523405,
+        "longitude": 127.027212
+      },
+      "roof": {
+        "latitude": 37.523405,
+        "longitude": 127.027212
+      }
+    },
+    "hours": {
+      "is_local_holiday": false,
+      "open_now": false
+    },
+    "location": {
+      "address": "신사동 567-21",
+      "address_extended": "1층",
+      "country": "KR",
+      "cross_street": "",
+      "formatted_address": "신사동 567-21, 신사동, 강남구, 서울특별시, 135-891",
+      "locality": "서울특별시",
+      "post_town": "강남구",
+      "postcode": "135-891",
+      "region": "서울특별시"
+    },
+    "name": "압구정공주떡집",
+    "photos": [
+      {
+        "id": "645ee223b1c1ce40cd3a64b7",
+        "created_at": "2023-05-13T01:04:35.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/13264554_axS6vhiZVORlUpnrKniFt9u0Pk2vcII3CmCs9ehOpgE.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "6459d980aed68036d7489f4f",
+        "created_at": "2023-05-09T05:26:24.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/756926_7ZFr43tSRYC7ZPbu-SJcZAWhtjdGh_D3Iwr-2TuOZVw.jpg",
+        "width": 1920,
+        "height": 1440
+      },
+      {
+        "id": "63afe1d5323cda63c50e6426",
+        "created_at": "2022-12-31T07:16:37.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/996637_jPa7gE77MKfy2Ztq2kI5tAXeYo-vY2RKoMg5OnhrlKA.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "62971df1bbf7a05c22bab33b",
+        "created_at": "2022-06-01T08:06:09.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/996637_x2vNjK7CL_88_Y7-36es7LwpVwLL4xpA4YR5H8FlUOg.jpg",
+        "width": 1440,
+        "height": 1440
+      },
+      {
+        "id": "6245160e544a357f1c3f348f",
+        "created_at": "2022-03-31T02:46:38.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/13103671_r_6o1cuV0nHsnGZcS9-Lk8Fj2rm9hR8JC3BpVnyhjRk.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9921531887415437,
+    "price": 1,
+    "rating": 8.6,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "598bd7ffc4df1d322f4cec2c",
+    "chains": [],
+    "geocodes": {
+      "drop_off": {
+        "latitude": 37.515254,
+        "longitude": 127.042554
+      },
+      "main": {
+        "latitude": 37.515341,
+        "longitude": 127.042535
+      },
+      "roof": {
+        "latitude": 37.515341,
+        "longitude": 127.042535
+      }
+    },
+    "hours": {
+      "display": "Open Daily 8:00-22:30",
+      "is_local_holiday": false,
+      "open_now": false,
+      "regular": [
+        {
+          "close": "2230",
+          "day": 1,
+          "open": "0800"
+        },
+        {
+          "close": "2230",
+          "day": 2,
+          "open": "0800"
+        },
+        {
+          "close": "2230",
+          "day": 3,
+          "open": "0800"
+        },
+        {
+          "close": "2230",
+          "day": 4,
+          "open": "0800"
+        },
+        {
+          "close": "2230",
+          "day": 5,
+          "open": "0800"
+        },
+        {
+          "close": "2230",
+          "day": 6,
+          "open": "0800"
+        },
+        {
+          "close": "2230",
+          "day": 7,
+          "open": "0800"
+        }
+      ]
+    },
+    "location": {
+      "address": "선릉로126길 6",
+      "country": "KR",
+      "cross_street": "강남구청점",
+      "formatted_address": "선릉로126길 6 (강남구청점), 삼성2동, 강남구, 서울특별시",
+      "locality": "서울특별시",
+      "post_town": "강남구",
+      "region": "서울특별시"
+    },
+    "name": "김영모 과자점",
+    "photos": [
+      {
+        "id": "5b88ba26a5a315002cd8baa0",
+        "created_at": "2018-08-31T03:46:46.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4084159_pNpLUnCa9rpboPk3Fgl6TCEVtOjcPXGhvK1XWo5mqZI.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      },
+      {
+        "id": "59d0872eb23dfa246f9b9882",
+        "created_at": "2017-10-01T06:11:58.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4713089_GmEX0H6s03g4GeQHtEbXDC4k-qzOrC13WKL-1RBgOYc.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "5aa34ed079187106da35926e",
+        "created_at": "2018-03-10T03:19:44.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/8624794_XtfWcWwmsn5GiWVYDPTTcwTt1Urkdz9M4UP7nvuhf9M.jpg",
+        "width": 1920,
+        "height": 1439
+      },
+      {
+        "id": "5b506306838e590039375279",
+        "created_at": "2018-07-19T10:08:06.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/4713089_yrQ2be4SkJPOe5EglrzFfkKMv_GSQDwc7Q3ZOL-8XqE.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "59b269c5eacf4567b7ef314c",
+        "created_at": "2017-09-08T09:58:29.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/3775036_8OLNd7yjTWxPjqvG9aEta83ch7Ql5zWyYh_tdwHfpbs.jpg",
+        "width": 1440,
+        "height": 1920
+      }
+    ],
+    "popularity": 0.9933908517798478,
+    "price": 1,
+    "rating": 8.6,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "57a733c4498ead41637b758c",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 37.510981,
+        "longitude": 127.084234
+      },
+      "roof": {
+        "latitude": 37.510981,
+        "longitude": 127.084234
+      }
+    },
+    "hours": {
+      "is_local_holiday": false,
+      "open_now": false
+    },
+    "location": {
+      "country": "KR",
+      "cross_street": "",
+      "formatted_address": "잠실본동, 송파구, 서울특별시",
+      "locality": "서울특별시",
+      "post_town": "송파구",
+      "region": "서울특별시"
+    },
+    "name": "동경야시장",
+    "photos": [
+      {
+        "id": "5c06a3228c35dc002c0125dc",
+        "created_at": "2018-12-04T15:54:10.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/406981718_5kV6rK2M0kpJtClCYzfbxjsjeDjT4yIIHVFKeXy-xuI.jpg",
+        "width": 1440,
+        "height": 1920
+      },
+      {
+        "id": "5bbe08af60255e002c08d291",
+        "created_at": "2018-10-10T14:11:59.000Z",
+        "prefix": "https://fastly.4sqi.net/img/general/",
+        "suffix": "/406981718_CoRFQN2KmN0x8BflDKvRbqKtdPNlsqqD5hTv_AwYWVk.jpg",
+        "width": 1440,
+        "height": 1920,
+        "classifications": [
+          "food"
+        ]
+      }
+    ],
+    "popularity": 0.38256343885434074,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "5f85e070f440345374e96cc3",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 37.513775,
+        "longitude": 127.109745
+      },
+      "roof": {
+        "latitude": 37.513775,
+        "longitude": 127.109745
+      }
+    },
+    "hours": {
+      "is_local_holiday": false,
+      "open_now": false
+    },
+    "location": {
+      "country": "KR",
+      "cross_street": "",
+      "formatted_address": "서울특별시, 서울특별시, 138-050",
+      "locality": "서울특별시",
+      "postcode": "138-050",
+      "region": "서울특별시"
+    },
+    "name": "뉴욕야시장",
+    "photos": [],
+    "popularity": 0.05042269573220118,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "5db0515240edfe00084e055c",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 37.492827,
+        "longitude": 127.117564
+      },
+      "roof": {
+        "latitude": 37.492827,
+        "longitude": 127.117564
+      }
+    },
+    "hours": {
+      "is_local_holiday": false,
+      "open_now": false
+    },
+    "location": {
+      "country": "KR",
+      "cross_street": "",
+      "formatted_address": "송파구, 서울특별시",
+      "locality": "송파구",
+      "post_town": "송파구",
+      "region": "서울특별시"
+    },
+    "name": "오다가다포차",
+    "photos": [],
+    "popularity": 0.49759573261511164,
+    "activity_duration": 1
+  },
+  {
+    "fsq_id": "5d370b819bc0e70008551cad",
+    "chains": [],
+    "geocodes": {
+      "main": {
+        "latitude": 37.486067,
+        "longitude": 127.12101
+      },
+      "roof": {
+        "latitude": 37.486067,
+        "longitude": 127.12101
+      }
+    },
+    "hours": {
+      "is_local_holiday": false,
+      "open_now": false
+    },
+    "location": {
+      "country": "KR",
+      "cross_street": "",
+      "formatted_address": "문정2동, 송파구, 서울특별시",
+      "locality": "서울특별시",
+      "post_town": "송파구",
+      "region": "서울특별시"
+    },
+    "name": "와포차",
+    "photos": [],
+    "popularity": 0.6672452545901845,
+    "activity_duration": 1
+  }
+]

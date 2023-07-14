@@ -64,7 +64,7 @@ function Preference(props) {
     const endpoint = 'http://localhost:5000/Preferences';
     try {
       const response = await axios.post(endpoint, { 
-        "preferences": preferences
+        preferences
       });
       console.log(response.data)
       return response.data;

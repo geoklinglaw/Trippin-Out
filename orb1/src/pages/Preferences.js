@@ -11,7 +11,6 @@ import SuggestedLocations from "../components/Pref_Page/SuggestedLocation";
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
 
-//const description = "This is a description.";
 
 const App = () => {
   const [generatedLocations, setGeneratedLocations] = useState([]);
