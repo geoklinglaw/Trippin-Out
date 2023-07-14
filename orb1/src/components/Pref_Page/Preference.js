@@ -59,14 +59,36 @@ function Preference() {
     setPreferences(newPreferences);
   };
 
+  
+  async function submitPreferences() {
+    const endpoint = 'http://localhost:5000/Preferences';
+    try {
+      const response = await axios.post(endpoint, { 
+        "preferences": preferences
+      });
+      console.log(response.data)
+      return response.data;
+    } catch (error) {
+      console.error('Error submitting data:', error)
+      return null;
+    }
+  }
+  
+
   const handleSubmit = async () => {
-    // Check if rankings are unique
     const ranks = preferences.map(p => p.rank);
     const uniqueRanks = new Set(ranks);
 
     if (uniqueRanks.size !== ranks.length) {
       message.error("Please ensure that all rankings are unique.");
       return;
+
+    } else {
+      const responseData = await submitPreferences();
+      console.log(responseData);
+      props.onPreferencesSubmitted(responseData);
+      props.onSubmit();
+
     }
 
     const endpoint = 'YOUR_BACKEND_API_ENDPOINT';
@@ -111,9 +133,6 @@ function Preference() {
       </div>
     </div>
   );
-  
-  
-  
 }
 
 export default Preference;

@@ -1,12 +1,18 @@
 
+
 const express = require('express');
 const admin = require('firebase-admin');
 const cors = require('cors');
 const path = require('path');
 const app = express();
 
+
+
+app.use(express.json());
+const locationsAPI = require('./routes/locationsAPI');
+
 const PORT = 5000;
-// const PORT = 7000;
+
 app.use(cors());
 
 
@@ -24,6 +30,15 @@ app.get('/files/:filename', (req, res) => {
           res.status(404).json({error: 'File not found'});
       }
   });
+});
+
+
+
+app.post('/Preferences', async (req, res) => {
+  const preferences = req.body.preferences;
+  console.log('Received preferences:', preferences);
+  const generateLocations = await locationsAPI.processPreferences(preferences); 
+  res.json({message: 'Preferences received successfully', data: generateLocations});
 });
 
 

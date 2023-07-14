@@ -2,18 +2,21 @@ import React, { useEffect, useState } from 'react';
 import { Card, Button } from 'antd';
 import SuggLocations from "./SuggLocations";
 import "./Explore.css";
+
 import { getFirestore } from 'firebase/firestore';
+
 import { db, firebase } from '../../firebase';
 import { collection, query, getDocs, addDoc, doc, setDoc } from "firebase/firestore";
 import axios from 'axios';
 
 const SuggestedLocations = (props) => {
-  const {data} = props;
+
+  const {data} = props.data;
+
 
   const [locations, setLocations] = useState([]);
   const [selectedLocations, setSelectedLocations] = useState({});
   const [error, setError] = useState(null);
-  const [apiData, setApiData] = useState(null);
 
   const toggleSelected = (props) => {
     const { locationId, photo, name, formatted_address, price } = props;
@@ -26,11 +29,6 @@ const SuggestedLocations = (props) => {
     }));
   };
   
-  // const trytry = collection(db, 'users')
-  // await setDoc(doc(trytry), {
-  //   name: 'Lexuan',
-  //   userID: '2',
-  // })    
 
   const submitData = async () => {
     const selectedData = Object.values(selectedLocations).filter(location => location);
@@ -59,40 +57,9 @@ const SuggestedLocations = (props) => {
         }
     }
 };
-
-    // Save as JSON file (server-side handling is recommended)
-    // const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(selectedData));
-    // const downloadAnchorNode = document.createElement('a');
-    // downloadAnchorNode.setAttribute("href", dataStr);
-    // downloadAnchorNode.setAttribute("download", "locations.json");
-    // document.body.appendChild(downloadAnchorNode);
-    // downloadAnchorNode.click();
-    // downloadAnchorNode.remove();
   
 
-  useEffect(() => {
-    // filename: location_list_20230625T195008389Z.json
 
-    const filename = 'location_list_20230627T192603047Z.json';
-    fetch(`http://localhost:5123/files/${filename}`)
-          .then(response => response.json())
-          .then(data => {
-              console.log(data);
-              setLocations(data); 
-          })
-          .catch(error => console.error('Error fetching data:', error));
-    }, []);
-
-  //   fetch("http://localhost:9000/list_of_locations_26062023,0204am")
-  //     .then((response) => {
-  //       if (!response.ok) {
-  //         throw new Error("Network response was not ok");
-  //       }
-  //       return response.json();
-  //     })
-  //     .then((data) => setLocations(data))
-  //     .catch((err) => setError(err.message));
-  // }, []);
 
   return (
     <>
@@ -110,10 +77,7 @@ const SuggestedLocations = (props) => {
                 gap: "20px",
               }}
             >
-              {error ? (
-                <div>Error fetching locations: {error}</div>
-              ) : (
-                locations.map((location, index) => (
+              {data.map((location, index) => (
                   <SuggLocations
                     key={index}
                     locationId={index}
@@ -127,7 +91,7 @@ const SuggestedLocations = (props) => {
                     price={location.price}
                   />
                 ))
-              )}
+                  };
             </div>
           </div>
         </div>
@@ -135,19 +99,6 @@ const SuggestedLocations = (props) => {
       <div style={{ justifyContent: 'end' }}>
         <Button type="primary" onClick={submitData}>Submit</Button>
       </div>
-
-      {/* Render API response */}
-      {apiData && (
-        <div>
-          {apiData.map((location, index) => (
-            <Card key={index} title={location.name}>
-              {/* Display relevant data from the API response */}
-              <p>Location: {location.location}</p>
-              <p>Price: {location.price}</p>
-            </Card>
-          ))}
-        </div>
-      )}
     </>
   );
 };
