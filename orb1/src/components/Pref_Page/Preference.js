@@ -61,7 +61,7 @@ function Preference(props) {
   };
   
   async function submitPreferences() {
-    const endpoint = 'http://localhost:5000/Preferences';
+    const endpoint = 'http://localhost:5123/Preferences';
     try {
       const response = await axios.post(endpoint, { 
         "preferences": preferences
