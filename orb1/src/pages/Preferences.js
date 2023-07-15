@@ -7,72 +7,96 @@ import Accommodation from "../components/Pref_Page/Accommodation";
 import Preference from "../components/Pref_Page/Preference";
 import FoodOptions from "../components/Pref_Page/FoodOptions";
 import SuggestedLocations from "../components/Pref_Page/SuggestedLocation";
+import { ToastContainer, toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css';
 
 //const description = "This is a description.";
-const A = () => <Explore />;
 
-// const B = () => {
-//   return <h1>Accomodation</h1>;
-// };
-
-const handleCheckInDateTimeChange = (value) => {
-  console.log("Check-in date and time: ", value);
-};
-const handleCheckOutDateTimeChange = (value) => {
-  console.log("Check-out date and time: ", value);
-};
-
-const handleLocationChange = (event) => {
-  console.log("Location: ", event.target.value);
-};
-
-const handleHotelNameChange = (event) => {
-  console.log("Hotel Name: ", event.target.value);
-};
-
-
-const B = () => (
-  <>
-    <h1>Accommodation</h1>
-    <Accommodation
-    onCheckInDateTimeChange={handleCheckInDateTimeChange}
-    onCheckOutDateTimeChange={handleCheckOutDateTimeChange}
-    onLocationChange={handleLocationChange}
-    onHotelNameChange={handleHotelNameChange}
-     />
-  </>
-);
-
-
-const C = () => (
-  <>
-    <h1>Preferences</h1>
-    <Preference/>
-  </>
-);
-
-//const C = () => <h1>Preferences</h1>;
-
-
-const D = () => (
-  <>
-   <h1 style={{ marginBottom: '5px' }}>Suggested Locations</h1>
-    <h6 style={{ opacity: 0.7, fontSize: '14px', marginTop: '0' }}>tick the locations if you wish to include it in your itinerary</h6>
-  <SuggestedLocations/>
-  </>
-)
-const E = () => (
-  <>
-   <h1 style={{ marginBottom: '5px' }}>Food Options</h1>
-    <h6 style={{ opacity: 0.7, fontSize: '14px', marginTop: '0' }}>Pick the food you would like to include</h6>
-  <FoodOptions />
-  </>
-);
 const App = () => {
+  const [generatedLocations, setGeneratedLocations] = useState([]);
+  const [isPreferencesSubmitted, setIsPreferencesSubmitted] = useState(false);
+  const [currentStep, setCurrentStep] = useState(0);
+
+  const handlePreferencesSubmitted = (data) => {
+    setGeneratedLocations(data);
+    setIsPreferencesSubmitted(true);
+}
+
+
+  const A = () => <Explore />;
+
+  const handleCheckInDateTimeChange = (value) => {
+    console.log("Check-in date and time: ", value);
+  };
+  const handleCheckOutDateTimeChange = (value) => {
+    console.log("Check-out date and time: ", value);
+  };
+  
+  const handleLocationChange = (event) => {
+    console.log("Location: ", event.target.value);
+  };
+  
+  const handleHotelNameChange = (event) => {
+    console.log("Hotel Name: ", event.target.value);
+  };
+  
+  
+  const B = () => (
+    <>
+      <h1>Accommodation</h1>
+      <Accommodation
+      onCheckInDateTimeChange={handleCheckInDateTimeChange}
+      onCheckOutDateTimeChange={handleCheckOutDateTimeChange}
+      onLocationChange={handleLocationChange}
+      onHotelNameChange={handleHotelNameChange}
+       />
+    </>
+  );
+  
+  
+  const C = () => (
+    <>
+      <h1>Preferences</h1>
+      <Preference onSubmit={() => {setCurrentStep(3); setHeader(3)}} onPreferencesSubmitted={handlePreferencesSubmitted}/>
+    </>
+  );
+  
+  
+  const D = () => {
+    if (!isPreferencesSubmitted) {
+      return null;
+    }
+
+    return (
+      <>
+       <h1 style={{ marginBottom: '5px' }}>Suggested Locations</h1>
+       <h6 style={{ opacity: 0.7, fontSize: '14px', marginTop: '0' }}>tick the locations if you wish to include it in your itinerary</h6>
+       <SuggestedLocations data={generatedLocations}/>
+      </>
+    );
+  };
+
+
+  const E = () => {
+    if (!isPreferencesSubmitted) {
+      return null;
+    }
+
+    return (
+      <>
+       <h1 style={{ marginBottom: '5px' }}>Food Options</h1>
+        <h6 style={{ opacity: 0.7, fontSize: '14px', marginTop: '0' }}>Pick the food you would like to include</h6>
+      <FoodOptions />
+      </>
+    );
+  };
+
+
   const [header, setHeader] = useState(0);
   return (
     <>
-      <Sidebar setHeader={(x) => setHeader(x)} />
+      <Sidebar setHeader={(x) => {setHeader(x); setCurrentStep(x);}} currentStep={currentStep} isPreferencesSubmitted={isPreferencesSubmitted} />
+      <ToastContainer />
       <div
         style={{
           display: "flex",
