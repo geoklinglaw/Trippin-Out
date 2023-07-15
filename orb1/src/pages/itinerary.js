@@ -63,6 +63,7 @@ const Itinerary = () => {
     };
 
     useEffect(() => {
+
         (async () => {
         const { locations, food, accoms } = await fetchfromFirebase();
 
@@ -71,6 +72,17 @@ const Itinerary = () => {
         // setLocations(allData);
         })();
     }, []);
+
+        // const filename = 'sorted_routes.json';
+        // fetch(`http://localhost:5123/files/${filename}`)
+        //       .then(response => response.json())
+        //       .then(data => {
+        //           console.log(data);
+        //           setLocations(data);
+        //       })
+        //       .catch(error => console.error('Error fetching data:', error));
+        // }, []);
+
 
     // Check if the locations have been set, if not, display loading
     if (!locations) {

@@ -1,3 +1,4 @@
+
 import React, { useState, useEffect } from "react";
 import { Segmented, Button } from "antd";
 import SuggLocations from "./SuggLocations";
@@ -94,6 +95,15 @@ const FoodOptions = () => {
   }, []);
   
 
+  useEffect(() => {
+    (async () => {
+      const destination = await fetchfromFirebase();
+      const locationsData = await fetchDataWithParams(destination);
+      setLocations(locationsData);
+    })();
+  }, []);
+  
+
   const submitData = async () => {
     const selectedData = Object.values(selectedLocations).filter(
       (location) => location
@@ -178,3 +188,4 @@ const FoodOptions = () => {
 };
 
 export default FoodOptions;
+

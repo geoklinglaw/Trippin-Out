@@ -1,4 +1,3 @@
-
 const express = require('express');
 const admin = require('firebase-admin');
 const cors = require('cors');
@@ -82,5 +81,3 @@ app.get('/itinerary',async (req, res) => {
 
 
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
-
-

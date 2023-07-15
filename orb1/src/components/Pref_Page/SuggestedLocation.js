@@ -111,4 +111,3 @@ const SuggestedLocations = (props) => {
 };
 
 export default SuggestedLocations;
-

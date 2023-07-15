@@ -3,17 +3,22 @@ import { Routes, Route, BrowserRouter as Router } from "react-router-dom";
 import SignUp from "./pages/Signup";
 import Login from "./pages/Login";
 import LandingPage from "./pages/LandingPage";
+import PastItineraries from "./pages/PastItineraries";
 import Preferences from "./pages/Preferences";
 import Itinerary from "./pages/itinerary";
 import Explore from "./components/Pref_Page/Explore";
 import SuggestedLocations from "./components/Pref_Page/SuggestedLocation";
 import FoodOptions from "./components/Pref_Page/FoodOptions";
-
+import { useEffect } from "react";
 
 
 function App() {
-
-
+  useEffect(() => {
+    if (window.location.pathname !== "/signup") {
+      window.location.href = "/signup";
+    }
+  }, []);
+  
   const saveUserDataHandler = (enteredUserData) => {
     const landingData = {
       ...enteredUserData,
@@ -31,6 +36,7 @@ function App() {
         />
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/pastitineraries" element={<PastItineraries />} />
         <Route path="/explore" element={<Explore />} />
         <Route path="/preferences" element={<Preferences />} />
         <Route path="/Pref_Page/SuggestedLocation" element={<SuggestedLocations />} />

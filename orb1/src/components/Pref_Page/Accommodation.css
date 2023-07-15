@@ -1,70 +1,62 @@
 .container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    height: 70vh;
-    margin: 0;
-    padding: 0;
-    margin-left: 300px;
-    margin-bottom: 20px;
-  }
-  
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  padding: 0 20px;
+}
+
+.form-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 50px;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.input {
+  border-radius: 15px;
+  border: 1px solid #769ABE;
+  padding: 10px;
+  width: 100%;
+  max-width: 500px;
+}
+
+.date-info-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  max-width: 500px;
+  transition: all 0.3s ease-in-out;
+}
+
+.button-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.success-message {
+  text-align: center;
+}
+
+/* Responsive Changes */
+
+@media screen and (max-width: 768px) {
   .form-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 20px;
-    padding: 50px;
-    width: 100%;
-    border-radius: 15px;
-  }
-  
-  .input {
-    border-radius: 15px;
-    border: 1px solid #769ABE;
-    padding: 10px;
-    width: 500px;
-  }
-  
-  .datetime-picker-wrapper {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  .hotel-info-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .date-info-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 20px;
-    margin-right:120px;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .add-button-wrapper {
-    display: flex;
-    justify-content: center;
-    transition: all 0.3s ease-in-out;
+    padding: 30px;
   }
 
-  .panel-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  .input {
+    max-width: 400px;
   }
-  
-  .panel-header span {
-    margin-right: 8px;
-  }
-  
-  
+}

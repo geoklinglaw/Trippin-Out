@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 //import { Steps, Layout, Menu, theme } from "antd";
 import Sidebar from "../components/Sidebar";
-import two from "../images/2.png";
+
 import Explore from "../components/Pref_Page/Explore";
-import Pref from "../components/Pref_Page/Pref";
 import Accommodation from "../components/Pref_Page/Accommodation";
 import Preference from "../components/Pref_Page/Preference";
 import FoodOptions from "../components/Pref_Page/FoodOptions";
