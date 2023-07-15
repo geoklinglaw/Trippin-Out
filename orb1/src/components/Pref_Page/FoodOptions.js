@@ -57,7 +57,7 @@ const FoodOptions = () => {
   // }, []);
 
   async function fetchDataWithParams() {
-      const endpoint = 'http://localhost:5000/foodoptions';
+      const endpoint = 'http://localhost:5123/foodoptions';
       const params = {
           param1: 'value1',
           param2: 'value2',

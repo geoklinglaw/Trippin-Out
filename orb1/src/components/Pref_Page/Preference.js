@@ -6,7 +6,7 @@ import '../../tailwind.css';
 
 
 
-function Preference() {
+function Preference(props) {
   const [preferences, setPreferences] = useState([
     {
       "category": "Arts & Entertainment",
@@ -61,7 +61,7 @@ function Preference() {
 
   
   async function submitPreferences() {
-    const endpoint = 'http://localhost:5000/Preferences';
+    const endpoint = 'http://localhost:5123/Preferences';
     try {
       const response = await axios.post(endpoint, { 
         "preferences": preferences
