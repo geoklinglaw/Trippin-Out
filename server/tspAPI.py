@@ -248,109 +248,359 @@ import json
 
 ########## HAVE NOT IMPLEMENTED DURATION TIME YET ##########
 
-def create_data_model(output, info):
-    """Converts the result from Google Distance Matrix API to data model for TSP."""
-    data = {}
-    rows = output["rows"]
+# def create_data_model(output, info):
+#     """Converts the result from Google Distance Matrix API to data model for TSP."""
+#     data = {}
+#     rows = output["rows"]
     
-    time_matrix = []
-    for row in rows:
+#     time_matrix = []
+#     for row in rows:
+#         row_distances = []
+#         for element in row["elements"]:
+#             if element["status"] == "OK":
+#                 row_distances.append(element["duration"]["value"])
+#             elif element["status"] == "ZERO_RESULTS":
+#                 row_distances.append(0)
+#             else:
+#                 row_distances.append(10000000000)
+#         time_matrix.append(row_distances)
+
+#     num_days = 3
+#     data['time_matrix'] = time_matrix
+#     data['num_vehicles'] = num_days
+#     data['depot'] = 0
+#     # print(data)
+#     return data
+
+# def print_solution(data, manager, routing, solution):
+#     """Prints solution on console."""
+#     print(f'Objective: {int(solution.ObjectiveValue() / 60)}')
+#     max_route_time = 0
+#     for vehicle_id in range(data['num_vehicles']):
+#         index = routing.Start(vehicle_id)
+#         plan_output = 'Route for vehicle {}:\n'.format(vehicle_id)
+#         route_time = 0
+#         while not routing.IsEnd(index):
+#             plan_output += ' {} -> '.format(manager.IndexToNode(index))
+#             previous_index = index
+#             index = solution.Value(routing.NextVar(index))
+#             route_time += routing.GetArcCostForVehicle(previous_index, index, vehicle_id)
+#         plan_output += '{}\n'.format(manager.IndexToNode(index))
+#         plan_output += 'Time of the route: {} minutes\n'.format(int(route_time / 60))
+#         print(plan_output)
+#         max_route_time = max(route_time, max_route_time) / 60
+#     print('Maximum of the route times: {} minutes'.format(int(max_route_time)))
+
+# def get_solution(data, manager, routing, solution):
+#     """Returns solution as a list of dictionaries."""
+#     vrp_output = []
+#     max_route_time = 0
+#     for vehicle_id in range(data['num_vehicles']):
+#         index = routing.Start(vehicle_id)
+#         route = []
+#         route_time = 0
+#         while not routing.IsEnd(index):
+#             route.append(manager.IndexToNode(index))
+#             previous_index = index
+#             index = solution.Value(routing.NextVar(index))
+#             route_time += routing.GetArcCostForVehicle(
+#                 previous_index, index, vehicle_id
+#             )
+#         route.append(manager.IndexToNode(index))
+#         vrp_output.append({
+#             "vehicle": vehicle_id,
+#             "route": route,
+#             "time": int(route_time / 60)
+#         })
+#         max_route_time = max(route_time, max_route_time) / 60
+#     return vrp_output
+
+# def main(output, info):
+#     """Entry point of the program."""
+#     # Instantiate the data problem.
+#     data = create_data_model(output, info)
+
+#     # Create the routing index manager.
+#     manager = pywrapcp.RoutingIndexManager(len(data['time_matrix']),
+#                                            data['num_vehicles'], data['depot'])
+
+#     # Create Routing Model.
+#     routing = pywrapcp.RoutingModel(manager)
+
+
+#     # Create and register a transit callback.
+#     def distance_callback(from_index, to_index):
+#         """Returns the distance between the two nodes."""
+#         # Convert from routing variable Index to distance matrix NodeIndex.
+#         from_node = manager.IndexToNode(from_index)
+#         to_node = manager.IndexToNode(to_index)
+#         return data['time_matrix'][from_node][to_node]
+
+#     transit_callback_index = routing.RegisterTransitCallback(distance_callback)
+
+#     # Define cost of each arc.
+#     routing.SetArcCostEvaluatorOfAllVehicles(transit_callback_index)
+
+#     # Add Distance constraint.
+#     dimension_name = 'Distance'
+#     routing.AddDimension(
+#         transit_callback_index,
+#         0,  # no slack
+#         18000,  # vehicle maximum travel distance
+#         True,  # start cumul to zero
+#         dimension_name)
+#     distance_dimension = routing.GetDimensionOrDie(dimension_name)
+#     distance_dimension.SetGlobalSpanCostCoefficient(100)
+
+#     # Setting first solution heuristic.
+#     search_parameters = pywrapcp.DefaultRoutingSearchParameters()
+#     search_parameters.first_solution_strategy = (
+#         routing_enums_pb2.FirstSolutionStrategy.PATH_CHEAPEST_ARC)
+
+#     # Solve the problem.
+#     solution = routing.SolveWithParameters(search_parameters)
+
+#     # Print solution on console.
+#     if solution:
+#         print_solution(data, manager, routing, solution)
+#         return get_solution(data, manager, routing, solution)
+#     else:
+#         print('No solution found !')
+
+# def get_location_info(vrp_list, accoms):
+#     with open('distance_matrix_results1_20230627T214531790Z.json', 'r') as file:
+#         location_data = json.load(file)
+
+#     sorted_routes = {"results": []}
+
+#     for vrp in vrp_list:
+#         vehicle = vrp["vehicle"]
+#         route_indices = vrp["route"]
+#         time = vrp["time"]
+
+#         sorted_route = {"vehicle": vehicle, "route": [], "time": time, "attraction": []}
+#         # sorted_route["attraction"].append({
+#         #     "name": "Home",
+#         #     "location": f"{accoms}"
+#         # })
+        
+#         for index in route_indices:
+#             if index < len(location_data):
+#                 sorted_route["attraction"].append({
+#                     "name": location_data[index]["name"],
+#                     "location": location_data[index]["location"]
+#                 })
+
+#         sorted_routes["results"].append(sorted_route)
+#         with open('sorted_routes.json', 'w') as file:
+#             json.dump(sorted_routes, file, indent=4)
+
+#     return sorted_routes
+
+
+
+# if __name__ == '__main__':
+
+#     with open('location_list_20230627T205236778Z.json') as f:
+#         info = json.load(f)
+    
+#     accoms = '1.2841401999747222, 103.86086997077395'
+#     with open('timeMatrix/distance_matrix_results_20230627T104314646Z.json') as json_file:
+#         data = json_file.read()
+#         json_data = json.loads(data)
+
+
+#     results = main(json_data, info)
+#     print(results)
+#     sorted = get_location_info(results, accoms)
+#     print(sorted)
+
+
+############### TRY AGAIN
+
+
+
+# def get_location_info(vrp_list, accoms):
+#     with open('distance_matrix_results1_20230627T214531790Z.json', 'r') as file:
+#         location_data = json.load(file)
+
+#     sorted_routes = {"results": []}
+
+#     for vrp in vrp_list:
+#         vehicle = vrp["vehicle"]
+#         route_indices = vrp["route"]
+#         time = vrp["time"]
+
+#         sorted_route = {"vehicle": vehicle, "route": [], "time": time, "attraction": []}
+#         # sorted_route["attraction"].append({
+#         #     "name": "Home",
+#         #     "location": f"{accoms}"
+#         # })
+        
+#         for index in route_indices:
+#             if index < len(location_data):
+#                 sorted_route["attraction"].append({
+#                     "name": location_data[index]["name"],
+#                     "location": location_data[index]["location"]
+#                 })
+
+#         sorted_routes["results"].append(sorted_route)
+#         with open('sorted_routes.json', 'w') as file:
+#             json.dump(sorted_routes, file, indent=4)
+
+#     return sorted_routes
+
+def create_dist_matrix(data):
+    # Create an empty distances list
+    distances = []
+
+    # Go through each row in the 'rows' field of the JSON data
+    for row in data["rows"]:
+        # Create a list to hold the distances for this row
         row_distances = []
+        
+        # Go through each 'element' in this row
         for element in row["elements"]:
+            # If the status is 'OK', extract the 'value' field of the 'distance' field
             if element["status"] == "OK":
-                row_distances.append(element["duration"]["value"])
-            elif element["status"] == "ZERO_RESULTS":
-                row_distances.append(0)
+                row_distances.append(element["distance"]["value"])
+            # If the status is not 'OK', use a very high value to indicate that there is no direct path
             else:
-                row_distances.append(10000000000)
-        time_matrix.append(row_distances)
+                row_distances.append(float('inf'))
+        
+        # Add this row's distances to the overall distances list
+        distances.append(row_distances)    
 
-    num_days = 3
-    data['time_matrix'] = time_matrix
-    data['num_vehicles'] = num_days
-    data['depot'] = 0
-    # print(data)
-    return data
+    return distances
 
-def print_solution(data, manager, routing, solution):
-    """Prints solution on console."""
-    print(f'Objective: {int(solution.ObjectiveValue() / 60)}')
-    max_route_time = 0
-    for vehicle_id in range(data['num_vehicles']):
-        index = routing.Start(vehicle_id)
-        plan_output = 'Route for vehicle {}:\n'.format(vehicle_id)
-        route_time = 0
-        while not routing.IsEnd(index):
-            plan_output += ' {} -> '.format(manager.IndexToNode(index))
-            previous_index = index
-            index = solution.Value(routing.NextVar(index))
-            route_time += routing.GetArcCostForVehicle(previous_index, index, vehicle_id)
-        plan_output += '{}\n'.format(manager.IndexToNode(index))
-        plan_output += 'Time of the route: {} minutes\n'.format(int(route_time / 60))
-        print(plan_output)
-        max_route_time = max(route_time, max_route_time) / 60
-    print('Maximum of the route times: {} minutes'.format(int(max_route_time)))
+def find_nearest_neighbor(current, distances, visited):
+    """"
+    This function finds the nearest neighbor of the current node
+    """
+    print(f"current {current}")
+    min_distance = float('inf')
+    nearest = -1
+    for i in range(len(distances)):
+        if not visited[i] and distances[current][i] < min_distance:
+            min_distance = distances[current][i]
+            nearest = i
+    print("nearest neighbor")
+    print(nearest)
+    return nearest
 
-def get_solution(data, manager, routing, solution):
-    """Returns solution as a list of dictionaries."""
-    vrp_output = []
-    max_route_time = 0
-    for vehicle_id in range(data['num_vehicles']):
-        index = routing.Start(vehicle_id)
-        route = []
-        route_time = 0
-        while not routing.IsEnd(index):
-            route.append(manager.IndexToNode(index))
-            previous_index = index
-            index = solution.Value(routing.NextVar(index))
-            route_time += routing.GetArcCostForVehicle(
-                previous_index, index, vehicle_id
-            )
+def sort_activities(distances):
+    """"
+    This function sorts the activities based on the nearest neighbor heuristic
+    """
+    N = len(distances)
+    visited = [False]*N
+    visited[0] = True  # Assuming accommodation is at index 0
+    current = 0  # Start at accommodation
+    itinerary = [0]  # Start itinerary with accommodation
+
+    for _ in range(N-1):  # Do this N-1 times
+        next_activity = find_nearest_neighbor(current, distances, visited)
+        visited[next_activity] = True
+        itinerary.append(next_activity)
+        current = next_activity
+    print("sort activities")
+    print(itinerary)
+
+    return itinerary
+
+
+def split_into_days(itinerary, num_days, max_duration, data):
+    """ 
+    This function splits the itinerary into days, with the accommodation at the start and end of each day, represented by 0
+    """
+    itinerary = itinerary[1:]  # Remove the accommodation from the itinerary
+    # Determine the number of activities per day
+    activities_per_day = len(itinerary) // num_days
+
+    # If there are leftover activities, spread them across the first few days
+    leftover_activities = len(itinerary) % num_days
+
+    # Initialize the itinerary for each day
+    itinerary_days = []
+
+    for i in range(num_days):
+        # The start and end of each day is the accommodation
+        day = [0]
+
+        # Add the activities for this day
+        start = i*activities_per_day
+        end = (i+1)*activities_per_day
+        day += itinerary[start:end]
+
+        # If there are leftover activities, add one to this day
+        if leftover_activities > 0:
+            day += [itinerary[end]]
+            end += 1
+            leftover_activities -= 1
+
+        # Add this day to the itinerary
+        itinerary_days.append(day)
+
+    print("itinerary days")
+    print(itinerary_days)
+    return itinerary_days
+
+
+def create_data_model(output, day):
+    """Converts the result from Google Distance Matrix API to data model for TSP."""
+    """Creates the data model for a specific day."""
+    rows = output["rows"]
+    day = [i for i in day]
+
+    # Extract the subset of the time matrix for the specific day.
+    time_matrix = [
+        [
+            rows[i]["elements"][j]["duration"]["value"]
+            if rows[i]["elements"][j]["status"] == "OK"
+            else (0 if rows[i]["elements"][j]["status"] == "ZERO_RESULTS" else 10000000000)
+            for j in day
+        ]
+        for i in day
+    ]
+
+    return {
+        'distance_matrix': time_matrix,  
+        'num_vehicles': 1,
+        'depot': 0,
+    }
+
+
+def get_solution(manager, routing, solution):
+    """Returns solution as a list of indices."""
+    index = routing.Start(0)
+    route = []
+    while not routing.IsEnd(index):
         route.append(manager.IndexToNode(index))
-        vrp_output.append({
-            "vehicle": vehicle_id,
-            "route": route,
-            "time": int(route_time / 60)
-        })
-        max_route_time = max(route_time, max_route_time) / 60
-    return vrp_output
+        index = solution.Value(routing.NextVar(index))
+    route.append(manager.IndexToNode(index))  # append the end node
+    return route
 
-def main(output, info):
-    """Entry point of the program."""
-    # Instantiate the data problem.
-    data = create_data_model(output, info)
 
+def solve_tsp(data):
     # Create the routing index manager.
-    manager = pywrapcp.RoutingIndexManager(len(data['time_matrix']),
+    manager = pywrapcp.RoutingIndexManager(len(data['distance_matrix']),
                                            data['num_vehicles'], data['depot'])
 
     # Create Routing Model.
     routing = pywrapcp.RoutingModel(manager)
 
 
-    # Create and register a transit callback.
     def distance_callback(from_index, to_index):
         """Returns the distance between the two nodes."""
         # Convert from routing variable Index to distance matrix NodeIndex.
         from_node = manager.IndexToNode(from_index)
         to_node = manager.IndexToNode(to_index)
-        return data['time_matrix'][from_node][to_node]
+        return data['distance_matrix'][from_node][to_node]
 
     transit_callback_index = routing.RegisterTransitCallback(distance_callback)
 
     # Define cost of each arc.
     routing.SetArcCostEvaluatorOfAllVehicles(transit_callback_index)
-
-    # Add Distance constraint.
-    dimension_name = 'Distance'
-    routing.AddDimension(
-        transit_callback_index,
-        0,  # no slack
-        18000,  # vehicle maximum travel distance
-        True,  # start cumul to zero
-        dimension_name)
-    distance_dimension = routing.GetDimensionOrDie(dimension_name)
-    distance_dimension.SetGlobalSpanCostCoefficient(100)
 
     # Setting first solution heuristic.
     search_parameters = pywrapcp.DefaultRoutingSearchParameters()
@@ -362,40 +612,48 @@ def main(output, info):
 
     # Print solution on console.
     if solution:
-        print_solution(data, manager, routing, solution)
-        return get_solution(data, manager, routing, solution)
-    else:
-        print('No solution found !')
+        tsp_result = get_solution(manager, routing, solution)
+        return tsp_result
 
-def get_location_info(vrp_list, accoms):
-    with open('location_list_20230627T205236778Z.json', 'r') as file:
-        location_data = json.load(file)
 
-    sorted_routes = {"results": []}
+def map_tsp_to_original(tsp_results, original_indices):
+    mapped_results = {}
+    # print(type(original_indices))
+    for day, result in enumerate(tsp_results, start=1):
+        print(f"{day}: {result}")
+        mapped_day = []
+        for idx in result:
+            original_idx = original_indices[day-1][idx]
+            mapped_day.append(original_idx)
+        mapped_results.update({f"day{day}": mapped_day})
 
-    for vrp in vrp_list:
-        vehicle = vrp["vehicle"]
-        route_indices = vrp["route"]
-        time = vrp["time"]
+    return mapped_results
 
-        sorted_route = {"vehicle": vehicle, "route": [], "time": time, "attraction": []}
-        # sorted_route["attraction"].append({
-        #     "name": "Home",
-        #     "location": f"{accoms}"
-        # })
+
+
+
+def main(input, info):
+
+    dist_matrix = create_dist_matrix(input)
+    itinerary = sort_activities(dist_matrix)
+    num_days = 2
+    max_duration = 7
+    itinerary_days = split_into_days(itinerary, num_days, max_duration, data)
+    data_models_for_days = [create_data_model(input, day) for day in itinerary_days]
+
+    results = []
+    for i, data_model in enumerate(data_models_for_days, start=1):
+        solution = solve_tsp(data_model)
+        results.append(solution)
+    
+    mapped_results = map_tsp_to_original(results, itinerary_days)
+    return mapped_results
+    
+    # for results in mapped_results.values():
+    #     print(results)
         
-        for index in route_indices:
-            if index < len(location_data):
-                sorted_route["attraction"].append({
-                    "name": location_data[index]["name"],
-                    "location": location_data[index]["location"]
-                })
 
-        sorted_routes["results"].append(sorted_route)
-        with open('sorted_routes.json', 'w') as file:
-            json.dump(sorted_routes, file, indent=4)
-
-    return sorted_routes
+    
 
 
 
@@ -405,12 +663,14 @@ if __name__ == '__main__':
         info = json.load(f)
     
     accoms = '1.2841401999747222, 103.86086997077395'
-    with open('timeMatrix/distance_matrix_results1_20230627T214453014Z.json') as json_file:
+    with open('timeMatrix/distance_matrix_results_20230627T104314646Z.json') as json_file:
         data = json_file.read()
         json_data = json.loads(data)
 
 
     results = main(json_data, info)
     print(results)
-    sorted = get_location_info(results, accoms)
-    print(sorted)
+
+    # print(results)
+    # sorted = get_location_info(results, accoms)
+    # print(sorted)
