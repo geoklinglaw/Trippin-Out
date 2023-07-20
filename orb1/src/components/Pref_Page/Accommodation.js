@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import { Form, Input, Button, Collapse, DatePicker, message } from "antd";
-import { DeleteOutlined } from "@ant-design/icons";
 import { saveAccommodationDetails } from "../../pages/authStore";
 import "./Accommodation.css";
 import { auth } from "../../firebase";
@@ -14,6 +13,7 @@ function Accommodation(props) {
       location: "",
       checkInDateTime: null,
       checkOutDateTime: null,
+      latLong: "",
     },
   ]);
   const [isSaved, setIsSaved] = useState(false);
@@ -44,7 +44,7 @@ function Accommodation(props) {
     };
     setAccommodations(updatedAccommodations);
   };
-  
+
   const handleCheckOutDateTimeChange = (index, value) => {
     const updatedAccommodations = [...accommodations];
     updatedAccommodations[index] = {
@@ -53,22 +53,17 @@ function Accommodation(props) {
     };
     setAccommodations(updatedAccommodations);
   };
-  
-  const addAccommodation = () => {
-    const newAccommodation = {
-      hotelName: "",
-      location: "",
-      checkInDateTime: null,
-      checkOutDateTime: null,
-    };
-    setAccommodations([...accommodations, newAccommodation]);
-  };
 
-  const removeAccommodation = (index) => {
+  const handleLatLongChange = (index, value) => {
     const updatedAccommodations = [...accommodations];
-    updatedAccommodations.splice(index, 1);
+    updatedAccommodations[index] = {
+      ...updatedAccommodations[index],
+      latLong: value,
+    };
     setAccommodations(updatedAccommodations);
   };
+
+
 
   const handleSubmit = async () => {
     try {
@@ -77,14 +72,15 @@ function Accommodation(props) {
         location: accommodation.location,
         checkInDateTime: accommodation.checkInDateTime,
         checkOutDateTime: accommodation.checkOutDateTime,
+        latLong: accommodation.latLong,
       }));
-  
+
       // Save the accommodation details to Firestore
       const userId = auth.currentUser.uid;
       const tripId = Math.random().toString();
-  
+
       await saveAccommodationDetails(userId, tripId, accommodationDetails);
-  
+
       console.log("Accommodation details saved to Firestore");
       setIsSaved(true);
       message.success("Accommodation details saved successfully!");
@@ -93,7 +89,7 @@ function Accommodation(props) {
       message.error("Error saving accommodation details");
     }
   };
-
+  
   return (
     <div className="container">
       <div className="form-wrapper">
@@ -102,17 +98,21 @@ function Accommodation(props) {
             <Panel
               header={
                 <div className="panel-header">
-                  <span>Accommodation {index + 1}</span>
+                  <span>Accommodation Details</span>
                   <Button
                     type="text"
-                    icon={<DeleteOutlined />}
-                    onClick={() => removeAccommodation(index)}
+              
                   />
                 </div>
               }
               key={index.toString()}
             >
-              <Form name={`accommodation-form-${index}`} initialValues={accommodation}>
+              <Form
+              style={{ maxWidth: 20000000 }}
+              labelCol={{ span: 8 }}
+              wrapperCol={{ span: 14 }}
+              layout="horizontal"
+               name={`accommodation-form-${index}`} initialValues={accommodation}>
                 <Form.Item
                   name={`hotelName-${index}`}
                   label="Hotel Name"
@@ -136,24 +136,46 @@ function Accommodation(props) {
                   />
                 </Form.Item>
                 <Form.Item
+                  name={`latLong-${index}`}
+                  label="Lat-Long"
+                  rules={[
+                    {
+                      required: true,
+                      message: "Please enter the latitude and longitude!",
+                    },
+                    {
+                      pattern: /^\s*-?\d{1,2}(?:\.\d{1,2})?,\s*-?\d{1,3}(?:\.\d{1,2})?\s*$/,
+                      message: "Please enter the latitude and longitude in the format: 37.51,127.09",
+                    },
+                  ]}
+                >
+                  <div className="input-container">
+                  <Input
+                    placeholder="Latitude-Longitude"
+                    className="input"
+                    onChange={(e) => handleLatLongChange(index, e.target.value)}
+                  />
+                </div>
+                </Form.Item>
+                <Form.Item
                   name={`checkInDate-${index}`}
-                  label="Check-in Date"
+                  label="Check-in"
                   rules={[{ required: true, message: "Please select the check-in date!" }]}
                 >
                   <DatePicker
                     className="input"
-                    style={{ width: '100%' }}
+                    style={{ width: "100%" }}
                     onChange={(value) => handleCheckInDateTimeChange(index, value)}
                   />
                 </Form.Item>
                 <Form.Item
                   name={`checkOutDate-${index}`}
-                  label="Check-out Date"
+                  label="Check-out "
                   rules={[{ required: true, message: "Please select the check-out date!" }]}
                 >
                   <DatePicker
                     className="input"
-                    style={{ width: '100%' }}
+                    style={{ width: "100%" }}
                     onChange={(value) => handleCheckOutDateTimeChange(index, value)}
                   />
                 </Form.Item>
@@ -162,9 +184,6 @@ function Accommodation(props) {
           ))}
         </Collapse>
         <div className="button-wrapper">
-          <Button type="dashed" onClick={addAccommodation}>
-            Add Accommodation
-          </Button>
           <Button type="primary" onClick={handleSubmit}>
             Submit
           </Button>

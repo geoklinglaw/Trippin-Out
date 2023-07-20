@@ -6,28 +6,27 @@ import { getFirestore } from 'firebase/firestore';
 import { db, firebase } from '../../firebase';
 import { collection, query, getDocs, addDoc, doc, setDoc } from "firebase/firestore";
 import axios from 'axios';
+import  useStore  from '../../pages/authStore';
 
 const SuggestedLocations = (props) => {
-  const {data} = props.data;
-
-  const [locations, setLocations] = useState([]);
-  const [selectedLocations, setSelectedLocations] = useState({});
-  const [error, setError] = useState(null);
+  const suggestedLocations = useStore((state) => state.suggestedLocations);
+  const selectedSuggestedLocations = useStore((state) => state.selectedSuggestedLocations);
+  const setSuggestedLocations = useStore((state) => state.setSuggestedLocations);
+  const setSelectedSuggestedLocations = useStore((state) => state.setSelectedSuggestedLocations);
 
   const toggleSelected = (props) => {
     const { locationId, photo, name, formatted_address, price } = props;
-  
-    setSelectedLocations(prevSelected => ({
-      ...prevSelected,
-      [locationId]: prevSelected[locationId]
+    setSelectedSuggestedLocations({
+      ...selectedSuggestedLocations,
+      [locationId]: selectedSuggestedLocations[locationId]
         ? undefined 
         : { name, locationId, photo, formatted_address, price } 
-    }));
+    });
   };
   
 
   const submitData = async () => {
-    const selectedData = Object.values(selectedLocations).filter(location => location);
+    const selectedData = Object.values(selectedSuggestedLocations).filter(location => location);
 
     const userID = 'pVOrWYawmnkMvUu3IFtn';
     const tripID = 'V1NBZp7HSK7hnEkKT0Aw';
@@ -56,16 +55,16 @@ const SuggestedLocations = (props) => {
   
 
   // useEffect(() => {
-    // // filename: location_list_20230625T195008389Z.json
-    // const filename = 'location_list_20230627T131746308Z.json';
-    // fetch(`http://localhost:5000/files/${filename}`)
-    //       .then(response => response.json())
-    //       .then(data => {
-    //           console.log(data);
-    //           setLocations(data); 
-    //       })
-    //       .catch(error => console.error('Error fetching data:', error));
-    // }, []);
+  //   // filename: location_list_20230625T195008389Z.json
+  //   const filename = 'location_list_20230627T131746308Z.json';
+  //   fetch(`http://localhost:5123/files/${filename}`)
+  //         .then(response => response.json())
+  //         .then(data => {
+  //             console.log(data);
+  //             setSuggestedLocations(data); 
+  //         })
+  //         .catch(error => console.error('Error fetching data:', error));
+  //   }, []);
 
 
   return (
@@ -84,11 +83,11 @@ const SuggestedLocations = (props) => {
                 gap: "20px",
               }}
             >
-              {data.map((location, index) => (
+              {suggestedLocations.map((location, index) => (
                   <SuggLocations
                     key={index}
                     locationId={index}
-                    selected={!!selectedLocations[index]}
+                    selected={!!selectedSuggestedLocations[index]}
                     toggleSelected={toggleSelected}
                     photo={location.photos ? location.photos[0] : null}
                     name={location.name}

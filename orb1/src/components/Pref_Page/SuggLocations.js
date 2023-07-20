@@ -27,7 +27,7 @@ function SuggLocations(props) {
                 style={{ position: "absolute", top: "10px", right: "10px" }}
                 type="checkbox"
                 checked={props.selected}
-                onChange={() => props.toggleSelected(props)} // passes locationId out to toggleSelected in suggestedLocations.js
+                onClick={() => props.toggleSelected(props)} // passes locationId out to toggleSelected in suggestedLocations.js
             />
             <div style={{ width: "100%", height: "200px", overflow: "hidden" }}>
                 <img

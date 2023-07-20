@@ -46,7 +46,7 @@ const Itinerary = () => {
     };
 
     async function fetchDataWithParams(locations, food, accoms) {
-        const endpoint = "http://localhost:5000/itinerary";
+        const endpoint = "http://localhost:5123/itinerary";
         try {
           const response = await axios.get(endpoint, {
             params: { 

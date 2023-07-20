@@ -10,6 +10,8 @@
     border-radius: 10px;
     margin: 20px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+
+  
   }
   
   .product h3 {
@@ -30,5 +32,12 @@
   .product a:hover {
     color: #1C395B;
     text-decoration: none;
+  }
+  
+  .product-image {
+    width: 50vh; /* Set the desired width */
+    height: 20vh; /* Set the desired height or use "auto" for maintaining aspect ratio */
+    object-fit: cover; /* Adjusts how the image fills its container */
+    /* Add any additional styles here */
   }
   

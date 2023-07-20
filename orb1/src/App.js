@@ -13,11 +13,7 @@ import { useEffect } from "react";
 
 
 function App() {
-  useEffect(() => {
-    if (window.location.pathname !== "/signup") {
-      window.location.href = "/signup";
-    }
-  }, []);
+ 
   
   const saveUserDataHandler = (enteredUserData) => {
     const landingData = {
