@@ -7,6 +7,7 @@ import { createUserWithEmailAndPassword, sendEmailVerification } from "firebase/
 import { db, auth } from "../firebase";
 import { collection, doc, setDoc } from "firebase/firestore";
 
+
 const SignUp = () => {
   const navigate = useNavigate();
   const [email, setEmail] = useState("");
@@ -59,9 +60,7 @@ const SignUp = () => {
       <div className="Signup-logo">
         <img src={logo} alt="Logo" className="Signup-logo-image" />
       </div>
-      <div className="Signup-heading">
-        <h2>Trippin out</h2>
-      </div>
+      
       <Card className="Signup-card">
         {error && <Alert type="error" message={error} />}
         <h2>Register here!</h2>

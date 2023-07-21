@@ -78,8 +78,7 @@ const Itinerary = () => {
     const [locations, setLocations] = useState(null);
     const route = {'day1': [0, 5, 1, 6, 7, 0], 'day2': [0, 6, 3, 2, 0]};
 
-
-
+z
     useEffect(() => {
         const filename = 'location_list_20230627T205236778Z.json';
         fetch(`http://localhost:5000/files/${filename}`)

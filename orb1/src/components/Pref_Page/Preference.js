@@ -1,67 +1,73 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { InputNumber, Button, message } from "antd";
+import  useStore  from '../../pages/authStore';
+import { getDoc, db, firebase } from "../../firebase";
 import axios from 'axios';
 import "./Preference.css";
 import '../../tailwind.css';
 import SuggestedLocations from './SuggestedLocation.js'
-
+import {
+  collection,
+  query,
+  getDocs,
+  addDoc,
+  doc,
+  setDoc,
+} from "firebase/firestore";
 
 function Preference(props) {
+  const preferences = useStore((state) => state.preferences);
+  const setPreferences = useStore((state) => state.setPreferences);
+  const setSuggestedLocations = useStore((state) => state.setSuggestedLocations);
+  const setLocations = useStore((state) => state.setfoodLocations);
 
-  const [preferences, setPreferences] = useState([
-    {
-      "category": "Exhibitions & Museums",
-      "category_id": "10000",
-      "activity_duration": 2,
-      "rank": undefined
-    },
-    {
-      "category": "Sports and Recreation",
-      "category_id": "18067",
-      "activity_duration": 2,
-      "rank": undefined
-    },
-    {
-      "category": "Night Life",
-      "category_id": "10032",
-      "activity_duration": 3,
-      "rank": undefined
-    },
-    {
-      "category": "Historic & Protected Sites",
-      "category_id": "16020",
-      "activity_duration": 3,
-      "rank": undefined
-    },
-    {
-      "category": "Landmark & Outdoors",
-      "category_id": "16000",
-      "activity_duration": 3,
-      "rank": undefined
-    },
-    {
-      "category": "Entertainment Events",
-      "category_id": "14003",
-      "activity_duration": 3,
-      "rank": undefined
+  async function fetchDataWithParams(destination) {
+    const endpoint = "http://localhost:5123/food-options";
+    try {
+      const response = await axios.get(endpoint, {
+        params: { destination },
+      });
+      console.log("response: ", response.data.data);
+      return response.data.data; 
+    } catch (error) {
+      console.error("Error retrieving data: ", error);
     }
-    // {
-    //   "category": "Dining",
-    //   "category_id": "13000",
-    //   "activity_duration": 1,
-    //   "rank": undefined
-    // }
-  ]);
+  }
+  
+  async function fetchfromFirebase() {
+    const userID = "dBLCC8TXlrYkYQXDZ7f5eFyvex92" // "pVOrWYawmnkMvUu3IFtn";
+    const tripID = "sdIccla3xbdTQLpCjn7Y" // "V1NBZp7HSK7hnEkKT0Aw";
+
+    const destinationRef = doc(db, "users", userID, "trips", tripID);
+    const destinationSnap = await getDoc(destinationRef);
+
+    if (destinationSnap.exists()) {
+      const accommodation = destinationSnap.data().latlong;
+      return accommodation;
+    } else {
+      console.error("No such document exists!");
+    }
+  }
+
+  useEffect(() => {
+    (async () => {
+      const destination = await fetchfromFirebase();
+      const locationsData = await fetchDataWithParams(destination);
+      setLocations(locationsData);
+    })();
+  }, [setLocations]);
+    
 
   const handlePreferenceChange = (index) => (value) => {
     const newValue = Math.min(Math.max(value, 1), 7);
     const newPreferences = [...preferences];
     newPreferences[index].rank = newValue;
     setPreferences(newPreferences);
+    console.log(newPreferences);
   };
   
   async function submitPreferences() {
-    const endpoint = 'http://localhost:5000/Preferences';
+    const endpoint = 'http://localhost:5123/Preferences';
     try {
       const response = await axios.post(endpoint, { 
         preferences
@@ -76,6 +82,7 @@ function Preference(props) {
   
   const handleSubmit = async () => {
     const ranks = preferences.map(p => p.rank);
+    console.log(ranks); // Add this line to see the rankings before validation
     const uniqueRanks = new Set(ranks);
 
     if (uniqueRanks.size !== ranks.length) {
@@ -83,7 +90,8 @@ function Preference(props) {
       return;
     } else {
       const responseData = await submitPreferences();
-      console.log(responseData);
+      console.log(responseData.data);
+      setSuggestedLocations(responseData.data);
       props.onPreferencesSubmitted(responseData);
       props.onSubmit();
 

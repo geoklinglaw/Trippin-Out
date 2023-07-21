@@ -40,21 +40,7 @@ const Login = () => {
   };
   
 
-  // const handleGoogleLogin = () => {
-  //   const auth = getAuth();
-  //   const provider = new GoogleAuthProvider();
-
-  //   signInWithPopup(auth, provider)
-  //     .then((result) => {
-  //       // Perform any necessary actions after successful Google login
-  //       console.log("Google login successful", result.user);
-  //       navigate("/GoogleLogin");
-  //     })
-  //     .catch((error) => {
-  //       // Handle any errors that occur during Google login
-  //       console.error("Google login error", error);
-  //     });
-  // };
+ 
 
   return (
     <div className="container">
@@ -99,10 +85,8 @@ const Login = () => {
             >
               Login
             </Button>
-            <div className="line"></div>
-            {/* <Button className="google-button" onClick={handleGoogleLogin}>
-              <Link to="/google-login">Login with Google</Link>
-            </Button> */}
+           
+          
           </div>
           <label className="login-status">{store.loginStatus}</label>
         </Card>

@@ -16,12 +16,14 @@ import {
 import { Routes, Route, NavLink, useNavigate } from "react-router-dom";
 import itinerary from "./../../pages/itinerary";
 import axios from "axios";
+import  useStore  from '../../pages/authStore';
 
 const FoodOptions = () => {
-  // const { userID, setUserID } = useContext(UserContext);
-  const [locations, setLocations] = useState([]);
-  const [selectedLocations, setSelectedLocations] = useState({}); // keep track of selected locations
-  const [error, setError] = useState(null);
+ // Use the state and actions from authStore.js
+ const locations = useStore((state) => state.foodLocations);
+ const selectedLocations = useStore((state) => state.selectedfoodLocations);
+ const setLocations = useStore((state) => state.setfoodLocations);
+ const setSelectedLocations = useStore((state) => state.setSelectedfoodLocations);
   const navigate = useNavigate();
 
   const YOUR_API_KEY = "AIzaSyCcw5UjfxwKAhVVUeSqjp_Gx4wxFys8mbo";
@@ -29,12 +31,12 @@ const FoodOptions = () => {
   const toggleSelected = (props) => {
     const { locationId, photo, name, formatted_address, price } = props;
 
-    setSelectedLocations((prevSelected) => ({
-      ...prevSelected,
-      [locationId]: prevSelected[locationId]
+    setSelectedLocations({
+      ...selectedLocations,
+      [locationId]: setSelectedLocations[locationId]
         ? undefined
         : { name, locationId, photo, formatted_address, price },
-    }));
+    });
   };
 
   const handleClick = (e) => {
@@ -58,50 +60,7 @@ const FoodOptions = () => {
   //         })
   //         .catch(error => console.error('Error fetching data:', error));
   // }, []);
-  async function fetchDataWithParams(destination) {
-    const endpoint = "http://localhost:5000/food-options";
-    try {
-      const response = await axios.get(endpoint, {
-        params: { destination },
-      });
-      console.log("response: ", response.data.data);
-      return response.data.data; 
-    } catch (error) {
-      console.error("Error retrieving data: ", error);
-    }
-  }
   
-  async function fetchfromFirebase() {
-    const userID = "dBLCC8TXlrYkYQXDZ7f5eFyvex92" // "pVOrWYawmnkMvUu3IFtn";
-    const tripID = "sdIccla3xbdTQLpCjn7Y" // "V1NBZp7HSK7hnEkKT0Aw";
-
-    const destinationRef = doc(db, "users", userID, "trips", tripID);
-    const destinationSnap = await getDoc(destinationRef);
-
-    if (destinationSnap.exists()) {
-      const accommodation = destinationSnap.data().latlong;
-      return accommodation;
-    } else {
-      console.error("No such document exists!");
-    }
-  }
-
-  useEffect(() => {
-    (async () => {
-      const destination = await fetchfromFirebase();
-      const locationsData = await fetchDataWithParams(destination);
-      setLocations(locationsData);
-    })();
-  }, []);
-  
-
-  useEffect(() => {
-    (async () => {
-      const destination = await fetchfromFirebase();
-      const locationsData = await fetchDataWithParams(destination);
-      setLocations(locationsData);
-    })();
-  }, []);
   
 
   const submitData = async () => {
