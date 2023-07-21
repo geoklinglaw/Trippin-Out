@@ -57,6 +57,7 @@ const sdk = require('api')('@fsq-developer/v1.0#x6xjhzlic2gi70');
                 // Append activity_duration to each item in results array
                 data.results.forEach(item => {
                     item.activity_duration = duration;
+                    item.category = cat_id;
                 });
                 // console.log(data)
                 return data
