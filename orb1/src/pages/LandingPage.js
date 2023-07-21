@@ -1,4 +1,3 @@
-
 import { Card, Space, Form, message, Button } from "antd";
 import React, { useState } from "react";
 import Header from "../components/Header.js";
@@ -7,23 +6,28 @@ import DateSelector from "../components/DateSelector";
 import NumberInput from "../components/NumberInput";
 import "./LandingPage.css";
 import { db, auth } from "../firebase";
-import { doc, setDoc } from "firebase/firestore";
-import useAuthStore from "./authStore";
+import { doc, setDoc, Timestamp } from "firebase/firestore";
+import useAuthStore, { saveLandingPageDetails, saveAccommodationDetails } from "./authStore";
 import moment from "moment";
-import {useNavigate} from "react-router-dom";
-import Accommodation from ".././components/Pref_Page/Accommodation"; // Import the Accommodation component
-
-
+import { useNavigate } from "react-router-dom";
 
 function LandingPage() {
   const [form] = Form.useForm();
   const [error, setError] = useState(null);
-  const { email } = useAuthStore();
+  const { email, setAccommodation } = useAuthStore();
   const [destination, setDestination] = useState("");
   const [guests, setGuests] = useState("");
+  const [accommodations, setAccommodations] = useState([
+    {
+      hotelName: "",
+      location: "",
+      checkInDateTime: null,
+      checkOutDateTime: null,
+      latLong: "",
+    },
+  ]);
+  const [isSaved, setIsSaved] = useState(false);
   const navigate = useNavigate();
-  const [tripId, setTripId] = useState(""); // State for tripId
-  const authStore = useAuthStore();
 
   const peopleChangeHandler = (value) => {
     setGuests(value);
@@ -31,28 +35,35 @@ function LandingPage() {
 
   const onFinish = async (values) => {
     try {
-
       const userId = auth.currentUser.uid;
       const tripId = Math.random().toString();
-      authStore.setTripId(tripId); // Update the tripId in the authStore
-      const tripRef = doc(db, "users", userId, "trips", tripId);
+      console.log(userId, tripId);
+      const duration = values.duration[1].diff(values.duration[0], "days");
 
-      const duration = moment(values.duration); // Convert to moment object
-      const formattedDuration = duration.format("YYYY-MM-DD HH:mm"); // Format the duration
-      
-      await setDoc(tripRef, {
+      await setDoc(doc(db, "users", userId, "trips", tripId), {
         email: email,
         destination: destination,
-        duration: formattedDuration,
+        duration: parseInt(duration),
         guests: parseInt(values.guests),
       });
 
       message.success("Submit success!");
       form.resetFields();
-      setTripId(tripId); // Set the generated tripId in state
+
+      // Save the landing page details using the saveLandingPageDetails function
+      // await saveLandingPageDetails(userId, tripId, {
+      //   email: email,
+      //   destination: destination,
+      //   duration: duration,
+      //   guests: parseInt(values.guests),
+      // });
+
+      // Save the accommodation details using the saveAccommodationDetails function
+      await saveAccommodationDetails(userId, tripId, accommodations);
+
+      setAccommodation(accommodations); // Update the state in the store with accommodation details
+
       navigate("/preferences?tripId=" + tripId);
-
-
     } catch (error) {
       console.error("Error storing data:", error);
       setError("Submit failed!");
@@ -64,18 +75,14 @@ function LandingPage() {
     setError("Submit failed!");
   };
 
-  
-  
-const destinationChangeHandler = (e) => {
-  setDestination(e.key); // Update destination state with the selected value
-};
-
+  const destinationChangeHandler = (e) => {
+    setDestination(e.key); // Update destination state with the selected value
+  };
 
   const dateChangeHandler = (_, dateString) => {
     console.log(dateString);
   };
 
-  
   return (
     <>
       <Header />
@@ -104,28 +111,21 @@ const destinationChangeHandler = (e) => {
                 justifyContent: "center",
               }}
             >
-              <h2
-                className="Title"
-                style={{ textAlign: "center", marginTop: "50px" }}
-              >
+              <h2 className="Title" style={{ textAlign: "center", marginTop: "50px" }}>
                 We've Got Your Journey Covered &#128526;
               </h2>
               <div className="Card">
                 <Form.Item
                   name="destination"
                   label="Destination"
-                  rules={[
-                    { required: true, message: "Please select a destination!" },
-                  ]}
+                  rules={[{ required: true, message: "Please select a destination!" }]}
                 >
                   <DropdownButton onChange={destinationChangeHandler} />
                 </Form.Item>
                 <Form.Item
                   name="duration"
                   label="Duration"
-                  rules={[
-                    { required: true, message: "Please select a duration!" },
-                  ]}
+                  rules={[{ required: true, message: "Please select a duration!" }]}
                 >
                   <DateSelector onChange={dateChangeHandler} />
                 </Form.Item>
@@ -148,11 +148,7 @@ const destinationChangeHandler = (e) => {
                 </Form.Item>
                 <Form.Item>
                   <Space>
-                    <Button
-                      style={{ backgroundColor: "#5186CD", color: "white" }}
-                      type="primary"
-                      htmlType="submit"
-                    >
+                    <Button style={{ backgroundColor: "#5186CD", color: "white" }} type="primary" htmlType="submit">
                       Submit
                     </Button>
                   </Space>
@@ -162,8 +158,6 @@ const destinationChangeHandler = (e) => {
           </Space>
         </div>
       </Form>
-     
-      
     </>
   );
 }

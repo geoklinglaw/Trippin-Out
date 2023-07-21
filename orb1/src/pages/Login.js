@@ -5,7 +5,7 @@ import { Card, Input, Button } from "antd";
 import LoginImage from "../images/login.png";
 import { Link, useNavigate } from "react-router-dom";
 import "./Login.css";
-import { getAuth, signInWithPopup, GoogleAuthProvider, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 import useAuthStore from "./authStore";
 import { doc, setDoc } from "firebase/firestore"; 
 import { auth, firestore } from "../firebase";
@@ -40,21 +40,7 @@ const Login = () => {
   };
   
 
-  const handleGoogleLogin = () => {
-    const auth = getAuth();
-    const provider = new GoogleAuthProvider();
-
-    signInWithPopup(auth, provider)
-      .then((result) => {
-        // Perform any necessary actions after successful Google login
-        console.log("Google login successful", result.user);
-        navigate("/GoogleLogin");
-      })
-      .catch((error) => {
-        // Handle any errors that occur during Google login
-        console.error("Google login error", error);
-      });
-  };
+ 
 
   return (
     <div className="container">
@@ -99,10 +85,8 @@ const Login = () => {
             >
               Login
             </Button>
-            <div className="line"></div>
-            <Button className="google-button" onClick={handleGoogleLogin}>
-              <Link to="/google-login">Login with Google</Link>
-            </Button>
+           
+          
           </div>
           <label className="login-status">{store.loginStatus}</label>
         </Card>

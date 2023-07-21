@@ -1,25 +1,23 @@
-/* Preference.css */
-
 .preference-item {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
-  align-items: left;
+  align-items: center;
   margin-bottom: 16px;
-  padding: 10px 100px 10px 5px; /* top, right, bottom, left */
+  padding: 10px 5px; /* top, right, bottom, left */
 }
 
-
 .category-text {
+  flex: 1;
   font-size: 20px;
   font-weight: bold;
   margin-top: 15px;
-  margin-right: 800px; /* Adjust the margin to the desired space */
 }
-
 
 .submit-button-wrapper {
   display: flex;
   justify-content: flex-end;
+  margin-top: 20px;
 }
 
 .submit-button {
@@ -30,5 +28,6 @@
 }
 
 .input {
-  width: 100px;
+  width: 100%;
+  max-width: 100px;
 }

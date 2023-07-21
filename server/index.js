@@ -1,18 +1,44 @@
-
-const express = require('express');
-const admin = require('firebase-admin');
-const cors = require('cors');
-const path = require('path');
+const express = require("express");
+const admin = require("firebase-admin");
+const cors = require("cors");
+const path = require("path");
+const axios = require("axios");
 const app = express();
+app.use(express.json());
+const locationsAPI = require("./routes/locationsAPI");
+const foodOptionsAPI = require("./routes/foodAPI");
+const distanceAPI = require("./distanceAPI");
 
-// const PORT = 7000;
+const PORT = 5123;
 app.use(cors());
 
+// Firebase config
+const firebaseConfig = {
+  apiKey: "AIzaSyC_SyZezplGnJqMLfuYCjt69y_wiYZXmsU",
+  authDomain: "trippin-out-4b976.firebaseapp.com",
+  databaseURL:
+    "https://trippin-out-4b976-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "trippin-out-4b976",
+  storageBucket: "trippin-out-4b976.appspot.com",
+  messagingSenderId: "647184431594",
+  appId: "1:647184431594:web:d69a768cadd176075c9a93",
+};
 
-app.get('/', (req, res) => {
-  res.json({message: 'Server is running'});
+// Initialize Firebase Admin SDK
+var serviceAccount = require("./trippin-out-4b976-firebase-adminsdk-tikce-71353c614d.json");
+
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL:
+    "https://trippin-out-4b976-default-rtdb.asia-southeast1.firebasedatabase.app",
 });
 
+const db = admin.firestore();
+module.exports = { db };
+
+app.get("/", (req, res) => {
+  res.json({ message: "Server is running" });
+});
 
 app.get('/files/:filename', (req, res) => {
   const filename = req.params.filename;
@@ -25,94 +51,35 @@ app.get('/files/:filename', (req, res) => {
   });
 });
 
-
-app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
-// Firebase config
-const firebaseConfig = {
-  apiKey: "AIzaSyC_SyZezplGnJqMLfuYCjt69y_wiYZXmsU",
-  authDomain: "trippin-out-4b976.firebaseapp.com",
-  databaseURL: "https://trippin-out-4b976-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "trippin-out-4b976",
-  storageBucket: "trippin-out-4b976.appspot.com",
-  messagingSenderId: "647184431594",
-  appId: "1:647184431594:web:d69a768cadd176075c9a93",
-};
-
-// Initialize Firebase Admin SDK
-var serviceAccount = require("./trippin-out-4b976-firebase-adminsdk-tikce-71353c614d.json");
-
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://trippin-out-4b976-default-rtdb.asia-southeast1.firebasedatabase.app"
+app.post("/Preferences", async (req, res) => {
+  const preferences = req.body.preferences;
+  const generateLocations = await locationsAPI.processPreferences(preferences);
+  res.json({
+    message: "Preferences received successfully",
+    data: generateLocations,
+  });
 });
 
-const db = admin.firestore();
-module.exports = { admin, db };
+app.get("/food-options", async (req, res) => {
+  const dest = req.query.destination;
+  // console.log(dest);
+  const generateFood = await foodOptionsAPI.processFood(dest);
+  res.json({
+    message: "Food options received successfully",
+    data: generateFood,
+  });
+});
 
+app.get("/itinerary", async (req, res) => {
+  const locations = req.query.locations;
+  const food = req.query.food;
+  const accoms = req.query.accoms;
 
-// app2.post('/submitPreferences', (req, res) => {
-//   try {
-//     const data = req.body;
+  console.log(locations);
+  console.log(food);
+  // console.log(accoms);
+  // const generateFood = await foodOptionsAPI.processFood(dest);
+  // res.json({message: 'Food options received successfully', data: generateFood});
+});
 
-//     // Write data to rankingtest.json file
-//     fs.readFile('rankingtest.json', 'utf8', (err, fileData) => {
-//       if (err) {
-//         console.error('Error reading rankingtest.json:', err);
-//         res.status(500).send('Error storing preferences');
-//         return;
-//       }
-
-//       let preferences = [];
-//       try {
-//         preferences = JSON.parse(fileData);
-//       } catch (parseError) {
-//         console.error('Error parsing rankingtest.json:', parseError);
-//         res.status(500).send('Error storing preferences');
-//         return;
-//       }
-
-//       preferences.push(data);
-
-//       const preferencesJSON = JSON.stringify(preferences);
-
-//       fs.writeFile('rankingtest.json', preferencesJSON, 'utf8', (writeErr) => {
-//         if (writeErr) {
-//           console.error('Error writing rankingtest.json:', writeErr);
-//           res.status(500).send('Error storing preferences');
-//           return;
-//         }
-//         console.log('Preferences stored in rankingtest.json');
-//         res.status(200).send('Preferences stored successfully');
-//       });
-//     });
-//   } catch (error) {
-//     console.error('An error occurred during submission:', error);
-//     res.status(500).send('Error storing preferences');
-//   }
-// });
-
-async function readAndWriteData() {
-  try {
-    // Write data
-    // const docRef = db.collection('users').doc('alovelace');
-    // await docRef.set({
-    //   first: 'Ada',
-    //   last: 'Lovelace',
-    //   born: 1815
-    // });
-
-    // Read data
-    const snapshot = await db.collection('users').get();
-    snapshot.forEach((doc) => {
-      console.log(doc.id, '=>', doc.data());
-    });
-  } catch (error) {
-    console.error('Error reading or writing data:', error);
-  }
-}
-
-// --------- UNIT TEST ---------
-// test for firebase connection
-// readAndWriteData();
-
-
+app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));

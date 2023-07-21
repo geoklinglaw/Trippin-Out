@@ -19,7 +19,7 @@ function Explore() {
             className="product"
             key={tip.id}
             onClick={() => tip.url && handleClick(tip.url)}
-            cover={tip.img && <img src={tip.img} alt={tip.title}
+            cover={tip.img && <img className="product-image" src={tip.img} alt={tip.title}
            />}
             
           >

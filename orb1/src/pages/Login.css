@@ -1,19 +1,23 @@
-.container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
+
 
 .login-image {
-  width: 100%;
-  max-width: 550px;
-  height: auto;
+  width: 200px;
+  height: 250px;
+  margin: auto;
+  margin-left: 40%;
+
+ 
 }
 
 .form-container {
-  width: 100%;
-  max-width: 520px;
+  display: flex; /* Add display flex */
+  flex-direction: column; /* Add flex direction column */
+  align-items: center; /* Center items horizontally */
+  justify-content: center; /* Center items vertically */
+
+  max-width: 500px;
+  max-height: 500px;
+  margin: 0 auto;
   padding: 20px;
   border: 2px solid #d9d9d9;
 }
@@ -56,23 +60,6 @@
   background-color: #355791;
 }
 
-.google-button {
-  font-size: 16px;
-  background-color: #db4437;
-  color: white;
-  padding: 0px 60px;
-  height: 40px;
-  width: 100%;
-}
-
-.google-button:hover {
-  background-color: #b93227;
-}
-
-.google-button:active {
-  background-color: #94241c;
-}
-
 .line {
   height: 1px;
   width: 100%;
@@ -83,3 +70,61 @@
 .error-label {
   color: red;
 }
+
+@media screen and (max-width: 480px) {
+  .login-image {
+    width: 100%;
+    height: auto;
+    max-width: 250px;
+    margin: auto;
+  }
+
+  .form-container {
+    width: 90%;
+  }
+
+  .login-title {
+    font-size: 28px;
+  }
+
+  .form-input {
+    font-size: 15px;
+  }
+
+  .login-button {
+    font-size: 16px;
+    padding: 0px 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .login-image {
+    width: 100%;
+    height: auto;
+    max-width: 300px;
+    margin: auto;
+  }
+
+  .form-container {
+    width: 90%;
+  }
+
+  .login-title {
+    font-size: 28px;
+  }
+
+  .form-input {
+    font-size: 16px;
+  }
+
+  .login-button {
+    font-size: 17px;
+    padding: 0px 50px;
+  }
+}
+
+
+
+
+
+
+
