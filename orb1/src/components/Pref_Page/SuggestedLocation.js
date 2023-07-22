@@ -1,21 +1,59 @@
 import React, { useEffect, useState } from 'react';
-import { Card, Button } from 'antd';
+import { Progress, Button, message } from 'antd';
 import SuggLocations from "./SuggLocations";
 import "./Explore.css";
 import { getFirestore } from 'firebase/firestore';
-import { db, firebase } from '../../firebase';
-import { collection, query, getDocs, addDoc, doc, setDoc } from "firebase/firestore";
+import { db, auth } from '../../firebase';
+import { collection, query, getDoc, addDoc, doc, setDoc } from "firebase/firestore";
 import axios from 'axios';
 import  useStore  from '../../pages/authStore';
 
 const SuggestedLocations = (props) => {
+  const { tripId } = props;
+  console.log("tripId", tripId);
   const suggestedLocations = useStore((state) => state.suggestedLocations);
   const selectedSuggestedLocations = useStore((state) => state.selectedSuggestedLocations);
   const setSuggestedLocations = useStore((state) => state.setSuggestedLocations);
   const setSelectedSuggestedLocations = useStore((state) => state.setSelectedSuggestedLocations);
+  const [duration, setDuration] = useState(0);
+  
+  const selectedData = Object.values(selectedSuggestedLocations).filter(location => location);
+  useEffect(() => {
+    // Function to fetch the duration from Firestore
+    const fetchDuration = async () => {
+      const userId = auth.currentUser.uid;
+      console.log(userId);
+      try {
+        // Fetch the trip document from Firestore
+        const tripRef = doc(db, 'users', userId, 'trips', tripId);
+        console.log("tripRef:", tripRef);
+        const tripSnap = await getDoc(tripRef);
+  
+        // Get the duration from the trip document
+        const tripData = tripSnap.data();
+        if (tripData) {
+          setDuration(tripData.duration);
+        }
+      } catch (error) {
+        console.error('Error fetching duration from Firestore:', error);
+      }
+    };
+  
+    // Call the function to fetch the duration
+    fetchDuration();
+  }, []); // Empty dependency array ensures this effect runs only once on mount
+  
 
   const toggleSelected = (props) => {
     const { locationId, photo, name, formatted_address, price } = props;
+    const selectedCount = Object.values(selectedSuggestedLocations).filter(location => location).length;
+  
+    console.log(duration);
+  // Check if the limit of duration * 5 locations has been reached
+  if (selectedCount >= duration * 5) {
+    message.warning('You have reached the maximum limit of selected locations!');
+    return;
+  }
     setSelectedSuggestedLocations({
       ...selectedSuggestedLocations,
       [locationId]: selectedSuggestedLocations[locationId]
@@ -51,26 +89,29 @@ const SuggestedLocations = (props) => {
             console.error("Error storing locations:", error);
         }
     }
+    message.success("Successfully submitted! Please proceed to explore the food options!");
 };
+
+
+
+
   
 
-  // useEffect(() => {
-  //   // filename: location_list_20230625T195008389Z.json
-  //   const filename = 'location_list_20230627T131746308Z.json';
-  //   fetch(`http://localhost:5123/files/${filename}`)
-  //         .then(response => response.json())
-  //         .then(data => {
-  //             console.log(data);
-  //             setSuggestedLocations(data); 
-  //         })
-  //         .catch(error => console.error('Error fetching data:', error));
-  //   }, []);
+ 
 
 
   return (
     <>
+    <Progress
+        style={{ position: 'absolute', top: 60, right: 100}}
+        type="circle"
+        percent={(selectedData.length / (duration * 5)) * 100} // Calculate the percentage of locations selected
+        format={(percent) => `${selectedData.length} / ${duration * 5}`}
+        width={120}
+        strokeWidth={15} 
+      />
       <div style={{ display: "flex" }}>
-        {/* ... */}
+
       </div>
       <div>
         <div style={{ display: "flex", justifyContent: "center" }}>
@@ -105,6 +146,7 @@ const SuggestedLocations = (props) => {
       <div style={{ justifyContent: 'end' }}>
         <Button type="primary" onClick={submitData}>Submit</Button>
       </div>
+      
     </>
   );
 };

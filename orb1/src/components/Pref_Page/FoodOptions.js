@@ -1,14 +1,12 @@
 
 import React, { useState, useEffect } from "react";
-import { Segmented, Button } from "antd";
+import { Segmented, Button, message, Progress } from "antd";
 import SuggLocations from "./SuggLocations";
 import "./FoodOptions.css";
 import { getFirestore } from "firebase/firestore";
-import { getDoc, db, firebase } from "../../firebase";
+import { getDoc, db, auth } from "../../firebase";
 import {
   collection,
-  query,
-  getDocs,
   addDoc,
   doc,
   setDoc,
@@ -18,26 +16,61 @@ import itinerary from "./../../pages/itinerary";
 import axios from "axios";
 import  useStore  from '../../pages/authStore';
 
-const FoodOptions = () => {
+const FoodOptions = (props) => {
  // Use the state and actions from authStore.js
+ const { tripId } = props;
+
  const locations = useStore((state) => state.foodLocations);
  const selectedLocations = useStore((state) => state.selectedfoodLocations);
  const setLocations = useStore((state) => state.setfoodLocations);
  const setSelectedLocations = useStore((state) => state.setSelectedfoodLocations);
   const navigate = useNavigate();
+  const [duration, setDuration] = useState(0);
+  const selectedData = Object.values(selectedLocations).filter(location => location);
+
+  useEffect(() => {
+    const fetchDuration = async () => {
+      const userId = auth.currentUser.uid;
+      try {
+        const tripRef = doc(db, "users", userId, "trips", tripId);
+        const tripSnap = await getDoc(tripRef);
+        const tripData = tripSnap.data();
+        if (tripData) {
+          setDuration(tripData.duration);
+        }
+      } catch (error) {
+        console.error("Error fetching duration from Firestore:", error);
+      }
+    };
+
+    fetchDuration();
+  }, []);
 
   const YOUR_API_KEY = "AIzaSyCcw5UjfxwKAhVVUeSqjp_Gx4wxFys8mbo";
 
   const toggleSelected = (props) => {
     const { locationId, photo, name, formatted_address, price } = props;
 
+    const selectedCount = Object.values(selectedLocations).filter(
+      (location) => location
+    ).length;
+
+    // Check if the limit of duration * 4 locations has been reached
+    if (selectedCount >= duration * 4) {
+      message.warning(
+        "You have reached the maximum limit of selected locations!"
+      );
+      return;
+    }
+
     setSelectedLocations({
       ...selectedLocations,
-      [locationId]: setSelectedLocations[locationId]
+      [locationId]: selectedLocations[locationId]
         ? undefined
         : { name, locationId, photo, formatted_address, price },
     });
   };
+
 
   const handleClick = (e) => {
     submitData();
@@ -50,16 +83,7 @@ const FoodOptions = () => {
     <Route path="orb1/src/pages/itinerary" element={<itinerary />} />;
   };
 
-  // useEffect(() => {
-  //   const filename = 'food_options_20230627T123722044Z.json';
-  //   fetch(`http://localhost:5000/files/${filename}`)
-  //         .then(response => response.json())
-  //         .then(data => {
-  //             console.log(data);
-  //             setLocations(data);
-  //         })
-  //         .catch(error => console.error('Error fetching data:', error));
-  // }, []);
+
   
   
 
@@ -101,10 +125,19 @@ const FoodOptions = () => {
         console.error("Error storing locations:", error);
       }
     }
-  };
+    message.success("Successfully submitted!");
+  }
 
   return (
     <>
+    <Progress
+        style={{ position: 'absolute', top: 60, right: 100}}
+        type="circle"
+        percent={(selectedData.length / (duration * 4)) * 100} // Calculate the percentage of locations selected
+        format={(percent) => `${selectedData.length} / ${duration * 4}`}
+        width={120}
+        strokeWidth={15} 
+      />
       <div style={{ display: "flex" }}></div>
       <div>
         <div style={{ display: "flex", justifyContent: "center" }}>

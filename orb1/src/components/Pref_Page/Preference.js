@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { InputNumber, Button, message } from "antd";
+import { InputNumber, Button, message, Modal } from "antd";
 import  useStore  from '../../pages/authStore';
 import { getDoc, db, firebase } from "../../firebase";
 import axios from 'axios';
@@ -14,13 +14,15 @@ import {
   doc,
   setDoc,
 } from "firebase/firestore";
+import Loading from "../Loading";
 
 function Preference(props) {
   const preferences = useStore((state) => state.preferences);
   const setPreferences = useStore((state) => state.setPreferences);
   const setSuggestedLocations = useStore((state) => state.setSuggestedLocations);
   const setLocations = useStore((state) => state.setfoodLocations);
-
+  const [loading, setLoading] = useState(false);
+  
   async function fetchDataWithParams(destination) {
     const endpoint = "http://localhost:5123/food-options";
     try {
@@ -80,24 +82,51 @@ function Preference(props) {
     }
   }
   
+  // const handleSubmit = async () => {
+  //   const ranks = preferences.map(p => p.rank);
+  //   console.log(ranks); // Add this line to see the rankings before validation
+  //   const uniqueRanks = new Set(ranks);
+
+  //   if (uniqueRanks.size !== ranks.length) {
+  //     message.error("Please fill up all boxes and ensure that all rankings are unique.");
+  //     return;
+  //   } else {
+  //     const responseData = await submitPreferences();
+  //     console.log(responseData.data);
+  //     setSuggestedLocations(responseData.data);
+  //     props.onPreferencesSubmitted(responseData);
+  //     props.onSubmit();
+
+  //   }
+    
+  // };
   const handleSubmit = async () => {
-    const ranks = preferences.map(p => p.rank);
+    const ranks = preferences.map((p) => p.rank);
     console.log(ranks); // Add this line to see the rankings before validation
     const uniqueRanks = new Set(ranks);
-
+  
     if (uniqueRanks.size !== ranks.length) {
-      message.error("Please fill up all boxes and ensure that all rankings are unique.");
+      message.error(
+        "Please fill up all boxes and ensure that all rankings are unique."
+      );
       return;
     } else {
-      const responseData = await submitPreferences();
-      console.log(responseData.data);
-      setSuggestedLocations(responseData.data);
-      props.onPreferencesSubmitted(responseData);
-      props.onSubmit();
-
+      try {
+        setLoading(true); // Show the loading modal
+        const responseData = await submitPreferences();
+        console.log(responseData.data);
+        setSuggestedLocations(responseData.data);
+        props.onPreferencesSubmitted(responseData);
+        props.onSubmit();
+      
+      } catch (error) {
+        console.error("Error submitting data:", error);
+      } finally {
+        setLoading(false); // Hide the loading modal after the API call is completed
+      }
     }
-    
   };
+  
 
   return (
     <div className="container mx-auto p-4">
@@ -130,6 +159,15 @@ function Preference(props) {
           Submit
         </Button>
       </div>
+      <Modal
+        visible={loading}
+        title="Loading"
+        closable={false}
+        footer={null}
+        style={{ textAlign: "center" }} // Add this line to centralize the title
+      >
+      </Modal>
+
     </div>
   );
 }

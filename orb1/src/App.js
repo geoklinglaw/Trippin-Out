@@ -9,18 +9,20 @@ import Itinerary from "./pages/itinerary";
 import Explore from "./components/Pref_Page/Explore";
 import SuggestedLocations from "./components/Pref_Page/SuggestedLocation";
 import FoodOptions from "./components/Pref_Page/FoodOptions";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 
 function App() {
 
-  
+  const [tripId, setTripId] = useState(null);
   const saveUserDataHandler = (enteredUserData) => {
     const landingData = {
       ...enteredUserData,
       id: Math.random().toString(),
     };
     console.log(landingData);
+    const { tripId } = enteredUserData;
+    setTripId(tripId);
   };
 
   return (
@@ -30,6 +32,7 @@ function App() {
           path="/"
           element={<LandingPage onSaveUserData={saveUserDataHandler} />}
         />
+        
         <Route path="/signup" element={<SignUp />} />
         <Route path="/login" element={<Login />} />
         <Route path="/pastitineraries" element={<PastItineraries />} />

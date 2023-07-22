@@ -7,9 +7,10 @@ import NumberInput from "../components/NumberInput";
 import "./LandingPage.css";
 import { db, auth } from "../firebase";
 import { doc, setDoc, Timestamp } from "firebase/firestore";
-import useAuthStore, { saveLandingPageDetails, saveAccommodationDetails } from "./authStore";
-import moment from "moment";
+import useAuthStore from "./authStore";
+import Wave from 'react-wavify'
 import { useNavigate } from "react-router-dom";
+
 
 function LandingPage() {
   const [form] = Form.useForm();
@@ -40,6 +41,8 @@ function LandingPage() {
       console.log(userId, tripId);
       const duration = values.duration[1].diff(values.duration[0], "days");
 
+       
+
       await setDoc(doc(db, "users", userId, "trips", tripId), {
         email: email,
         destination: destination,
@@ -50,20 +53,13 @@ function LandingPage() {
       message.success("Submit success!");
       form.resetFields();
 
-      // Save the landing page details using the saveLandingPageDetails function
-      // await saveLandingPageDetails(userId, tripId, {
-      //   email: email,
-      //   destination: destination,
-      //   duration: duration,
-      //   guests: parseInt(values.guests),
-      // });
-
+     
       // Save the accommodation details using the saveAccommodationDetails function
-      await saveAccommodationDetails(userId, tripId, accommodations);
+      // await saveAccommodationDetails(userId, tripId, accommodations);
 
-      setAccommodation(accommodations); // Update the state in the store with accommodation details
+      // setAccommodation(accommodations); // Update the state in the store with accommodation details
 
-      navigate("/preferences?tripId=" + tripId);
+      navigate(`/preferences?tripId=${tripId}` , { state: { tripId } });
     } catch (error) {
       console.error("Error storing data:", error);
       setError("Submit failed!");
@@ -96,6 +92,7 @@ function LandingPage() {
         <div
           style={{
             display: "flex",
+            flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
             height: "90vh",
@@ -156,8 +153,22 @@ function LandingPage() {
               </div>
             </Card>
           </Space>
+          
         </div>
+        <div style={{ position: "relative"}}>
+        <Wave
+          fill="#769ABE"
+          paused={false}
+          options={{
+
+            amplitude: 100,
+            speed: 0.15,
+            points: 3,
+          }}
+        />
+      </div>
       </Form>
+      
     </>
   );
 }

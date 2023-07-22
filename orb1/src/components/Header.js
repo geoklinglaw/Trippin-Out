@@ -19,9 +19,9 @@ const Header = () => {
     navigate("/login");
   };
 
-  const navigateToPreferences = () => {
-    navigate("/preferences");
-  };
+  // const navigateToPreferences = () => {
+  //   navigate("/preferences");
+  // };
 
   const navigateToPastItineraries = () => {
     navigate("/pastitineraries");
@@ -42,7 +42,6 @@ const Header = () => {
         >
           <Button onClick={navigateToLogin}>Login</Button>
           <Button onClick={navigateToSignUp}>Create Account</Button>
-          <Button onClick={navigateToPreferences}>Preferences</Button>
           <Button onClick={navigateToPastItineraries}>Past Itineraries</Button>
           <Routes>
             <Route path="orb1/src/pages/Login.js" element={<Login />} />

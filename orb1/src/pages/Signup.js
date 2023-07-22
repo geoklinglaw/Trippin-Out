@@ -2,10 +2,13 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Card, Input, Button, Alert } from "antd";
 import "./Signup.css";
+import HelicopterAnimation from "../components/Helicopter";
 import logo from "../images/logo.png";
+
 import { createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
 import { db, auth } from "../firebase";
 import { collection, doc, setDoc } from "firebase/firestore";
+
 
 
 const SignUp = () => {
@@ -56,7 +59,9 @@ const SignUp = () => {
   };
 
   return (
-    <div className="Signup">
+    
+    <div className="Signup" >
+      
       <div className="Signup-logo">
         <img src={logo} alt="Logo" className="Signup-logo-image" />
       </div>
@@ -112,7 +117,9 @@ const SignUp = () => {
           </p>
         </div>
       </Card>
+      <HelicopterAnimation/>
     </div>
+    
   );
 };
 
