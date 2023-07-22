@@ -31,11 +31,5 @@ test('renders login form without errors', () => {
   
     // Simulate form submission
     fireEvent.click(loginButton);
-  
-    // Use assertions to check if the form submission was successful
-    // You can assert the expected behavior such as redirection or displaying success messages
-    // For example:
-    // expect(screen.getByText('You have successfully logged in')).toBeInTheDocument();
-    // expect(mockLoginFunction).toHaveBeenCalledWith('test@example.com', 'password123');
   });
   

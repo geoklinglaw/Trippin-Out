@@ -1,0 +1,11 @@
+.product {
+    /* Your default styling for the location card goes here */
+    cursor: pointer; /* Add this to indicate that it's clickable */
+  }
+  
+  .product.selected {
+    background-color: #3e95ff; /* Change this to the desired background color when selected */
+    color: #ffffff; /* Change this to the desired text color when selected */
+    /* Add any other styling you want for the selected state */
+  }
+  

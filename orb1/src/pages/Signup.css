@@ -1,32 +1,77 @@
+/* Signup.css */
 .Signup {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* Center the content vertically */
+  justify-content: center;
   padding: 10px;
   height: 100vh;
 }
 
 .Signup-logo {
-  margin-bottom: 20px; /* Add margin at the bottom to create space between the logo and the card */
+  margin-bottom: 20px;
 }
 
 .Signup-logo-image {
   width: 400px;
   height: 200px;
-  margin-right: 0;
 }
 
 .Signup-card {
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   max-width: 500px;
   padding: 20px;
-  background-color: transparent;
-  border: 1px solid #1A385A;
+  background-color: #fff;
+  border: 2px solid #d9d9d9;
+}
+
+.Signup-title {
+  font-size: 35px;
+  text-align: center;
+  color: #1c395b;
+  margin-bottom: 20px;
+}
+
+.Signup-input {
+  font-size: 17px;
+  padding: 14px;
+  width: 100%;
+}
+
+.Signup-buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.Signup-button {
+  font-size: 18px;
+  background-color: #5186cd;
+  color: white;
+  padding: 0px 60px;
+  height: 40px;
+  margin-bottom: 10px;
+  width: 100%;
+}
+
+.Signup-button:hover {
+  background-color: #416db5;
+}
+
+.Signup-button:active {
+  background-color: #355791;
+}
+
+.Signup-error-label {
+  color: red;
 }
 
 @media screen and (max-width: 768px) {
-  /* Adjust the styles for smaller screens */
   .Signup-logo-image {
     width: 150px;
     height: 75px;
@@ -35,10 +80,22 @@
   .Signup-card {
     max-width: 400px;
   }
+
+  .Signup-title {
+    font-size: 28px;
+  }
+
+  .Signup-input {
+    font-size: 16px;
+  }
+
+  .Signup-button {
+    font-size: 17px;
+    padding: 0px 50px;
+  }
 }
 
 @media screen and (max-width: 480px) {
-  /* Further adjust the styles for even smaller screens */
   .Signup-logo-image {
     width: 100px;
     height: 50px;
@@ -47,7 +104,17 @@
   .Signup-card {
     max-width: 300px;
   }
+
+  .Signup-title {
+    font-size: 28px;
+  }
+
+  .Signup-input {
+    font-size: 15px;
+  }
+
+  .Signup-button {
+    font-size: 16px;
+    padding: 0px 40px;
+  }
 }
-
-
-

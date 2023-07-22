@@ -1,9 +1,9 @@
 
 import React, { useState, useEffect } from "react";
-import { Segmented, Button, message, Progress } from "antd";
+import { Button, message, Progress } from "antd";
+import { FaArrowDown } from "react-icons/fa";
 import SuggLocations from "./SuggLocations";
 import "./FoodOptions.css";
-import { getFirestore } from "firebase/firestore";
 import { getDoc, db, auth } from "../../firebase";
 import {
   collection,
@@ -27,6 +27,15 @@ const FoodOptions = (props) => {
   const navigate = useNavigate();
   const [duration, setDuration] = useState(0);
   const selectedData = Object.values(selectedLocations).filter(location => location);
+  const [selectedCount, setSelectedCount] = useState(0);
+
+  const handleScrollToBottom = () => {
+    const scrollHeight = document.documentElement.scrollHeight;
+    const windowHeight = window.innerHeight;
+    const offset = 100; // To leave some space after scrolling
+    const scrollTo = scrollHeight - windowHeight + offset;
+    window.scrollTo({ top: scrollTo, behavior: "smooth" });
+  };
 
   useEffect(() => {
     const fetchDuration = async () => {
@@ -50,26 +59,34 @@ const FoodOptions = (props) => {
 
   const toggleSelected = (props) => {
     const { locationId, photo, name, formatted_address, price } = props;
-
-    const selectedCount = Object.values(selectedLocations).filter(
-      (location) => location
-    ).length;
-
-    // Check if the limit of duration * 4 locations has been reached
-    if (selectedCount >= duration * 4) {
-      message.warning(
-        "You have reached the maximum limit of selected locations!"
-      );
-      return;
+  
+    const updatedSelectedLocations = { ...selectedLocations };
+  
+    if (selectedLocations[locationId]) {
+      // Deselect the location
+      updatedSelectedLocations[locationId] = undefined;
+      setSelectedCount((prevCount) => prevCount - 1);
+    } else {
+      // Check if the limit of duration * 4 locations has been reached
+      if (selectedCount >= duration * 4) {
+        message.warning("You have reached the maximum limit of selected locations!");
+        return;
+      }
+  
+      // Select the location
+      updatedSelectedLocations[locationId] = {
+        name,
+        locationId,
+        photo,
+        formatted_address,
+        price,
+      };
+      setSelectedCount((prevCount) => prevCount + 1);
     }
-
-    setSelectedLocations({
-      ...selectedLocations,
-      [locationId]: selectedLocations[locationId]
-        ? undefined
-        : { name, locationId, photo, formatted_address, price },
-    });
+  
+    setSelectedLocations(updatedSelectedLocations);
   };
+  
 
 
   const handleClick = (e) => {
@@ -173,6 +190,12 @@ const FoodOptions = (props) => {
         <Button type="primary" onClick={handleClick}>
           {" "}
           Submit{" "}
+        </Button>
+      </div>
+      <div style={{ position: "fixed", bottom: "20px", right: "20px", zIndex: "999" }}>
+        <Button type="primary" shape="circle" size="large" onClick={handleScrollToBottom}>
+        <FaArrowDown />
+
         </Button>
       </div>
     </>

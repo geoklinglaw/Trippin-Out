@@ -60,12 +60,7 @@
   background-color: #355791;
 }
 
-.line {
-  height: 1px;
-  width: 100%;
-  background-color: #d9d9d9;
-  margin-bottom: 20px;
-}
+
 
 .error-label {
   color: red;

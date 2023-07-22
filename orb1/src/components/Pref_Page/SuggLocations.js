@@ -1,5 +1,6 @@
 import React from "react";
 import { Card } from "antd";
+import "./SuggLocations.css"
 
 function SuggLocations(props) {
   const truncateWords = (text) => {
@@ -13,37 +14,42 @@ function SuggLocations(props) {
   const renderPrice = (price) => {
     let priceIndicator = "$$$";
     return (
-      <span style={{ color: price ? 'black' : '#808080' }}>
+      <span style={{ color: price ? "black" : "#808080" }}>
         {price ? priceIndicator.slice(0, price) : priceIndicator}
       </span>
     );
   };
-  
+
   return (
     <div>
-        <div>
-            <Card className="product" style={{ width: "350px", margin: "15px" }}>
-            <input
-                style={{ position: "absolute", top: "10px", right: "10px" }}
-                type="checkbox"
-                checked={props.selected}
-                onClick={() => props.toggleSelected(props)} // passes locationId out to toggleSelected in suggestedLocations.js
+      <div>
+        <Card
+          className={`product ${props.selected ? "selected" : ""}`} // Apply the "selected" class when the location is selected
+          style={{ width: "350px", margin: "15px" }}
+          onClick={() => props.toggleSelected(props)} // passes locationId out to toggleSelected in suggestedLocations.js
+        >
+          <div style={{ width: "100%", height: "200px", overflow: "hidden" }}>
+            <img
+              src={
+                props.photo
+                  ? props.photo.prefix +
+                    props.photo.width +
+                    "x" +
+                    props.photo.height +
+                    props.photo.suffix
+                  : ""
+              }
+              alt={props.name}
+              style={{ width: "100%", height: "100%", objectFit: "cover" }}
             />
-            <div style={{ width: "100%", height: "200px", overflow: "hidden" }}>
-                <img
-                src={props.photo ? props.photo.prefix + props.photo.width + 'x' + props.photo.height + props.photo.suffix : ""}
-                alt={props.name}
-                style={{ width: "100%", height: "100%", objectFit: "cover" }}
-                />
-            </div>
-            <h2 style={{ marginTop: "13px" }}>{props.name}</h2>
-            <p>{truncateWords(props.formatted_address)}</p>
-            <p>{renderPrice(props.price)}</p>
-            </Card>
-        </div>
+          </div>
+          <h2 style={{ marginTop: "13px" }}>{props.name}</h2>
+          <p>{truncateWords(props.formatted_address)}</p>
+          <p>{renderPrice(props.price)}</p>
+        </Card>
+      </div>
     </div>
   );
 }
 
 export default SuggLocations;
-

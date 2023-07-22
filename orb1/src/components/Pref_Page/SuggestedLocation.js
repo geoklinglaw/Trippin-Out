@@ -1,12 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import { Progress, Button, message } from 'antd';
 import SuggLocations from "./SuggLocations";
-import "./Explore.css";
-import { getFirestore } from 'firebase/firestore';
+import "./SuggestedLocations.css";
 import { db, auth } from '../../firebase';
 import { collection, query, getDoc, addDoc, doc, setDoc } from "firebase/firestore";
-import axios from 'axios';
 import  useStore  from '../../pages/authStore';
+import { FaArrowDown } from "react-icons/fa";
 
 const SuggestedLocations = (props) => {
   const { tripId } = props;
@@ -18,6 +17,14 @@ const SuggestedLocations = (props) => {
   const [duration, setDuration] = useState(0);
   
   const selectedData = Object.values(selectedSuggestedLocations).filter(location => location);
+
+  const handleScrollToBottom = () => {
+    const scrollHeight = document.documentElement.scrollHeight;
+    const windowHeight = window.innerHeight;
+    const offset = 100; // To leave some space after scrolling
+    const scrollTo = scrollHeight - windowHeight + offset;
+    window.scrollTo({ top: scrollTo, behavior: "smooth" });
+  };
   useEffect(() => {
     // Function to fetch the duration from Firestore
     const fetchDuration = async () => {
@@ -146,7 +153,11 @@ const SuggestedLocations = (props) => {
       <div style={{ justifyContent: 'end' }}>
         <Button type="primary" onClick={submitData}>Submit</Button>
       </div>
-      
+      <div style={{ position: "fixed", bottom: "20px", right: "20px", zIndex: "999" }}>
+        <Button type="primary" shape="circle" size="large" onClick={handleScrollToBottom}>
+        <FaArrowDown />
+        </Button>
+      </div>
     </>
   );
 };
