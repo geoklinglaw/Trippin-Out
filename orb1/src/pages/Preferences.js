@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 //import { Steps, Layout, Menu, theme } from "antd";
 import Sidebar from "../components/Sidebar";
+import { useLocation, useNavigate, Route, Routes, BrowserRouter, Router } from "react-router-dom";
 
 import Explore from "../components/Pref_Page/Explore";
 import Accommodation from "../components/Pref_Page/Accommodation";
@@ -15,7 +16,8 @@ const App = () => {
   const [generatedLocations, setGeneratedLocations] = useState([]);
   const [isPreferencesSubmitted, setIsPreferencesSubmitted] = useState(false);
   const [currentStep, setCurrentStep] = useState(0);
-
+  const { state } = useLocation();
+  const navigate = useNavigate();
   const handlePreferencesSubmitted = (data) => {
     setGeneratedLocations(data);
     setIsPreferencesSubmitted(true);
@@ -40,15 +42,21 @@ const App = () => {
   };
   
   
+  
   const B = () => (
+    
     <>
       <h1>Accommodation</h1>
       <Accommodation
+      tripId={state.tripId}
+      
       onCheckInDateTimeChange={handleCheckInDateTimeChange}
       onCheckOutDateTimeChange={handleCheckOutDateTimeChange}
       onLocationChange={handleLocationChange}
       onHotelNameChange={handleHotelNameChange}
+     
        />
+      
     </>
   );
   
@@ -68,9 +76,10 @@ const App = () => {
 
     return (
       <>
+     
        <h1 style={{ marginBottom: '5px' }}>Suggested Locations</h1>
        <h6 style={{ opacity: 0.7, fontSize: '14px', marginTop: '0' }}>tick the locations if you wish to include it in your itinerary</h6>
-       <SuggestedLocations data={generatedLocations}/>
+       <SuggestedLocations data={generatedLocations}  tripId={state.tripId}/>
       </>
     );
   };
@@ -85,7 +94,7 @@ const App = () => {
       <>
        <h1 style={{ marginBottom: '5px' }}>Food Options</h1>
         <h6 style={{ opacity: 0.7, fontSize: '14px', marginTop: '0' }}>Pick the food you would like to include</h6>
-      <FoodOptions />
+      <FoodOptions tripId={state.tripId}/>
       </>
     );
   };
@@ -116,6 +125,13 @@ const App = () => {
           ) : (
             <E />
           )}
+           <Routes>
+            <Route path="/explore" element={<A />} />
+            <Route path="/accommodation" element={<B />} />
+            <Route path="/preferences" element={<C />} />
+            <Route path="/suggested-locations" element={<D />} />
+            <Route path="/food-options" element={<E />} />
+          </Routes>
         </div>
       </div>
     </>

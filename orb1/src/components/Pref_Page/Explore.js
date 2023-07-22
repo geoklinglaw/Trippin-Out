@@ -2,6 +2,7 @@ import React from "react";
 import { Card } from "antd";
 import "./Explore.css";
 import { tips } from "./traveltips";
+import { useLocation } from "react-router-dom"; 
 
 const { Meta } = Card;
 

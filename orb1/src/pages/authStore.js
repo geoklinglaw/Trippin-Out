@@ -5,24 +5,24 @@ import { doc, setDoc } from 'firebase/firestore';
 
 
 
-export const saveAccommodationDetails = async (userId, tripId, accommodationDetails) => {
-  try {
-    console.log('Received parameters:');
-    console.log('userId:', userId);
-    console.log('tripId:', tripId);
-    console.log('accommodationDetails:', accommodationDetails);
+// export const saveAccommodationDetails = async (userId, tripId, accommodationDetails) => {
+//   try {
+//     console.log('Received parameters:');
+//     console.log('userId:', userId);
+//     console.log('tripId:', tripId);
+//     console.log('accommodationDetails:', accommodationDetails);
 
-    // Save the accommodation details under the user's document in Firestore
-    await setDoc(doc(db, 'users', userId, 'trips', tripId), {
-      accommodation: accommodationDetails,
-    });
+//     // Save the accommodation details under the user's document in Firestore
+//     await setDoc(doc(db, 'users', userId, 'trips', tripId), {
+//       accommodation: accommodationDetails,
+//     });
 
-    console.log('Accommodation details saved to Firestore');
-  } catch (error) {
-    console.error('Error saving accommodation details to Firestore:', error);
-    throw error;
-  }
-};
+//     console.log('Accommodation details saved to Firestore');
+//   } catch (error) {
+//     console.error('Error saving accommodation details to Firestore:', error);
+//     throw error;
+//   }
+// };
 
 export const saveLandingPageDetails = async (userId, tripId, landingPageDetails) => {
   try {

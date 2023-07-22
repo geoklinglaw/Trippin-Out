@@ -2,11 +2,17 @@ import React, { useState } from "react";
 import { Form, Input, Button, Collapse, DatePicker, message } from "antd";
 import { saveAccommodationDetails } from "../../pages/authStore";
 import "./Accommodation.css";
-import { auth } from "../../firebase";
-
+import { auth, db } from "../../firebase";
+import Preference from "./Preference";
+import { doc, updateDoc, getDoc, collection } from "firebase/firestore";
+import { useNavigate } from "react-router-dom";
 const { Panel } = Collapse;
 
 function Accommodation(props) {
+  const { tripId } = props;
+  console.log(tripId);
+  const navigate = useNavigate();
+
   const [accommodations, setAccommodations] = useState([
     {
       hotelName: "",
@@ -77,13 +83,40 @@ function Accommodation(props) {
 
       // Save the accommodation details to Firestore
       const userId = auth.currentUser.uid;
-      const tripId = Math.random().toString();
+      
+      const userRef = doc(db, "users", userId);
+      
+      const userDoc = await getDoc(userRef);
+      //const userDoc = await getDoc(collection(db, "users", userId,"trips", tripId));
+      // Get the existing data from the document
+      const userData = userDoc.data();
+      console.log("userData", userData);
+      
+      console.log("trip id", tripId);
+       // Fetch the existing user document from Firestore
+     
+      const tripRef = doc(db, "users", userId, "trips", tripId);
+      
 
-      await saveAccommodationDetails(userId, tripId, accommodationDetails);
+
+    const updatedTrips = {
+      ...userData?.trips,
+      [tripId]: {
+        ...userData?.trips?.[tripId],
+        accommodations: accommodationDetails,
+      },
+    };
+    // Update the user document with the new data
+    await updateDoc(tripRef, {
+      currentTripId: tripId,
+      trips: updatedTrips,
+    });
 
       console.log("Accommodation details saved to Firestore");
       setIsSaved(true);
+    
       message.success("Accommodation details saved successfully!");
+      
     } catch (error) {
       console.error("Error saving accommodation details:", error);
       message.error("Error saving accommodation details");
@@ -188,7 +221,8 @@ function Accommodation(props) {
             Submit
           </Button>
         </div>
-        {isSaved && <div className="success-message">Accommodation details saved successfully!</div>}
+       
+        {isSaved && <div className="success-message"></div>}
       </div>
     </div>
   );

@@ -63,7 +63,8 @@ function Sidebar({ setHeader, isPreferencesSubmitted, currentStep }) {
     const handleClick = (value) => {
       if (!isPreferencesSubmitted && (value === 3 || value === 4)) {
         notify();
-      } else {
+      } 
+      else {
         onChange(value);
       }
     };
