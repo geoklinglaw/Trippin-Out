@@ -60,8 +60,8 @@ const SuggestedLocations = (props) => {
   
     console.log(duration);
   // Check if the limit of duration * 3 locations has been reached
-  const MULTIPLE = 3;
-  if (selectedCount >= duration * MULTIPLE) {
+
+  if (selectedCount >= 10) {
     message.warning('You have reached the maximum limit of selected locations!');
     return;
   }
@@ -128,8 +128,8 @@ const SuggestedLocations = (props) => {
     <Progress
         style={{ position: 'absolute', top: 60, right: 100}}
         type="circle"
-        percent={(selectedData.length / (duration * 3)) * 100} // Calculate the percentage of locations selected
-        format={(percent) => `${selectedData.length} / ${duration * 3}`}
+        percent={(selectedData.length / 10) * 100} // Calculate the percentage of locations selected
+        format={(percent) => `${selectedData.length} / 10`}
         width={120}
         strokeWidth={15} 
       />
