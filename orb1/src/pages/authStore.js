@@ -125,6 +125,10 @@ const useAuthStore = create((set) => ({
   setTripId: (value) => set((state) => ({ tripId: value })),
   getTripId: () => useAuthStore.getState().tripId,
   setPreferences: (newPreferences) => set((state) => ({ preferences: newPreferences })),
+  setLocationId: (value) => set((state) => ({ locationId: value })),
+  getLocationId: () => useAuthStore.getState().locationId,
+  setFoodId: (value) => set((state) => ({ foodId: value })),
+  getFoodId: () => useAuthStore.getState().foodId,
 
   saveLandingPageDetails: saveLandingPageDetails,
   // New action to set locations

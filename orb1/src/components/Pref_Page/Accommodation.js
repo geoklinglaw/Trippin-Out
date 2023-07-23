@@ -6,13 +6,16 @@ import { auth, db } from "../../firebase";
 import Preference from "./Preference";
 import { doc, updateDoc, getDoc, collection } from "firebase/firestore";
 import house from "../../images/house.png";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 const { Panel } = Collapse;
+import  useStore  from '../../pages/authStore';
 
 function Accommodation(props) {
+  const setTripId = useStore((state) => state.setTripId);
+  const setAccommodation = useStore((state) => state.setAccommodation);
   const { tripId } = props;
   console.log(tripId);
-  const navigate = useNavigate();
+//   const navigate = useNavigate();
 
   const [accommodations, setAccommodations] = useState([
     {
@@ -97,7 +100,9 @@ function Accommodation(props) {
        // Fetch the existing user document from Firestore
      
       const tripRef = doc(db, "users", userId, "trips", tripId);
-      
+      const tripId = Math.random().toString();
+      setTripId(tripId);
+      setAccommodation(accommodationDetails);
 
 
     const updatedTrips = {

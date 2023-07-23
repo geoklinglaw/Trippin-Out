@@ -126,7 +126,7 @@ module.exports = {
             const rank = rankRule(duration);
             // console.log(rank);
             const list = await obtainListOfLocations(preferences, rankRule, destination_location);
-            // console.log(list);
+            console.log(list);
             return list;
         } catch (error) {
             console.error(`Error: ${error}`);

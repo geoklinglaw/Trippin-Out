@@ -15,9 +15,11 @@ import { Routes, Route, NavLink, useNavigate } from "react-router-dom";
 import itinerary from "./../../pages/itinerary";
 import axios from "axios";
 import  useStore  from '../../pages/authStore';
+import { auth } from "../../firebase";
 
 const FoodOptions = (props) => {
  // Use the state and actions from authStore.js
+
  const { tripId } = props;
 
  const locations = useStore((state) => state.foodLocations);
@@ -28,6 +30,8 @@ const FoodOptions = (props) => {
   const [duration, setDuration] = useState(0);
   const selectedData = Object.values(selectedLocations).filter(location => location);
   const [selectedCount, setSelectedCount] = useState(0);
+  const tripId = useStore((state) => state.tripId);
+  // const setFoodId = useStore((state) => state.setFoodId);
 
   const handleScrollToBottom = () => {
     const scrollHeight = document.documentElement.scrollHeight;
@@ -54,6 +58,7 @@ const FoodOptions = (props) => {
 
     fetchDuration();
   }, []);
+
 
   const YOUR_API_KEY = "AIzaSyCcw5UjfxwKAhVVUeSqjp_Gx4wxFys8mbo";
 
@@ -109,8 +114,14 @@ const FoodOptions = (props) => {
       (location) => location
     );
 
-    const userID = "pVOrWYawmnkMvUu3IFtn";
-    const tripID = "V1NBZp7HSK7hnEkKT0Aw";
+    const userID = auth.currentUser.uid;
+    const tripID = tripId;
+    // const foodID = Math.random().toString();
+    // setFoodId(foodID);
+
+    console.log("userID: " + userID);
+    console.log("tripID: " + tripID);
+    // console.log("foodID: " + foodID);
 
     // Reference to the locations collection
     const locationsRef = collection(
@@ -123,6 +134,7 @@ const FoodOptions = (props) => {
     );
 
     // Loop through each selected location and save it to Firestore
+    
     for (const location of selectedData) {
       try {
         // console.log("id: " + location.locationId);

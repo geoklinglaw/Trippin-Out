@@ -5,12 +5,17 @@ const path = require("path");
 const axios = require("axios");
 const app = express();
 app.use(express.json());
+app.use(cors());
+const { exec } = require('node:child_process');
 const locationsAPI = require("./routes/locationsAPI");
 const foodOptionsAPI = require("./routes/foodAPI");
-const distanceAPI = require("./distanceAPI");
+const distanceAPI = require("./routes/distanceAPI");
+// const genItinerary = require("./routes/tspAPI");
+
+const { spawn } = require('child_process');
 
 const PORT = 5123;
-app.use(cors());
+
 
 // Firebase config
 const firebaseConfig = {
@@ -25,12 +30,11 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase Admin SDK
-var serviceAccount = require("./trippin-out-4b976-firebase-adminsdk-tikce-71353c614d.json");
+var serviceAccount = require("./trippin-out-4b976-firebase-adminsdk-tikce-c9df623474.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL:
-    "https://trippin-out-4b976-default-rtdb.asia-southeast1.firebasedatabase.app",
+  databaseURL: "https://trippin-out-4b976-default-rtdb.asia-southeast1.firebasedatabase.app"
 });
 
 const db = admin.firestore();
@@ -51,6 +55,8 @@ app.get('/files/:filename', (req, res) => {
   });
 });
 
+
+
 app.post("/Preferences", async (req, res) => {
   const preferences = req.body.preferences;
   const generateLocations = await locationsAPI.processPreferences(preferences);
@@ -62,7 +68,7 @@ app.post("/Preferences", async (req, res) => {
 
 app.get("/food-options", async (req, res) => {
   const dest = req.query.destination;
-  // console.log(dest);
+  console.log(dest);
   const generateFood = await foodOptionsAPI.processFood(dest);
   res.json({
     message: "Food options received successfully",
@@ -70,16 +76,49 @@ app.get("/food-options", async (req, res) => {
   });
 });
 
-app.get("/itinerary", async (req, res) => {
+app.get("/distanceMatrix", async (req, res) => {
+  const accoms = req.query.accommodation;
   const locations = req.query.locations;
-  const food = req.query.food;
-  const accoms = req.query.accoms;
 
-  console.log(locations);
-  console.log(food);
-  // console.log(accoms);
-  // const generateFood = await foodOptionsAPI.processFood(dest);
-  // res.json({message: 'Food options received successfully', data: generateFood});
+  const distanceMatrix = await distanceAPI.getDistanceMatrix(accoms, locations);
+  res.json({
+    message: "Distance matrix received successfully",
+    data: distanceMatrix,
+  });
 });
+
+
+app.post("/itinerary", async (req, res) => {
+  // const locations = req.body.locations;
+  // const accoms = req.body.accommodation;
+  const distMat = req.body.distMat;
+
+  const python = spawn('/opt/homebrew/bin/python3', ['routes/tspAPI.py', '--distMat', JSON.stringify(distMat)]);
+
+  let pythonData = '';
+  python.stdout.on('data', (data) => {
+    pythonData += data;
+    console.log(`stdout: ${data}`);
+  });
+
+  python.on('error', (error) => {
+    console.error(`Error spawning Python script: ${error}`);
+  });
+
+  python.on('close', (code) => {
+      console.log(`Python script exited with code ${code}`);
+      if (code !== 0) {
+          return res.status(500).json({ error: 'Error in Python script' });
+      }
+      console.log("final output")
+      console.log(pythonData)
+      console.log(JSON.parse(pythonData))
+      res.json({ data: JSON.parse(pythonData) });
+  });
+});
+
+
+
+
 
 app.listen(PORT, () => console.log(`Server listening on port ${PORT}`));
