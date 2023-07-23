@@ -2,7 +2,7 @@
 // Generates list of locations based on categories and search query
 // DO NOT USE IMPORT FOR COMMON JS MODULES
 const { get } = require('http');
-const data = require('../rankingtest.json');
+// const data = require('../rankingtest.json');
 const fs = require('fs');
 const { DocumentSnapshot } = require('firebase-admin/firestore');
 const sdk = require('api')('@fsq-developer/v1.0#x6xjhzlic2gi70');
