@@ -1,6 +1,6 @@
 import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
-import Login from './Login';
+import Login from '../pages/Login';
 import { MemoryRouter } from 'react-router-dom';
 
 test('renders login form without errors', () => {

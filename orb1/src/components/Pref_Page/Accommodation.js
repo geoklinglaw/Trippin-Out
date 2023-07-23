@@ -5,6 +5,7 @@ import "./Accommodation.css";
 import { auth, db } from "../../firebase";
 import Preference from "./Preference";
 import { doc, updateDoc, getDoc, collection } from "firebase/firestore";
+import house from "../../images/house.png";
 import { useNavigate } from "react-router-dom";
 const { Panel } = Collapse;
 
@@ -114,7 +115,7 @@ function Accommodation(props) {
 
       console.log("Accommodation details saved to Firestore");
       setIsSaved(true);
-    
+      props.onAccommodationSubmitted(true);
       message.success("Accommodation details saved successfully!");
       
     } catch (error) {
@@ -216,6 +217,7 @@ function Accommodation(props) {
             </Panel>
           ))}
         </Collapse>
+        
         <div className="button-wrapper">
           <Button type="primary" onClick={handleSubmit}>
             Submit

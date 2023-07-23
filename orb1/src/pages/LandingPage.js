@@ -63,7 +63,8 @@ function LandingPage() {
 
       // setAccommodation(accommodations); // Update the state in the store with accommodation details
 
-      navigate(`/preferences?tripId=${tripId}`, { state: { tripId } });
+      navigate(`/preferences?tripId=${tripId}`, { state: { tripId }, 
+      duration: parseInt(duration) });
     } catch (error) {
       console.error("Error storing data:", error);
       setError("Submit failed!");
@@ -166,9 +167,10 @@ function LandingPage() {
                 >
                   <NumberInput onChange={peopleChangeHandler} />
                 </Form.Item>
-                <Form.Item>
+                <Form.Item style={{ textAlign: "center" }}>
                   <Space>
                     <Button
+                    className="Button"
                       style={{ backgroundColor: "#5186CD", color: "white" }}
                       type="primary"
                       htmlType="submit"

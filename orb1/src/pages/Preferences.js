@@ -15,13 +15,24 @@ import 'react-toastify/dist/ReactToastify.css';
 const App = () => {
   const [generatedLocations, setGeneratedLocations] = useState([]);
   const [isPreferencesSubmitted, setIsPreferencesSubmitted] = useState(false);
+  const [isAccommodationSubmitted, setIsAccommodationSubmitted] = useState(false);
   const [currentStep, setCurrentStep] = useState(0);
   const { state } = useLocation();
   const navigate = useNavigate();
+
+  const handleAccommodationSubmitted= (data) => {
+    setIsAccommodationSubmitted(true); 
+  }
   const handlePreferencesSubmitted = (data) => {
     setGeneratedLocations(data);
     setIsPreferencesSubmitted(true);
 }
+const handleSidebarChange = (value) => {
+  setCurrentStep(value);
+  setHeader(value);
+};
+
+
 
 
   const A = () => <Explore />;
@@ -49,11 +60,12 @@ const App = () => {
       <h1>Accommodation</h1>
       <Accommodation
       tripId={state.tripId}
-      
       onCheckInDateTimeChange={handleCheckInDateTimeChange}
       onCheckOutDateTimeChange={handleCheckOutDateTimeChange}
       onLocationChange={handleLocationChange}
       onHotelNameChange={handleHotelNameChange}
+      onSubmit = {() => {setCurrentStep(2); setHeader(2)}}
+      onAccommodationSubmitted = {handleAccommodationSubmitted}
      
        />
       
@@ -103,7 +115,11 @@ const App = () => {
   const [header, setHeader] = useState(0);
   return (
     <>
-      <Sidebar setHeader={(x) => {setHeader(x); setCurrentStep(x);}} currentStep={currentStep} isPreferencesSubmitted={isPreferencesSubmitted} />
+      <Sidebar setHeader={(x) => handleSidebarChange(x)}
+       currentStep={currentStep} 
+       isPreferencesSubmitted={isPreferencesSubmitted} 
+       isAccommodationSubmitted={isAccommodationSubmitted}
+       />
       <ToastContainer />
       <div
         style={{
