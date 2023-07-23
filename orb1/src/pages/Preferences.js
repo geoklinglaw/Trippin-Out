@@ -39,8 +39,8 @@ const App = () => {
   }
 
   const handlePreferencesSubmitted = async (data) => {
+    console.log("RECEIVED IN PREF.JS PAGES ", data)
     setGeneratedLocations(data);
-    console.log("data: ", data);
     setIsPreferencesSubmitted(true);
     
     // Wait for the promises to resolve before logging the result

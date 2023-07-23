@@ -10,13 +10,13 @@ import { saveSuggestedLocations } from '../../pages/authStore';
 
 
 const SuggestedLocations = (props) => {
-  const { tripId } = props;
-  console.log("tripId", tripId);
+
   const suggestedLocations = useStore((state) => state.suggestedLocations);
   const selectedSuggestedLocations = useStore((state) => state.selectedSuggestedLocations);
   const setSuggestedLocations = useStore((state) => state.setSuggestedLocations);
   const setSelectedSuggestedLocations = useStore((state) => state.setSelectedSuggestedLocations);
   const [duration, setDuration] = useState(0);
+  const tripID = useStore((state) => state.tripId);
   
   const selectedData = Object.values(selectedSuggestedLocations).filter(location => location);
 
@@ -27,6 +27,7 @@ const SuggestedLocations = (props) => {
     const scrollTo = scrollHeight - windowHeight + offset;
     window.scrollTo({ top: scrollTo, behavior: "smooth" });
   };
+  
   useEffect(() => {
     // Function to fetch the duration from Firestore
     const fetchDuration = async () => {
@@ -34,7 +35,7 @@ const SuggestedLocations = (props) => {
       console.log(userId);
       try {
         // Fetch the trip document from Firestore
-        const tripRef = doc(db, 'users', userId, 'trips', tripId);
+        const tripRef = doc(db, 'users', userId, 'trips', tripID);
         console.log("tripRef:", tripRef);
         const tripSnap = await getDoc(tripRef);
   
@@ -55,6 +56,7 @@ const SuggestedLocations = (props) => {
 
   const toggleSelected = (props) => {
     const { locationId, photo, name, formatted_address, price, geocodes, category, activity_duration } = props;
+    const selectedCount = Object.values(selectedSuggestedLocations).filter(location => location).length;
   
     console.log(duration);
   // Check if the limit of duration * 5 locations has been reached
@@ -76,7 +78,7 @@ const SuggestedLocations = (props) => {
     
 
     // const userID = useStore((state) => state.tripId);
-    // const tripID = useStore((state) => state.tripId);
+    
     const userID = auth.currentUser.uid;
     // const locationID = Math.random().toString();
     // setLocationId(locationID);

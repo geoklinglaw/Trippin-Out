@@ -15,12 +15,10 @@ import { Routes, Route, NavLink, useNavigate } from "react-router-dom";
 import itinerary from "./../../pages/itinerary";
 import axios from "axios";
 import  useStore  from '../../pages/authStore';
-import { auth } from "../../firebase";
 
 const FoodOptions = (props) => {
  // Use the state and actions from authStore.js
 
- const { tripId } = props;
 
  const locations = useStore((state) => state.foodLocations);
  const selectedLocations = useStore((state) => state.selectedfoodLocations);
