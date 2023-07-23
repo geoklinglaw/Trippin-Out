@@ -104,7 +104,8 @@
       ],
       "popularity": 0.9980282717400039,
       "rating": 9.2,
-      "activity_duration": 3
+      "activity_duration": 3,
+      "category": 16000
     },
     {
       "fsq_id": "4b949b12f964a5208e7e34e3",
@@ -250,7 +251,8 @@
       ],
       "popularity": 0.9999752761346709,
       "rating": 9.4,
-      "activity_duration": 2
+      "activity_duration": 2,
+      "category": 16000
     },
     {
       "fsq_id": "4d438c6514aa8cfa743d5c3d",
@@ -367,7 +369,8 @@
       ],
       "popularity": 0.9996266696335305,
       "rating": 9.2,
-      "activity_duration": 2
+      "activity_duration": 2,
+      "category": 10000
     },
     {
       "fsq_id": "4f15780ce4b07e9ece62b1f2",
@@ -509,7 +512,8 @@
       "popularity": 0.9795632529189614,
       "price": 1,
       "rating": 8.1,
-      "activity_duration": 1
+      "activity_duration": 1,
+      "category": 1000
     },
     {
       "fsq_id": "5040a505e4b0068b1feba467",
@@ -660,7 +664,8 @@
       "popularity": 0.676388090514071,
       "price": 2,
       "rating": 7.9,
-      "activity_duration": 1
+      "activity_duration": 1,
+      "category": 1000
     },
     {
       "fsq_id": "54119564498e4371f8dce458",
@@ -856,7 +861,8 @@
       "popularity": 0.9488141816091528,
       "price": 2,
       "rating": 7.7,
-      "activity_duration": 1
+      "activity_duration": 1,
+      "category": 1000
     },
     {
       "fsq_id": "5388afe7498e0c921f99f2af",
@@ -993,7 +999,8 @@
       ],
       "popularity": 0.9982520227212323,
       "rating": 7.5,
-      "activity_duration": 1
+      "activity_duration": 1,
+      "category": 1000
     },
     {
       "fsq_id": "4b911562f964a520eca233e3",
@@ -1106,7 +1113,8 @@
       "popularity": 0.9974114113000426,
       "price": 2,
       "rating": 7.1,
-      "activity_duration": 1
+      "activity_duration": 1,
+      "category": 1000
     }
   ]
   

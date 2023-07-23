@@ -52,6 +52,7 @@ async function getAllFood(latlong) {
             const results = response.results;
             results.forEach(result => {
                 result.activity_duration = 1;
+                result.category = "1000"
             });
             // console.log(results);
             aggregatedResults.push(...results);
