@@ -27,7 +27,7 @@ const SuggestedLocations = (props) => {
     const scrollTo = scrollHeight - windowHeight + offset;
     window.scrollTo({ top: scrollTo, behavior: "smooth" });
   };
-  
+
   useEffect(() => {
     // Function to fetch the duration from Firestore
     const fetchDuration = async () => {
@@ -59,8 +59,9 @@ const SuggestedLocations = (props) => {
     const selectedCount = Object.values(selectedSuggestedLocations).filter(location => location).length;
   
     console.log(duration);
-  // Check if the limit of duration * 5 locations has been reached
-  if (selectedCount >= duration * 5) {
+  // Check if the limit of duration * 3 locations has been reached
+  const MULTIPLE = 3;
+  if (selectedCount >= duration * MULTIPLE) {
     message.warning('You have reached the maximum limit of selected locations!');
     return;
   }
@@ -127,8 +128,8 @@ const SuggestedLocations = (props) => {
     <Progress
         style={{ position: 'absolute', top: 60, right: 100}}
         type="circle"
-        percent={(selectedData.length / (duration * 5)) * 100} // Calculate the percentage of locations selected
-        format={(percent) => `${selectedData.length} / ${duration * 5}`}
+        percent={(selectedData.length / (duration * 3)) * 100} // Calculate the percentage of locations selected
+        format={(percent) => `${selectedData.length} / ${duration * 3}`}
         width={120}
         strokeWidth={15} 
       />

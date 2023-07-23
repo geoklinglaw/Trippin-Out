@@ -150,8 +150,9 @@ function Accommodation(props) {
     // Update the accommodations array in the trip document
     // Firebase will ensure each accommodation detail is unique in the array
     await updateDoc(tripRef, {
-      accommodations: accommodationDetails,
+      accommodation: accommodationDetails,
     });
+    setAccommodation(accommodationDetails);
 
     console.log("Accommodation details saved to Firestore");
     setIsSaved(true);
