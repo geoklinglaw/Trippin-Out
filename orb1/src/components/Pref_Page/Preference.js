@@ -5,6 +5,7 @@ import { getDoc, db, firebase } from "../../firebase";
 import axios from 'axios';
 import "./Preference.css";
 import '../../tailwind.css';
+import { auth } from "../../firebase";
 import SuggestedLocations from './SuggestedLocation.js'
 import {
   collection,
@@ -19,43 +20,47 @@ function Preference(props) {
   const preferences = useStore((state) => state.preferences);
   const setPreferences = useStore((state) => state.setPreferences);
   const setSuggestedLocations = useStore((state) => state.setSuggestedLocations);
-  const setLocations = useStore((state) => state.setfoodLocations);
+  // const setLocations = useStore((state) => state.setfoodLocations);
+  const tripID = useStore((state) => state.tripId);
 
-  async function fetchDataWithParams(destination) {
-    const endpoint = "http://localhost:5123/food-options";
-    try {
-      const response = await axios.get(endpoint, {
-        params: { destination },
-      });
-      console.log("response: ", response.data.data);
-      return response.data.data; 
-    } catch (error) {
-      console.error("Error retrieving data: ", error);
-    }
-  }
+  // async function fetchDataWithParams(destination) {
+  //   const endpoint = "http://localhost:5123/food-options";
+  //   try {
+  //     const response = await axios.get(endpoint, {
+  //       params: { destination },
+  //     });
+  //     console.log("food response: ", response.data.data);
+  //     return response.data.data; 
+  //   } catch (error) {
+  //     console.error("Error retrieving data: ", error);
+  //   }
+  // }
   
-  async function fetchfromFirebase() {
-    const userID = "dBLCC8TXlrYkYQXDZ7f5eFyvex92" // "pVOrWYawmnkMvUu3IFtn";
-    const tripID = "sdIccla3xbdTQLpCjn7Y" // "V1NBZp7HSK7hnEkKT0Aw";
+  // async function fetchfromFirebase() {
+  //   const userID = auth.currentUser.uid;
+  //   // const locationID = Math.random().toString();
+  //   // setLocationId(locationID);
+  //   console.log("userID: " + userID);
+  //   console.log("tripID: " + tripID);
 
-    const destinationRef = doc(db, "users", userID, "trips", tripID);
-    const destinationSnap = await getDoc(destinationRef);
+  //   const destinationRef = doc(db, "users", userID, "trips", tripID);
+  //   const destinationSnap = await getDoc(destinationRef);
 
-    if (destinationSnap.exists()) {
-      const accommodation = destinationSnap.data().latlong;
-      return accommodation;
-    } else {
-      console.error("No such document exists!");
-    }
-  }
+  //   if (destinationSnap.exists()) {
+  //     const accommodation = destinationSnap.data().latlong;
+  //     return accommodation;
+  //   } else {
+  //     console.error("No such document exists!");
+  //   }
+  // }
 
-  useEffect(() => {
-    (async () => {
-      const destination = await fetchfromFirebase();
-      const locationsData = await fetchDataWithParams(destination);
-      setLocations(locationsData);
-    })();
-  }, [setLocations]);
+  // useEffect(() => {
+  //   (async () => {
+  //     // const destination = await fetchfromFirebase();
+  //     // const locationsData = await fetchDataWithParams(destination);
+  //     // setLocations(locationsData);
+  //   })();
+  // }, [setLocations]);
     
 
   const handlePreferenceChange = (index) => (value) => {
@@ -90,11 +95,13 @@ function Preference(props) {
       return;
     } else {
       const responseData = await submitPreferences();
-      console.log(responseData.data);
+      console.log("RESPONSE DATA", responseData.data);
+      // const destination = await fetchfromFirebase();
+      // const locationsData = await fetchDataWithParams(destination);
+      // setLocations(locationsData);
       setSuggestedLocations(responseData.data);
       props.onPreferencesSubmitted(responseData);
       props.onSubmit();
-
     }
     
   };

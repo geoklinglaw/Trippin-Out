@@ -3,10 +3,14 @@ import { Form, Input, Button, Collapse, DatePicker, message } from "antd";
 import { saveAccommodationDetails } from "../../pages/authStore";
 import "./Accommodation.css";
 import { auth } from "../../firebase";
+import  useStore  from '../../pages/authStore';
 
 const { Panel } = Collapse;
 
 function Accommodation(props) {
+  const setTripId = useStore((state) => state.setTripId);
+  const setAccommodation = useStore((state) => state.setAccommodation);
+
   const [accommodations, setAccommodations] = useState([
     {
       hotelName: "",
@@ -78,6 +82,8 @@ function Accommodation(props) {
       // Save the accommodation details to Firestore
       const userId = auth.currentUser.uid;
       const tripId = Math.random().toString();
+      setTripId(tripId);
+      setAccommodation(accommodationDetails);
 
       await saveAccommodationDetails(userId, tripId, accommodationDetails);
 

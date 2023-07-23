@@ -38,8 +38,8 @@ async function getFoodOptions(cat, cat_id, country) {
 }
 
 async function getAllFood(latlong) {
-    // const userID = 'pVOrWYawmnkMvUu3IFtn';
-    // const tripID = 'V1NBZp7HSK7hnEkKT0Aw';
+    console.log(latlong);
+    console.log(typeof(latlong));
     var aggregatedResults = [];
 
     for (let cate in categories) {

@@ -7,32 +7,47 @@ import { db, firebase } from '../../firebase';
 import { collection, query, getDocs, addDoc, doc, setDoc } from "firebase/firestore";
 import axios from 'axios';
 import  useStore  from '../../pages/authStore';
+import { auth } from "../../firebase";
+import { saveSuggestedLocations } from '../../pages/authStore';
 
 const SuggestedLocations = (props) => {
   const suggestedLocations = useStore((state) => state.suggestedLocations);
   const selectedSuggestedLocations = useStore((state) => state.selectedSuggestedLocations);
   const setSuggestedLocations = useStore((state) => state.setSuggestedLocations);
   const setSelectedSuggestedLocations = useStore((state) => state.setSelectedSuggestedLocations);
+  const tripID = useStore((state) => state.tripId);
+  // const setLocationId = useStore((state) => state.setLocationId);
 
   const toggleSelected = (props) => {
-    const { locationId, photo, name, formatted_address, price } = props;
+    console.log("SELECTED")
+    console.log(props.activity_duration)
+    const { locationId, photo, name, formatted_address, price, geocodes, category, activity_duration } = props;
+    
     setSelectedSuggestedLocations({
       ...selectedSuggestedLocations,
       [locationId]: selectedSuggestedLocations[locationId]
         ? undefined 
-        : { name, locationId, photo, formatted_address, price } 
+        : { name, locationId, photo, formatted_address, price, geocodes, category, activity_duration } 
     });
   };
   
 
   const submitData = async () => {
     const selectedData = Object.values(selectedSuggestedLocations).filter(location => location);
+    
 
-    const userID = 'pVOrWYawmnkMvUu3IFtn';
-    const tripID = 'V1NBZp7HSK7hnEkKT0Aw';
+    // const userID = useStore((state) => state.tripId);
+    // const tripID = useStore((state) => state.tripId);
+    const userID = auth.currentUser.uid;
+    // const locationID = Math.random().toString();
+    // setLocationId(locationID);
+    console.log("userID: " + userID);
+    console.log("tripID: " + tripID);
+    
 
     const locationsRef = collection(db, 'users', userID, 'trips', tripID, 'locations');
     for (const location of selectedData) {
+        console.log(location)
         try {
             // console.log("id: " + location.locationId);
             // console.log("name: " + location.name);
@@ -42,8 +57,12 @@ const SuggestedLocations = (props) => {
             await addDoc(locationsRef, {
                 name: location.name,
                 locationId: location.locationId,
+                latitude: location.geocodes.main.latitude.toFixed(4),
+                longitude: location.geocodes.main.longitude.toFixed(4),
                 photo: location.photo,
                 address: location.formatted_address,
+                category: location.category,
+                activity_duration: location.activity_duration,
                 // price: location.price
             });
             console.log("Document successfully written!");
@@ -87,6 +106,7 @@ const SuggestedLocations = (props) => {
                   <SuggLocations
                     key={index}
                     locationId={index}
+                    geocodes={location.geocodes}
                     selected={!!selectedSuggestedLocations[index]}
                     toggleSelected={toggleSelected}
                     photo={location.photos ? location.photos[0] : null}
@@ -95,6 +115,8 @@ const SuggestedLocations = (props) => {
                       location.location ? location.location.formatted_address : ""
                     }
                     price={location.price}
+                    category={location.category}
+                    activity_duration={location.activity_duration}
                   />
                 ))
               };

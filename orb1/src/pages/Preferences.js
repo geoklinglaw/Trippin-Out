@@ -9,18 +9,73 @@ import FoodOptions from "../components/Pref_Page/FoodOptions";
 import SuggestedLocations from "../components/Pref_Page/SuggestedLocation";
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import  useStore  from './authStore';
+import axios from "axios";
+import { auth } from "../firebase";
+import {
+  collection,
+  query,
+  getDocs,
+  addDoc,
+  doc,
+  setDoc,
+} from "firebase/firestore";
+import { getDoc, db, firebase } from "../firebase";
 
 
 const App = () => {
   const [generatedLocations, setGeneratedLocations] = useState([]);
   const [isPreferencesSubmitted, setIsPreferencesSubmitted] = useState(false);
   const [currentStep, setCurrentStep] = useState(0);
+  const tripId = useStore((state) => state.tripId);
+  const setLocations = useStore((state) => state.setfoodLocations);
 
-  const handlePreferencesSubmitted = (data) => {
+  const handlePreferencesSubmitted = async (data) => {
     setGeneratedLocations(data);
+    console.log("data: ", data);
     setIsPreferencesSubmitted(true);
+    
+    // Wait for the promises to resolve before logging the result
+    const destination = await fetchfromFirebase();
+    const locationsData = await callFoodAPI(destination);
+    setLocations(locationsData);
+
+    console.log("call food API: ", locationsData);
+};
+
+
+async function fetchfromFirebase() {
+  const userID = auth.currentUser.uid;
+  const tripID = tripId;
+  console.log("userID: " + userID);
+  console.log("tripID: " + tripID);
+
+  const tripRef = doc(db, "users", userID, "trips", tripID);
+  const tripSnap = await getDoc(tripRef);
+
+  if (tripSnap.exists()) {
+    const trip = tripSnap.data();
+    const accommodation = trip.accommodation[0];  // get the first accommodation in the array
+    const latLong = accommodation.latLong;
+    console.log(`latLong for accommodation: ${latLong}`);
+    return latLong;
+  } else {
+    console.error("No such document exists!");
+  }
 }
 
+async function callFoodAPI(destination) {
+  const endpoint = "http://localhost:5123/food-options";
+  try {
+    const response = await axios.get(endpoint, {
+      params: { destination },
+    });
+    console.log("food response: ", response.data.data);
+    return response.data.data; 
+  } catch (error) {
+    console.error("Error retrieving data: ", error);
+  }
+}
 
   const A = () => <Explore />;
 

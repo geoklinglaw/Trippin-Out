@@ -3,7 +3,7 @@ from ortools.constraint_solver import pywrapcp
 from ortools.constraint_solver import routing_enums_pb2
 import sys
 import json
-
+import argparse
     
 
 # def create_data_model(output):
@@ -473,20 +473,6 @@ def create_dist_matrix(data):
 
     return distances
 
-def find_nearest_neighbor(current, distances, visited):
-    """"
-    This function finds the nearest neighbor of the current node
-    """
-    print(f"current {current}")
-    min_distance = float('inf')
-    nearest = -1
-    for i in range(len(distances)):
-        if not visited[i] and distances[current][i] < min_distance:
-            min_distance = distances[current][i]
-            nearest = i
-    print("nearest neighbor")
-    print(nearest)
-    return nearest
 
 def sort_activities(distances):
     """"
@@ -503,47 +489,78 @@ def sort_activities(distances):
         visited[next_activity] = True
         itinerary.append(next_activity)
         current = next_activity
-    print("sort activities")
-    print(itinerary)
+    # print("sort activities")
+    # print(itinerary)
 
     return itinerary
 
-
-def split_into_days(itinerary, num_days, max_duration, data):
-    """ 
-    This function splits the itinerary into days, with the accommodation at the start and end of each day, represented by 0
+def find_nearest_neighbor(current, distances, visited):
+    """"
+    This function finds the nearest neighbor of the current node
     """
-    itinerary = itinerary[1:]  # Remove the accommodation from the itinerary
-    # Determine the number of activities per day
-    activities_per_day = len(itinerary) // num_days
+    min_distance = float('inf')
+    nearest = None
+    start = 1 if visited[0] else 0  # Skip accommodation if visited already
+    for i in range(start, len(distances)):  
+        if not visited[i] and distances[current][i] < min_distance:
+            min_distance = distances[current][i]
+            nearest = i
+    return nearest
 
-    # If there are leftover activities, spread them across the first few days
-    leftover_activities = len(itinerary) % num_days
 
-    # Initialize the itinerary for each day
+def sort_activities(distances):
+    """"
+    This function sorts the activities based on the nearest neighbor heuristic
+    """
+    N = len(distances)
+    visited = [False]*N
+    visited[0] = True  # Assuming accommodation is at index 0
+    current = 0  # Start at accommodation
+    itinerary = [0]  # Start itinerary with accommodation
+
+    for _ in range(N-1):  # Do this N-1 times
+        next_activity = find_nearest_neighbor(current, distances, visited)
+        if next_activity is None:  # Skip this iteration if no neighbor found
+            continue
+        visited[next_activity] = True
+        itinerary.append(next_activity)
+        current = next_activity
+
+    return itinerary
+
+def split_into_days(itinerary, num_days):
+    total_activities = len(itinerary)
+    min_activities_per_day = total_activities // num_days
+    extra_activities = total_activities % num_days
+
     itinerary_days = []
+    backup_queue = []  
+    visited = set()
+    index = 0  
 
-    for i in range(num_days):
-        # The start and end of each day is the accommodation
-        day = [0]
+    for _ in range(num_days):
+        day = []
+        activities_for_this_day = min_activities_per_day
+        if extra_activities > 0:
+            activities_for_this_day += 1
+            extra_activities -= 1
 
-        # Add the activities for this day
-        start = i*activities_per_day
-        end = (i+1)*activities_per_day
-        day += itinerary[start:end]
+        while len(day) < activities_for_this_day and index < total_activities:
+            activity = itinerary[index]
+            index += 1  
+            if activity not in visited:
+                day.append(activity)
+                visited.add(activity) 
+            else:
+                backup_queue.append(activity)
 
-        # If there are leftover activities, add one to this day
-        if leftover_activities > 0:
-            day += [itinerary[end]]
-            end += 1
-            leftover_activities -= 1
+        itinerary_days.append([0] + day)  
 
-        # Add this day to the itinerary
-        itinerary_days.append(day)
+    return itinerary_days, itinerary_days
 
-    print("itinerary days")
-    print(itinerary_days)
-    return itinerary_days
+
+
+
 
 
 def create_data_model(output, day):
@@ -581,7 +598,7 @@ def get_solution(manager, routing, solution):
     return route
 
 
-def solve_tsp(data):
+def solve_tsp(data): 
     # Create the routing index manager.
     manager = pywrapcp.RoutingIndexManager(len(data['distance_matrix']),
                                            data['num_vehicles'], data['depot'])
@@ -620,7 +637,7 @@ def map_tsp_to_original(tsp_results, original_indices):
     mapped_results = {}
     # print(type(original_indices))
     for day, result in enumerate(tsp_results, start=1):
-        print(f"{day}: {result}")
+        # print(f"{day}: {result}")
         mapped_day = []
         for idx in result:
             original_idx = original_indices[day-1][idx]
@@ -630,15 +647,12 @@ def map_tsp_to_original(tsp_results, original_indices):
     return mapped_results
 
 
-
-
-def main(input, info):
-
+def main(input):
     dist_matrix = create_dist_matrix(input)
     itinerary = sort_activities(dist_matrix)
     num_days = 2
     max_duration = 7
-    itinerary_days = split_into_days(itinerary, num_days, max_duration, data)
+    itinerary_days, original_indices = split_into_days(itinerary, num_days)  # now original_indices are also returned
     data_models_for_days = [create_data_model(input, day) for day in itinerary_days]
 
     results = []
@@ -646,8 +660,26 @@ def main(input, info):
         solution = solve_tsp(data_model)
         results.append(solution)
     
-    mapped_results = map_tsp_to_original(results, itinerary_days)
+    mapped_results = map_tsp_to_original(results, original_indices)  # pass original_indices here
     return mapped_results
+
+
+# def main(input):
+
+#     dist_matrix = create_dist_matrix(input)
+#     itinerary = sort_activities(dist_matrix)
+#     num_days = 2
+#     max_duration = 7
+#     itinerary_days = split_into_days(itinerary, num_days)
+#     data_models_for_days = [create_data_model(input, day) for day in itinerary_days]
+
+#     results = []
+#     for i, data_model in enumerate(data_models_for_days, start=1):
+#         solution = solve_tsp(data_model)
+#         results.append(solution)
+    
+#     mapped_results = map_tsp_to_original(results, itinerary_days)
+#     return mapped_results
     
     # for results in mapped_results.values():
     #     print(results)
@@ -659,17 +691,17 @@ def main(input, info):
 
 if __name__ == '__main__':
 
-    with open('location_list_20230627T205236778Z.json') as f:
-        info = json.load(f)
-    
-    accoms = '1.2841401999747222, 103.86086997077395'
-    with open('timeMatrix/distance_matrix_results_20230627T104314646Z.json') as json_file:
-        data = json_file.read()
-        json_data = json.loads(data)
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--distMat', help='JSON data for processing')
+    args = parser.parse_args()
 
 
-    results = main(json_data, info)
-    print(results)
+    json_data = json.loads(args.distMat)
+
+    results = main(json_data)
+    print(json.dumps(results))
+
+
 
     # print(results)
     # sorted = get_location_info(results, accoms)
