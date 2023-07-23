@@ -57,6 +57,7 @@ const sdk = require('api')('@fsq-developer/v1.0#x6xjhzlic2gi70');
                 // Append activity_duration to each item in results array
                 data.results.forEach(item => {
                     item.activity_duration = duration;
+                    item.category = cat_id;
                 });
                 // console.log(data)
                 return data
@@ -125,7 +126,7 @@ module.exports = {
             const rank = rankRule(duration);
             // console.log(rank);
             const list = await obtainListOfLocations(preferences, rankRule, destination_location);
-            // console.log(list);
+            console.log(list);
             return list;
         } catch (error) {
             console.error(`Error: ${error}`);

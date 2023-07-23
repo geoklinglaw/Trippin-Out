@@ -9,7 +9,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const { Step } = Steps;
 
-function Sidebar({ setHeader, isPreferencesSubmitted, currentStep }) {
+function Sidebar({ setHeader,isAccommodationSubmitted, isPreferencesSubmitted, currentStep }) {
   const [current, setCurrent] = useState(0);
   const [username, setUsername] = useState("");
 
@@ -58,16 +58,40 @@ function Sidebar({ setHeader, isPreferencesSubmitted, currentStep }) {
       setCurrent(value);
     };
   
-    const notify = () => toast("Submit your preferences first before accessing the locations and food options!");
+    // const notify = () => toast("Submit your preferences first before accessing the locations and food options!");
   
-    const handleClick = (value) => {
-      if (!isPreferencesSubmitted && (value === 3 || value === 4)) {
-        notify();
-      } 
-      else {
+    // const handleClick = (value) => {
+    //   if (!isPreferencesSubmitted && (value === 3 || value === 4)) {
+    //     notify();
+    //   } 
+    //   else {
+    //     onChange(value);
+    //   }
+    // };
+
+    const notifyAccommodation = () => toast("Submit your accommodation details before accessing preferences!");
+  const notifyPreferences = () => toast("Submit your preferences first before accessing the locations and food options!");
+
+  const handleClick = (value) => {
+    if (value === 2) {
+      // Check if user has filled up accommodation details before proceeding to Preferences
+      if (!isAccommodationSubmitted) {
+        notifyAccommodation();
+      } else {
         onChange(value);
       }
-    };
+    } else if (value === 3 || value === 4) {
+      // Check if user has filled up preferences before proceeding to Locations or Food Options
+      if (!isPreferencesSubmitted) {
+        notifyPreferences();
+      } else {
+        onChange(value);
+      }
+    } else {
+      // For other steps, no special condition is required
+      onChange(value);
+    }
+  };
     
     return (
       <>

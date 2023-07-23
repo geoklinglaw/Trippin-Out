@@ -4,7 +4,8 @@
   }
   
   .product.selected {
-    background-color: #3e95ff; /* Change this to the desired background color when selected */
+    background-color: #345589;
+    opacity: 80%;; /* Change this to the desired background color when selected */
     color: #ffffff; /* Change this to the desired text color when selected */
     /* Add any other styling you want for the selected state */
   }

@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { DayPilot, DayPilotCalendar, DayPilotNavigator } from "@daypilot/daypilot-lite-react";
 import "./CalendarStyles.css";
+import PropTypes from 'prop-types';
 
 const styles = {
   wrap: {
@@ -14,9 +15,43 @@ const styles = {
   }
 };
 
-const Calendar = () => {
-  const calendarRef = useRef();
-  const [calendarConfig, setCalendarConfig] = useState({
+
+const Calendar = ({propsLoc, propsRoute, propsMatrix}) => {
+    console.log("PROPS MATRIX", propsMatrix)
+
+    Calendar.propTypes = {
+        propsLoc: PropTypes.array.isRequired,
+        propsRoute: PropTypes.object.isRequired,
+    };
+
+    const categoryColors = new Map([
+        ["10000", "#5186CD"], // red for Exhibitions & Museums
+        ["18067", "#CD9251"], // green for Sports and Recreation
+        ["10032", "#51CD86"], // blue for Night Life
+        ["16020", "#ffff00"], // yellow for Historic & Protected Sites
+        ["16000", "#CD5186"], // cyan for Landmark & Outdoors
+        ["14003", "#9251CD"],
+        ["1000", "#CDDA51"], // magenta for Entertainment Events
+        // add more categories as needed
+    ]);
+
+    function generateDates(startDate, endDate, numDays) {
+        let start = new Date(startDate);
+        let end = new Date(endDate);
+        let dates = [];
+
+        for (let i = 0; i < numDays; i++) {
+          let date = new Date(start);
+          date.setDate(start.getDate() + i);
+          if (date > end) break; // Stop if we've gone past the end date
+          dates.push(date);
+        }
+
+        return dates;
+    }
+
+    const calendarRef = useRef();
+    const [calendarConfig, setCalendarConfig] = useState({
     viewType: "Week",
     durationBarVisible: false,
     timeRangeSelectedHandling: "Enabled",
@@ -43,41 +78,93 @@ const Calendar = () => {
     },
   });
 
+    function getTravelDuration(originIndex, destinationIndex, distMatrix) {
+        const travelDetails = distMatrix.rows[originIndex].elements[destinationIndex];
+        return travelDetails.status === 'OK' ? travelDetails.duration.value : 0;
+    }
+  
+
   useEffect(() => {
-    const events = [
-      {
-        id: 1,
-        text: "Event 1",
-        start: "2023-10-02T10:30:00",
-        end: "2023-10-02T13:00:00"
-      },
-      {
-        id: 2,
-        text: "Event 2",
-        start: "2023-10-03T09:30:00",
-        end: "2023-10-03T11:30:00",
-        backColor: "#6aa84f"
-      },
-      {
-        id: 3,
-        text: "Event 3",
-        start: "2023-10-03T12:00:00",
-        end: "2023-10-03T15:00:00",
-        backColor: "#f1c232"
-      },
-      {
-        id: 4,
-        text: "Event 4",
-        start: "2023-10-01T11:30:00",
-        end: "2023-10-01T14:30:00",
-        backColor: "#cc4125"
-      },
-    ];
+    const events = [];
+    const dateArray = generateDates('2023-8-02', '2023-8-3', 2);
 
-    const startDate = "2023-10-02";
+    // Loop through the entries of the propsRoute object, providing each entry as an array [key, value]
+    // and the index of the entry within the object.
+    Object.entries(propsRoute).forEach(([day, routeIndexes], dayIndex) => {
 
-    calendarRef.current.control.update({startDate, events});
-  }, []);
+        if (routeIndexes === 0) {
+            console.error('routeIndexes is 0', {day, routeIndexes, dayIndex, propsRoute});  
+            return;
+          }
+        
+        let startHour = 18;  // Reset startHour for each new day
+
+        // Loop through the indexes in routeIndexes for each day
+        routeIndexes.forEach((locationIndex, index, self) => {
+            
+        if (locationIndex === 0) {  // Skip accommodation
+            return;
+        }
+
+        let travelDuration = 1;
+        console.log(`${index} ${self.length}`)
+        if (index < self.length - 1) {
+            const nextLocationIndex = self[index + 1];
+            const travelDuration = getTravelDuration(locationIndex, nextLocationIndex, propsMatrix);
+            console.log(`Travel duration from location ${locationIndex} to ${nextLocationIndex}: ${travelDuration/60} minutes`);
+            // Process travelDuration as needed
+        }
+            
+        // Use the locationIndex to get the corresponding location from propsLoc
+        const adjustedLocationIndex = locationIndex - 1;
+        const location = propsLoc[adjustedLocationIndex];
+        console.log(locationIndex, location)
+        // Use the dayIndex to get the corresponding date from dateArray, and create a new date object
+        const start = new Date(dateArray[dayIndex]);
+        start.setHours(startHour, 0, 0);
+
+        // Create a new date object for the end time, identical to the start time.
+        const end = new Date(start.getTime());
+
+        // Set the hours of the end date object to one hour later than the start time.
+        end.setHours(start.getHours() + location.activity_duration);
+        const color = categoryColors.get(location.category);
+
+        // Push a new event to the events array, with an id made from the dayIndex and index,
+        // the location name as the text, the start and end times, and a background color
+        // depending on whether the index is even or odd.
+        // Adding travel event
+            if (travelDuration > 0) {
+                const travelDurationInHours = travelDuration / 60;
+                const travelStart = new Date(end.getTime());  // Start time of travel is end time of activity
+                const travelEnd = new Date(travelStart.getTime());
+                travelEnd.setHours(travelStart.getHours() + travelDurationInHours);  // End time is start time + duration
+                events.push({
+                    id: `travel-${dayIndex}-${index}`,
+                    text: `Taking public transport to next location`,
+                    start: travelStart.toISOString(),
+                    end: travelEnd.toISOString(),
+                    backColor: "#D3D3D3"  // Grey color for travel time
+                });
+                startHour += travelDurationInHours;  // Increase startHour by travel duration
+                console.log(`aft travelling ${startHour}`);
+            }
+        
+            events.push({
+                id: `${dayIndex}-${index}`,
+                text: location.name,
+                start: start.toISOString(),
+                end: end.toISOString(),
+                backColor: color  // Color for activity
+            });
+        
+            startHour += location.activity_duration;  // Increase startHour by activity duration
+            console.log(`aft event ${startHour}`);
+        });
+    });
+
+    calendarRef.current.control.update({ startDate: dateArray[0].toISOString(), events });
+}, [propsLoc, propsRoute]);
 
   return (
     <div style={styles.wrap}>

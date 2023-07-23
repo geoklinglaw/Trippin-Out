@@ -10,19 +10,86 @@ import FoodOptions from "../components/Pref_Page/FoodOptions";
 import SuggestedLocations from "../components/Pref_Page/SuggestedLocation";
 import { ToastContainer, toast } from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css';
+import  useStore  from './authStore';
+import axios from "axios";
+import { auth } from "../firebase";
+import {
+  collection,
+  query,
+  getDocs,
+  addDoc,
+  doc,
+  setDoc,
+} from "firebase/firestore";
+import { getDoc, db, firebase } from "../firebase";
 
 
 const App = () => {
   const [generatedLocations, setGeneratedLocations] = useState([]);
   const [isPreferencesSubmitted, setIsPreferencesSubmitted] = useState(false);
+  const [isAccommodationSubmitted, setIsAccommodationSubmitted] = useState(false);
   const [currentStep, setCurrentStep] = useState(0);
+  const tripId = useStore((state) => state.tripId);
+  const setLocations = useStore((state) => state.setfoodLocations);
   const { state } = useLocation();
   const navigate = useNavigate();
-  const handlePreferencesSubmitted = (data) => {
+
+  const handleAccommodationSubmitted= (data) => {
+    setIsAccommodationSubmitted(true); 
+  }
+
+  const handlePreferencesSubmitted = async (data) => {
+    console.log("RECEIVED IN PREF.JS PAGES ", data)
     setGeneratedLocations(data);
     setIsPreferencesSubmitted(true);
-}
+    
+    // Wait for the promises to resolve before logging the result
+    const destination = await fetchfromFirebase();
+    const locationsData = await callFoodAPI(destination);
+    setLocations(locationsData);
 
+    console.log("call food API: ", locationsData);
+};
+
+
+async function fetchfromFirebase() {
+  const userID = auth.currentUser.uid;
+  const tripID = tripId;
+  console.log("userID: " + userID);
+  console.log("tripID: " + tripID);
+
+  const tripRef = doc(db, "users", userID, "trips", tripID);
+  const tripSnap = await getDoc(tripRef);
+
+  if (tripSnap.exists()) {
+    const trip = tripSnap.data();
+    const accommodation = trip.accommodation[0];  // get the first accommodation in the array
+    const latLong = accommodation.latLong;
+    console.log(`latLong for accommodation: ${latLong}`);
+    return latLong;
+  } else {
+    console.error("No such document exists!");
+  }
+}
+const handleSidebarChange = (value) => {
+  setCurrentStep(value);
+  setHeader(value);
+};
+
+
+
+async function callFoodAPI(destination) {
+  const endpoint = "http://localhost:5123/food-options";
+  try {
+    const response = await axios.get(endpoint, {
+      params: { destination },
+    });
+    console.log("food response: ", response.data.data);
+    return response.data.data; 
+  } catch (error) {
+    console.error("Error retrieving data: ", error);
+  }
+}
 
   const A = () => <Explore />;
 
@@ -49,11 +116,12 @@ const App = () => {
       <h1>Accommodation</h1>
       <Accommodation
       tripId={state.tripId}
-      
       onCheckInDateTimeChange={handleCheckInDateTimeChange}
       onCheckOutDateTimeChange={handleCheckOutDateTimeChange}
       onLocationChange={handleLocationChange}
       onHotelNameChange={handleHotelNameChange}
+      onSubmit = {() => {setCurrentStep(2); setHeader(2)}}
+      onAccommodationSubmitted = {handleAccommodationSubmitted}
      
        />
       
@@ -103,7 +171,11 @@ const App = () => {
   const [header, setHeader] = useState(0);
   return (
     <>
-      <Sidebar setHeader={(x) => {setHeader(x); setCurrentStep(x);}} currentStep={currentStep} isPreferencesSubmitted={isPreferencesSubmitted} />
+      <Sidebar setHeader={(x) => handleSidebarChange(x)}
+       currentStep={currentStep} 
+       isPreferencesSubmitted={isPreferencesSubmitted} 
+       isAccommodationSubmitted={isAccommodationSubmitted}
+       />
       <ToastContainer />
       <div
         style={{

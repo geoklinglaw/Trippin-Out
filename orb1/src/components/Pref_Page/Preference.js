@@ -5,6 +5,7 @@ import { getDoc, db, firebase } from "../../firebase";
 import axios from 'axios';
 import "./Preference.css";
 import '../../tailwind.css';
+import { auth } from "../../firebase";
 import SuggestedLocations from './SuggestedLocation.js'
 import {
   collection,
@@ -21,6 +22,7 @@ function Preference(props) {
   const setPreferences = useStore((state) => state.setPreferences);
   const setSuggestedLocations = useStore((state) => state.setSuggestedLocations);
   const setLocations = useStore((state) => state.setfoodLocations);
+  const tripID = useStore((state) => state.tripId);
   const [loading, setLoading] = useState(false);
   
   async function fetchDataWithParams(destination) {
@@ -35,29 +37,33 @@ function Preference(props) {
       console.error("Error retrieving data: ", error);
     }
   }
+
   
-  async function fetchfromFirebase() {
-    const userID = "dBLCC8TXlrYkYQXDZ7f5eFyvex92" // "pVOrWYawmnkMvUu3IFtn";
-    const tripID = "sdIccla3xbdTQLpCjn7Y" // "V1NBZp7HSK7hnEkKT0Aw";
+  // async function fetchfromFirebase() {
+  //   const userID = auth.currentUser.uid;
+  //   // const locationID = Math.random().toString();
+  //   // setLocationId(locationID);
+  //   console.log("userID: " + userID);
+  //   console.log("tripID: " + tripID);
 
-    const destinationRef = doc(db, "users", userID, "trips", tripID);
-    const destinationSnap = await getDoc(destinationRef);
+  //   const destinationRef = doc(db, "users", userID, "trips", tripID);
+  //   const destinationSnap = await getDoc(destinationRef);
 
-    if (destinationSnap.exists()) {
-      const accommodation = destinationSnap.data().latlong;
-      return accommodation;
-    } else {
-      console.error("No such document exists!");
-    }
-  }
+  //   if (destinationSnap.exists()) {
+  //     const accommodation = destinationSnap.data().latlong;
+  //     return accommodation;
+  //   } else {
+  //     console.error("No such document exists!");
+  //   }
+  // }
 
-  useEffect(() => {
-    (async () => {
-      const destination = await fetchfromFirebase();
-      const locationsData = await fetchDataWithParams(destination);
-      setLocations(locationsData);
-    })();
-  }, [setLocations]);
+  // useEffect(() => {
+  //   (async () => {
+  //     // const destination = await fetchfromFirebase();
+  //     // const locationsData = await fetchDataWithParams(destination);
+  //     // setLocations(locationsData);
+  //   })();
+  // }, [setLocations]);
     
 
   const handlePreferenceChange = (index) => (value) => {
@@ -111,6 +117,7 @@ function Preference(props) {
       );
       return;
     } else {
+
       try {
         setLoading(true); // Show the loading modal
         const responseData = await submitPreferences();
@@ -124,6 +131,7 @@ function Preference(props) {
       } finally {
         setLoading(false); // Hide the loading modal after the API call is completed
       }
+
     }
   };
   

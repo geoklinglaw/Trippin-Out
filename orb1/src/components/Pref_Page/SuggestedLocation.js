@@ -6,15 +6,17 @@ import { db, auth } from '../../firebase';
 import { collection, query, getDoc, addDoc, doc, setDoc } from "firebase/firestore";
 import  useStore  from '../../pages/authStore';
 import { FaArrowDown } from "react-icons/fa";
+import { saveSuggestedLocations } from '../../pages/authStore';
+
 
 const SuggestedLocations = (props) => {
-  const { tripId } = props;
-  console.log("tripId", tripId);
+
   const suggestedLocations = useStore((state) => state.suggestedLocations);
   const selectedSuggestedLocations = useStore((state) => state.selectedSuggestedLocations);
   const setSuggestedLocations = useStore((state) => state.setSuggestedLocations);
   const setSelectedSuggestedLocations = useStore((state) => state.setSelectedSuggestedLocations);
   const [duration, setDuration] = useState(0);
+  const tripID = useStore((state) => state.tripId);
   
   const selectedData = Object.values(selectedSuggestedLocations).filter(location => location);
 
@@ -25,6 +27,7 @@ const SuggestedLocations = (props) => {
     const scrollTo = scrollHeight - windowHeight + offset;
     window.scrollTo({ top: scrollTo, behavior: "smooth" });
   };
+
   useEffect(() => {
     // Function to fetch the duration from Firestore
     const fetchDuration = async () => {
@@ -32,7 +35,7 @@ const SuggestedLocations = (props) => {
       console.log(userId);
       try {
         // Fetch the trip document from Firestore
-        const tripRef = doc(db, 'users', userId, 'trips', tripId);
+        const tripRef = doc(db, 'users', userId, 'trips', tripID);
         console.log("tripRef:", tripRef);
         const tripSnap = await getDoc(tripRef);
   
@@ -52,12 +55,13 @@ const SuggestedLocations = (props) => {
   
 
   const toggleSelected = (props) => {
-    const { locationId, photo, name, formatted_address, price } = props;
+    const { locationId, photo, name, formatted_address, price, geocodes, category, activity_duration } = props;
     const selectedCount = Object.values(selectedSuggestedLocations).filter(location => location).length;
   
     console.log(duration);
-  // Check if the limit of duration * 5 locations has been reached
-  if (selectedCount >= duration * 5) {
+  // Check if the limit of duration * 3 locations has been reached
+
+  if (selectedCount >= 10) {
     message.warning('You have reached the maximum limit of selected locations!');
     return;
   }
@@ -65,19 +69,27 @@ const SuggestedLocations = (props) => {
       ...selectedSuggestedLocations,
       [locationId]: selectedSuggestedLocations[locationId]
         ? undefined 
-        : { name, locationId, photo, formatted_address, price } 
+        : { name, locationId, photo, formatted_address, price, geocodes, category, activity_duration } 
     });
   };
   
 
   const submitData = async () => {
     const selectedData = Object.values(selectedSuggestedLocations).filter(location => location);
+    
 
-    const userID = 'pVOrWYawmnkMvUu3IFtn';
-    const tripID = 'V1NBZp7HSK7hnEkKT0Aw';
+    // const userID = useStore((state) => state.tripId);
+    
+    const userID = auth.currentUser.uid;
+    // const locationID = Math.random().toString();
+    // setLocationId(locationID);
+    console.log("userID: " + userID);
+    console.log("tripID: " + tripID);
+    
 
     const locationsRef = collection(db, 'users', userID, 'trips', tripID, 'locations');
     for (const location of selectedData) {
+        console.log(location)
         try {
             // console.log("id: " + location.locationId);
             // console.log("name: " + location.name);
@@ -87,8 +99,12 @@ const SuggestedLocations = (props) => {
             await addDoc(locationsRef, {
                 name: location.name,
                 locationId: location.locationId,
+                latitude: location.geocodes.main.latitude.toFixed(4),
+                longitude: location.geocodes.main.longitude.toFixed(4),
                 photo: location.photo,
                 address: location.formatted_address,
+                category: location.category,
+                activity_duration: location.activity_duration,
                 // price: location.price
             });
             console.log("Document successfully written!");
@@ -112,8 +128,8 @@ const SuggestedLocations = (props) => {
     <Progress
         style={{ position: 'absolute', top: 60, right: 100}}
         type="circle"
-        percent={(selectedData.length / (duration * 5)) * 100} // Calculate the percentage of locations selected
-        format={(percent) => `${selectedData.length} / ${duration * 5}`}
+        percent={(selectedData.length / 10) * 100} // Calculate the percentage of locations selected
+        format={(percent) => `${selectedData.length} / 10`}
         width={120}
         strokeWidth={15} 
       />
@@ -135,6 +151,7 @@ const SuggestedLocations = (props) => {
                   <SuggLocations
                     key={index}
                     locationId={index}
+                    geocodes={location.geocodes}
                     selected={!!selectedSuggestedLocations[index]}
                     toggleSelected={toggleSelected}
                     photo={location.photos ? location.photos[0] : null}
@@ -143,6 +160,8 @@ const SuggestedLocations = (props) => {
                       location.location ? location.location.formatted_address : ""
                     }
                     price={location.price}
+                    category={location.category}
+                    activity_duration={location.activity_duration}
                   />
                 ))
               };
