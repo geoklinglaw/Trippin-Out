@@ -4,7 +4,7 @@ import  useStore  from '../../pages/authStore';
 import { getDoc, db, firebase } from "../../firebase";
 import axios from 'axios';
 import "./Preference.css";
-import '../../tailwind.css';
+// import '../../tailwind.css';
 import { auth } from "../../firebase";
 import SuggestedLocations from './SuggestedLocation.js'
 import {
