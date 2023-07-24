@@ -105,7 +105,7 @@ function LandingPage() {
   };
 
   return (
-    <>
+    <div className="landing-page">
       <Header />
       <Form
         form={form}
@@ -139,7 +139,7 @@ function LandingPage() {
               >
                 We've Got Your Journey Covered 😆
               </h2>
-              <div className="Card">
+              <div className="Card2">
                 <Form.Item
                   name="destination"
                   label="Destination"
@@ -213,7 +213,7 @@ function LandingPage() {
       >
         <p>Please sign up or log in to continue!</p>
       </Modal>
-    </>
+    </div>
   );
 }
 
