@@ -1,13 +1,20 @@
 
 
 .login-image {
-  width: 200px;
-  height: 250px;
-  margin: auto;
-  margin-left: 40%;
-
- 
+  width: 500px;
+  height: 650px;
+  /* margin: auto; */
+  margin-left: 10%;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  padding: 20px;
+}
+
 
 .form-container {
   display: flex; /* Add display flex */
@@ -92,6 +99,10 @@
   }
 }
 @media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
   .login-image {
     width: 100%;
     height: auto;
