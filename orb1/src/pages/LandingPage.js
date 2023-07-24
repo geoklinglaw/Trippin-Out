@@ -1,5 +1,5 @@
 import { Card, Space, Form, message, Button, Modal } from "antd";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Header from "../components/Header.js";
 import DropdownButton from "../components/DropdownButton";
 import DateSelector from "../components/DateSelector";
@@ -24,12 +24,19 @@ function LandingPage() {
   const navigate = useNavigate();
   const [isModalVisible, setIsModalVisible] = useState(false);
   const setTripId = useStore((state) => state.setTripId);
+  const [isWelcomeModalVisible, setIsWelcomeModalVisible] = useState(true);
 
   const peopleChangeHandler = (value) => {
     setGuests(value);
   };
 
-  
+  const handleWelcomeModalOk = () => {
+    setIsWelcomeModalVisible(false);
+  };
+
+  const handleWelcomeModalCancel = () => {
+    setIsWelcomeModalVisible(false);
+  };
 
   const onFinish = async (values) => {
     // Check if the user is authenticated
@@ -106,7 +113,17 @@ function LandingPage() {
 
   return (
     <div className="landing-page">
+      <Modal
+        title="Welcome to Trippin' Out"
+        visible={isWelcomeModalVisible}
+        onOk={handleWelcomeModalOk}
+        onCancel={handleWelcomeModalCancel}
+      >
+        <p>Please login or sign up before submitting the following details!</p>
+      </Modal>
+      
       <Header />
+      
       <Form
         form={form}
         layout="vertical"
@@ -205,14 +222,6 @@ function LandingPage() {
         </div>
       </Form>
 
-      <Modal
-        title="Sign up/Login Required"
-        visible={isModalVisible}
-        onOk={handleOk}
-        onCancel={handleCancel}
-      >
-        <p>Please sign up or log in to continue!</p>
-      </Modal>
     </div>
   );
 }
