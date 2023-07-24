@@ -9,7 +9,7 @@ import  useStore  from '../../pages/authStore';
 import { arrayUnion } from "firebase/firestore";
 
 
-import house from "../../images/house.png";
+
 // import { useNavigate } from "react-router-dom";
 const { Panel } = Collapse;
 
@@ -153,8 +153,6 @@ function Accommodation(props) {
       accommodation: accommodationDetails,
     });
     setAccommodation(accommodationDetails);
-
-    console.log("Accommodation details saved to Firestore");
     setIsSaved(true);
     props.onAccommodationSubmitted(true);
     message.success("Accommodation details saved successfully!");

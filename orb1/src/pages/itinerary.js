@@ -15,6 +15,7 @@ import  useStore  from './authStore';
 import { auth } from "../firebase";
 
 const Itinerary = () => {
+    const [food, setFood] = useState(null);
     const [locations, setLocations] = useState(null);
     const [route, setRoute] = useState(null);
     const [matrix, setMatrix] = useState(null);
@@ -25,7 +26,6 @@ const Itinerary = () => {
         const userID = auth.currentUser.uid;
         console.log("userID: " + userID);
         console.log("tripID: " + tripID);
-
         const locationsRef = collection(db, "users", userID, "trips", tripID, "locations");
         const locationSnapshot = await getDocs(locationsRef);
         const locations = locationSnapshot.docs.map(doc => doc.data());
@@ -33,6 +33,35 @@ const Itinerary = () => {
         const locationsJson = JSON.stringify(locations);
 
         return locationsJson;
+    }
+
+    async function fetchDaysFirebase() {
+        const userID = auth.currentUser.uid;
+        const durationRef = doc(db, "users", userID, "trips", tripID);
+        const durationSnap = await getDoc(durationRef);
+    
+        if (durationSnap.exists()) {
+          const duration = durationSnap.data().duration;
+          console.log("DURATION IN RPEFERENCES.JS: ", duration);
+          return duration;
+        } else {
+          console.error("No such document exists!");
+        }
+      }
+
+    async function fetchFoodfromFirebase() {
+        const userID = auth.currentUser.uid;
+        console.log("IN FOOD")
+        console.log("userID: " + userID);
+        console.log("tripID: " + tripID);
+
+        const locationsRef = collection(db, "users", userID, "trips", tripID, "food");
+        const locationSnapshot = await getDocs(locationsRef);
+        const food = locationSnapshot.docs.map(doc => doc.data());
+        console.log("FOOD: ", food);
+        const foodJson = JSON.stringify(food);
+
+        return foodJson;
     }
     
 
@@ -52,13 +81,14 @@ const Itinerary = () => {
         }
       }
 
-      async function generateItinerary(distanceMatrix) {
+      async function generateItinerary(distanceMatrix, days) {
         const endpoint = "http://localhost:5123/itinerary";
         try {
           const response = await axios.post(endpoint, {
                 // accommodation: accoms,
                 // locations: locationsJSON,
-                distMat: distanceMatrix
+                distMat: distanceMatrix,
+                days: days
           });
           console.log("Itinerary: ", response.data.data);
           return response.data.data; 
@@ -70,14 +100,19 @@ const Itinerary = () => {
       useEffect(() => {
         (async () => {
             const locationsJSON = await fetchfromFirebase()
+            const days = await fetchDaysFirebase();
+            console.log("days: ", days);
             setLocations(JSON.parse(locationsJSON));
             console.log("locationsJSON: ", locationsJSON);
             console.log("accommodation in itinerary: ", accommodation);
             const results = await callDistanceMatrixAPI(accommodation, locationsJSON);
-            const itinerary = await generateItinerary(results);
+            const itinerary = await generateItinerary(results, days);
             console.log("itinerary line 80: ", itinerary);
             setRoute(itinerary);
             setMatrix(results);
+            const foodJson = await fetchFoodfromFirebase();
+            setFood(JSON.parse(foodJson));
+            console.log("food: ", food);
         })(); 
     }, []);
     
@@ -89,7 +124,7 @@ const Itinerary = () => {
 
     return (
     <>
-        <Calendar propsLoc={locations} propsRoute={route} propsMatrix={matrix}/>
+        <Calendar propsLoc={locations} propsRoute={route} propsMatrix={matrix} propsFood={food}/>
         
         {/* <div style={{ display: 'flex', flexDirection: 'column', overflowX: 'auto' }}>
             {Object.entries(route).map(([day, routeIndexes], dayIndex) => (

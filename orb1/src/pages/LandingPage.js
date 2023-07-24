@@ -11,6 +11,8 @@ import { doc, setDoc, Timestamp } from "firebase/firestore";
 import  useStore  from './authStore';
 import Wave from "react-wavify";
 import { useNavigate } from "react-router-dom";
+import moment from "moment";
+
 
 function LandingPage() {
   const [form] = Form.useForm();
@@ -36,6 +38,8 @@ function LandingPage() {
     setGuests(value);
   };
 
+  
+
   const onFinish = async (values) => {
     // Check if the user is authenticated
     const user = auth.currentUser;
@@ -43,36 +47,53 @@ function LandingPage() {
       showModal(); // If not authenticated, show the modal
       return;
     }
-
+  
     try {
       const userId = auth.currentUser.uid;
       const tripId = Math.random().toString();
       setTripId(tripId);
       console.log(userId, tripId);
-      const duration = values.duration[1].diff(values.duration[0], "days");
 
+      const startDate = moment(values.duration[0]);
+      console.log(startDate); // Start date from the date range picker
+      const endDate = moment(values.duration[1]); 
+      const duration = values.duration[1].diff(values.duration[0], "days");
+      duration = duration + 1;
+      
+  
+      // Check if the duration is greater than 3 days
+      if (duration > 3) {
+        message.error("Duration cannot exceed 3 days!");
+        return;
+      }
+  
       await setDoc(doc(db, "users", userId, "trips", tripId), {
         email: email,
         destination: destination,
+        startDate: startDate,
+        endDate: endDate,
         duration: parseInt(duration),
         guests: parseInt(values.guests),
       });
-
+  
       message.success("Submit success!");
       form.resetFields();
-
+  
       // Save the accommodation details using the saveAccommodationDetails function
       // await saveAccommodationDetails(userId, tripId, accommodations);
-
+  
       // setAccommodation(accommodations); // Update the state in the store with accommodation details
-
-      navigate(`/preferences?tripId=${tripId}`, { state: { tripId }, 
-      duration: parseInt(duration) });
+  
+      navigate(`/preferences?tripId=${tripId}`, {
+        state: { tripId },
+        duration: parseInt(duration),
+      });
     } catch (error) {
       console.error("Error storing data:", error);
       setError("Submit failed!");
     }
   };
+  
 
   const onFinishFailed = (errorInfo) => {
     console.log("Failed:", errorInfo);
