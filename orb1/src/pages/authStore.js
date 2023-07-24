@@ -71,7 +71,7 @@ const useAuthStore = create((set) => ({
     {
       "category": "Exhibitions & Museums",
       "category_id": "10000",
-      "activity_duration": 2,
+      "activity_duration": 3,
       "rank": undefined
     },
     {

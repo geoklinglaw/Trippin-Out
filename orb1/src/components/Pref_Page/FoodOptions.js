@@ -17,19 +17,17 @@ import axios from "axios";
 import  useStore  from '../../pages/authStore';
 
 const FoodOptions = (props) => {
- // Use the state and actions from authStore.js
-
-
- const locations = useStore((state) => state.foodLocations);
- const selectedLocations = useStore((state) => state.selectedfoodLocations);
- const setLocations = useStore((state) => state.setfoodLocations);
- const setSelectedLocations = useStore((state) => state.setSelectedfoodLocations);
+  const locations = useStore((state) => state.foodLocations);
+  const selectedLocations = useStore((state) => state.selectedfoodLocations);
+  const setLocations = useStore((state) => state.setfoodLocations);
+  const setSelectedLocations = useStore((state) => state.setSelectedfoodLocations);
   const navigate = useNavigate();
   const [duration, setDuration] = useState(0);
   const selectedData = Object.values(selectedLocations).filter(location => location);
   const [selectedCount, setSelectedCount] = useState(0);
   const tripId = useStore((state) => state.tripId);
-  // const setFoodId = useStore((state) => state.setFoodId);
+  const maxCount = duration * 2;
+
 
   const handleScrollToBottom = () => {
     const scrollHeight = document.documentElement.scrollHeight;
@@ -70,8 +68,7 @@ const FoodOptions = (props) => {
       updatedSelectedLocations[locationId] = undefined;
       setSelectedCount((prevCount) => prevCount - 1);
     } else {
-      // Check if the limit of duration * 4 locations has been reached
-      if (selectedCount >= duration * 4) {
+      if (selectedCount >= maxCount) {
         message.warning("You have reached the maximum limit of selected locations!");
         return;
       }
@@ -83,6 +80,9 @@ const FoodOptions = (props) => {
         photo,
         formatted_address,
         price,
+        // geocodes,
+        // category,
+        // activity_duration
       };
       setSelectedCount((prevCount) => prevCount + 1);
     }
@@ -142,9 +142,13 @@ const FoodOptions = (props) => {
 
         await addDoc(locationsRef, {
           name: location.name,
+          // latitude: location.geocodes.main.latitude.toFixed(4),
+          // longitude: location.geocodes.main.longitude.toFixed(4),
           locationId: location.locationId,
           photo: location.photo,
           address: location.formatted_address,
+          // category: location.category,
+          // activity_duration: location.activity_duration
           // price: location.price
         });
         console.log("Document successfully written!");
@@ -160,8 +164,8 @@ const FoodOptions = (props) => {
     <Progress
         style={{ position: 'absolute', top: 60, right: 100}}
         type="circle"
-        percent={(selectedData.length / (duration * 4)) * 100} // Calculate the percentage of locations selected
-        format={(percent) => `${selectedData.length} / ${duration * 4}`}
+        percent={(selectedData.length / (maxCount)) * 100} // Calculate the percentage of locations selected
+        format={(percent) => `${selectedData.length} / ${maxCount}`}
         width={120}
         strokeWidth={15} 
       />

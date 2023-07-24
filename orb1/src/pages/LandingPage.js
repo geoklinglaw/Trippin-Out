@@ -49,7 +49,8 @@ function LandingPage() {
       const tripId = Math.random().toString();
       setTripId(tripId);
       console.log(userId, tripId);
-      const duration = values.duration[1].diff(values.duration[0], "days");
+      let duration = values.duration[1].diff(values.duration[0], "days");
+      duration = duration + 1;
 
       await setDoc(doc(db, "users", userId, "trips", tripId), {
         email: email,
