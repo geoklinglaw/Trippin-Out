@@ -1,6 +1,33 @@
 {
     "countries":
     [
-    {"name": "Singapore", "code": "SG"}
+    {"name": "Australia", "code": "AU"},
+    {"name": "Brazil", "code": "BR"},
+    {"name": "China", "code": "CN"},
+    {"name": "Denmark", "code": "DK"},
+    {"name": "Finland", "code": "FI"},
+    {"name": "France", "code": "FR"},
+    {"name": "Germany", "code": "DE"},
+    {"name": "Greece", "code": "GR"},
+    {"name": "Hong Kong", "code": "HK"},
+    {"name": "India", "code": "IN"},
+    {"name": "Indonesia", "code": "ID"},
+    {"name": "Iraq", "code": "IQ"},
+    {"name": "Ireland", "code": "IE"},
+    {"name": "Israel", "code": "IL"},
+    {"name": "Italy", "code": "IT"},
+    {"name": "Japan", "code": "JP"},
+    {"name": "New Zealand", "code": "NZ"},
+    {"name": "Norway", "code": "NO"},
+    {"name": "Philippines", "code": "PH"},
+    {"name": "Poland", "code": "PL"},
+    {"name": "Singapore", "code": "SG"},
+    {"name": "Spain", "code": "ES"},
+    {"name": "Sweden", "code": "SE"},
+    {"name": "Switzerland", "code": "CH"},
+    {"name": "Taiwan", "code": "TW"},
+    {"name": "Thailand", "code": "TH"},
+    {"name": "United Kingdom", "code": "GB"},
+    {"name": "United States", "code": "US"}
     ]
 }

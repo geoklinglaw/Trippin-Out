@@ -11,7 +11,7 @@ import { doc, setDoc, Timestamp } from "firebase/firestore";
 import  useStore  from './authStore';
 import Wave from "react-wavify";
 import { useNavigate } from "react-router-dom";
-import moment from "moment";
+// import moment from "moment";
 
 
 function LandingPage() {
@@ -54,11 +54,13 @@ function LandingPage() {
       setTripId(tripId);
       console.log(userId, tripId);
 
-      const startDate = moment(values.duration[0]);
-      console.log(startDate); // Start date from the date range picker
-      const endDate = moment(values.duration[1]); 
-      const duration = values.duration[1].diff(values.duration[0], "days");
+   
+      //const duration = values.duration[1].diff(values.duration[0], "days");
+
+
+      let duration = values.duration[1].diff(values.duration[0], "days");
       duration = duration + 1;
+
       
   
       // Check if the duration is greater than 3 days
@@ -70,8 +72,6 @@ function LandingPage() {
       await setDoc(doc(db, "users", userId, "trips", tripId), {
         email: email,
         destination: destination,
-        startDate: startDate,
-        endDate: endDate,
         duration: parseInt(duration),
         guests: parseInt(values.guests),
       });
