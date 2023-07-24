@@ -134,34 +134,45 @@ function Accommodation(props) {
   //   }
   // };
   const handleSubmit = async () => {
-  try {
-    const accommodationDetails = accommodations.map((accommodation) => ({
-      hotelName: accommodation.hotelName,
-      location: accommodation.location,
-      checkInDateTime: accommodation.checkInDateTime,
-      checkOutDateTime: accommodation.checkOutDateTime,
-      latLong: accommodation.latLong,
-    }));
-
-    // Save the accommodation details to Firestore
-    const userId = auth.currentUser.uid;
-    const tripRef = doc(db, "users", userId, "trips", tripId);
-
-    // Update the accommodations array in the trip document
-    // Firebase will ensure each accommodation detail is unique in the array
-    await updateDoc(tripRef, {
-      accommodation: accommodationDetails,
-    });
-    setAccommodation(accommodationDetails);
-    setIsSaved(true);
-    props.onAccommodationSubmitted(true);
-    message.success("Accommodation details saved successfully!");
-    
-  } catch (error) {
-    console.error("Error saving accommodation details:", error);
-    message.error("Error saving accommodation details");
-  }
-};
+    try {
+      const accommodationDetails = accommodations.map((accommodation) => {
+        // Calculate the duration of stay in days
+        const duration = Math.ceil((accommodation.checkOutDateTime.getTime() - accommodation.checkInDateTime.getTime()) / (1000 * 60 * 60 * 24));
+  
+        // Ensure the duration is within 3 days
+        if (duration < 1 || duration > 3) {
+          throw new Error(`Duration of stay should be within 3 days. Currently, it's ${duration} day(s).`);
+        }
+  
+        return {
+          hotelName: accommodation.hotelName,
+          location: accommodation.location,
+          checkInDateTime: accommodation.checkInDateTime,
+          checkOutDateTime: accommodation.checkOutDateTime,
+          latLong: accommodation.latLong,
+        };
+      });
+  
+      // Save the accommodation details to Firestore
+      const userId = auth.currentUser.uid;
+      const tripRef = doc(db, "users", userId, "trips", tripId);
+  
+      // Update the accommodations array in the trip document
+      // Firebase will ensure each accommodation detail is unique in the array
+      await updateDoc(tripRef, {
+        accommodation: accommodationDetails,
+      });
+      setAccommodation(accommodationDetails);
+      setIsSaved(true);
+      props.onAccommodationSubmitted(true);
+      message.success("Accommodation details saved successfully!");
+      
+    } catch (error) {
+      console.error("Error saving accommodation details:", error);
+      message.error(error.message);
+    }
+  };
+  
 
   
   return (

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Card, Input, Button, Alert } from "antd";
 import "./Signup.css";
-import HelicopterAnimation from "../components/Helicopter";
+// import HelicopterAnimation from "../components/Helicopter";
 import logo from "../images/logo.png";
 
 import { createUserWithEmailAndPassword, sendEmailVerification } from "firebase/auth";
@@ -117,7 +117,7 @@ const SignUp = () => {
           </p>
         </div>
       </Card>
-      <HelicopterAnimation/>
+      {/* <HelicopterAnimation/> */}
     </div>
     
   );
