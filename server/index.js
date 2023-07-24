@@ -93,7 +93,7 @@ app.post("/itinerary", async (req, res) => {
   // const accoms = req.body.accommodation;
   const distMat = req.body.distMat;
 
-  const python = spawn('/opt/homebrew/bin/python3', ['routes/tspAPI.py', '--distMat', JSON.stringify(distMat)]);
+  const python = spawn('/Users/lexuanng/opt/anaconda3/bin/python', ['routes/tspAPI.py', '--distMat', JSON.stringify(distMat)]);
 
   let pythonData = '';
   python.stdout.on('data', (data) => {

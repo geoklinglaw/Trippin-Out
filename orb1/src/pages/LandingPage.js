@@ -53,9 +53,7 @@ function LandingPage() {
       const tripId = Math.random().toString();
       setTripId(tripId);
       console.log(userId, tripId);
-      const startDate = moment(values.duration[0]);
-      console.log(startDate); // Start date from the date range picker
-      const endDate = moment(values.duration[1]); 
+   
       const duration = values.duration[1].diff(values.duration[0], "days");
       
   
@@ -68,8 +66,7 @@ function LandingPage() {
       await setDoc(doc(db, "users", userId, "trips", tripId), {
         email: email,
         destination: destination,
-        startDate: startDate,
-        endDate: endDate,
+      
         duration: parseInt(duration),
         guests: parseInt(values.guests),
       });
