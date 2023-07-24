@@ -647,11 +647,10 @@ def map_tsp_to_original(tsp_results, original_indices):
     return mapped_results
 
 
-def main(input):
+def main(input, num_days):
     dist_matrix = create_dist_matrix(input)
     itinerary = sort_activities(dist_matrix)
-    num_days = 2
-    max_duration = 7
+
     itinerary_days, original_indices = split_into_days(itinerary, num_days)  # now original_indices are also returned
     data_models_for_days = [create_data_model(input, day) for day in itinerary_days]
 
@@ -693,12 +692,15 @@ if __name__ == '__main__':
 
     parser = argparse.ArgumentParser()
     parser.add_argument('--distMat', help='JSON data for processing')
+    parser.add_argument('--days', help='number of days of trip', type=int)
+
     args = parser.parse_args()
 
-
     json_data = json.loads(args.distMat)
+    days = args.days
 
-    results = main(json_data)
+
+    results = main(json_data, days)
     print(json.dumps(results))
 
 

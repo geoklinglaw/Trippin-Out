@@ -153,8 +153,6 @@ function Accommodation(props) {
       accommodation: accommodationDetails,
     });
     setAccommodation(accommodationDetails);
-
-    console.log("Accommodation details saved to Firestore");
     setIsSaved(true);
     props.onAccommodationSubmitted(true);
     message.success("Accommodation details saved successfully!");

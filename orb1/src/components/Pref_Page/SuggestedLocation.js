@@ -7,6 +7,7 @@ import { collection, query, getDoc, addDoc, doc, setDoc } from "firebase/firesto
 import  useStore  from '../../pages/authStore';
 import { FaArrowDown } from "react-icons/fa";
 import { saveSuggestedLocations } from '../../pages/authStore';
+import { max } from 'moment/moment';
 
 
 const SuggestedLocations = (props) => {
@@ -17,6 +18,7 @@ const SuggestedLocations = (props) => {
   const setSelectedSuggestedLocations = useStore((state) => state.setSelectedSuggestedLocations);
   const [duration, setDuration] = useState(0);
   const tripID = useStore((state) => state.tripId);
+  let maxCount = duration < 3 ? duration * 3 : 8;
   
   const selectedData = Object.values(selectedSuggestedLocations).filter(location => location);
 
@@ -32,11 +34,10 @@ const SuggestedLocations = (props) => {
     // Function to fetch the duration from Firestore
     const fetchDuration = async () => {
       const userId = auth.currentUser.uid;
-      console.log(userId);
+
       try {
         // Fetch the trip document from Firestore
         const tripRef = doc(db, 'users', userId, 'trips', tripID);
-        console.log("tripRef:", tripRef);
         const tripSnap = await getDoc(tripRef);
   
         // Get the duration from the trip document
@@ -61,7 +62,7 @@ const SuggestedLocations = (props) => {
     console.log(duration);
   // Check if the limit of duration * 3 locations has been reached
 
-  if (selectedCount >= 10) {
+  if (selectedCount >= maxCount) {
     message.warning('You have reached the maximum limit of selected locations!');
     return;
   }
@@ -117,19 +118,13 @@ const SuggestedLocations = (props) => {
 
 
 
-
-  
-
- 
-
-
   return (
     <>
     <Progress
         style={{ position: 'absolute', top: 60, right: 100}}
         type="circle"
-        percent={(selectedData.length / 10) * 100} // Calculate the percentage of locations selected
-        format={(percent) => `${selectedData.length} / 10`}
+        percent={(selectedData.length / maxCount) * 100} // Calculate the percentage of locations selected
+        format={(percent) => `${selectedData.length} / ${maxCount}`}
         width={120}
         strokeWidth={15} 
       />

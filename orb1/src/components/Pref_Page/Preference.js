@@ -24,6 +24,7 @@ function Preference(props) {
   const setLocations = useStore((state) => state.setfoodLocations);
   const tripID = useStore((state) => state.tripId);
   const [loading, setLoading] = useState(false);
+  const accommodation = useStore((state) => state.accommodation);
   
   async function fetchDataWithParams(destination) {
     const endpoint = "http://localhost:5123/food-options";
@@ -39,23 +40,19 @@ function Preference(props) {
   }
 
   
-  // async function fetchfromFirebase() {
-  //   const userID = auth.currentUser.uid;
-  //   // const locationID = Math.random().toString();
-  //   // setLocationId(locationID);
-  //   console.log("userID: " + userID);
-  //   console.log("tripID: " + tripID);
+  async function fetchfromFirebase() {
+    const userID = auth.currentUser.uid;
+    const durationRef = doc(db, "users", userID, "trips", tripID);
+    const durationSnap = await getDoc(durationRef);
 
-  //   const destinationRef = doc(db, "users", userID, "trips", tripID);
-  //   const destinationSnap = await getDoc(destinationRef);
-
-  //   if (destinationSnap.exists()) {
-  //     const accommodation = destinationSnap.data().latlong;
-  //     return accommodation;
-  //   } else {
-  //     console.error("No such document exists!");
-  //   }
-  // }
+    if (durationSnap.exists()) {
+      const duration = durationSnap.data().duration;
+      console.log("DURATION IN RPEFERENCES.JS: ", duration);
+      return duration;
+    } else {
+      console.error("No such document exists!");
+    }
+  }
 
   // useEffect(() => {
   //   (async () => {
@@ -74,13 +71,17 @@ function Preference(props) {
     console.log(newPreferences);
   };
   
-  async function submitPreferences() {
+  async function submitPreferences(accommodations) {
     const endpoint = 'http://localhost:5123/Preferences';
     try {
+      console.log("accommodations: ", accommodations);
+      const accommodation = accommodations[0].latLong;
+      console.log("Acommodation details", accommodation)
+      const duration = await fetchfromFirebase();
       const response = await axios.post(endpoint, { 
-        preferences
+        preferences, accommodation, duration
       });
-      console.log(response.data)
+      console.log("RECEIVED PREF.JS:", response.data)
       return response.data;
     } catch (error) {
       console.error('Error submitting data:', error)
@@ -120,8 +121,8 @@ function Preference(props) {
 
       try {
         setLoading(true); // Show the loading modal
-        const responseData = await submitPreferences();
-        console.log(responseData.data);
+        const responseData = await submitPreferences(accommodation);
+        console.log("PREFERENCE", responseData.data);
         setSuggestedLocations(responseData.data);
         props.onPreferencesSubmitted(responseData);
         props.onSubmit();

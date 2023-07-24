@@ -2,6 +2,17 @@ import React, { useState, useRef, useEffect } from 'react';
 import { DayPilot, DayPilotCalendar, DayPilotNavigator } from "@daypilot/daypilot-lite-react";
 import "./CalendarStyles.css";
 import PropTypes from 'prop-types';
+import  useStore  from './authStore';
+import { auth } from "../firebase";
+import { getDoc, db, firebase } from "../firebase";
+import {
+    collection,
+    query,
+    getDocs,
+    addDoc,
+    doc,
+    setDoc,
+} from "firebase/firestore";
 
 const styles = {
   wrap: {
@@ -16,9 +27,59 @@ const styles = {
 };
 
 
-const Calendar = ({propsLoc, propsRoute, propsMatrix}) => {
-    console.log("PROPS MATRIX", propsMatrix)
 
+const Calendar = ({propsLoc, propsRoute, propsMatrix, propsFood}) => {
+    const tripID = useStore((state) => state.tripId);
+    const [startDate, setStartDate] = useState('');
+    const [endDate, setEndDate] = useState('');
+    console.log("PROPS MATRIX", propsMatrix)
+    console.log("PROPS FOOD", propsFood)
+
+    async function fetchDaysFirebase() {
+        const userID = auth.currentUser.uid;
+        const durationRef = doc(db, "users", userID, "trips", tripID);
+        const durationSnap = await getDoc(durationRef);
+    
+        if (durationSnap.exists()) {
+          const duration = durationSnap.data().duration;
+          console.log("DURATION IN RPEFERENCES.JS: ", duration);
+          return duration;
+        } else {
+          console.error("No such document exists!");
+        }
+    }
+
+    function formatDate(date) {
+        let d = new Date(date),
+            month = '' + (d.getMonth() + 1),  // JavaScript months are 0-based, so we add 1
+            day = '' + d.getDate(),
+            year = d.getFullYear();
+    
+        if (month.length < 2) 
+            month = '0' + month;
+        if (day.length < 2) 
+            day = '0' + day;
+    
+        return [year, month, day].join('-');
+    }
+
+    async function fetchDatesFirebase() {
+        const userID = auth.currentUser.uid;
+        const durationRef = doc(db, "users", userID, "trips", tripID);
+        const durationSnap = await getDoc(durationRef);
+    
+        if (durationSnap.exists()) {
+          const accom = durationSnap.data().accommmodation[0];
+          const startDate = accom.checkInDateTime;
+          const endDate = accom.checkOutDateTime;
+          console.log("START DATE IN RPEFERENCES.JS: ", startDate);
+          console.log("END DATE IN RPEFERENCES.JS: ", endDate);
+          return await startDate, endDate;
+        } else {
+          console.error("No such document exists!");
+        }
+    }
+    
     Calendar.propTypes = {
         propsLoc: PropTypes.array.isRequired,
         propsRoute: PropTypes.object.isRequired,
@@ -82,11 +143,31 @@ const Calendar = ({propsLoc, propsRoute, propsMatrix}) => {
         const travelDetails = distMatrix.rows[originIndex].elements[destinationIndex];
         return travelDetails.status === 'OK' ? travelDetails.duration.value : 0;
     }
-  
+
+    function roundUpTime(timeInMin) {
+        if(timeInMin >= 15 && timeInMin < 45) {
+            return 0.5;
+        } else if(timeInMin >= 45 && timeInMin < 75) {
+            return 1;
+        } else {
+            return timeInMin / 60; // convert minutes to hours
+        }
+    }
+    
+
+    // useEffect(() => {
+    //     const fetchDates = async () => {
+    //         const dates = await fetchDatesFirebase();
+    //         setStartDate(formatDate(dates[0].toString()));
+    //         setEndDate(formatDate(dates[1].toString()));
+    //     }
+    //     fetchDates();
+    // }, []);
+    
 
   useEffect(() => {
     const events = [];
-    const dateArray = generateDates('2023-8-02', '2023-8-3', 2);
+    const dateArray = generateDates('2023-8-02', '2023-8-04', 3);
 
     // Loop through the entries of the propsRoute object, providing each entry as an array [key, value]
     // and the index of the entry within the object.
@@ -105,14 +186,15 @@ const Calendar = ({propsLoc, propsRoute, propsMatrix}) => {
         if (locationIndex === 0) {  // Skip accommodation
             return;
         }
-
-        let travelDuration = 1;
-        console.log(`${index} ${self.length}`)
+    
+        let travelDurationInHour = 0;
         if (index < self.length - 1) {
             const nextLocationIndex = self[index + 1];
             const travelDuration = getTravelDuration(locationIndex, nextLocationIndex, propsMatrix);
             console.log(`Travel duration from location ${locationIndex} to ${nextLocationIndex}: ${travelDuration/60} minutes`);
-            // Process travelDuration as needed
+            travelDurationInHour = roundUpTime(travelDuration / 60);
+            console.log(`Travel duration after rounding ${travelDurationInHour}`)
+            // no need to increase startHour here
         }
             
         // Use the locationIndex to get the corresponding location from propsLoc
@@ -122,33 +204,27 @@ const Calendar = ({propsLoc, propsRoute, propsMatrix}) => {
         // Use the dayIndex to get the corresponding date from dateArray, and create a new date object
         const start = new Date(dateArray[dayIndex]);
         start.setHours(startHour, 0, 0);
-
-        // Create a new date object for the end time, identical to the start time.
         const end = new Date(start.getTime());
-
-        // Set the hours of the end date object to one hour later than the start time.
         end.setHours(start.getHours() + location.activity_duration);
         const color = categoryColors.get(location.category);
 
-        // Push a new event to the events array, with an id made from the dayIndex and index,
-        // the location name as the text, the start and end times, and a background color
-        // depending on whether the index is even or odd.
-        // Adding travel event
-            if (travelDuration > 0) {
-                const travelDurationInHours = travelDuration / 60;
-                const travelStart = new Date(end.getTime());  // Start time of travel is end time of activity
-                const travelEnd = new Date(travelStart.getTime());
-                travelEnd.setHours(travelStart.getHours() + travelDurationInHours);  // End time is start time + duration
-                events.push({
-                    id: `travel-${dayIndex}-${index}`,
-                    text: `Taking public transport to next location`,
-                    start: travelStart.toISOString(),
-                    end: travelEnd.toISOString(),
-                    backColor: "#D3D3D3"  // Grey color for travel time
-                });
-                startHour += travelDurationInHours;  // Increase startHour by travel duration
-                console.log(`aft travelling ${startHour}`);
-            }
+        if (travelDurationInHour > 0) {
+            // we add travel event after the current event has finished
+            const travelStart = new Date(end.getTime());  // Start time of travel is end time of activity
+            const travelEnd = new Date(travelStart.getTime());
+            travelEnd.setHours(travelStart.getHours() + travelDurationInHour);  // End time is start time + duration
+            events.push({
+                id: `travel-${dayIndex}-${index}`,
+                text: `Travel via Bus/Walk`,
+                start: travelStart.toISOString(),
+                end: travelEnd.toISOString(),
+                backColor: "#D3D3D3"  
+            });
+    
+            startHour += travelDurationInHour;  
+            console.log(`aft travelling ${startHour}`);
+        }
+        console.log(`aft event ${startHour}`);
         
             events.push({
                 id: `${dayIndex}-${index}`,

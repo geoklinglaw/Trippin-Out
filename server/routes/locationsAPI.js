@@ -2,7 +2,7 @@
 // Generates list of locations based on categories and search query
 // DO NOT USE IMPORT FOR COMMON JS MODULES
 const { get } = require('http');
-const data = require('../rankingtest.json');
+// const data = require('../rankingtest.json');
 const fs = require('fs');
 const { DocumentSnapshot } = require('firebase-admin/firestore');
 const sdk = require('api')('@fsq-developer/v1.0#x6xjhzlic2gi70');
@@ -79,19 +79,19 @@ const sdk = require('api')('@fsq-developer/v1.0#x6xjhzlic2gi70');
 //         console.error(`Error: ${error}`);
 //     });
 
-    async function fetchfromFirebase() {
-        const { db } = require('.././index.js');
-        const userID = "dBLCC8TXlrYkYQXDZ7f5eFyvex92" // "pVOrWYawmnkMvUu3IFtn";
-        const tripID = "sdIccla3xbdTQLpCjn7Y" // "V1NBZp7HSK7hnEkKT0Aw";
+    // async function fetchfromFirebase() {
+    //     const { db } = require('.././index.js');
+    //     const userID = "dBLCC8TXlrYkYQXDZ7f5eFyvex92" // "pVOrWYawmnkMvUu3IFtn";
+    //     const tripID = "sdIccla3xbdTQLpCjn7Y" // "V1NBZp7HSK7hnEkKT0Aw";
         
-        const destinationRef = db.doc(`users/${userID}/trips/${tripID}`);
-        const DocumentSnapshot = await destinationRef.get();
-        let data = DocumentSnapshot.data();
-        const accommodation = data.latlong;
-        const duration = data.Duration; // Note the capitalized 'D'
-        return [accommodation, duration];    
+    //     const destinationRef = db.doc(`users/${userID}/trips/${tripID}`);
+    //     const DocumentSnapshot = await destinationRef.get();
+    //     let data = DocumentSnapshot.data();
+    //     const accommodation = data.latlong;
+    //     const duration = data.Duration; // Note the capitalized 'D'
+    //     return [accommodation, duration];    
             
-    };
+    // };
     
         // if (destinationSnap.exists()) {
         //   const accommodation = destinationSnap.data().latlong;
@@ -115,17 +115,16 @@ const sdk = require('api')('@fsq-developer/v1.0#x6xjhzlic2gi70');
     };
     
 module.exports = {
-    processPreferences: async function(preference) {
+    processPreferences: async function(preference, accoms, duration) {
         const preferences = preference.sort((a, b) => {
             return a.rank - b.rank;
         });
 
         try {
-            const [destination_location, duration] = await fetchfromFirebase();
             // console.log(destination_location, duration);
             const rank = rankRule(duration);
             // console.log(rank);
-            const list = await obtainListOfLocations(preferences, rankRule, destination_location);
+            const list = await obtainListOfLocations(preferences, rankRule, accoms);
             console.log(list);
             return list;
         } catch (error) {

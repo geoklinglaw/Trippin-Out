@@ -1,6 +1,7 @@
 const express = require("express");
 const admin = require("firebase-admin");
 const cors = require("cors");
+var protobuf = require("protobufjs");
 const path = require("path");
 const axios = require("axios");
 const app = express();
@@ -59,7 +60,11 @@ app.get('/files/:filename', (req, res) => {
 
 app.post("/Preferences", async (req, res) => {
   const preferences = req.body.preferences;
-  const generateLocations = await locationsAPI.processPreferences(preferences);
+  const accommodation = req.body.accommodation;
+  const duration = req.body.duration;
+  console.log(accommodation)
+
+  const generateLocations = await locationsAPI.processPreferences(preferences, accommodation, duration);
   res.json({
     message: "Preferences received successfully",
     data: generateLocations,
@@ -92,8 +97,13 @@ app.post("/itinerary", async (req, res) => {
   // const locations = req.body.locations;
   // const accoms = req.body.accommodation;
   const distMat = req.body.distMat;
+  const days = req.body.days;
+
+  //const python = spawn('/opt/homebrew/bin/python3', ['routes/tspAPI.py', '--distMat', JSON.stringify(distMat), '--days', days]);
+
 
   const python = spawn('/Users/lexuanng/opt/anaconda3/bin/python', ['routes/tspAPI.py', '--distMat', JSON.stringify(distMat)]);
+
 
   let pythonData = '';
   python.stdout.on('data', (data) => {
