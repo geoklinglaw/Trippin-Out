@@ -9,7 +9,7 @@ import  useStore  from '../../pages/authStore';
 import { arrayUnion } from "firebase/firestore";
 
 
-import house from "../../images/house.png";
+
 // import { useNavigate } from "react-router-dom";
 const { Panel } = Collapse;
 
