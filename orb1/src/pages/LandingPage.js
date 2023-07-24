@@ -11,7 +11,7 @@ import { doc, setDoc, Timestamp } from "firebase/firestore";
 import  useStore  from './authStore';
 import Wave from "react-wavify";
 import { useNavigate } from "react-router-dom";
-// import moment from "moment";
+import moment from "moment";
 
 
 function LandingPage() {
@@ -20,15 +20,6 @@ function LandingPage() {
   const { email } = useStore();
   const [destination, setDestination] = useState("");
   const [guests, setGuests] = useState("");
-  // const [accommodations, setAccommodations] = useState([
-  //   {
-  //     hotelName: "",
-  //     location: "",
-  //     checkInDateTime: null,
-  //     checkOutDateTime: null,
-  //     latLong: "",
-  //   },
-  // ]);
   const [isSaved, setIsSaved] = useState(false);
   const navigate = useNavigate();
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -52,10 +43,8 @@ function LandingPage() {
       const userId = auth.currentUser.uid;
       const tripId = Math.random().toString();
       setTripId(tripId);
-      console.log(userId, tripId);
 
-      let duration = values.duration[1].diff(values.duration[0], "days");
-      duration = duration + 1;
+      const duration = values.duration[1].diff(values.duration[0], "days") + 1;
       
   
       // Check if the duration is greater than 3 days
