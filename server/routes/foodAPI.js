@@ -24,7 +24,7 @@ async function getFoodOptions(cat, cat_id, country) {
     return sdk.placeSearch({
         query: cat.toString(),  // keyword search
         ll: country.toString(), // the lat/long for Singapore // ideally should be airbnb location
-        radius: 10000,  // search within a radius (in terms of m)
+        radius: 50000,  // search within a radius (in terms of m)
         categories: cat_id.toString(),
         fields: 'fsq_id%2Cname%2Cgeocodes%2Clocation%2Cchains%2Chours%2Crating%2Cpopularity%2Cprice%2Cphotos',
         sort: 'RATING', // sort by rating
