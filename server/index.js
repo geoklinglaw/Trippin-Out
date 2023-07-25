@@ -42,7 +42,7 @@ const db = admin.firestore();
 module.exports = { db };
 
 app.get("/", (req, res) => {
-  res.json({ message: "Server is running" });
+  res.send('Hello my server is running yay!');
 });
 
 app.get('/files/:filename', (req, res) => {
