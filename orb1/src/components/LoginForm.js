@@ -11,7 +11,7 @@ const LoginForm = () => {
 
     try {
       // Make a request to the login endpoint
-      const response = await axios.post("https://trippin-out-ten.vercel.app/login", {
+      const response = await axios.post("https://pls-8k70.onrender.com/login", {
         email,
         password,
       });
