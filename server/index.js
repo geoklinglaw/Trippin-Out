@@ -42,7 +42,7 @@ const db = admin.firestore();
 module.exports = { db };
 
 app.get("/", (req, res) => {
-  res.json({ message: "Server is running" });
+  res.send('Hello my server is running yay!');
 });
 
 app.get('/files/:filename', (req, res) => {
@@ -102,7 +102,7 @@ app.post("/itinerary", async (req, res) => {
   //const python = spawn('/opt/homebrew/bin/python3', ['routes/tspAPI.py', '--distMat', JSON.stringify(distMat), '--days', days]);
 
 
-  const python = spawn('/Users/lexuanng/opt/anaconda3/bin/python', ['routes/tspAPI.py', '--distMat', JSON.stringify(distMat)]);
+  const python = spawn('python', ['routes/tspAPI.py', '--distMat', JSON.stringify(distMat), '--days', days]);
 
 
   let pythonData = '';

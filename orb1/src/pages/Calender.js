@@ -30,10 +30,13 @@ const styles = {
 
 const Calendar = ({propsLoc, propsRoute, propsMatrix, propsFood}) => {
     const tripID = useStore((state) => state.tripId);
-    const [startDate, setStartDate] = useState('');
-    const [endDate, setEndDate] = useState('');
+    const [startDate, setStartDate] = useState(null);
+    const [endDate, setEndDate] = useState(null);
+    const [days, setDays] = useState(0);
+    
     console.log("PROPS MATRIX", propsMatrix)
     console.log("PROPS FOOD", propsFood)
+    console.log(propsLoc, propsRoute);
 
     async function fetchDaysFirebase() {
         const userID = auth.currentUser.uid;
@@ -69,12 +72,12 @@ const Calendar = ({propsLoc, propsRoute, propsMatrix, propsFood}) => {
         const durationSnap = await getDoc(durationRef);
     
         if (durationSnap.exists()) {
-          const accom = durationSnap.data().accommmodation[0];
-          const startDate = accom.checkInDateTime;
-          const endDate = accom.checkOutDateTime;
-          console.log("START DATE IN RPEFERENCES.JS: ", startDate);
-          console.log("END DATE IN RPEFERENCES.JS: ", endDate);
-          return await startDate, endDate;
+          const accom = durationSnap.data().accommodation[0];
+          const startDate = accom.checkInDateTime.toDate();
+          const endDate = accom.checkOutDateTime.toDate();
+          console.log("START DATE: ", startDate);
+            console.log("END DATE: ", endDate);
+          return [startDate, endDate];  // Return dates in an array
         } else {
           console.error("No such document exists!");
         }
@@ -154,93 +157,109 @@ const Calendar = ({propsLoc, propsRoute, propsMatrix, propsFood}) => {
         }
     }
     
-
-    // useEffect(() => {
-    //     const fetchDates = async () => {
-    //         const dates = await fetchDatesFirebase();
-    //         setStartDate(formatDate(dates[0].toString()));
-    //         setEndDate(formatDate(dates[1].toString()));
-    //     }
-    //     fetchDates();
-    // }, []);
     
+    useEffect(() => {
+        const fetchDates = async () => {
+            const dates = await fetchDatesFirebase();
+            console.log("DATES IN CALENDAR.JS: ", dates);
+            setStartDate(formatDate(dates[0].toString()));
+            setEndDate(formatDate(dates[1].toString()));
+        }
+        fetchDates();
 
+        const getDays = async () => {
+          const days = await fetchDaysFirebase();
+          setDays(days);
+        };
+        getDays();
+      }, []);
+      
   useEffect(() => {
     const events = [];
-    const dateArray = generateDates('2023-8-02', '2023-8-04', 3);
+    // console.log("fuck this shit",fetchDaysFirebase().then((days) => setDays(days)));
 
-    // Loop through the entries of the propsRoute object, providing each entry as an array [key, value]
-    // and the index of the entry within the object.
-    Object.entries(propsRoute).forEach(([day, routeIndexes], dayIndex) => {
+    if (days != 0 && startDate != null && endDate != null) {
+        console.log("fking hell", days)
+        console.log("start date", startDate)
+        console.log("end date", endDate)
 
-        if (routeIndexes === 0) {
-            console.error('routeIndexes is 0', {day, routeIndexes, dayIndex, propsRoute});  
-            return;
-          }
-        
-        let startHour = 18;  // Reset startHour for each new day
+        const dateArray = generateDates(`${startDate}`, `${endDate}`, days);
 
-        // Loop through the indexes in routeIndexes for each day
-        routeIndexes.forEach((locationIndex, index, self) => {
+        // Loop through the entries of the propsRoute object, providing each entry as an array [key, value]
+        // and the index of the entry within the object.
+        Object.entries(propsRoute).forEach(([day, routeIndexes], dayIndex) => {
+
+            if (routeIndexes === 0) {
+                console.error('routeIndexes is 0', {day, routeIndexes, dayIndex, propsRoute});  
+                return;
+            }
             
-        if (locationIndex === 0) {  // Skip accommodation
-            return;
-        }
-    
-        let travelDurationInHour = 0;
-        if (index < self.length - 1) {
-            const nextLocationIndex = self[index + 1];
-            const travelDuration = getTravelDuration(locationIndex, nextLocationIndex, propsMatrix);
-            console.log(`Travel duration from location ${locationIndex} to ${nextLocationIndex}: ${travelDuration/60} minutes`);
-            travelDurationInHour = roundUpTime(travelDuration / 60);
-            console.log(`Travel duration after rounding ${travelDurationInHour}`)
-            // no need to increase startHour here
-        }
-            
-        // Use the locationIndex to get the corresponding location from propsLoc
-        const adjustedLocationIndex = locationIndex - 1;
-        const location = propsLoc[adjustedLocationIndex];
-        console.log(locationIndex, location)
-        // Use the dayIndex to get the corresponding date from dateArray, and create a new date object
-        const start = new Date(dateArray[dayIndex]);
-        start.setHours(startHour, 0, 0);
-        const end = new Date(start.getTime());
-        end.setHours(start.getHours() + location.activity_duration);
-        const color = categoryColors.get(location.category);
+            let startHour = 18;  // Reset startHour for each new day
 
-        if (travelDurationInHour > 0) {
-            // we add travel event after the current event has finished
-            const travelStart = new Date(end.getTime());  // Start time of travel is end time of activity
-            const travelEnd = new Date(travelStart.getTime());
-            travelEnd.setHours(travelStart.getHours() + travelDurationInHour);  // End time is start time + duration
-            events.push({
-                id: `travel-${dayIndex}-${index}`,
-                text: `Travel via Bus/Walk`,
-                start: travelStart.toISOString(),
-                end: travelEnd.toISOString(),
-                backColor: "#D3D3D3"  
-            });
-    
-            startHour += travelDurationInHour;  
-            console.log(`aft travelling ${startHour}`);
-        }
-        console.log(`aft event ${startHour}`);
+            // Loop through the indexes in routeIndexes for each day
+            routeIndexes.forEach((locationIndex, index, self) => {
+                
+            if (locationIndex === 0) {  // Skip accommodation
+                return;
+            }
         
-            events.push({
-                id: `${dayIndex}-${index}`,
-                text: location.name,
-                start: start.toISOString(),
-                end: end.toISOString(),
-                backColor: color  // Color for activity
-            });
+            let travelDurationInHour = 0;
+            if (index < self.length - 1) {
+                const nextLocationIndex = self[index + 1];
+                const travelDuration = getTravelDuration(locationIndex, nextLocationIndex, propsMatrix);
+                console.log(`Travel duration from location ${locationIndex} to ${nextLocationIndex}: ${travelDuration/60} minutes`);
+                travelDurationInHour = roundUpTime(travelDuration / 60);
+                console.log(`Travel duration after rounding ${travelDurationInHour}`)
+                // no need to increase startHour here
+            }
+                
+            // Use the locationIndex to get the corresponding location from propsLoc
+            const adjustedLocationIndex = locationIndex - 1;
+            const location = propsLoc[adjustedLocationIndex];
+            console.log(locationIndex, location)
+            // Use the dayIndex to get the corresponding date from dateArray, and create a new date object
+            const start = new Date(dateArray[dayIndex]);
+            start.setHours(startHour, 0, 0);
+            const end = new Date(start.getTime());
+            end.setHours(start.getHours() + location.activity_duration);
+            const color = categoryColors.get(location.category);
+
+            if (travelDurationInHour > 0) {
+                // we add travel event after the current event has finished
+                const travelStart = new Date(end.getTime());  // Start time of travel is end time of activity
+                const travelEnd = new Date(travelStart.getTime());
+                travelEnd.setHours(travelStart.getHours() + travelDurationInHour);  // End time is start time + duration
+                events.push({
+                    id: `travel-${dayIndex}-${index}`,
+                    text: `Travel via Bus/Walk`,
+                    start: travelStart.toISOString(),
+                    end: travelEnd.toISOString(),
+                    backColor: "#D3D3D3"  
+                });
         
-            startHour += location.activity_duration;  // Increase startHour by activity duration
+                startHour += travelDurationInHour;  
+                console.log(`aft travelling ${startHour}`);
+            }
             console.log(`aft event ${startHour}`);
+            
+                events.push({
+                    id: `${dayIndex}-${index}`,
+                    text: location.name,
+                    start: start.toISOString(),
+                    end: end.toISOString(),
+                    backColor: color  // Color for activity
+                });
+            
+                startHour += location.activity_duration;  // Increase startHour by activity duration
+                console.log(`aft event ${startHour}`);
+                
         });
-    });
+        
+        });
+        calendarRef.current.control.update({ startDate: dateArray[0].toISOString(), events });
+    }   
 
-    calendarRef.current.control.update({ startDate: dateArray[0].toISOString(), events });
-}, [propsLoc, propsRoute]);
+}, [categoryColors, days, endDate, propsLoc, propsMatrix, propsRoute, startDate]);
 
   return (
     <div style={styles.wrap}>

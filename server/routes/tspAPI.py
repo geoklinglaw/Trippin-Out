@@ -453,7 +453,6 @@ import argparse
 def create_dist_matrix(data):
     # Create an empty distances list
     distances = []
-
     # Go through each row in the 'rows' field of the JSON data
     for row in data["rows"]:
         # Create a list to hold the distances for this row
@@ -683,19 +682,12 @@ def main(input, num_days):
     # for results in mapped_results.values():
     #     print(results)
         
-
-    
-
-
-
 if __name__ == '__main__':
-
     parser = argparse.ArgumentParser()
     parser.add_argument('--distMat', help='JSON data for processing')
     parser.add_argument('--days', help='number of days of trip', type=int)
 
     args = parser.parse_args()
-
     json_data = json.loads(args.distMat)
     days = args.days
 

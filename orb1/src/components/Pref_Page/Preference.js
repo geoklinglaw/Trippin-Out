@@ -4,7 +4,7 @@ import  useStore  from '../../pages/authStore';
 import { getDoc, db, firebase } from "../../firebase";
 import axios from 'axios';
 import "./Preference.css";
-import '../../tailwind.css';
+// import '../../tailwind.css';
 import { auth } from "../../firebase";
 import SuggestedLocations from './SuggestedLocation.js'
 import {
@@ -27,7 +27,7 @@ function Preference(props) {
   const accommodation = useStore((state) => state.accommodation);
   
   async function fetchDataWithParams(destination) {
-    const endpoint = "http://localhost:5123/food-options";
+    const endpoint = "https://pls-8k70.onrender.com/food-options";
     try {
       const response = await axios.get(endpoint, {
         params: { destination },
@@ -72,7 +72,7 @@ function Preference(props) {
   };
   
   async function submitPreferences(accommodations) {
-    const endpoint = 'http://localhost:5123/Preferences';
+    const endpoint = 'https://pls-8k70.onrender.com/Preferences';
     try {
       console.log("accommodations: ", accommodations);
       const accommodation = accommodations[0].latLong;

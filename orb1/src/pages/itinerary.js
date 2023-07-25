@@ -66,7 +66,7 @@ const Itinerary = () => {
     
 
     async function callDistanceMatrixAPI(accoms, locationsJSON) {
-        const endpoint = "http://localhost:5123/distanceMatrix";
+        const endpoint = "https://pls-8k70.onrender.com/distanceMatrix";
         try {
           const response = await axios.get(endpoint, {
             params: {
@@ -82,7 +82,7 @@ const Itinerary = () => {
       }
 
       async function generateItinerary(distanceMatrix, days) {
-        const endpoint = "http://localhost:5123/itinerary";
+        const endpoint = "https://pls-8k70.onrender.com/itinerary";
         try {
           const response = await axios.post(endpoint, {
                 // accommodation: accoms,
@@ -106,12 +106,14 @@ const Itinerary = () => {
             console.log("locationsJSON: ", locationsJSON);
             console.log("accommodation in itinerary: ", accommodation);
             const results = await callDistanceMatrixAPI(accommodation, locationsJSON);
+            console.log("results: ", results);
             const itinerary = await generateItinerary(results, days);
             console.log("itinerary line 80: ", itinerary);
             setRoute(itinerary);
             setMatrix(results);
             const foodJson = await fetchFoodfromFirebase();
-            setFood(JSON.parse(foodJson));
+            const food = await JSON.parse(foodJson);
+            setFood(food);
             console.log("food: ", food);
         })(); 
     }, []);
