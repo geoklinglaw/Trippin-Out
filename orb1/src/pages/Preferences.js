@@ -79,7 +79,7 @@ const handleSidebarChange = (value) => {
 
 
 async function callFoodAPI(destination) {
-  const endpoint = "http://localhost:5123/food-options";
+  const endpoint = "https://trippin-out-ten.vercel.app/food-options";
   try {
     const response = await axios.get(endpoint, {
       params: { destination },

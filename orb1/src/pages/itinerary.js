@@ -66,7 +66,7 @@ const Itinerary = () => {
     
 
     async function callDistanceMatrixAPI(accoms, locationsJSON) {
-        const endpoint = "http://localhost:5123/distanceMatrix";
+        const endpoint = "https://trippin-out-ten.vercel.app/distanceMatrix";
         try {
           const response = await axios.get(endpoint, {
             params: {
@@ -82,7 +82,7 @@ const Itinerary = () => {
       }
 
       async function generateItinerary(distanceMatrix, days) {
-        const endpoint = "http://localhost:5123/itinerary";
+        const endpoint = "https://trippin-out-ten.vercel.app/itinerary";
         try {
           const response = await axios.post(endpoint, {
                 // accommodation: accoms,
