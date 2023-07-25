@@ -27,7 +27,7 @@ function Preference(props) {
   const accommodation = useStore((state) => state.accommodation);
   
   async function fetchDataWithParams(destination) {
-    const endpoint = "https://trippin-out-ten.vercel.app/food-options";
+    const endpoint = "https://pls-8k70.onrender.com/food-options";
     try {
       const response = await axios.get(endpoint, {
         params: { destination },
@@ -72,7 +72,7 @@ function Preference(props) {
   };
   
   async function submitPreferences(accommodations) {
-    const endpoint = 'https://trippin-out-ten.vercel.app/Preferences';
+    const endpoint = 'https://pls-8k70.onrender.com/Preferences';
     try {
       console.log("accommodations: ", accommodations);
       const accommodation = accommodations[0].latLong;
