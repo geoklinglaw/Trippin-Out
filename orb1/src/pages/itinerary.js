@@ -106,12 +106,14 @@ const Itinerary = () => {
             console.log("locationsJSON: ", locationsJSON);
             console.log("accommodation in itinerary: ", accommodation);
             const results = await callDistanceMatrixAPI(accommodation, locationsJSON);
+            console.log("results: ", results);
             const itinerary = await generateItinerary(results, days);
             console.log("itinerary line 80: ", itinerary);
             setRoute(itinerary);
             setMatrix(results);
             const foodJson = await fetchFoodfromFirebase();
-            setFood(JSON.parse(foodJson));
+            const food = await JSON.parse(foodJson);
+            setFood(food);
             console.log("food: ", food);
         })(); 
     }, []);

@@ -36,6 +36,7 @@ const Calendar = ({propsLoc, propsRoute, propsMatrix, propsFood}) => {
     
     console.log("PROPS MATRIX", propsMatrix)
     console.log("PROPS FOOD", propsFood)
+    console.log(propsLoc, propsRoute);
 
     async function fetchDaysFirebase() {
         const userID = auth.currentUser.uid;
@@ -258,7 +259,7 @@ const Calendar = ({propsLoc, propsRoute, propsMatrix, propsFood}) => {
         calendarRef.current.control.update({ startDate: dateArray[0].toISOString(), events });
     }   
 
-}, [propsLoc, propsRoute]);
+}, [categoryColors, days, endDate, propsLoc, propsMatrix, propsRoute, startDate]);
 
   return (
     <div style={styles.wrap}>
